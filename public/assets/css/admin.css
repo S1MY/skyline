@@ -1,0 +1,216 @@
+.adminText{
+    font-size: 16px;
+    line-height: 28px;
+}
+.adminText:nth-child(1){
+    margin-top: 16px;
+}
+.adminForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.adminForm textarea{
+    outline: none;
+    border: none;
+    padding: 15px;
+    margin-top: 16px;
+    width: calc((100% - 30px) / 3);
+    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+    border-radius: 10px;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    height: 100px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #202020;
+}
+.adminForm textarea::placeholder{
+    color: rgba(32, 32, 32, 0.7);    
+}
+.adminForm .btnWrapper{
+    width: 100%;
+}
+.adminForm .btn{
+    width: calc((100% - 30px) / 3);
+    justify-content: center;
+    cursor: pointer;
+}
+.adminForm input{
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    margin-top: 16px;
+    width: calc((100% - 30px) / 3);
+    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+    border-radius: 10px;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+    height: 48px;
+    font-size: 16px;
+    line-height: 28px;
+    color: #202020;
+}
+.adminForm input::placeholder{
+    color: rgba(32, 32, 32, 0.7);    
+}
+.excelCreate{
+    font-weight: 400;
+    font-size: 18px;
+    color: #20BF6B;
+    transition: all 0.4s;
+    margin-right: 15px;
+}
+.excelCreate:hover{
+    color: #3867D6;
+}
+.pageStatItem._admin{
+    height: 410px;
+    flex-wrap: wrap;
+}
+.adminList{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.userLink{
+    color: #EB3B5A;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.userLink:hover{
+    opacity: 0.8;
+}
+.userItem{
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    margin-top: 16px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+}
+.userItem .userLink{
+    font-weight: 400;
+}
+.userCount{
+    font-weight: 500;
+    font-size: 16px;
+}
+.adminUser{
+    display: flex;
+    justify-content: space-between;
+}
+.adminUser .contentInput{
+    width: calc((100% - 40px) / 3);
+}
+#adminAuth{
+    width: calc((100% - 40px) / 3);
+    justify-content: center;
+    height: 48px;
+    margin-top: 16px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #3867D6;
+    border: none;
+    outline: none;
+}
+#adminAuth:hover{
+    color: #ffffff;
+    opacity: 0.8;
+}
+#adminEdit{
+    width: calc((100% - 40px) / 3);
+    justify-content: center;
+    height: 48px;
+    margin-top: 16px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    background: #EB3B5A;
+    border: none;
+    outline: none;
+}
+#adminEdit:hover{
+    color: #ffffff;
+    opacity: 0.8;
+}
+.btn._blueed{
+    background: #3867D6;
+    border: 1px solid #3867D6;
+    margin-bottom: 12px;
+    width: 100%;
+    justify-content: center;
+}
+.btn._blueed:hover{
+    color: #3867D6;
+    background: transparent;
+}
+.userPopup{
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+    text-align: center;
+}
+.popupAvatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+    margin: 0 auto;
+    margin-bottom: 12px;
+}
+.userPopupName{
+    font-weight: 500;
+    font-size: 18px;
+}
+.userPopupText{
+    margin-top: 6px;
+    font-size: 16px;
+}
+.responseBtn._w100{
+    width: 100%;
+    justify-content: center;
+}
+@media (max-width: 1120px) {
+    .pageStatItem{
+        width: 100%;
+    }
+    .pageStatItem._admin{
+        height: unset;
+    }
+}
+@media (max-width: 1024px) {
+    .adminForm textarea{
+        width: 100%;
+    }
+    .adminForm .btn{
+        width: 100%;
+    }
+    .adminForm input{
+        width: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .adminUser{
+        flex-wrap: wrap;
+    }
+    .adminUser .contentInput{
+        width: 100%;
+    }
+    #adminAuth{
+        width: 100%;
+    }
+    #adminEdit{
+        width: 100%;
+    }
+    .pageTitle.displayFlex{
+        flex-wrap: wrap;
+    }
+}
