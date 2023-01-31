@@ -74,19 +74,19 @@
                     <div class="serviceIcon"><img src="/image/home/s1.png" alt="serviceIcon"></div>
                     <h3 class="serviceTitle">@lang('mainPages.main_third_screen.cards.first_title')</h3>
                     <p class="serviceText">@lang('mainPages.main_third_screen.cards.first_description')</p>
-                    <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.first_btn')</a>
+                    {{-- <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.first_btn')</a> --}}
                 </div>
                 <div class="serviceItem">
                     <div class="serviceIcon"><img src="/image/home/s2.png" alt="serviceIcon"></div>
                     <h3 class="serviceTitle">@lang('mainPages.main_third_screen.cards.second_title')</h3>
                     <p class="serviceText">@lang('mainPages.main_third_screen.cards.second_description')</p>
-                    <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.second_btn')</a>
+                    {{-- <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.second_btn')</a> --}}
                 </div>
                 <div class="serviceItem">
                     <div class="serviceIcon"><img src="/image/home/s3.png" alt="serviceIcon"></div>
                     <h3 class="serviceTitle">@lang('mainPages.main_third_screen.cards.third_title')</h3>
                     <p class="serviceText">@lang('mainPages.main_third_screen.cards.third_description')</p>
-                    <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.third_btn')</a>
+                    {{-- <a href="#" class="serviceBtn">@lang('mainPages.main_third_screen.cards.third_btn')</a> --}}
                 </div>
             </div>
         </div>
