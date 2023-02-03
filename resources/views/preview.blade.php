@@ -67,9 +67,8 @@
     margin-top:30px;
 }
 table {
-    max-width: 800px;
+    width: 800px;
     margin: 0 auto;
-			width:100%;
     border-collapse: separate;
     border-spacing: 0 12px;
 		}
@@ -88,19 +87,13 @@ table {
         tr{
   border-spacing: 10px 10px;
 }
-        tr td:first-child {
+        tr td:first-child,
+        tr th:first-child{
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
-        th td:first-child {
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-tr td:last-child {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-th td:last-child {
+tr td:last-child,
+tr th:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
