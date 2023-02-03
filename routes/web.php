@@ -34,6 +34,7 @@ Route::middleware(['set_locale'])->group(function(){
         Route::get('/econom', [CabinetController::class, 'econom'])->name('econom');
         Route::get('/standard', [CabinetController::class, 'standard'])->name('standard');
         Route::get('/premium', [CabinetController::class, 'premium'])->name('premium');
+        Route::get('/vip', [CabinetController::class, 'vip'])->name('vip');
         Route::get('/partners', [CabinetController::class, 'partners'])->name('partners');
         Route::get('/promo', [CabinetController::class, 'promo'])->name('promo');
     });
