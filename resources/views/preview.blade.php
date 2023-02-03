@@ -6,7 +6,6 @@
 </head>
 <style type="text/css">
     * {
-        padding: 0 !important;
         box-sizing: border-box;
     }    
     body{
@@ -30,6 +29,7 @@
     font-size: 16px;
     line-height: 20px;
     opacity: 0.8;
+    margin: 0 !important;
 }
 .customTableItem._w100{
     width: 100% !important;
