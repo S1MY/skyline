@@ -121,7 +121,7 @@
                 if(Auth::user()->UserInfo->user_show_id){
                     $userId = Auth::user()->UserInfo->user_show_id;
                 }else{
-                    $userId = 00000;
+                    $userId = '00000';
                 }
                 @endphp
                 <p class="headerInfo{{$notactive}}">ID: {{ $userId }}</p>
