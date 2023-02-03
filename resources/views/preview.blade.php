@@ -21,7 +21,7 @@
     display: block;
     background: #f2f2f2;
     margin-top: 16px;
-    padding: 12px 20px;
+    padding: 16px 20px;
     border-radius: 10px;
 }
 .customTableItem{
