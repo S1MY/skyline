@@ -20,7 +20,7 @@
                             <p class="statName">@lang('cabinet.pacage.earned')</p>
                             <p class="statCount">
                                 @php
-                                    $pacagePrice = 10000;
+                                    $pacagePrice = 100000;
 
                                     $fromFirstLine = $partnersInLine->user_first_line * ($pacagePrice * 0.4);
                                     $fromSecondLine = $partnersInLine->user_second_line * ($pacagePrice * 0.2);

@@ -94,7 +94,7 @@
                         </div>
                         <p class="packageAccumulation">Дальше дело за вами</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="vip">Апгрейд</a>
                         @endif
                     </div>
                 </div>

@@ -176,6 +176,30 @@ class CabinetController extends Controller
         return view('cabinet.premium', compact('partners', 'partnersInLine'));
     }
 
+    public function vip(){
+
+        $currentPacage = 4;
+
+        if( Auth::user()->userInfo->user_pacage < $currentPacage ){
+            session()->flash('warning', 'У вас не приобретён данный пакет');
+            return redirect()->route('cabinet');
+        }
+
+        // Партнёры разбитые по страницам
+        $partners = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+        ->leftJoin('user_partners as up', 'up.user_id', '=', 'users.id')
+        ->select('users.id', 'ui.login', 'users.email', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status', 'up.user_first_line', 'up.user_second_line', 'up.user_third_line', 'up.user_fourth_line')
+        ->where('up.pacage', '=', $currentPacage)
+        ->where('users.sponsor_id', '=', Auth::user()->id)
+        ->paginate(9);
+
+        $partnersInLine = UserPartner::where('user_id', '=', Auth::user()->id)
+        ->where('pacage', '=', $currentPacage)
+        ->first();
+
+        return view('cabinet.vip', compact('partners', 'partnersInLine'));
+    }
+
     public function showPartnerInfo($pacage, $id){
 
         $userInfo = UserInfo::where('login', '=', $id)->first();
@@ -420,6 +444,10 @@ class CabinetController extends Controller
             $type = 4;
             $pacage = 3;
             $price = 10000;
+        }elseif ( $request->pacage == 'VIP' ){
+            $type = 11;
+            $pacage = 4;
+            $price = 100000;
         }
 
         if( $pacage == 0 ){
