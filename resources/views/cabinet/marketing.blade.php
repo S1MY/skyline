@@ -15,36 +15,30 @@
                     <p class="pageText">На каждой из этих линий нет ограничений по количеству участников, поэтому Вы можете атывать бесконечно</p>
                     <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span>, <span class="_standard">"STANDARD"</span> или <span class="_premium">"PREMIUM"</span> на накопительном счёте достаточно средств, Вы автоматически перейдёте на следующий пакет с ещё им доходом.</p>
                     <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
+                    <p class="pageText">На пакете <span class="_vip">"VIP"</span> вам станет доступно участиве в совместных проектах с компанией "MySkyLine"</p>
                 </div>
                 <div class="packageFlex displayFlex spaceBetween alignBaseline">
                     <div class="packageItem">
-                        <p class="packageTitle">Econom</p>
-                        <p class="packageInfo _noborder">Стоимость пакета <span>100€</span></p>
-                        <p class="packageCourse">Курс "Продвижение"</p>
-                        <p class="packageInfo">1 линия <span>40%</span></p>
-                        <p class="packageInfo">2 линия <span>20%</span></p>
-                        <p class="packageInfo">3 линия <span>5%</span></p>
-                        <p class="packageInfo">4 линия <span>15%</span></p>
-                        <p class="packageInfo">Общий счёт <span>100%</span></p>
-                        <p class="packageInfo">Вывод денег <span>40%</span></p>
-                        <p class="packageInfo">Накопительный счёт <span>60%</span></p>
-                        <p class="packageInfo _disabled">БОК <span>5€ в месяц</span></p>
-                        <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
+                        <div class="packageTop">
+                            <p class="packageTitle">Econom</p>
+                            <p class="packageInfo _noborder">Стоимость пакета <span>100€</span></p>
+                            <p class="packageCourse">Курс "Продвижение"</p>
+                            <p class="packageInfo">Вывод денег <span>40%</span></p>
+                            <p class="packageInfo">Накопительный счёт <span>60%</span></p>
+                            <p class="packageInfo _disabled">БОК <span>5€ в месяц</span></p>
+                            <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
+                            <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
+                        </div>
                         <p class="packageAccumulation">1000€ для перехода на 2 пакет</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 1 )
                             <a href="#" class="btnBuy" data-name="econom">Приобрести</a>
                         @endif
                     </div>
                     <div class="packageItem _standard">
+                        <div class="packageTop">
                         <p class="packageTitle">Standard</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>1000€</span></p>
                         <p class="packageCourse">Курс "Позитивное мышление"</p>
-                        <p class="packageInfo">1 линия <span>40%</span></p>
-                        <p class="packageInfo">2 линия <span>20%</span></p>
-                        <p class="packageInfo">3 линия <span>5%</span></p>
-                        <p class="packageInfo">4 линия <span>15%</span></p>
-                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo">Накопительный счёт <span>60%</span></p>
                         <p class="packageInfo _disabled">БОК <span>20€ в месяц</span></p>
@@ -52,20 +46,17 @@
                         <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
                         <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
                         <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
+                        </div>
                         <p class="packageAccumulation">10000€ для перехода на 3 пакет</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 2 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 1 ? ' _disabled' : '' }}" data-name="standard">Апгрейд</a>
                         @endif
                     </div>
                     <div class="packageItem _premium">
+                        <div class="packageTop">
                         <p class="packageTitle">Premium</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>10000€</span></p>
                         <p class="packageCourse">Курс "Инвестиции"</p>
-                        <p class="packageInfo">1 линия <span>40%</span></p>
-                        <p class="packageInfo">2 линия <span>20%</span></p>
-                        <p class="packageInfo">3 линия <span>5%</span></p>
-                        <p class="packageInfo">4 линия <span>15%</span></p>
-                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo">Накопительный счёт <span>60%</span></p>
                         <p class="packageInfo _disabled">БОК <span>30€ в месяц</span></p>
@@ -75,20 +66,17 @@
                         <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
                         <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
                         <p class="packageInfo _disabled">Инвестиционная(НК 30%) <span>до 300.000€</span></p>
+                        </div>
                         <p class="packageAccumulation">100000€ для перехода на 4 пакет</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 3 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
                         @endif
                     </div>
                     <div class="packageItem _vip">
+                        <div class="packageTop">
                         <p class="packageTitle">VIP</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>100000€</span></p>
                         <p class="packageCourse">Курс "Инвестиции +"</p>
-                        <p class="packageInfo">1 линия <span>40%</span></p>
-                        <p class="packageInfo">2 линия <span>20%</span></p>
-                        <p class="packageInfo">3 линия <span>5%</span></p>
-                        <p class="packageInfo">4 линия <span>15%</span></p>
-                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo _disabled">БОК <span>50€ в месяц</span></p>
                         <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
@@ -96,6 +84,7 @@
                         <p class="packageGroover">Индивидуальные тренинги</p>
                         <p class="packageGroover">Участие в мероприятиях</p>
                         <p class="packageGroover">Закрытый инвестиционный клуб</p>
+                        </div>
                         <p class="packageAccumulation">Дальше дело за вами</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
