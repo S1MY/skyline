@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <title>Generate PDF Laravel 8 - phpcodingstuff.com</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <style type="text/css">
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
