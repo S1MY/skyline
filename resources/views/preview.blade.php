@@ -67,17 +67,20 @@
     margin-top:30px;
 }
 table {
+    max-width: 800px;
+    margin: 0 auto;
 			width:100%;
-			padding:16px;
 		}
 		table th {
 			padding:16px;
-			background: #000000;
+			background: #202020;
 			color: #ffffff;
+            margin-top: 12px;
 		}
 		table td {
 			padding:16px;
-			background: #d6d6d6;
+			background: #f2f2f2;
+            color: #202020;
 		}
 </style>
 <body>
@@ -85,16 +88,16 @@ table {
         <table>
             <thead>
                 <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    <th>Дата и время</th>
+                    <th>Имя и ID</th>
+                    <th>Операция</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Дата и время</td>
-                    <td>Имя и ID</td>
-                    <td>Операция</td>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
                 </tr>
             </tbody>
         </table>
