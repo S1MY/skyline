@@ -37,7 +37,7 @@ return [
         'smtp' => [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST', 'mail.myskylinecompany.com'),
-            'port' => env('MAIL_PORT', 995),
+            'port' => env('MAIL_PORT', 465),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('info@myskylinecompany.com'),
             'password' => env('uM2mI2dY0yiZ3cH9'),
