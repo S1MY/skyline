@@ -70,11 +70,11 @@
 <body>
     <div class="container">
         <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                style="color:#FFFFFF;font-family: 'Roboto',sans-serif, Arial, Helvetica;background-color: #202020;Margin:0;padding:0;width: 100%;max-width: 480px; border-radius: 8px;">
+                style="color:#FFFFFF;font-family: 'Roboto',sans-serif, Arial, Helvetica;background-color: #202020;Margin:0;padding:0;width: 100%; max-width: 800px; border-radius: 8px;">
                 <tr style="background: #f2f2f2; margin-top: 16px; padding: 16px 20px; border-radius: 10px;">
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important;">Дата и время</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important;">>Имя и ID</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important;">>Операция</td>
+                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">Дата и время</td>
+                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Имя и ID</td>
+                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Операция</td>
                 </tr>
         </table>
         <div class="customTable">
