@@ -15,7 +15,10 @@
     * {
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif, Arial, Helvetica !important;
-    }    
+    }  
+    @page{
+        margin: 50px !important; 
+    }  
     .customTable{
         max-width: 800px;
         margin: 0 auto;
