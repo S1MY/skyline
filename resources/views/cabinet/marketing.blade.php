@@ -8,17 +8,24 @@
         <div class="content">
             <div class="contentWrapper">
                 <h1 class="pageTitle">Маркетинг план</h1>
-                <p class="pageText">В настоящее время любой бизнес реально построить в интернете. И именно здесь вы можете начать зарабатывать на машину мечты, тёплую и уютную квартиру или инвестировать в доходный бизнес.</p>
-                <p class="pageText">Наша партнёрская программа, ориентированная на заработок каждого пользователя системы имеет целых <span class="_premium">три пакета</span>, каждый из которых будет иметь свои фишки.</p>
-                <p class="pageText">Каждый из этих трёх пакетов имеет <span class="_premium">4 линии</span> партнёров с доходом <span class="_premium">40/20/5/15</span> процентов с линий.</p>
-                <p class="pageText">На каждой из этих линий <span class="_reded">нет ограничений по количеству участников</span>, поэтому Вы можете зарабатывать бесконечно.</p>
-                <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span> или <span class="_standard">"STANDARD"</span> на накопительном счёте будет достаточно средст, Вы автоматически перейдёте на следующий пакет с ещё большим доходом.</p>
-                <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
+                <div class="myRamka">
+                    <p class="pageText">Партнёрская программа, ориентированная на заработок каждого пользователя системы.</p>
+                    <p class="pageText">Имеет,<span class="_premium">четыре пакета</span> каждый из которых имеет свои фишки.</p>
+                    <p class="pageText">В каждом пакете <span class="_premium">4</span> линии партнёров с доходом <span class="_premium">40/20/5/15</span> процентов с линий.</p>
+                    <p class="pageText">На каждой из этих линий нет ограничений по количеству участников, поэтому Вы можете атывать бесконечно</p>
+                    <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span>, <span class="_standard">"STANDARD"</span> или <span class="_premium">"PREMIUM"</span> на накопительном счёте достаточно средств, Вы автоматически перейдёте на следующий пакет с ещё им доходом.</p>
+                    <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
+                </div>
                 <div class="packageFlex displayFlex spaceBetween alignBaseline">
                     <div class="packageItem">
                         <p class="packageTitle">Econom</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>100€</span></p>
                         <p class="packageCourse">Курс "Продвижение"</p>
+                        <p class="packageInfo">1 линия <span>40%</span></p>
+                        <p class="packageInfo">2 линия <span>20%</span></p>
+                        <p class="packageInfo">3 линия <span>5%</span></p>
+                        <p class="packageInfo">4 линия <span>15%</span></p>
+                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo">Накопительный счёт <span>60%</span></p>
                         <p class="packageAccumulation">1000€ для перехода на 2 пакет</p>
@@ -30,6 +37,11 @@
                         <p class="packageTitle">Standard</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>1000€</span></p>
                         <p class="packageCourse">Курс "Позитивное мышление"</p>
+                        <p class="packageInfo">1 линия <span>40%</span></p>
+                        <p class="packageInfo">2 линия <span>20%</span></p>
+                        <p class="packageInfo">3 линия <span>5%</span></p>
+                        <p class="packageInfo">4 линия <span>15%</span></p>
+                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo">Накопительный счёт <span>60%</span></p>
                         <p class="packageInfo _disabled">Библиотека развития <span>10€ в месяц</span></p>
@@ -44,16 +56,48 @@
                         <p class="packageTitle">Premium</p>
                         <p class="packageInfo _noborder">Стоимость пакета <span>10000€</span></p>
                         <p class="packageCourse">Курс "Инвестиции"</p>
+                        <p class="packageInfo">1 линия <span>40%</span></p>
+                        <p class="packageInfo">2 линия <span>20%</span></p>
+                        <p class="packageInfo">3 линия <span>5%</span></p>
+                        <p class="packageInfo">4 линия <span>15%</span></p>
+                        <p class="packageInfo">Общий счёт <span>100%</span></p>
+                        <p class="packageInfo">Вывод денег <span>40%</span></p>
+                        <p class="packageInfo">Накопительный счёт <span>60%</span></p>
+                        <p class="packageInfo _disabled">Библиотека развития <span>20€ в месяц</span></p>
+                        <p class="packageInfo _disabled">Автомобильная(10%) <span>до 20.000€</span></p>
+                        <p class="packageInfo _disabled">Жилищная(20%) <span>до 100.000€</span></p>
+                        <p class="packageInfo _disabled">Инвестиционная(30%) <span>до 300.000€</span></p>
+                        <p class="packageAccumulation">100000€ для перехода на 4 пакет</p>
+                        @if ( Auth::user()->UserInfo->user_pacage < 3 )
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
+                        @endif
+                    </div>
+                    <div class="packageItem _vip">
+                        <p class="packageTitle">VIP</p>
+                        <p class="packageInfo _noborder">Стоимость пакета <span>100000€</span></p>
+                        <p class="packageCourse">Курс "Инвестиции +"</p>
+                        <p class="packageInfo">1 линия <span>40%</span></p>
+                        <p class="packageInfo">2 линия <span>20%</span></p>
+                        <p class="packageInfo">3 линия <span>5%</span></p>
+                        <p class="packageInfo">4 линия <span>15%</span></p>
+                        <p class="packageInfo">Общий счёт <span>100%</span></p>
                         <p class="packageInfo">Вывод денег <span>40%</span></p>
                         <p class="packageInfo _disabled">Библиотека развития <span>20€ в месяц</span></p>
                         <p class="packageInfo _disabled">Автомобильная(10%) <span>до 20.000€</span></p>
                         <p class="packageInfo _disabled">Жилищная(20%) <span>до 100.000€</span></p>
                         <p class="packageInfo _disabled">Инвестиционная(30%) <span>до 300.000€</span></p>
                         <p class="packageAccumulation">Дальше дело за вами</p>
-                        @if ( Auth::user()->UserInfo->user_pacage < 3 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
+                        @if ( Auth::user()->UserInfo->user_pacage < 4 )
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
                         @endif
                     </div>
+                </div>
+                <div class="myRamka">
+                    <p class="pageText _rammer">* Каждый желающий может приобрести любой из четырех пакетов. В случае покупки большего пакета, меньший открывается автоматически бесплатно.</p>
+                    <p class="pageText _rammer">1 БОК (Библиотека Образовательных Курсов) для партнеров компании открыты все курсы, предусмотренные для каждого пакета</p>
+                    <p class="pageText _rammer">2 РП - Реферальная Программа для партнеров компании</p>
+                    <p class="pageText _rammer">3 НК – Накопительная Сумма для Авто программы и Жилищной программы</p>
+                    <p class="pageText _rammer">4 Пассивный доход выплачивается партнерам после выполнения квалификации. Полная информация на официальном ресурсе компании.</p>
                 </div>
             </div>
         </div>

@@ -230,8 +230,8 @@ body {
     font-size: 42px;
     font-weight: 300;
     line-height: 50px;
-    color: #202020;
-    text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.4);
+    color: #1a354a;
+    /* text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.4); */
     position: relative;
 }
 .heroTitle::after{
@@ -250,9 +250,9 @@ body {
     line-height: 28px;
     margin-top: 50px;
     max-width: 460px;
-    color: #202020;
+    color: #1a354a;
     font-weight: 300;
-    text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.4);
+    /* text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.4); */
 }
 .heroBtn{
     background: #EB3B5A;
