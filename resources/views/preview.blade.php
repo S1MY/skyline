@@ -44,22 +44,22 @@
 .customTableItem:not(:nth-child(1)){
     padding-left: 10px;
 }
-.customTableItem ._bold{
+._bold{
     font-weight: 500;
 }
-.customTableItem ._reded{
+._reded{
     color: #EB3B5A;
     font-weight: 600;
 }
-.customTableItem ._yelled{
+._yelled{
     color: #FFD700;
     font-weight: 600;
 }
-.customTableItem ._greened{
+._greened{
     color: #20BF6B;
     font-weight: 600;
 }
-.customTableItem ._blueed{
+._blueed{
     color: #3867D6;
     font-weight: 600;
 }
@@ -81,7 +81,11 @@ table {
 			padding:16px;
 			background: #f2f2f2;
             color: #202020;
+            font-size: 14px;
 		}
+        tr{
+  border-spacing: 10px 10px;
+}
         tr td:first-child {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
