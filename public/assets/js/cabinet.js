@@ -216,4 +216,9 @@ $(document).ready(function () {
 
         }, 1000);
     }
+    $('.confirmEmail').click(function(e){
+        e.preventDefault();
+        $('#confirmEmailNotic').slideUp();
+        $('#activator').slideDown();
+    });
 });
