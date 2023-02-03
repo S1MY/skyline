@@ -323,7 +323,7 @@
         <div class="popupItem" data-name="premium">
             <p class="popupName">Приобретение пакета <span class="_premium">PREMIUM</span></p>
             <p class="priceCount">Накоплено: <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
-            <p class="priceCount">К оплате: <span>{{ 1000 - Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="priceCount">К оплате: <span>{{ 10000 - Auth::user()->UserWallets->capital }}€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
                     <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="PREMIUM">Ручной апгрейд</a>
                 </div>
@@ -331,7 +331,7 @@
         <div class="popupItem" data-name="vip">
             <p class="popupName">Приобретение пакета <span class="_vip">VIP</span></p>
             <p class="priceCount">Накоплено: <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
-            <p class="priceCount">К оплате: <span>{{ 1000 - Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="priceCount">К оплате: <span>{{ 100000 - Auth::user()->UserWallets->capital }}€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
                     <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="VIP">Ручной апгрейд</a>
                 </div>
