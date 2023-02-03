@@ -181,7 +181,7 @@
 <link rel="stylesheet" href="/assets/css/index.css">
 <div class="popup" style="display: block;">
     <div class="popupBg"></div>
-    <div class="popupItem" style="display: block;">
+    <div class="popupItem" style="display: block;" id="confirmEmailNotic">
         <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_53_662)">
             <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
@@ -197,7 +197,7 @@
             <p class="responseDesc">Для восстановления аккаунта необходимо</p>
             <p class="responseDesc">подтвердить вашу почту!</p>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn">Подтвердить</a>
+                <a href="#" class="responseBtn confirmEmail">Подтвердить</a>
             </div>
     </div>
     <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
