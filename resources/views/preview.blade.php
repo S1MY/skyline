@@ -66,16 +66,37 @@
 .pdf-btn{
     margin-top:30px;
 }
+table {
+			width:100%;
+			padding:16px;
+		}
+		table th {
+			padding:16px;
+			background: #000000;
+			color: #ffffff;
+		}
+		table td {
+			padding:16px;
+			background: #d6d6d6;
+		}
 </style>
 <body>
     <div class="container">
-        <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                style="color:#FFFFFF;font-family: 'Roboto',sans-serif, Arial, Helvetica;background-color: #202020;Margin:0;padding:0;width: 100%; max-width: 800px; border-radius: 8px;">
-                <tr style="background: #f2f2f2; margin-top: 16px; padding: 16px 20px; border-radius: 10px;">
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">Дата и время</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Имя и ID</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Операция</td>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Дата и время</td>
+                    <td>Имя и ID</td>
+                    <td>Операция</td>
+                </tr>
+            </tbody>
         </table>
         <div class="customTable">
             <div class="customTableLine customTableHead">
