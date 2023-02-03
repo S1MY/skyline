@@ -686,9 +686,9 @@ class CabinetController extends Controller
             return 'Вы отправили парашу';
         }
 
-        $sendToMail = Mail::to($emailUser)->send(new EmailConfirm());
+        Mail::to($emailUser)->send(new EmailConfirm());
 
-        return $sendToMail;
+        return 1;
 
     }
 
