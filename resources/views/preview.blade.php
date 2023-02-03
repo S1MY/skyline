@@ -115,7 +115,7 @@ tr th:last-child {
 <body>
     <div class="container">
         <div class="logotype">
-            <img src="/image/loga.png" alt="loga">
+            <img src="https://myskylinecompany.com/image/loga.png" alt="loga">
         </div>
         <table>
             <thead>
