@@ -147,7 +147,6 @@
                                             $sign = '';
                                             $type = __('cabinet.cabinet.operations_type.eleven');
                                             break;
-
                                         default:
                                             $sign = '';
                                             $type = __('cabinet.cabinet.operations_type.none');
