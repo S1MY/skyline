@@ -15,7 +15,7 @@
         font-family: 'Roboto',sans-serif, Arial, Helvetica;
     }    
     .customTable{
-        max-width: 1110px;
+        max-width: 800px;
     }
     .customTableLine{
     display: block;
@@ -25,8 +25,8 @@
     border-radius: 10px;
 }
 .customTableItem{
-    width: 350px;
-    font-size: 16px;
+    width: 254px;
+    font-size: 14px;
     line-height: 20px;
     opacity: 0.8;
     margin: 0 !important;
@@ -60,9 +60,9 @@
     color: #3867D6;
     font-weight: 600;
 }
-    .pdf-btn{
-        margin-top:30px;
-    }
+.pdf-btn{
+    margin-top:30px;
+}
 </style>
 <body>
     <div class="container">
