@@ -483,6 +483,8 @@ body::-webkit-scrollbar-thumb {
     padding: 16px;
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
     border: 2px solid #EB3B5A;
+    margin-top: 20px;
+    border-radius: 12px;
 }
 .accumulation span{
     font-weight: 700;
@@ -654,7 +656,7 @@ h2.pageTitle{
     line-height: 24px;
 }
 .packageItem{
-    width: calc((100% - 40px) / 3);
+    width: calc(50% - 10px);
     margin-top: 20px;
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
     border-radius: 10px;
@@ -1614,6 +1616,9 @@ input:checked + p{
 .avatarImageInputText svg{
     margin-left: 5px;
 }
+.packageFlex{
+    flex-wrap: wrap;
+}
 /* adaptive */
 @media (max-width: 1520px) {
     .headerInfo{
@@ -1742,9 +1747,6 @@ input:checked + p{
     .headerLink._blueed,
     .headerLink._greened{
         display: none;
-    }
-    .packageFlex{
-        flex-wrap: wrap;
     }
     .packageItem{
         width: 100%;
