@@ -1,6 +1,11 @@
 
 $(document).ready(function () {
     let storageLang = localStorage.getItem("lang");
+    $(document).on('click', '._notactive', function(e){
+        e.preventDefault();
+        $('.popup').fadeIn();
+        $('.popupItem[data-name="notactive"]').fadeIn();
+    });
     $(document).on('click', '._dev', function(e){
         e.preventDefault();
         $('.popup').fadeIn();
