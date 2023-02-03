@@ -471,7 +471,7 @@ body::-webkit-scrollbar-thumb {
 }
 .accumulation{
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
-    background: #EB3B5A;
+    border: 2px solid #EB3B5A;
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
@@ -481,6 +481,7 @@ body::-webkit-scrollbar-thumb {
 }
 .accumulation span{
     font-weight: 700;
+    color: #EB3B5A;
 }
 h2.pageTitle{
     margin-top: 20px;
