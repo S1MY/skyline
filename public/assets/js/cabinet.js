@@ -30,7 +30,9 @@ $(document).ready(function () {
         e.preventDefault();
         $('.popup').fadeOut();
         $('.popupItem').fadeOut();
-        location.reload();
+        if( !$(this).hasClass('confirmEmail') ){
+            location.reload();
+        }
     });
     $(document).on('click', '.currentLang', function(e){
         e.preventDefault();
