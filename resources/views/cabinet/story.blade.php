@@ -67,7 +67,7 @@
                                     break;
                                 case '11':
                                     $sign = '+';
-                                    $type = __('cabinet.story.operations_type.nine');
+                                    $type = __('cabinet.story.operations_type.eleven');
                                     break;
 
                                 default:
