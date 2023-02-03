@@ -15,7 +15,7 @@
     * {
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif, Arial, Helvetica;
-    }
+    }    
     .customTable{
         max-width: 800px;
         margin: 0 auto;
@@ -68,6 +68,7 @@
 }
 table {
     width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0 12px;
@@ -98,9 +99,6 @@ tr th:last-child {
     border-bottom-right-radius: 10px;
 }
 
-</style>
-<style>
-    body { font-family: DejaVu Sans, sans-serif; }
 </style>
 <body>
     <div class="container">
