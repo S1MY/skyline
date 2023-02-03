@@ -197,7 +197,7 @@
             <p class="responseDesc">Для восстановления аккаунта необходимо</p>
             <p class="responseDesc">подтвердить вашу почту!</p>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}">Подтвердить</a>
+                <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">Подтвердить</a>
             </div>
     </div>
     <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
