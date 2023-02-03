@@ -100,8 +100,7 @@
                 <div class="packageFlex displayFlex spaceBetween">
                     <div class="packageItem">
                         <p class="packageName">Econom</p>
-                        {{ dd($economPartners->count()) }}
-                        @if ($economPartners)
+                        @if ($economPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($economPartners as $economPartner)
                                     <div class="flowItem">
@@ -180,7 +179,7 @@
                     </div>
                     <div class="packageItem _standard _closed">
                         <p class="packageName">Standard</p>
-                        @if ($standartPartners)
+                        @if ($standartPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($standartPartners as $standartPartner)
                                     <div class="flowItem">
@@ -259,7 +258,7 @@
                     </div>
                     <div class="packageItem _premium _closed">
                         <p class="packageName">Premium</p>
-                        @if ($premiumPartners)
+                        @if ($premiumPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($premiumPartners as $premiumPartner)
                                     <div class="flowItem">
