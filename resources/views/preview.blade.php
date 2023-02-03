@@ -15,7 +15,7 @@
     * {
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif, Arial, Helvetica;
-    }    
+    }
     .customTable{
         max-width: 800px;
         margin: 0 auto;
@@ -66,6 +66,9 @@
 .pdf-btn{
     margin-top:30px;
 }
+</style>
+<style>
+    body { font-family: DejaVu Sans, sans-serif; }
 </style>
 <body>
     <div class="container">
