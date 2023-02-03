@@ -114,6 +114,7 @@
                     <span>@lang('cabinet.header_btn.messages') <span class="messageCount">(1)</span></span>
                 </a>
                 @php
+                $notactive = '';
                 if( Auth::user()->UserInfo->user_status == 1 ){
                     $notactive = ' _notactive';
                 }
