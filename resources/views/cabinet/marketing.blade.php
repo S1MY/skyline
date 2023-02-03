@@ -107,9 +107,24 @@
                     <p class="pageText _rammer">4 Пассивный доход выплачивается партнерам после выполнения квалификации. Полная информация на официальном ресурсе компании.</p>
                 </div>
                 <div class="myRamka">
-                    <p class="myBonusName"><span>Bonus "Start"</span><span>пакет "Econom"</span></p>
+                    <p class="myBonusName"><span>Bonus "Travel"</span><span>пакет "Econom"</span></p>
                     <p class="pageText">20 партнеров в первую линию за 6 месяцев + 200 €</p>
-                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете эконом.</p>
+                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете Econom.</p>
+                    <p class="myBonusName"><span>Bonus "Start"</span><span>пакет "Standard»"</span></p>
+                    <p class="pageText">20 партнеров в первую линию за 6 месяцев + 2 000 € на путешествие.</p>
+                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете a.</p>
+                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Standard»"</span></p>
+                    <p class="pageText">50 партнеров в первую линию 2% пассивный доход.</p>
+                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 2 партнера в первую линию в течении трех месяцев со дня первой выплаты в пакете a.</p>
+                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Premium"</span></p>
+                    <p class="pageText">50 партнеров в первую линию 3% пассивный доход.</p>
+                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 1 партнера в первую линию в течении трех месяцев со дня первой выплаты в пакете Premium.</p>
+                    <p class="myBonusName"><span>Bonus "Passive Partners"</span><span>пакет "Premium"</span></p>
+                    <p class="pageText">60 партнеров, из них 30 партнеров в первую линию и 30 партнеров в остальные линии за 12 месяцев + 50 000 €</p>
+                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете Premium.</p>
+                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "VIP"</span></p>
+                    <p class="pageText">10 партнеров в первую линию 5% пассивный доход.</p>
+                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 1 партнер в первую линию в течении 6 месяцев со дня первой выплаты в пакете VIP.</p>
                 </div>
             </div>
         </div>
