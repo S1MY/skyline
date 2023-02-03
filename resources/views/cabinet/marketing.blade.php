@@ -90,6 +90,7 @@
                         <p class="packageGroover">Индивидуальные тренинги</p>
                         <p class="packageGroover">Участие в мероприятиях</p>
                         <p class="packageGroover">Закрытый инвестиционный клуб</p>
+                        <p class="packageGroover">Совместные проекты с MySkyLine</p>
                         </div>
                         <p class="packageAccumulation">Дальше дело за вами</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
