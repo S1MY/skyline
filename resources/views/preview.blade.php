@@ -70,14 +70,16 @@ table {
     max-width: 800px;
     margin: 0 auto;
 			width:100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
 		}
-		table th {
+		th {
 			padding:16px;
 			background: #202020;
 			color: #ffffff;
             margin-top: 12px;
 		}
-		table td {
+		td {
 			padding:16px;
 			background: #f2f2f2;
             color: #202020;
@@ -90,7 +92,15 @@ table {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
+        th td:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
 tr td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+th td:last-child {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
