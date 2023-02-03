@@ -13,9 +13,6 @@
         box-sizing: border-box;
         font-family: 'Roboto',sans-serif, Arial, Helvetica;
     }    
-    body{
-        background:#f2f2f2;
-    }
     .customTable{
         max-width: 1110px;
     }
@@ -25,6 +22,7 @@
     justify-content: space-between;
     padding: 0 20px;
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
+    background: #f2f2f2;
     margin-top: 16px;
     height: 52px;
     border-radius: 10px;
