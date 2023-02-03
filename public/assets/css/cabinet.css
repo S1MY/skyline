@@ -457,6 +457,9 @@ body::-webkit-scrollbar-thumb {
 .statIcon._bluished{
     background: #0FB9B1;
 }
+.statIcon._yelled{
+    background: #FFD700;
+}
 ._development{
     opacity: 0.6;
 }
