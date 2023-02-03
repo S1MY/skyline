@@ -154,7 +154,7 @@ class CabinetController extends Controller
 
     public function premium(){
 
-        $currentPacage = 4;
+        $currentPacage = 3;
 
         if( Auth::user()->userInfo->user_pacage < $currentPacage ){
             session()->flash('warning', 'У вас не приобретён данный пакет');
