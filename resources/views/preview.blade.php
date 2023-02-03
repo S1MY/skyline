@@ -24,26 +24,56 @@
 </style>
 <body>
     <div class="container">
-        <div class="col-md-8 section offset-md-2">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h2>Laravel 8 Generate PDF - phpcodingstuff.com</h2>
+        <div class="customTable">
+            <div class="customTableLine customTableHead">
+                <p class="customTableItem">Дата и время</p>
+                <p class="customTableItem">Имя и ID</p>
+                <p class="customTableItem">Операция</p>
+            </div>
+                                        <div class="customTableLine">
+                    <p class="customTableItem" aria-label="Дата и время">03 февраля в 13:58:19</p>
+                    <p class="customTableItem" aria-label="Имя и ID">
+                        Ансвер Ансверов
+                                                                (00007)
+                                                        </p>
+                                                    <p class="customTableItem" aria-label="Операция"><span>Оплата "VIP" <span class="_greened">100000€</span></span></p>
                 </div>
-                <div class="panel-body">
-                    <div class="main-div">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
+                                        <div class="customTableLine">
+                    <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
+                    <p class="customTableItem" aria-label="Имя и ID">
+                        Ансвер Ансверов
+                                                                (00007)
+                                                        </p>
+                                                    <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
                 </div>
+                                        <div class="customTableLine">
+                    <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:13</p>
+                    <p class="customTableItem" aria-label="Имя и ID">
+                        Ансвер Ансверов
+                                                                (00007)
+                                                        </p>
+                                                    <p class="customTableItem" aria-label="Операция"><span>Оплата "Стандарт" <span class="_greened">1000€</span></span></p>
+                </div>
+                                        <div class="customTableLine">
+                    <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:03</p>
+                    <p class="customTableItem" aria-label="Имя и ID">
+                        Ансвер Ансверов
+                                                                (00007)
+                                                        </p>
+                                                    <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом" <span class="_greened">100€</span></span></p>
+                </div>
+                                        <div class="customTableLine">
+                    <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:48:34</p>
+                    <p class="customTableItem" aria-label="Имя и ID">
+                        Ансвер Ансверов
+                                                                (00007)
+                                                        </p>
+                                                    <p class="customTableItem" aria-label="Операция"><span>Пополнение баланса <span class="_greened">+1000000€</span></span></p>
+                </div>
+                                </div>
                 <div class="text-center pdf-btn">
                   <a href="{{ route('pdf.generate') }}" class="btn btn-primary">Generate PDF</a>
                 </div>
-            </div>
-        </div>
     </div>
 </body>
 </html>
