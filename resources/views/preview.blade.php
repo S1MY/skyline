@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Generate PDF Laravel 8 - phpcodingstuff.com</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <style type="text/css">
