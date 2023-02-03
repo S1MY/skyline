@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
     * {
         box-sizing: border-box;
+        font-family: 'Roboto',sans-serif, Arial, Helvetica;
     }    
     body{
         background:#f2f2f2;
