@@ -67,7 +67,7 @@
     margin-top:30px;
 }
 table {
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0 12px;
@@ -76,13 +76,13 @@ table {
 			padding:16px;
 			background: #202020;
 			color: #ffffff;
-            margin-top: 12px;
+            font-size: 12px;
 		}
 		td {
 			padding:16px;
 			background: #f2f2f2;
             color: #202020;
-            font-size: 14px;
+            font-size: 12px;
 		}
         tr{
   border-spacing: 10px 10px;
