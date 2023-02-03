@@ -6,6 +6,11 @@ $(document).ready(function () {
         $('.popup').fadeIn();
         $('.popupItem[data-name="development"]').fadeIn();
     });
+    $(document).on('click', '._deactivate', function(e){
+        e.preventDefault();
+        $('.popup').fadeIn();
+        $('.popupItem[data-name="deactivate"]').fadeIn();
+    });
     $(document).on('click', '._access', function(e){
         e.preventDefault();
         $('.popup').fadeIn();
