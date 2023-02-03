@@ -28,9 +28,9 @@ $(document).ready(function () {
     });
     $(document).on('click', '.popupBg, .responseBtn', function(e){
         e.preventDefault();
-        $('.popup').fadeOut();
-        $('.popupItem').fadeOut();
         if( !$(this).hasClass('confirmEmail') ){
+            $('.popup').fadeOut();
+            $('.popupItem').fadeOut();
             location.reload();
         }
     });
