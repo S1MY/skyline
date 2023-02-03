@@ -14,8 +14,8 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
     * {
         box-sizing: border-box;
-  font-family: "DejaVu Sans", sans-serif;
-    }  
+        font-family: DejaVu Sans, sans-serif;
+    }
         @page {
             margin: 0px 0px 0px 0px !important;
             padding: 0px 0px 0px 0px !important;
