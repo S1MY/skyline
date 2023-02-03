@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use PDF;
 
 class CabinetController extends Controller
 {
@@ -689,5 +690,16 @@ class CabinetController extends Controller
 
         return $sendToMail;
 
+    }
+
+    public function preview()
+    {
+        return view('preview');
+    }
+
+    public function generatePDF()
+    {
+        $pdf = PDF::loadView('preview');
+        return $pdf->download('demo.pdf');
     }
 }
