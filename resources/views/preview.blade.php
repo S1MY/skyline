@@ -18,9 +18,7 @@
         max-width: 1110px;
     }
     .customTableLine{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: block;
     padding: 0 20px;
     background: #f2f2f2;
     margin-top: 16px;
@@ -28,11 +26,12 @@
     border-radius: 10px;
 }
 .customTableItem{
-    width: calc(100% / 3);
+    width: 370px;
     font-size: 16px;
     line-height: 20px;
     opacity: 0.8;
     margin: 0 !important;
+    display: inline-block;
 }
 .customTableItem._w100{
     width: 100% !important;
