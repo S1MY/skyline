@@ -486,6 +486,22 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
     border-radius: 12px;
 }
+.myRamka .pageText:nth-child(1){
+    margin-top: 0;
+}
+.myRamka .myBonusName:nth-child(1){
+    margin-top: 0;
+}
+.myBonusName{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+.myBonusName{
+    background: #333333;
+    padding: 12px;
+    width: 100%;
+}
 .accumulation span{
     font-weight: 700;
     color: #EB3B5A;
