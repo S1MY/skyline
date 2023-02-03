@@ -1312,6 +1312,12 @@ span._premium{
 .popupItem[data-name="premium"] .btnPopup{
     background: #EB3B5A;
 }
+.popupItem[data-name="vip"] .priceCount span{
+    color: #FFD700;
+}
+.popupItem[data-name="vip"] .btnPopup{
+    background: #FFD700;
+}
 /* paginationWrapper */
 .paginationWrapper {
     margin-top: 16px;
