@@ -143,13 +143,14 @@
                                             $sign = '+';
                                             $type = __('cabinet.cabinet.operations_type.nine');
                                             break;
-                                        case '9':
+                                        case '11':
                                             $sign = '';
                                             $type = __('cabinet.cabinet.operations_type.eleven');
                                             break;
 
                                         default:
-                                            # code...
+                                            $sign = '';
+                                            $type = __('cabinet.cabinet.operations_type.none');
                                             break;
                                     }
                                 @endphp
