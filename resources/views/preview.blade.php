@@ -14,7 +14,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
     * {
         box-sizing: border-box;
-        font-family: 'Roboto',sans-serif, Arial, Helvetica !important;
+        font-family: 'DejaVu Sans' !important;
     }    
 html{margin:40px 50px}
     .customTable{
@@ -73,6 +73,7 @@ table {
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0 12px;
+    border: none;
 		}
 		th {
 			padding:16px;
