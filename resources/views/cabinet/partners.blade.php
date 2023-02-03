@@ -100,7 +100,7 @@
                 <div class="packageFlex displayFlex spaceBetween">
                     <div class="packageItem">
                         <p class="packageName">Econom</p>
-                        {{ dd($economPartners) }}
+                        {{ dd($economPartners->count()) }}
                         @if ($economPartners)
                             <div class="packageFlow">
                                 @foreach ($economPartners as $economPartner)

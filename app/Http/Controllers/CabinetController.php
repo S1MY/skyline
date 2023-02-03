@@ -321,7 +321,6 @@ class CabinetController extends Controller
 
         $standartPartners = null;
         $premiumPartners = null;
-        // dd($economPartners);
 
         return view('cabinet.partners', compact('partners', 'registers', 'economPartners', 'standartPartners', 'premiumPartners'));
     }
