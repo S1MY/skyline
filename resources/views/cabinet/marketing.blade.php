@@ -110,10 +110,10 @@
                     <p class="myBonusName"><span>Bonus "Travel"</span><span>пакет "Econom"</span></p>
                     <p class="pageText">20 партнеров в первую линию за 6 месяцев + 200 €</p>
                     <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете Econom.</p>
-                    <p class="myBonusName"><span>Bonus "Start"</span><span>пакет "Standard»"</span></p>
+                    <p class="myBonusName"><span>Bonus "Start"</span><span>пакет "Standard"</span></p>
                     <p class="pageText">20 партнеров в первую линию за 6 месяцев + 2 000 € на путешествие.</p>
                     <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете a.</p>
-                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Standard»"</span></p>
+                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Standard"</span></p>
                     <p class="pageText">50 партнеров в первую линию 2% пассивный доход.</p>
                     <p class="pageText">Выплаты один раз в квартал. Квалификация – 2 партнера в первую линию в течении трех месяцев со дня первой выплаты в пакете a.</p>
                     <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Premium"</span></p>

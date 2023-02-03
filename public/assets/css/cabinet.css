@@ -500,8 +500,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 12px;
 }
 .myBonusName{
-    background: #333333;
-    color: #FFFFFF;
+    color: #333333;
+    border: 2px solid #333333;
     border-radius: 8px;
     padding: 12px;
     width: 100%;
