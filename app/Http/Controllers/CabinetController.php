@@ -660,7 +660,7 @@ class CabinetController extends Controller
 
         Mail::to($emailUser)->send(new EmailConfirm());
 
-        return $request;
+        return 1;
 
     }
 }
