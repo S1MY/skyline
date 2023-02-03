@@ -29,7 +29,9 @@
                             <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
                             <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
                         </div>
+                        @if ( Auth::user()->UserInfo->user_pacage < 2 )
                         <p class="packageAccumulation">1000€ для перехода на 2 пакет</p>
+                        @endif
                         @if ( Auth::user()->UserInfo->user_pacage < 1 )
                             <a href="#" class="btnBuy" data-name="econom">Приобрести</a>
                         @endif
@@ -47,7 +49,9 @@
                         <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
                         <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
                         </div>
+                        @if ( Auth::user()->UserInfo->user_pacage < 3 )
                         <p class="packageAccumulation">10000€ для перехода на 3 пакет</p>
+                        @endif
                         @if ( Auth::user()->UserInfo->user_pacage < 2 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 1 ? ' _disabled' : '' }}" data-name="standard">Апгрейд</a>
                         @endif
@@ -67,7 +71,9 @@
                         <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
                         <p class="packageInfo _disabled">Инвестиционная(НК 30%) <span>до 300.000€</span></p>
                         </div>
+                        @if ( Auth::user()->UserInfo->user_pacage < 4 )
                         <p class="packageAccumulation">100000€ для перехода на 4 пакет</p>
+                        @endif
                         @if ( Auth::user()->UserInfo->user_pacage < 3 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
                         @endif
