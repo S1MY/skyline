@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmailConfirm;
 use App\Models\Operation;
 use App\Models\User;
 use App\Models\UserInfo;
@@ -10,6 +11,7 @@ use App\Models\UserWallets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class CabinetController extends Controller
@@ -648,6 +650,17 @@ class CabinetController extends Controller
     }
 
     public function emailConfirm(Request $request){
+
+        $emailUser = Auth::user()->email;
+        $emailSend = $request->email;
+
+        if( $emailUser != $emailSend ){
+            return 'Вы отправили парашу';
+        }
+
+        Mail::to($emailUser)->send(new EmailConfirm());
+
         return $request;
+
     }
 }
