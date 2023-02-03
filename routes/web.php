@@ -52,6 +52,7 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('l
 Route::post('/settings/update', [CabinetController::class, 'updateUserInfo'])->name('updateSettings');
 Route::post('/settings/change-password', [CabinetController::class, 'passwordChanger'])->name('changePassword');
 Route::post('/settings/avatar', [CabinetController::class, 'setAvatar'])->name('setAvatar');
+Route::post('/confirmEmail', [CabinetController::class, 'emailConfirm'])->name('confirmEmail');
 
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
 Route::post('/marketing/buy', [CabinetController::class, 'buy'])->name('buy');

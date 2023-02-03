@@ -646,4 +646,8 @@ class CabinetController extends Controller
             'error' => 0,
         ]);
     }
+
+    public function emailConfirm(Request $request){
+        return $request;
+    }
 }
