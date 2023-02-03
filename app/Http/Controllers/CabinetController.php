@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-use PDF;
+use Barryvdh\DomPDF\Facade\PDF;
 
 class CabinetController extends Controller
 {
