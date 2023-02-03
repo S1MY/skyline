@@ -220,7 +220,7 @@ $(document).ready(function () {
     }
     $('.confirmEmail').click(function(e){
         e.preventDefault();
-        $('#confirmEmailNotic').slide();
-        $('#activator').slide();
+        $('#confirmEmailNotic').hide();
+        $('#activator').show();
     });
 });
