@@ -17,7 +17,7 @@
                     <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
                     <p class="pageText">На пакете <span class="_vip">"VIP"</span> вам станет доступно участиве в совместных проектах с компанией "MySkyLine"</p>
                 </div>
-                <div class="packageFlex displayFlex spaceBetween alignBaseline">
+                <div class="packageFlex displayFlex spaceBetween">
                     <div class="packageItem">
                         <div class="packageTop">
                             <p class="packageTitle">Econom</p>

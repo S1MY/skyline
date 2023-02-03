@@ -113,15 +113,18 @@
                         </svg>
                     <span>@lang('cabinet.header_btn.messages') <span class="messageCount">(1)</span></span>
                 </a>
-                @if ( Auth::user()->UserInfo->user_status == 1 )
-                    <p class="headerInfo">ID: {{ Auth::user()->UserInfo->user_show_id }}</p>
-                    <a href="{{ route('partners') }}" class="headerLink _blueed">
-                        <span>@lang('cabinet.header_btn.partners')</span>
-                    </a>
-                    <a href="{{ route('bonus') }}" class="headerLink _reded">
-                        <span>@lang('cabinet.header_btn.bonus')</span>
-                    </a>
-                @endif
+                @php
+                if( Auth::user()->UserInfo->user_status == 1 ){
+                    $notactive = ' _notactive';
+                }
+                @endphp
+                <p class="headerInfo{{$notactive}}">ID: {{ Auth::user()->UserInfo->user_show_id }}</p>
+                <a href="{{ route('partners') }}" class="headerLink _blueed{{$notactive}}">
+                    <span>@lang('cabinet.header_btn.partners')</span>
+                </a>
+                <a href="{{ route('bonus') }}" class="headerLink _reded{{$notactive}}">
+                    <span>@lang('cabinet.header_btn.bonus')</span>
+                </a>
 
                 <div class="burgerBtn"></div>
 
