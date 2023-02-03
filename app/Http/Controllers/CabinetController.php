@@ -319,8 +319,8 @@ class CabinetController extends Controller
 
         });
 
-        $standartPartners = null;
-        $premiumPartners = null;
+        $standartPartners = 0;
+        $premiumPartners = 0;
 
         return view('cabinet.partners', compact('partners', 'registers', 'economPartners', 'standartPartners', 'premiumPartners'));
     }
