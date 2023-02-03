@@ -16,6 +16,7 @@
     }    
     .customTable{
         max-width: 800px;
+        margin: 0 auto;
     }
     .customTableLine{
     display: block;
@@ -25,7 +26,7 @@
     border-radius: 10px;
 }
 .customTableItem{
-    width: 254px;
+    width: 250px;
     font-size: 14px;
     line-height: 20px;
     opacity: 0.8;
