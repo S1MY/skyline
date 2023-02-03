@@ -223,17 +223,17 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
-                $('.popupItem').hide();
+                // $('.popupItem').hide();
 
-                if( result.error == 1 ){
-                    $('.popup').fadeIn();
-                    $('.popupItem[data-name="error"] .responseText').text(result.message);
-                    $('.popupItem[data-name="error"]').fadeIn();
-                }else{
-                    $('.popup').fadeIn();
-                    $('.popupItem[data-name="success"] .responseText').text(result.message);
-                    $('.popupItem[data-name="success"]').fadeIn();
-                }
+                // if( result.error == 1 ){
+                //     $('.popup').fadeIn();
+                //     $('.popupItem[data-name="error"] .responseText').text(result.message);
+                //     $('.popupItem[data-name="error"]').fadeIn();
+                // }else{
+                //     $('.popup').fadeIn();
+                //     $('.popupItem[data-name="success"] .responseText').text(result.message);
+                //     $('.popupItem[data-name="success"]').fadeIn();
+                // }
             },
             error: function (data) {
                 console.log(data);
