@@ -11,7 +11,7 @@
                 <h1 class="pageTitle">@lang('cabinet.navigation.messages')</h1>
                 <link rel="stylesheet" href="/assets/css/admin.css">
                 <div class="adminItem">
-                    <p class="adminText">Административная функция отправки сообщения. Введите сообщение и нажмите кнопку "Отправить".<br> Чтобы вставить ссылку в сообщение оберните по примеру &lt;a href="ссылка на страницу"&gt;название страницы&lt;/a&gt;.<br> Чтобы выделить текст жирным оберните по примеру &lt;span class="_bold"&gt;текст&lt;/span&gt;.<br> Чтобы выделить текст цветом в соответствии с пакетом замените _bold на _econom, _standard или _premium соответственно.</p>
+                    <p class="adminText">Административная функция отправки сообщения. Введите сообщение и нажмите кнопку "Отправить".<br> Чтобы вставить ссылку в сообщение оберните по примеру &lt;a href="ссылка на страницу"&gt;название страницы&lt;/a&gt;.<br> Чтобы выделить текст жирным оберните по примеру &lt;span class="_bold"&gt;текст&lt;/span&gt;.<br> Чтобы выделить текст цветом в соответствии с пакетом замените _bold на _econom, _standard, _premium или _vip соответственно.</p>
                     <form class="adminForm">
                         <textarea name="msg_ru" placeholder="Сообщение на русском"></textarea>
                         <textarea name="msg_en" placeholder="Сообщение на английском"></textarea>
