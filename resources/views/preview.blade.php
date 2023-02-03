@@ -19,10 +19,9 @@
     }
     .customTableLine{
     display: block;
-    padding: 0 20px;
     background: #f2f2f2;
     margin-top: 16px;
-    height: 52px;
+    padding: 12px 20px;
     border-radius: 10px;
 }
 .customTableItem{
