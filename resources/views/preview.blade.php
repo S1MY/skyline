@@ -44,41 +44,81 @@
 .customTableItem:not(:nth-child(1)){
     padding-left: 10px;
 }
-.customTableItem ._bold{
+._bold{
     font-weight: 500;
 }
-.customTableItem ._reded{
+._reded{
     color: #EB3B5A;
     font-weight: 600;
 }
-.customTableItem ._yelled{
+._yelled{
     color: #FFD700;
     font-weight: 600;
 }
-.customTableItem ._greened{
+._greened{
     color: #20BF6B;
     font-weight: 600;
 }
-.customTableItem ._blueed{
+._blueed{
     color: #3867D6;
     font-weight: 600;
 }
 .pdf-btn{
     margin-top:30px;
 }
+table {
+    width: 700px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+		}
+		th {
+			padding:16px;
+			background: #202020;
+			color: #ffffff;
+            font-size: 12px;
+		}
+		td {
+			padding:16px;
+			background: #f2f2f2;
+            color: #202020;
+            font-size: 12px;
+		}
+        tr{
+  border-spacing: 10px 10px;
+}
+        tr td:first-child,
+        tr th:first-child{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+tr td:last-child,
+tr th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 </style>
 <style>
     body { font-family: DejaVu Sans, sans-serif; }
 </style>
 <body>
     <div class="container">
-        <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
-                style="color:#FFFFFF;font-family: 'Roboto',sans-serif, Arial, Helvetica;background-color: #202020;Margin:0;padding:0;width: 100%; max-width: 800px; border-radius: 8px;">
-                <tr style="background: #f2f2f2; margin-top: 16px; padding: 16px 20px; border-radius: 10px;">
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">Дата и время</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Имя и ID</td>
-                    <td style="font-size: 14px; line-height: 20px; opacity: 0.8; margin: 0 !important; color: #202020;">>Операция</td>
+        <table>
+            <thead>
+                <tr>
+                    <th>Дата и время</th>
+                    <th>Имя и ID</th>
+                    <th>Операция</th>
                 </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+            </tbody>
         </table>
         <div class="customTable">
             <div class="customTableLine customTableHead">
