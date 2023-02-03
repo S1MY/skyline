@@ -179,7 +179,7 @@
                     </div>
                     <div class="packageItem _standard _closed">
                         <p class="packageName">Standard</p>
-                        @if ($standartPartners->count() > 0)
+                        @if ($standartPartners > 0)
                             <div class="packageFlow">
                                 @foreach ($standartPartners as $standartPartner)
                                     <div class="flowItem">
@@ -258,7 +258,7 @@
                     </div>
                     <div class="packageItem _premium _closed">
                         <p class="packageName">Premium</p>
-                        @if ($premiumPartners->count() > 0)
+                        @if ($premiumPartners > 0)
                             <div class="packageFlow">
                                 @foreach ($premiumPartners as $premiumPartner)
                                     <div class="flowItem">
