@@ -67,7 +67,7 @@
     margin-top:30px;
 }
 table {
-    width: 700px;
+    width: 100%;
     margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0 12px;
