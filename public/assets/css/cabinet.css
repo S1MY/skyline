@@ -245,6 +245,14 @@ body::-webkit-scrollbar-thumb {
     font-weight: 500;
     color: #3867D6;
 }
+.headerLink._yelled{
+    background: #FFD700;
+    color: #FFFFFF;
+}
+.headerLink._yelled:hover{
+    background: #FFFFFF;
+    color: #FFD700;
+}
 .headerInfo{
     display: flex;
     align-items: center;
@@ -562,6 +570,10 @@ h2.pageTitle{
 }
 .customTableItem ._reded{
     color: #EB3B5A;
+    font-weight: 600;
+}
+.customTableItem ._yelled{
+    color: #FFD700;
     font-weight: 600;
 }
 .customTableItem ._greened{
@@ -1130,6 +1142,9 @@ h2.pageTitle{
 .messageItem._reded{
     border-color: #EB3B5A;
 }
+.messageItem._yelled{
+    border-color: #FFD700;
+}
 .messageText{
     padding-bottom: 10px;
 }
@@ -1162,6 +1177,9 @@ span._premium{
 }
 .messageItem._reded .messageDate{
     color: #EB3B5A;
+}
+.messageItem._yelled .messageDate{
+    color: #FFD700;
 }
 .messageWrapper .paginationWrapper a.active{
     background: #3867D6;
@@ -1822,7 +1840,8 @@ input:checked + p{
     }
     .headerLink._reded,
     .headerLink._blueed,
-    .headerLink._greened{
+    .headerLink._greened,
+    .headerLink._yelled{
         display: none;
     }
     .packageItem{
