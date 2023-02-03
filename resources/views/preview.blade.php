@@ -23,34 +23,6 @@
             margin: 0px 0px 0px 0px !important;
             padding: 0px 0px 0px 0px !important;
         }
-    .customTable{
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .customTableLine{
-    display: block;
-    background: #f2f2f2;
-    margin-top: 16px;
-    padding: 16px 20px;
-    border-radius: 10px;
-}
-.customTableItem{
-    width: 250px;
-    font-size: 14px;
-    line-height: 20px;
-    opacity: 0.8;
-    margin: 0 !important;
-    display: inline-block;
-}
-.customTableItem._w100{
-    width: 100% !important;
-    text-align: center;
-    justify-content: center !important;
-    font-weight: 500;
-}
-.customTableItem:not(:nth-child(1)){
-    padding-left: 10px;
-}
 ._bold{
     font-weight: 500;
 }
@@ -84,13 +56,13 @@ table {
 			padding:16px;
 			background: #202020;
 			color: #ffffff;
-            font-size: 12px;
+            font-size: 14px;
 		}
 		td {
 			padding:16px;
 			background: #f2f2f2;
             color: #202020;
-            font-size: 12px;
+            font-size: 14px;
 		}
         tr{
   border-spacing: 10px 10px;
@@ -132,50 +104,38 @@ tr th:last-child {
                     <td>Ансвер Ансверов (00007)</td>
                     <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
                 </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
+                <tr>
+                    <td>03 февраля в 13:58:19</td>
+                    <td>Ансвер Ансверов (00007)</td>
+                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
+                </tr>
             </tbody>
         </table>
-        <div class="customTable">
-            <div class="customTableLine customTableHead">
-                <p class="customTableItem">Дата и время</p>
-                <p class="customTableItem">Имя и ID</p>
-                <p class="customTableItem">Операция</p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 13:58:19</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "VIP" <span class="_greened">100000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-            <div class="customTableLine">
-                <p class="customTableItem" aria-label="Дата и время">03 февраля в 11:49:21</p>
-                <p class="customTableItem" aria-label="Имя и ID">Ансвер Ансверов (00007)</p>
-                <p class="customTableItem" aria-label="Операция"><span>Оплата "Премиум" <span class="_greened">10000€</span></span></p>
-            </div>
-        </div>
         <div class="text-center pdf-btn">
             <a href="{{ route('pdf.generate') }}" class="btn btn-primary">Generate PDF</a>
         </div>
