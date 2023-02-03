@@ -16,6 +16,9 @@
         box-sizing: border-box;
   font-family: DejaVu Sans, sans-serif;
     }  
+    body{
+        font-family: DejaVu Sans, sans-serif;
+    }
         @page {
             margin: 0px 0px 0px 0px !important;
             padding: 0px 0px 0px 0px !important;
