@@ -93,6 +93,9 @@
                         <p class="packageInfo _disabled">БОК <span>50€ в месяц</span></p>
                         <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
                         <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
+                        <p class="packageGroover">Индивидуальные тренинги</p>
+                        <p class="packageGroover">Участие в мероприятиях</p>
+                        <p class="packageGroover">Закрытый инвестиционный клуб</p>
                         <p class="packageAccumulation">Дальше дело за вами</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
                             <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
@@ -100,11 +103,11 @@
                     </div>
                 </div>
                 <div class="myRamka">
-                    <p class="pageText _rammer">* Каждый желающий может приобрести любой из четырех пакетов. В случае покупки большего пакета, меньший открывается автоматически бесплатно.</p>
-                    <p class="pageText _rammer">1 БОК (Библиотека Образовательных Курсов) для партнеров компании открыты все курсы, предусмотренные для каждого пакета</p>
-                    <p class="pageText _rammer">2 РП - Реферальная Программа для партнеров компании</p>
-                    <p class="pageText _rammer">3 НК – Накопительная Сумма для Авто программы и Жилищной программы</p>
-                    <p class="pageText _rammer">4 Пассивный доход выплачивается партнерам после выполнения квалификации. Полная информация на официальном ресурсе компании.</p>
+                    <p class="pageText _rammer">Каждый желающий может приобрести любой из четырех пакетов. В случае покупки большего пакета, меньший открывается автоматически бесплатно.</p>
+                    <p class="pageText _rammer">БОК (Библиотека Образовательных Курсов) для партнеров компании открыты все курсы, предусмотренные для каждого пакета</p>
+                    <p class="pageText _rammer">РП - Реферальная Программа для партнеров компании</p>
+                    <p class="pageText _rammer">НК – Накопительная Сумма для Авто программы и Жилищной программы</p>
+                    <p class="pageText _rammer">Пассивный доход выплачивается партнерам после выполнения квалификации. Полная информация на официальном ресурсе компании.</p>
                 </div>
                 <div class="myRamka">
                     <p class="myBonusName"><span>Bonus "Travel"</span><span>пакет "Econom"</span></p>

@@ -878,6 +878,14 @@ h2.pageTitle{
     align-items: center;
     justify-content: space-between;
 }
+.packageGroover{
+    margin-top: 15px;
+    background: #303030;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 12px;
+    text-align: center;
+}
 .packageInfo._noborder{
     border: none;
 }
