@@ -26,7 +26,7 @@
     border-radius: 10px;
 }
 .customTableItem{
-    width: 370px;
+    width: 350px;
     font-size: 16px;
     line-height: 20px;
     opacity: 0.8;
