@@ -43,7 +43,7 @@
             </div>
         </div>
     </section>
-    <section class="section _b">
+    <!-- <section class="section _b">
         <div class="page">
             <div class="bItem">
                 <img src="/image/marketing/1.png" alt="1">
@@ -66,7 +66,7 @@
                 <p class="bItemText">Print media<br> Projects</p>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="section _marketing">
         <div class="page">
             <h2 class="title">Similar type of Services</h2>
