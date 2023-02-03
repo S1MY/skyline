@@ -115,11 +115,16 @@
                 </a>
                 @php
                 $notactive = '';
-                if( Auth::user()->UserInfo->user_status == 1 ){
+                if( Auth::user()->UserInfo->user_status != 1 ){
                     $notactive = ' _notactive';
                 }
+                if(Auth::user()->UserInfo->user_show_id){
+                    $userId = Auth::user()->UserInfo->user_show_id;
+                }else{
+                    $userId = 00000;
+                }
                 @endphp
-                <p class="headerInfo{{$notactive}}">ID: {{ Auth::user()->UserInfo->user_show_id }}</p>
+                <p class="headerInfo{{$notactive}}">ID: {{ $userId }}</p>
                 <a href="{{ route('partners') }}" class="headerLink _blueed{{$notactive}}">
                     <span>@lang('cabinet.header_btn.partners')</span>
                 </a>
