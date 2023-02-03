@@ -14,7 +14,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
     * {
         box-sizing: border-box;
-        font-family: 'Roboto',sans-serif, Arial, Helvetica !important;
+  font-family: "DejaVu Sans", sans-serif;
     }  
         @page {
             margin: 0px 0px 0px 0px !important;
