@@ -12,7 +12,7 @@ class PDFController extends Controller
 
     public function generatePDF()
     {
-        // $pdf = PDF::loadView('preview');
+        $pdf = PDF::loadView('preview');
         return $pdf->download('demo.pdf');
     }
 }
