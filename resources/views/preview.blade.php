@@ -6,12 +6,14 @@
 </head>
 <style type="text/css">
     * {
-        margin: 0 !important;
         padding: 0 !important;
         box-sizing: border-box;
     }    
     body{
         background:#f2f2f2;
+    }
+    .customTable{
+        max-width: 1110px;
     }
     .customTableLine{
     display: flex;
