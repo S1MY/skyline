@@ -711,7 +711,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageName{
-    background: #DAA520;
+    background: #E9C400;
 }
 .packageFlow{
     padding-right: 14px;
@@ -751,7 +751,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageFlow::-webkit-scrollbar-thumb{
-    background: #DAA520;
+    background: #E9C400;
 }
 .flowUser{
     padding: 8px;
@@ -783,7 +783,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .flowUser ._arrow{
-    background: #DAA520;
+    background: #E9C400;
 }
 .flowUser ._arrow svg{
     transition: all 0.4s;
@@ -833,7 +833,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageBtn{
-    background: #DAA520;
+    background: #E9C400;
 }
 .packageBtn:hover{
     background: #333333 !important;
@@ -857,7 +857,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 .packageItem._vip .packageClosed{
-    color: #DAA520;
+    color: #E9C400;
 }
 .packageUserClear{
     border-radius: 8px;
@@ -884,7 +884,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 .packageUsers._vip .packageUserClear{
-    color: #DAA520;
+    color: #E9C400;
 }
 .packageTitle{
     font-weight: 600;
@@ -904,7 +904,7 @@ h2.pageTitle{
 }
 .packageGroover{
     margin-top: 15px;
-    background: #DAA520;
+    background: #E9C400;
     border-radius: 8px;
     color: #FFFFFF;
     padding: 12px;
@@ -924,7 +924,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 ._vip .packageInfo span{
-    color: #DAA520;
+    color: #E9C400;
 }
 .packageCourse{
     display: flex;
@@ -951,7 +951,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 ._vip .packageAccumulation{
-    color: #DAA520;
+    color: #E9C400;
 }
 .btnBuy{
     height: 48px;
@@ -972,7 +972,7 @@ h2.pageTitle{
     background: #3867D6;
 }
 ._vip .btnBuy{
-    background: #DAA520;
+    background: #E9C400;
 }
 ._premium .btnBuy{
     background: #EB3B5A;
@@ -1103,16 +1103,16 @@ h2.pageTitle{
     fill: #EB3B5A;
 }
 .packageUsers._vip .userBtn{
-    background: #DAA520;
+    background: #E9C400;
 }
 .packageUsers._vip .paginationWrapper a.active{
-    background: #DAA520;
+    background: #E9C400;
 }
 .packageUsers._vip .paginationWrapper a:hover{
-    color: #DAA520;
+    color: #E9C400;
 }
 .packageUsers._vip .paginationWrapper a:hover path{
-    fill: #DAA520;
+    fill: #E9C400;
 }
 /* message */
 .messageItem{
@@ -1142,7 +1142,7 @@ span._econom{
 }
 span._vip{
     font-weight: 500;
-    color: #DAA520;
+    color: #E9C400;
 }
 span._standard{
     font-weight: 500;
