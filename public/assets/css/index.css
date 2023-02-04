@@ -1105,6 +1105,8 @@ section._case .markName::after{
     font-weight: 500;
 }
 .packageFlex{
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .packageItem{
