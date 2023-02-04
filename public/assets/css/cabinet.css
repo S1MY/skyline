@@ -246,12 +246,12 @@ body::-webkit-scrollbar-thumb {
     color: #3867D6;
 }
 .headerLink._yelled{
-    background: #FFD700;
+    background: #d6bf38;
     color: #FFFFFF;
 }
 .headerLink._yelled:hover{
     background: #FFFFFF;
-    color: #FFD700;
+    color: #d6bf38;
 }
 .headerInfo{
     display: flex;
@@ -458,7 +458,7 @@ body::-webkit-scrollbar-thumb {
     background: #0FB9B1;
 }
 .statIcon._yelled{
-    background: #FFD700;
+    background: #d6bf38;
 }
 ._development{
     opacity: 0.6;
@@ -576,7 +576,7 @@ h2.pageTitle{
     font-weight: 600;
 }
 .customTableItem ._yelled{
-    color: #FFD700;
+    color: #d6bf38;
     font-weight: 600;
 }
 .customTableItem ._greened{
@@ -726,7 +726,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageName{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .packageFlow{
     padding-right: 14px;
@@ -766,7 +766,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageFlow::-webkit-scrollbar-thumb{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .flowUser{
     padding: 8px;
@@ -798,7 +798,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .flowUser ._arrow{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .flowUser ._arrow svg{
     transition: all 0.4s;
@@ -848,7 +848,7 @@ h2.pageTitle{
     background: #EB3B5A;
 }
 .packageItem._vip .packageBtn{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .packageBtn:hover{
     background: #333333 !important;
@@ -872,7 +872,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 .packageItem._vip .packageClosed{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageUserClear{
     border-radius: 8px;
@@ -899,7 +899,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 .packageUsers._vip .packageUserClear{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageTitle{
     font-weight: 600;
@@ -939,7 +939,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 ._vip .packageInfo span{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageCourse{
     display: flex;
@@ -966,7 +966,7 @@ h2.pageTitle{
     color: #EB3B5A;
 }
 ._vip .packageAccumulation{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .btnBuy{
     height: 48px;
@@ -987,7 +987,7 @@ h2.pageTitle{
     background: #3867D6;
 }
 ._vip .btnBuy{
-    background: #FFD700;
+    background: #d6bf38;
 }
 ._premium .btnBuy{
     background: #EB3B5A;
@@ -1118,16 +1118,16 @@ h2.pageTitle{
     fill: #EB3B5A;
 }
 .packageUsers._vip .userBtn{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .packageUsers._vip .paginationWrapper a.active{
-    background: #FFD700;
+    background: #d6bf38;
 }
 .packageUsers._vip .paginationWrapper a:hover{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageUsers._vip .paginationWrapper a:hover path{
-    fill: #FFD700;
+    fill: #d6bf38;
 }
 /* message */
 .messageItem{
@@ -1146,7 +1146,7 @@ h2.pageTitle{
     border-color: #EB3B5A;
 }
 .messageItem._yelled{
-    border-color: #FFD700;
+    border-color: #d6bf38;
 }
 .messageText{
     padding-bottom: 10px;
@@ -1160,7 +1160,7 @@ span._econom{
 }
 span._vip{
     font-weight: 500;
-    color: #FFD700;
+    color: #d6bf38;
 }
 span._standard{
     font-weight: 500;
@@ -1182,7 +1182,7 @@ span._premium{
     color: #EB3B5A;
 }
 .messageItem._yelled .messageDate{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .messageWrapper .paginationWrapper a.active{
     background: #3867D6;
@@ -1316,10 +1316,10 @@ span._premium{
     background: #EB3B5A;
 }
 .popupItem[data-name="vip"] .priceCount span{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .popupItem[data-name="vip"] .btnPopup{
-    background: #FFD700;
+    background: #d6bf38;
 }
 /* paginationWrapper */
 .paginationWrapper {

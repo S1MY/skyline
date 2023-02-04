@@ -1133,7 +1133,7 @@ section._case .markName::after{
     background: #EB3B5A;
 }
 .packageItem._vip .packageName{
-    background: #FFD700;
+    background: #d6bf38;
 }.packageTitle{
     font-weight: 600;
     font-size: 24px;
@@ -1172,7 +1172,7 @@ section._case .markName::after{
     color: #EB3B5A;
 }
 ._vip .packageInfo span{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageCourse{
     display: flex;
@@ -1199,7 +1199,7 @@ section._case .markName::after{
     color: #EB3B5A;
 }
 ._vip .packageAccumulation{
-    color: #FFD700;
+    color: #d6bf38;
 }
 .packageInfo._disabled{
     opacity: 0.7;
@@ -1223,13 +1223,33 @@ section._case .markName::after{
     background: #3867D6;
 }
 ._vip .btnBuy{
-    background: #FFD700;
+    background: #d6bf38;
 }
 ._premium .btnBuy{
     background: #EB3B5A;
 }
 .btnBuy:hover{
     background: #333333;
+}
+.myRamka{
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #FFFFFF;
+    color: #202020;
+}
+.pageText{
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.myRamka .pageText:nth-child(1){
+    margin-top: 0;
 }
 /* adaptive */
 @media (max-width: 1240px) {
