@@ -216,7 +216,7 @@ body {
 }
 .hero{
     height: 920px;
-    background-position: center !important;
+    background-position: top center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
@@ -947,6 +947,7 @@ section._marketing .page{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 40px;
 }
 .markItem{
@@ -964,10 +965,19 @@ section._marketing .page{
     font-weight: 400;
     margin: 30px 0;
 }
+.markEblo{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
 .markText{
     font-size: 16px;
     font-weight: 300;
     line-height: 27px;
+}
+.markText span{
+    color: #EB3B5A;
+    font-weight: 400;
 }
 section._case .markItem{
     border: 1px solid #3867D6;
@@ -1087,6 +1097,9 @@ section._case .markName::after{
     padding-top: 18px;
     color: rgba(32, 32, 32, 0.8);
     display: none;
+}
+.answerContent span{
+    font-weight: 500;
 }
 .answerContent a{
     color: #3867D6;
