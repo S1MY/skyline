@@ -4,36 +4,19 @@
     <div class="headerP"></div>
     <section class="section _hero">
         <div class="page">
-            <h1 class="title">We are Search Engine & Social Media Experts</h1>
-            <p class="subText">Marketing Solutions That Work</p>
-            <p class="myText">We’re also experts at finding the sweet spot between Google’s guidelines and what is commercially right for you. We have progressive theories on search as a tool for retention of customers, not just for acquisition.</p>
+            <h1 class="title">Маркетинг план компании "MySkyLine"</h1>
+            <p class="subText">Все еще ждете подходящий момент - Этот момент настал</p>
+            <p class="myText">Успех любой МЛМ-компании основан на грамотно продуманной концепции. План линейного построения МЛМ структуры эффективен для любых МЛМ-компаний. Он наиболее стратегически-гибкий. Структура такого МП стабильна, работает длительное время, и развивается долго.</p>
         </div>
     </section>
     <section class="section _expert">
         <div class="page">
-            <h2 class="title">Featured Projects By Digital Agency</h2>
-            <p class="subText">We are Search Engine & Social Media Experts</p>
+            <h2 class="title">Видео презентация маркетинг плана компании</h2>
+            <p class="subText">Ваше будущее здесь</p>
             <div class="mediaFlex">
                 <div class="mediaItem">
-                    <p class="mediaText">We’re also experts at finding the sweet spot between Google’s guidelines and what is commercially right for you. We have progressive theories on search as a tool for retention of customers, not just for acquisition.</p>
-                    <div class="mediaLib">
-                        <div class="mediaLibItem">
-                            <div class="mediaLibIcon"><img src="/image/home/m1.png" alt="mediaLibIcon"></div>
-                            <p class="mediaLibName">Perfect Design</p>
-                        </div>
-                        <div class="mediaLibItem">
-                            <div class="mediaLibIcon"><img src="/image/home/m2.png" alt="mediaLibIcon"></div>
-                            <p class="mediaLibName">Fully Responsive</p>
-                        </div>
-                        <div class="mediaLibItem">
-                            <div class="mediaLibIcon"><img src="/image/home/m3.png" alt="mediaLibIcon"></div>
-                            <p class="mediaLibName">Fast Loading</p>
-                        </div>
-                        <div class="mediaLibItem">
-                            <div class="mediaLibIcon"><img src="/image/home/m4.png" alt="mediaLibIcon"></div>
-                            <p class="mediaLibName">Seo Friendly</p>
-                        </div>
-                    </div>
+                    <p class="mediaHead">Лучший инвестиционный проект с партнерской программой!</p>
+                    <p class="mediaText">В настоящее время любой бизнес реально построить в интернете. И именно здесь вы можете начать зарабатывать на машину мечты, тёплую и уютную квартиру или инвестировать в доходный бизнес.</p>
                 </div>
                 <div class="mediaItem">
                     <div class="noteWrapper">
@@ -69,8 +52,8 @@
     </section> -->
     <section class="section _marketing">
         <div class="page">
-            <h2 class="title">Similar type of Services</h2>
-            <p class="subText">We are Search Engine & Social Media Experts</p>
+            <h2 class="title">Четыре ступени развития</h2>
+            <p class="subText">Партнёрская программа, ориентированная на заработок каждого пользователя системы. Состоит из четырех пакетов, каждый из которых имеет свои фишки.</p>
             <div class="markFlex">
                 <div class="markItem">
                     <img src="/image/marketing/icon.png" alt="icon">
@@ -92,13 +75,14 @@
     </section>
     <section class="section _case">
         <div class="page">
-            <h2 class="title">Related Case Studies</h2>
-            <p class="subText">We are Search Engine & Social Media Experts</p>
+            <h2 class="title">Бонусная программа компании "MYSKYLINE"</h2>
+            <p class="subText">Присоединяйся к нам и мечты воплотятся в жизнь.</p>
             <div class="markFlex">
                 <div class="markItem">
-                    <img src="/image/marketing/i1.png" alt="icon">
-                    <h2 class="markName">Project illum qui dolorem to eum fugiat over.</h2>
-                    <p class="markText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus vel ligula placerat pellentesque.</p>
+                    <h2 class="markName">Bonus "Start"</h2>
+                    <h2 class="markName">Пакет "Econom"</h2>
+                    <p class="markText"><span>2020</span> партнеров в первую линию за 6 месяцев + <span>200 €</span></p>
+                    <p class="markText">Отсчет начинается с первого зарегистрированного партнера в пакете эконом.</p>
                 </div>
                 <div class="markItem">
                     <img src="/image/marketing/i2.png" alt="icon">
@@ -115,7 +99,7 @@
     </section>
     <section class="section _blued">
         <div class="page">
-            <h2 class="title">Questions and answers</h2>
+            <h2 class="title">Вопросы и ответы</h2>
             <div class="answerWrapper">
                 <div class="answerItem">
                     <p class="answerHeader">

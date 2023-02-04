@@ -339,11 +339,16 @@ body {
 .mediaItem{
     width: calc(50% - 15px);
 }
+.mediaHead{
+    color: #1a354a;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #1a354a;
+    margin-bottom: 16px;
+}
 .mediaText{
     line-height: 28px;
     font-weight: 300;
     opacity: 0.8;
-    margin-bottom: 10px;
 }
 .mediaLib{
     display: flex;

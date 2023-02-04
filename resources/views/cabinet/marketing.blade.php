@@ -12,10 +12,10 @@
                     <p class="pageText">Партнёрская программа, ориентированная на заработок каждого пользователя системы.</p>
                     <p class="pageText">Имеет,<span class="_premium">четыре пакета</span> каждый из которых имеет свои фишки.</p>
                     <p class="pageText">В каждом пакете <span class="_premium">4</span> линии партнёров с доходом <span class="_premium">40/20/5/15</span> процентов с линий.</p>
-                    <p class="pageText">На каждой из этих линий нет ограничений по количеству участников, поэтому Вы можете атывать бесконечно</p>
-                    <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span>, <span class="_standard">"STANDARD"</span> или <span class="_premium">"PREMIUM"</span> на накопительном счёте достаточно средств, Вы автоматически перейдёте на следующий пакет с ещё им доходом.</p>
+                    <p class="pageText">На каждой из этих линий нет ограничений по количеству участников, поэтому Вы можете зарабатывать бесконечно.</p>
+                    <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span>, <span class="_standard">"STANDARD"</span> или <span class="_premium">"PREMIUM"</span> на накопительном счёте достаточно средств, Вы автоматически перейдёте на следующий пакет с ещё большим доходом.</p>
                     <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
-                    <p class="pageText">На пакете <span class="_vip">"VIP"</span> вам станет доступно участиве в совместных проектах с компанией "MySkyLine"</p>
+                    <p class="pageText">На пакете <span class="_vip">"VIP"</span> вам станет доступно участие в совместных проектах с компанией "MySkyLine"</p>
                 </div>
                 <div class="packageFlex displayFlex spaceBetween">
                     <div class="packageItem">
