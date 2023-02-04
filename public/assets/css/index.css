@@ -1108,11 +1108,11 @@ section._case .markName::after{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 40px;
 }
 .packageItem{
     width: calc(50% - 10px);
     margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
     border-radius: 10px;
     padding: 15px;
     position: relative;
@@ -1120,6 +1120,7 @@ section._case .markName::after{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: #FFFFFF;
 }
 .packageTop{
     flex-grow: 1;
