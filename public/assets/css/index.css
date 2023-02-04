@@ -1121,6 +1121,7 @@ section._case .markName::after{
     flex-direction: column;
     justify-content: space-between;
     background: #FFFFFF;
+    color: #202020;
 }
 .packageTop{
     flex-grow: 1;
