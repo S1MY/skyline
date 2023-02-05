@@ -112,7 +112,6 @@
                         <p class="packageInfo _disabled">@lang('mainPages.marketing_third_screen.packages.vip.packageInfo1')</p>
                         <p class="packageInfo _disabled">@lang('mainPages.marketing_third_screen.packageInfo2')</p>
                         <p class="packageInfo _disabled">@lang('mainPages.marketing_third_screen.packageInfo3')</p>
-                        <p class="packageInfo _disabled">@lang('mainPages.marketing_third_screen.packageInfo4')</p>
                     <p class="packageGroover">@lang('mainPages.marketing_third_screen.packages.vip.packageGroover0')</p>
                     <p class="packageGroover">@lang('mainPages.marketing_third_screen.packages.vip.packageGroover1')</p>
                     <p class="packageGroover">@lang('mainPages.marketing_third_screen.packages.vip.packageGroover2')</p>

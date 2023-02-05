@@ -81,7 +81,6 @@
                             <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.vip.packageInfo1')</p>
                             <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo2')</p>
                             <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo3')</p>
-                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo4')</p>
                         <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover0')</p>
                         <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover1')</p>
                         <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover2')</p>
