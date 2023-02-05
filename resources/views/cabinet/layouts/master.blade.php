@@ -144,7 +144,7 @@
                     $stop_date = date('Y-m-d H:i:s', strtotime($stop_date . ' +2 day'));
                 @endphp
 
-                <p class="headerTimer{{$class}}" title="Время до деактивации аккаунта">
+                <p class="headerTimer{{$class}}" title="@lang('cabinet.account_stop')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0038 0.998047C5.94056 0.998047 0.996102 5.93472 0.996094 11.9979C0.996079 18.0611 5.94055 23.0036 12.0038 23.0036C18.067 23.0036 23.0017 18.0611 23.0017 11.9979C23.0017 5.93472 18.067 0.998047 12.0038 0.998047ZM12.0038 2.99802C16.9861 2.99802 21.0017 7.01557 21.0017 11.9979C21.0017 16.9802 16.9861 21.0037 12.0038 21.0037C7.02141 21.0037 2.99606 16.9802 2.99607 11.9979C2.99608 7.01557 7.02143 2.99802 12.0038 2.99802ZM11.9881 4.98432C11.856 4.9856 11.7254 5.01306 11.6039 5.06511C11.4825 5.11717 11.3725 5.19278 11.2804 5.28758C11.1883 5.38238 11.116 5.49449 11.0675 5.61744C11.019 5.74038 10.9953 5.87171 10.9979 6.00384V11.9979C10.9985 12.1295 11.025 12.2597 11.0759 12.381C11.1268 12.5023 11.2012 12.6124 11.2948 12.7049L15.2947 16.7068C15.3872 16.8025 15.4977 16.8788 15.62 16.9312C15.7423 16.9837 15.8738 17.0112 16.0068 17.0121C16.1398 17.0131 16.2717 16.9875 16.3947 16.9369C16.5177 16.8863 16.6294 16.8116 16.7232 16.7173C16.817 16.623 16.8911 16.5109 16.941 16.3876C16.991 16.2643 17.0158 16.1322 17.0141 15.9992C17.0124 15.8662 16.9842 15.7349 16.9311 15.6129C16.878 15.4909 16.8011 15.3808 16.7049 15.2889L12.9998 11.5839V6.00384C13.0025 5.8699 12.9781 5.7368 12.9283 5.61244C12.8785 5.48808 12.8042 5.37499 12.7098 5.2799C12.6155 5.18481 12.503 5.10964 12.379 5.05887C12.255 5.00809 12.1221 4.98274 11.9881 4.98432Z" fill="#202020"></path>
                     </svg>
@@ -174,9 +174,9 @@
                     </clipPath>
                     </defs>
                 </svg>
-                <p class="responseText">Изменения сохранены</p>
+                <p class="responseText">@lang('popups.changer')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn _greened">Закрыть окно</a>
+                    <a href="#" class="responseBtn _greened">@lang('popups.close')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="error">
@@ -191,9 +191,9 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">Непредвиденная ошибка</p>
+                <p class="responseText">@lang('popups.error')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Закрыть окно</a>
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="notactive">
@@ -208,9 +208,9 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">Данная информация будет доступна после приобретения пакета "Econom"</p>
+                <p class="responseText">@lang('popups.econom')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Закрыть окно</a>
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="development">
@@ -225,9 +225,9 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">Данная страница находится в разработке</p>
+                <p class="responseText">@lang('popups.develop')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Закрыть окно</a>
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="deactivate">
@@ -242,9 +242,9 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">В настоящий момент данная функция дорабатывается</p>
+                <p class="responseText">@lang('popups.dorabotka')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Закрыть окно</a>
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
                 </div>
         </div>
         @if (session()->has('warning'))
@@ -262,7 +262,7 @@
                     </svg>
                     <p class="responseText">{{ session()->get('warning') }}</p>
                     <div class="btnWrapper displayFlex spaceCenter">
-                        <a href="#" class="responseBtn">Закрыть окно</a>
+                        <a href="#" class="responseBtn">@lang('popups.close')</a>
                     </div>
             </div>
         @endif
@@ -278,9 +278,9 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">В данный момент у вас нет доступа для посещения!</p>
+                <p class="responseText">@lang('popups.page_closed')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Закрыть окно</a>
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="timer">
@@ -300,40 +300,40 @@
                     </clipPath>
                     </defs>
                 </svg>
-            <p class="responseText">До деактивации аккаунта:<br> <span class="_time">{{ downcounter($stop_date) }}</span></p>
+            <p class="responseText">@lang('popups.account_deactivated'):<br> <span class="_time">{{ downcounter($stop_date) }}</span></p>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn _blueed">Закрыть окно</a>
+                <a href="#" class="responseBtn _blueed">@lang('popups.close')</a>
             </div>
         </div>
         <div class="popupItem" data-name="econom">
-                <p class="popupName">Приобретение пакета <span class="_econom">ECONOM</span></p>
-                <p class="priceCount">К оплате: <span>100€</span></p>
+                <p class="popupName">@lang('popups.purchase_package') <span class="_econom">ECONOM</span></p>
+                <p class="priceCount">@lang('popups.paid'): <span>100€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="ECONOM">Приобрести</a>
+                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="ECONOM">@lang('popups.firstbuy')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="standard">
-                <p class="popupName">Приобретение пакета <span class="_standard">STANDARD</span></p>
-                <p class="priceCount">Накоплено: <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
-                <p class="priceCount">К оплате: <span>{{ 1000 - Auth::user()->UserWallets->capital }}€</span></p>
+                <p class="popupName">@lang('popups.purchase_package') <span class="_standard">STANDARD</span></p>
+                <p class="priceCount">@lang('popups.accrued'): <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
+                <p class="priceCount">@lang('popups.paid'): <span>{{ 1000 - Auth::user()->UserWallets->capital }}€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="STANDARD">Ручной апгрейд</a>
+                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="STANDARD">@lang('popups.hand_upgrade')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="premium">
-            <p class="popupName">Приобретение пакета <span class="_premium">PREMIUM</span></p>
-            <p class="priceCount">Накоплено: <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
-            <p class="priceCount">К оплате: <span>{{ 10000 - Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="popupName">@lang('popups.purchase_package') <span class="_premium">PREMIUM</span></p>
+            <p class="priceCount">@lang('popups.accrued'): <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="priceCount">@lang('popups.paid'): <span>{{ 10000 - Auth::user()->UserWallets->capital }}€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="PREMIUM">Ручной апгрейд</a>
+                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="PREMIUM">@lang('popups.hand_upgrade')</a>
                 </div>
         </div>
         <div class="popupItem" data-name="vip">
-            <p class="popupName">Приобретение пакета <span class="_vip">VIP</span></p>
-            <p class="priceCount">Накоплено: <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
-            <p class="priceCount">К оплате: <span>{{ 100000 - Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="popupName">@lang('popups.purchase_package') <span class="_vip">VIP</span></p>
+            <p class="priceCount">@lang('popups.accrued'): <span>{{ Auth::user()->UserWallets->capital }}€</span></p>
+            <p class="priceCount">@lang('popups.paid'): <span>{{ 100000 - Auth::user()->UserWallets->capital }}€</span></p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="VIP">Ручной апгрейд</a>
+                    <a href="#" class="btnPopup buy" data-action="{{ route('buy') }}" data-name="VIP">@lang('popups.hand_upgrade')</a>
                 </div>
         </div>
         <form class="popupItem" data-name="adminAuth">
@@ -344,10 +344,10 @@
                 <p class="userPopupText">examle@example.ru</p>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
-                <button class="btn _blueed">Авторизоваться</button>
+                <button class="btn _blueed">@lang('popups.autorization')</button>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn _w100">Закрыть окно</a>
+                <a href="#" class="responseBtn _w100">@lang('popups.close')</a>
             </div>
         </form>
         <form class="popupItem" data-name="adminEdit">
@@ -356,12 +356,12 @@
                 <p class="userPopupName">Иван Иванов</p>
                 <p class="userPopupText">Реферер: 00032</p>
             </div>
-            <input type="text" class="contentInput" name="refid" placeholder="ID нового реферера" required>
+            <input type="text" class="contentInput" name="refid" placeholder="@lang('popups.newref')" required>
             <div class="btnWrapper displayFlex spaceCenter">
-                <button class="btn _blueed">Изменить</button>
+                <button class="btn _blueed">@lang('popups.change')</button>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn _w100">Закрыть окно</a>
+                <a href="#" class="responseBtn _w100">@lang('popups.close')</a>
             </div>
         </form>
     </div>

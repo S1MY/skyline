@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'account_stop' => 'Zeit bis zur Deaktivierung des Kontos',
     'navigation' => [
         'main_nav' => 'Hauptmenü',
         'your_earnings' => 'Ihre Einnahmen',
@@ -52,7 +53,7 @@ return [
             'operation' => 'Operation',
             'clear_table' => 'Sie haben noch keine Transaktionen durchgeführt',
         ],
-        'operation_type' => [
+        'operations_type' => [
             'one' => 'Guthaben aufladen',
             'two' => 'Geld abheben',
             'free' => 'Zahlung "Econom"',
@@ -62,6 +63,7 @@ return [
             'seven' => 'Prozentsatz von 2 Zeilen',
             'eight' => 'Prozentsatz von 3 Zeilen',
             'nine' => 'Prozentsatz von 4 Zeilen',
+            'eleven' => 'Zahlung "VIP"',
         ],
         'full_history' => 'Vollständiger Verlauf',
     ],
@@ -130,7 +132,7 @@ return [
             'operation' => 'Operation',
             'clear_table' => 'Sie haben noch keine Transaktionen durchgeführt',
         ],
-        'operation_type' => [
+        'operations_type' => [
             'one' => 'Guthaben aufladen',
             'two' => 'Geld abheben',
             'free' => 'Zahlung "Econom"',
@@ -140,6 +142,7 @@ return [
             'seven' => 'Prozentsatz von 2 Zeilen',
             'eight' => 'Prozentsatz von 3 Zeilen',
             'nine' => 'Prozentsatz von 4 Zeilen',
+            'eleven' => 'Zahlung "VIP"',
         ],
     ],
     'messages' => [

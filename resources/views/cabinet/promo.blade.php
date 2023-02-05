@@ -22,7 +22,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):RU</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): RU</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):EN</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): EN</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):DE</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): DE</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">
@@ -108,7 +108,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):RU</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): RU</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">
@@ -138,7 +138,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):EN</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): EN</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">
@@ -166,7 +166,7 @@
                         </div>
                         <div class="linkBlock">
                             <p class="bannerFlexName displayFlex alignItemsCenter spaceBetween">
-                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']):DE</span>
+                                <span class="bannerFlexCount">@lang('cabinet.promo.banner_title', ['attribute' => '468x60']): DE</span>
                                 <span class="bannerFlexWeight">@lang('cabinet.promo.banner_lenght'): 6.40 KB</span>
                             </p>
                             <p class="fullLink">

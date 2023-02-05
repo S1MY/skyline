@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'account_stop' => 'Time until account deactivation',
     'navigation' => [
         'main_nav' => 'Main menu',
         'your_earnings' => 'Your earnings',
@@ -52,7 +53,7 @@ return [
             'operation' => 'Operation',
             'clear_table' => 'You haven`t done any transactions yet',
         ],
-        'operation_type' => [
+        'operations_type' => [
             'one' => 'Top up balance',
             'two' => 'Withdraw funds',
             'free' => 'Package "Econom"',
@@ -62,6 +63,7 @@ return [
             'seven' => 'Percentage 2 lines',
             'eight' => 'Percentage 3 lines',
             'nine' => 'Percentage 4 lines',
+            'eleven' => 'Package "VIP"',
         ],
         'full_history' => 'Full history',
     ],
@@ -130,7 +132,7 @@ return [
             'operation' => 'Operation',
             'clear_table' => 'You haven`t done any transactions yet',
         ],
-        'operation_type' => [
+        'operations_type' => [
             'one' => 'Top up balance',
             'two' => 'Withdraw funds',
             'free' => 'Package "Econom"',
@@ -140,6 +142,7 @@ return [
             'seven' => 'Percentage 2 lines',
             'eight' => 'Percentage 3 lines',
             'nine' => 'Percentage 4 lines',
+            'eleven' => 'Package "VIP"',
         ],
     ],
     'messages' => [

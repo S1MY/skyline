@@ -1,6 +1,11 @@
 <?php
 
 return [
+    'econom' => 'This information will be available after purchasing the "Econom" package',
+    'develop' => 'This page is under development',
+    'dorabotka' => 'This feature is currently being finalized',
+    'firstbuy' => 'Buy',
+    'newref' => 'New referrer ID',
     'close' => 'Close window',
      'changer' => 'Changes saved',
      'error' => 'Unexpected error',
