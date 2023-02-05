@@ -40,7 +40,7 @@
         }
     @endphp
 
-    @if ( strtotime($stop_date) < strtotime(date('Y-m-d H:i:s')) )
+    @if ( strtotime($stop_date) < strtotime(date('Y-m-d H:i:s')) &&  Auth::user()->UserInfo->login < 1)
         @yield('cabBlocked')
     @else
         <header class="header">
