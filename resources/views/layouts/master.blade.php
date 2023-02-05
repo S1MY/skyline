@@ -32,7 +32,7 @@
                 </li>
             </ul>
             @if (Auth::check())
-            <a href="#" class="btn userBtn">{{Auth::user()->login}}</a>
+            <a href="#" class="btn userBtn">{{Auth::user()->UserInfo->login}}</a>
             @else
             <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
             <a href="#" class="btn regBtn popupBtn" data-name="register">@lang('mainPages.header_btn.register')</a>
@@ -70,7 +70,7 @@
                         <p class="changerItem"><a href="{{ route('locale', 'ru') }}">ru</a></p>
                     </div> --}}
                     @if (Auth::check())
-                    <a href="#" class="btn userBtn">{{Auth::user()->login}}</a>
+                    <a href="#" class="btn userBtn">{{Auth::user()->UserInfo->login}}</a>
                     @else
                     <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
                     <a href="#" class="btn regBtn popupBtn" data-name="register">@lang('mainPages.header_btn.register')</a>
