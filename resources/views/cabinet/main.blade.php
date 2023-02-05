@@ -90,6 +90,8 @@
                     <p class="accumulation">@lang('cabinet.cabinet.savings1'): <span>{{ Auth::user()->UserWallets->capital }}€ / 10000€</span></p>
                 @elseif (Auth::user()->UserInfo->user_pacage == 3)
                     <p class="accumulation">@lang('cabinet.cabinet.savings2'): <span>{{ Auth::user()->UserWallets->capital }}€ / 100000€</span></p>
+                @elseif (Auth::user()->UserInfo->user_pacage == 4)
+                    <p class="accumulation">@lang('cabinet.cabinet.savings3')</p>
                 @else
                 @endif
                 @if ($operations->count() > 0)
