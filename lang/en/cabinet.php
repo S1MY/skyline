@@ -78,7 +78,7 @@ return [
         'sex_m' => 'Male',
         'sex_f' => 'Female',
         'input_country' => 'Country',
-        'input_city' => 'City',
+        'input_sity' => 'City',
         'save' => 'Save changes',
         'change_pass' => 'Change password',
         'old_pass' => 'Old password',

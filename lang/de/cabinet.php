@@ -78,7 +78,7 @@ return [
         'sex_m' => 'Männlich',
         'sex_f' => 'Weiblich',
         'input_country' => 'Land',
-        'input_city' => 'Stadt',
+        'input_sity' => 'Stadt',
         'save' => 'Änderungen speichern',
         'change_pass' => 'Passwort Rückgeld',
         'old_pass' => 'Altes Passwort',
