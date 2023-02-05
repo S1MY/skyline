@@ -436,12 +436,12 @@ body {
     background: #FFFFFF;
     box-shadow: 0 0 8px rgba(20, 20, 20, 0.1);
     transition: all 0.4s;
+    border: 2px solid;
     border-top: 100px solid;
     border-color: #3867D6;
     margin: 0;
     padding: 0 35px 40px;
     margin-top: 70px;
-    border: 1px solid #454545;
 }
 .serviceItem:hover{
     box-shadow: 0 2px 8px rgba(20, 20, 20, 0.2);
