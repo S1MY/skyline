@@ -21,7 +21,7 @@ return [
         'vip' => 'VIP-Paket',
         'partners' => 'Ihre Partner',
         'promotional' => 'Werbematerialien',
-        'auto' => 'Automotive-Programm',
+        'avto' => 'Automotive-Programm',
         'live' => 'Wohnprogramm',
         'invest' => 'Investitionsprogramm',
         'ishop' => 'Online-Shop',
