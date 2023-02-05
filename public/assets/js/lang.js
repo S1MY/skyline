@@ -50,6 +50,7 @@ $(document).ready(function () {
     location.reload();
   });
   $('.langLink').click(function (e) {
+    e.preventDefault();
     localStorage.removeItem("lang");
     let lang = $(this).attr('data-lang');
     let url = $(this).attr('href');
