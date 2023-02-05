@@ -295,6 +295,7 @@ return [
         'clear_partn' => 'There are no partners on this package yet',
         'more' => 'More',
         'your_partn' => 'Your partners',
+        'users' => 'p.',
     ],
     'promotion' => [
         'desc' => 'Here you can find any promotional materials to attract partners',

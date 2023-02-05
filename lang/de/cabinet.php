@@ -295,6 +295,7 @@ return [
         'clear_partn' => 'Es gibt noch keine Partner für dieses Paket',
         'mehr' => 'Mehr',
         'your_partn' => 'Ihre Partner',
+        'users' => 'p.',
     ],
     'promotion' => [
         'desc' => 'Hier finden Sie alle Werbematerialien, um Partner zu gewinnen',

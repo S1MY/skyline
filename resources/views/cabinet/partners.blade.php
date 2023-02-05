@@ -63,7 +63,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.partners.all_partners')</p>
-                            <p class="statCount">{{$partners}}ч.</p>
+                            <p class="statCount">{{$partners}}@lang('cabinet.partners.users')</p>
                         </div>
                     </div>
                     <div class="pageStatItem">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.partners.register_partners')</p>
-                            <p class="statCount">{{$registers}}ч.</p>
+                            <p class="statCount">{{$registers}}@lang('cabinet.partners.users')</p>
                         </div>
                     </div>
                     <div class="pageStatItem">
@@ -98,7 +98,8 @@
                 </div>
                 <h2 class="pageTitle">@lang('cabinet.partners.your_partn')</h2>
                 <div class="packageFlex displayFlex spaceBetween">
-                    <div class="packageItem">
+                    
+                    <div class="packageItem @if(Auth::user()->UserInfo->user_status < 1) _closed @endif">
                         <p class="packageName">Econom</p>
                         @if ($economPartners->count() > 0)
                             <div class="packageFlow">
@@ -177,7 +178,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="packageItem _standard _closed">
+                    <div class="packageItem _standard @if(Auth::user()->UserInfo->user_status < 2) _closed @endif">
                         <p class="packageName">Standard</p>
                         @if ($standartPartners > 0)
                             <div class="packageFlow">
@@ -256,7 +257,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="packageItem _premium _closed">
+                    <div class="packageItem _premium @if(Auth::user()->UserInfo->user_status < 3) _closed @endif">
                         <p class="packageName">Premium</p>
                         @if ($premiumPartners > 0)
                             <div class="packageFlow">
@@ -335,6 +336,85 @@
                             </a>
                         </div>
                     </div>
+                    <div class="packageItem _vip @if(Auth::user()->UserInfo->user_status < 4) _closed @endif">
+                        <p class="packageName">VIP</p>
+                        @if ($vipPartners > 0)
+                            <div class="packageFlow">
+                                @foreach ($vipPartners as $vipPartner)
+                                    <div class="flowItem">
+                                        <p class="flowUser">
+                                            ID: {{ $vipPartner->user_show_id }} {{ $vipPartner->name }} {{ $vipPartner->surname }}
+                                            @if ($vipPartner->flp->count() > 0)
+                                                <span class="_arrow line2">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.998 5.32602L8 10.198L3.002 5.32602C2.9127 5.2388 2.79283 5.18996 2.668 5.18996C2.54317 5.18996 2.4233 5.2388 2.334 5.32602C2.29076 5.36838 2.25641 5.41895 2.23296 5.47475C2.20951 5.53056 2.19743 5.59048 2.19743 5.65102C2.19743 5.71155 2.20951 5.77147 2.23296 5.82728C2.25641 5.88309 2.29076 5.93365 2.334 5.97602L7.651 11.16C7.74437 11.251 7.86961 11.302 8 11.302C8.13039 11.302 8.25563 11.251 8.349 11.16L13.666 5.97702C13.7095 5.93462 13.7442 5.88393 13.7678 5.82794C13.7914 5.77195 13.8036 5.71179 13.8036 5.65102C13.8036 5.59024 13.7914 5.53009 13.7678 5.47409C13.7442 5.4181 13.7095 5.36741 13.666 5.32502C13.5767 5.2378 13.4568 5.18896 13.332 5.18896C13.2072 5.18896 13.0873 5.2378 12.998 5.32502V5.32602Z" fill="white"/>
+                                                    </svg>
+                                                </span>
+                                            @endif
+                                        </p>
+                                        @if ($vipPartner->flp->count() > 0)
+                                            <div class="flowItem line2">
+                                                @foreach ($vipPartner->flp as $item)
+                                                    <p class="flowUser">
+                                                        ID: {{ $item->user_show_id }} {{ $item->name }} {{ $item->surname }}
+                                                        @if ($item->slp->count() > 0)
+                                                            <span class="_arrow line3">
+                                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M12.998 5.32602L8 10.198L3.002 5.32602C2.9127 5.2388 2.79283 5.18996 2.668 5.18996C2.54317 5.18996 2.4233 5.2388 2.334 5.32602C2.29076 5.36838 2.25641 5.41895 2.23296 5.47475C2.20951 5.53056 2.19743 5.59048 2.19743 5.65102C2.19743 5.71155 2.20951 5.77147 2.23296 5.82728C2.25641 5.88309 2.29076 5.93365 2.334 5.97602L7.651 11.16C7.74437 11.251 7.86961 11.302 8 11.302C8.13039 11.302 8.25563 11.251 8.349 11.16L13.666 5.97702C13.7095 5.93462 13.7442 5.88393 13.7678 5.82794C13.7914 5.77195 13.8036 5.71179 13.8036 5.65102C13.8036 5.59024 13.7914 5.53009 13.7678 5.47409C13.7442 5.4181 13.7095 5.36741 13.666 5.32502C13.5767 5.2378 13.4568 5.18896 13.332 5.18896C13.2072 5.18896 13.0873 5.2378 12.998 5.32502V5.32602Z" fill="white"/>
+                                                                </svg>
+                                                            </span>
+                                                        @endif
+                                                    </p>
+                                                    @if ($item->slp->count() > 0)
+                                                        <div class="flowItem line3">
+                                                            @foreach ($item->slp as $ite)
+                                                                <p class="flowUser">
+                                                                    ID: {{ $ite->user_show_id }} {{ $ite->name }} {{ $ite->surname }}
+                                                                    @if ($ite->freelp->count() > 0)
+                                                                        <span class="_arrow line4">
+                                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                <path d="M12.998 5.32602L8 10.198L3.002 5.32602C2.9127 5.2388 2.79283 5.18996 2.668 5.18996C2.54317 5.18996 2.4233 5.2388 2.334 5.32602C2.29076 5.36838 2.25641 5.41895 2.23296 5.47475C2.20951 5.53056 2.19743 5.59048 2.19743 5.65102C2.19743 5.71155 2.20951 5.77147 2.23296 5.82728C2.25641 5.88309 2.29076 5.93365 2.334 5.97602L7.651 11.16C7.74437 11.251 7.86961 11.302 8 11.302C8.13039 11.302 8.25563 11.251 8.349 11.16L13.666 5.97702C13.7095 5.93462 13.7442 5.88393 13.7678 5.82794C13.7914 5.77195 13.8036 5.71179 13.8036 5.65102C13.8036 5.59024 13.7914 5.53009 13.7678 5.47409C13.7442 5.4181 13.7095 5.36741 13.666 5.32502C13.5767 5.2378 13.4568 5.18896 13.332 5.18896C13.2072 5.18896 13.0873 5.2378 12.998 5.32502V5.32602Z" fill="white"/>
+                                                                            </svg>
+                                                                        </span>
+                                                                    @endif
+                                                                </p>
+                                                            @endforeach
+                                                            @if ($ite->freelp->count() > 0)
+                                                                <div class="flowItem line4">
+                                                                    @foreach ($ite->freelp as $it)
+                                                                        <p class="flowUser">
+                                                                            ID: {{ $it->user_show_id }} {{ $it->name }} {{ $it->surname }}
+                                                                            {{-- @if ($ite->folp->count() > 0)
+                                                                                <span class="_arrow line4">
+                                                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path d="M12.998 5.32602L8 10.198L3.002 5.32602C2.9127 5.2388 2.79283 5.18996 2.668 5.18996C2.54317 5.18996 2.4233 5.2388 2.334 5.32602C2.29076 5.36838 2.25641 5.41895 2.23296 5.47475C2.20951 5.53056 2.19743 5.59048 2.19743 5.65102C2.19743 5.71155 2.20951 5.77147 2.23296 5.82728C2.25641 5.88309 2.29076 5.93365 2.334 5.97602L7.651 11.16C7.74437 11.251 7.86961 11.302 8 11.302C8.13039 11.302 8.25563 11.251 8.349 11.16L13.666 5.97702C13.7095 5.93462 13.7442 5.88393 13.7678 5.82794C13.7914 5.77195 13.8036 5.71179 13.8036 5.65102C13.8036 5.59024 13.7914 5.53009 13.7678 5.47409C13.7442 5.4181 13.7095 5.36741 13.666 5.32502C13.5767 5.2378 13.4568 5.18896 13.332 5.18896C13.2072 5.18896 13.0873 5.2378 12.998 5.32502V5.32602Z" fill="white"/>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            @endif --}}
+                                                                        </p>
+                                                                    @endforeach
+                                                                </div>
+                                                            @endif
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            </div>
+                        @else
+                            <p class="packageClosed">@lang('cabinet.partners.clear_partn')</p>
+                        @endif
+                        <div class="btnWrapper displayFlex spaceCenter _access">
+                            <a href="{{ route('vip') }}" class="packageBtn">
+                                @lang('cabinet.partners.more')
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 10.0001C1.25 9.8343 1.31585 9.67533 1.43306 9.55812C1.55027 9.44091 1.70924 9.37506 1.875 9.37506H16.6163L12.6825 5.44256C12.5651 5.3252 12.4992 5.16603 12.4992 5.00006C12.4992 4.83409 12.5651 4.67492 12.6825 4.55756C12.7999 4.4402 12.959 4.37427 13.125 4.37427C13.291 4.37427 13.4501 4.4402 13.5675 4.55756L18.5675 9.55756C18.6257 9.61561 18.6719 9.68458 18.7034 9.76052C18.7349 9.83645 18.7511 9.91785 18.7511 10.0001C18.7511 10.0823 18.7349 10.1637 18.7034 10.2396C18.6719 10.3155 18.6257 10.3845 18.5675 10.4426L13.5675 15.4426C13.4501 15.5599 13.291 15.6258 13.125 15.6258C12.959 15.6258 12.7999 15.5599 12.6825 15.4426C12.5651 15.3252 12.4992 15.166 12.4992 15.0001C12.4992 14.8341 12.5651 14.6749 12.6825 14.5576L16.6163 10.6251H1.875C1.70924 10.6251 1.55027 10.5592 1.43306 10.442C1.31585 10.3248 1.25 10.1658 1.25 10.0001Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -348,7 +428,7 @@
     <link rel="stylesheet" href="/assets/css/index.css">
     <div class="popup" style="display: block;">
         <div class="popupBg"></div>
-        <div class="popupItem" style="display: block;">
+        <div class="popupItem" style="display: block;" id="confirmEmailNotic">
             <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_53_662)">
                 <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
@@ -360,22 +440,22 @@
                 </clipPath>
                 </defs>
                 </svg>
-                <p class="responseText">Ваш аккаунт был деактивирован</p>
-                <p class="responseDesc">Для восстановления аккаунта необходимо</p>
-                <p class="responseDesc">подтвердить вашу почту!</p>
+                <p class="responseText">@lang('popups.block.title')</p>
+                <p class="responseDesc">@lang('popups.block.text0')</p>
+                <p class="responseDesc">@lang('popups.block.text1')</p>
                 <div class="btnWrapper displayFlex spaceCenter">
-                    <a href="#" class="responseBtn">Подтвердить</a>
+                    <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
                 </div>
         </div>
         <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
             <svg class="popupCross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-            <h3 class="popupName">Восстановление доступа</h3>
-            <p class="policeForm popDesc">На почту <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a><br> был отправлен код восстановления доступа.</p>
-            <p class="policeForm popDesc">У вас будет 24 часа на приобретение пакета.</p>
+            <h3 class="popupName">@lang('popups.activate.title')</h3>
+            <p class="policeForm popDesc">@lang('popups.activate.text0') <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a>@lang('popups.activate.text01')</p>
+            <p class="policeForm popDesc">@lang('popups.activate.text1')</p>
             <input type="text" name="name" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
-            <button class="formButton">Восстановить</button>
+            <button class="formButton">@lang('popups.block.btn')</button>
         </form>
     </div>
     <style>
