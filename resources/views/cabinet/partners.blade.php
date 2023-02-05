@@ -99,7 +99,7 @@
                 <h2 class="pageTitle">@lang('cabinet.partners.your_partn')</h2>
                 <div class="packageFlex displayFlex spaceBetween">
                     
-                    <div class="packageItem @if(Auth::user()->UserInfo->user_status < 1) _closed @endif">
+                    <div class="packageItem{{ Auth::user()->UserInfo->user_status < 1 ? ' _closed' : '' }}">
                         <p class="packageName">Econom</p>
                         @if ($economPartners->count() > 0)
                             <div class="packageFlow">
@@ -178,7 +178,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="packageItem _standard @if(Auth::user()->UserInfo->user_status < 2) _closed @endif">
+                    <div class="packageItem _standard{{ Auth::user()->UserInfo->user_status < 2 ? ' _closed' : '' }}">
                         <p class="packageName">Standard</p>
                         @if ($standartPartners > 0)
                             <div class="packageFlow">
@@ -257,7 +257,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="packageItem _premium @if(Auth::user()->UserInfo->user_status < 3) _closed @endif">
+                    <div class="packageItem _premium{{ Auth::user()->UserInfo->user_status < 3 ? ' _closed' : '' }}">
                         <p class="packageName">Premium</p>
                         @if ($premiumPartners > 0)
                             <div class="packageFlow">
@@ -336,7 +336,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="packageItem _vip @if(Auth::user()->UserInfo->user_status < 4) _closed @endif">
+                    <div class="packageItem _vip{{ Auth::user()->UserInfo->user_status < 4 ? ' _closed' : '' }}">
                         <p class="packageName">VIP</p>
                         @if ($vipPartners > 0)
                             <div class="packageFlow">
