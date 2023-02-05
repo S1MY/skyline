@@ -16,7 +16,7 @@ return [
         'exit' => 'Exit the account',
         'marketing_plan' => 'Marketing plan',
         'econom' => 'Econom package',
-        'standard' => 'Standard package',
+        'standart' => 'Standard package',
         'premium' => 'Premium package',
         'vip' => 'VIP package',
         'partners' => 'Your partners',
