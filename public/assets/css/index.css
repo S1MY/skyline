@@ -457,6 +457,9 @@ body {
     width: 100px;
     height: 100px;
     margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 500;
+    color: #FFFFFF;
 }
 .serviceItem:nth-child(2) .serviceIcon{
     background: #20BF6B;
@@ -1032,6 +1035,7 @@ section._case .markName::after{
     line-height: 28px;
     padding-bottom: 16px;
     font-weight: 300;
+    text-align: center;
 }
 .aboutText._mt40{
     margin-top: 40px;
