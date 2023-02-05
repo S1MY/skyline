@@ -98,7 +98,7 @@
                 </div>
                 <h2 class="pageTitle">@lang('cabinet.partners.your_partn')</h2>
                 <div class="packageFlex displayFlex spaceBetween">
-                    
+                    {{Auth::user()->UserInfo->user_status}}
                     <div class="packageItem{{ Auth::user()->UserInfo->user_status < 1 ? ' _closed' : '' }}">
                         <p class="packageName">Econom</p>
                         @if ($economPartners->count() > 0)
