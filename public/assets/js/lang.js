@@ -44,10 +44,10 @@ $(document).ready(function () {
         data: {locale: lang},
         success: function (response) {
             console.log(response);
+            window.location.reload ();
         }
     });
 
-    location.reload();
   });
   $('.langLink').click(function (e) {
     e.preventDefault();
@@ -63,10 +63,10 @@ $(document).ready(function () {
         data: {locale: lang},
         success: function (response) {
             console.log(response);
+            window.location.reload ();
         }
     });
 
-    location.reload();
   });
   if ($('.changerItem').length > 0) {
     $.each($('.changerItem'), function (indexInArray, valueOfElement) {
