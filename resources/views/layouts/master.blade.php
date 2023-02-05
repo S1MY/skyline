@@ -66,13 +66,9 @@
                         <p class="changerItem"><a href="{{ route('locale', 'de') }}">de</a></p>
                         <p class="changerItem"><a href="{{ route('locale', 'ru') }}">ru</a></p>
                     </div> --}}
-                    @php
-                        if(Auth::user()){
-                            echo 1;
-                        }else{
-                            echo 0;
-                        }
-                    @endphp
+                    @if(Auth::check())
+
+                    @endif
                     <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
                     <a href="#" class="btn regBtn popupBtn" data-name="register">@lang('mainPages.header_btn.register')</a>
                     <!-- <a href="#" class="btn userBtn">Cabinet</a> -->
