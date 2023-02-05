@@ -8,7 +8,7 @@ return [
         'in_working' => 'In development',
         'cabinet' => 'User account',
         'settings' => 'Account settings',
-        'deposit' => 'Top up balance',
+        'deposite' => 'Top up balance',
         'withdraw' => 'Withdraw funds',
         'story' => 'History of operations',
         'messages' => 'Messages',

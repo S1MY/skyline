@@ -8,7 +8,7 @@ return [
         'in_working' => 'In Entwicklung',
         'cabinet' => 'Benutzerkonto',
         'settings' => 'Kontoeinstellungen',
-        'deposit' => 'Guthaben aufladen',
+        'deposite' => 'Guthaben aufladen',
         'withdraw' => 'Geld abheben',
         'story' => 'Geschäftsgeschichte',
         'messages' => 'Nachrichten',
