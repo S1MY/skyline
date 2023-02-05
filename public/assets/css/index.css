@@ -441,6 +441,7 @@ body {
     margin: 0;
     padding: 0 35px 40px;
     margin-top: 70px;
+    border: 1px solid #454545;
 }
 .serviceItem:hover{
     box-shadow: 0 2px 8px rgba(20, 20, 20, 0.2);
@@ -551,10 +552,10 @@ body {
 }
 .section._greened .title,
 .section._greened .subText{
-    color: #FFFFFF;
+    color: #202020;
 }
 .section._greened .subText::after{
-    background: #FFFFFF;
+    background: #202020;
 }
 .rotateFlex{
     display: flex;
