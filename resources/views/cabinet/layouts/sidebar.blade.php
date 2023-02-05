@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="sidebarLang">
-                <a href="#" class="langLink _active" data-lang="ru"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="langLink" data-lang="ru"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_56_740)">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H42V42H0V0Z" fill="white"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.0027H42V42H0V14.0027Z" fill="#0039A6"/>
@@ -22,7 +22,7 @@
                     </clipPath>
                     </defs>
                     </svg></a>
-                <a href="#" class="langLink" data-lang="en"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a href="#" class="langLink _active" data-lang="en"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_56_720)">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H79.8V3.23203H0V0ZM0 6.46406H79.8V9.69609H0V6.46406ZM0 12.9199H79.8V16.1602H0V12.9199ZM0 19.384H79.8V22.616H0V19.384ZM0 25.848H79.8V29.0801H0V25.848ZM0 32.3039H79.8V35.5359H0V32.3039ZM0 38.768H79.8V42H0V38.768Z" fill="#BD3D44"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3.23206H79.8V6.46409H0V3.23206ZM0 9.69612H79.8V12.9199H0V9.69612ZM0 16.152H79.8V19.384H0V16.152ZM0 22.616H79.8V25.8399H0V22.616ZM0 29.0801H79.8V32.3039H0V29.0801ZM0 35.536H79.8V38.768H0V35.536Z" fill="white"/>
