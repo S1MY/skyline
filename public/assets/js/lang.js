@@ -22,6 +22,7 @@ $(document).ready(function () {
         data: {locale: storageLang},
         success: function (response) {
             console.log(response);
+            window.location.reload ();
         },
         error: function (response) {
             console.log(response);
