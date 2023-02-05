@@ -322,8 +322,9 @@ class CabinetController extends Controller
 
         $standartPartners = 0;
         $premiumPartners = 0;
+        $vipPartners = 0;
 
-        return view('cabinet.partners', compact('partners', 'registers', 'economPartners', 'standartPartners', 'premiumPartners'));
+        return view('cabinet.partners', compact('partners', 'registers', 'economPartners', 'standartPartners', 'premiumPartners', 'vipPartners'));
     }
 
     public function promo(){
