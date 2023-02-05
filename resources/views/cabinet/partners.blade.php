@@ -92,7 +92,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.partners.clicks')</p>
-                            <p class="statCount">{{ Auth::user()->UserInfo->click }}.</p>
+                            <p class="statCount">{{ Auth::user()->UserInfo->click }}</p>
                         </div>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
                         @else
                             <p class="packageClosed">@lang('cabinet.partners.clear_partn')</p>
                         @endif
-                        <div class="btnWrapper displayFlex spaceCenter _access">
+                        <div class="btnWrapper displayFlex spaceCenter">
                             <a href="{{ route('premium') }}" class="packageBtn">
                                 @lang('cabinet.partners.more')
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -405,7 +405,7 @@
                         @else
                             <p class="packageClosed">@lang('cabinet.partners.clear_partn')</p>
                         @endif
-                        <div class="btnWrapper displayFlex spaceCenter _access">
+                        <div class="btnWrapper displayFlex spaceCenter">
                             <a href="{{ route('vip') }}" class="packageBtn">
                                 @lang('cabinet.partners.more')
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
