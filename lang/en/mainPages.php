@@ -155,6 +155,7 @@ return [
                 'packageInfo1' => 'БОК <span>50€ в месяц</span>',
                 'packageInfo2' => 'Автомобильная(НК 10%) <span>до 20.000€</span>',
                 'packageInfo3' => 'Жилищная(НК 20%) <span>до 100.000€</span>',
+                'packageInfo4' => 'Инвестиционная(НК 30%) <span>до 300.000€</span>',
                 'packageGroover0' => 'Индивидуальные тренинги',
                 'packageGroover1' => 'Участие в мероприятиях',
                 'packageGroover2' => 'Закрытый инвестиционный клуб',
@@ -183,7 +184,7 @@ return [
             'two' => [
                 'markName' => 'Bonus "Travel"',
                 'markEblo' => 'Пакет "Standard"',
-                'markText0' => '<span>2020</span> партнеров в первую линию за 6 месяцев + <span>200 €</span> на путешествие.',
+                'markText0' => '<span>20</span> партнеров в первую линию за 6 месяцев + <span>200 €</span> на путешествие.',
                 'markText1' => 'Отсчет начинается с первого зарегистрированного партнера в пакете "Standard".',
             ],
             'three' => [

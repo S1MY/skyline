@@ -20,8 +20,8 @@
                     </div>
                     @foreach ($operations as $operation)
                     <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
-                        <p class="customTableItem" aria-label="Имя и ID">
+                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
+                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
                             {{ $operation->name }} {{ $operation->surname }}
                             @if ($operation->user_show_id)
                                 ({{ $operation->user_show_id }})
@@ -75,7 +75,7 @@
                                     break;
                             }
                         @endphp
-                        <p class="customTableItem" aria-label="Операция"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
+                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
                     </div>
                 @endforeach
                     {{ $operations->links('cabinet.layouts.pagination') }}
@@ -92,7 +92,7 @@
 <link rel="stylesheet" href="/assets/css/index.css">
 <div class="popup" style="display: block;">
     <div class="popupBg"></div>
-    <div class="popupItem" style="display: block;">
+    <div class="popupItem" style="display: block;" id="confirmEmailNotic">
         <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_53_662)">
             <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
@@ -104,22 +104,22 @@
             </clipPath>
             </defs>
             </svg>
-            <p class="responseText">Ваш аккаунт был деактивирован</p>
-            <p class="responseDesc">Для восстановления аккаунта необходимо</p>
-            <p class="responseDesc">подтвердить вашу почту!</p>
+            <p class="responseText">@lang('popups.block.title')</p>
+            <p class="responseDesc">@lang('popups.block.text0')</p>
+            <p class="responseDesc">@lang('popups.block.text1')</p>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn">Подтвердить</a>
+                <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
             </div>
     </div>
     <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
         <svg class="popupCross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <h3 class="popupName">Восстановление доступа</h3>
-        <p class="policeForm popDesc">На почту <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a><br> был отправлен код восстановления доступа.</p>
-        <p class="policeForm popDesc">У вас будет 24 часа на приобретение пакета.</p>
+        <h3 class="popupName">@lang('popups.activate.title')</h3>
+        <p class="policeForm popDesc">@lang('popups.activate.text0') <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a>@lang('popups.activate.text01')</p>
+        <p class="policeForm popDesc">@lang('popups.activate.text1')</p>
         <input type="text" name="name" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
-        <button class="formButton">Восстановить</button>
+        <button class="formButton">@lang('popups.block.btn')</button>
     </form>
 </div>
 <style>

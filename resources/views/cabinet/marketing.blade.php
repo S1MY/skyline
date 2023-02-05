@@ -7,117 +7,123 @@
 
         <div class="content">
             <div class="contentWrapper">
-                <h1 class="pageTitle">Маркетинг план</h1>
+                <h1 class="pageTitle">@lang('cabinet.marketing.title')</h1>
                 <div class="myRamka">
-                    <p class="pageText">Партнёрская программа, ориентированная на заработок каждого пользователя системы.</p>
-                    <p class="pageText">Имеет,<span class="_premium">четыре пакета</span> каждый из которых имеет свои фишки.</p>
-                    <p class="pageText">В каждом пакете <span class="_premium">4</span> линии партнёров с доходом <span class="_premium">40/20/5/15</span> процентов с линий.</p>
-                    <p class="pageText">На каждой из этих линий нет ограничений по количеству участников, поэтому Вы можете зарабатывать бесконечно.</p>
-                    <p class="pageText">Как только на пакете <span class="_econom">"ECONOM"</span>, <span class="_standard">"STANDARD"</span> или <span class="_premium">"PREMIUM"</span> на накопительном счёте достаточно средств, Вы автоматически перейдёте на следующий пакет с ещё большим доходом.</p>
-                    <p class="pageText">Начните с пакета <span class="_econom">"ECONOM"</span> и достигните самой вершины нашей системы!</p>
-                    <p class="pageText">На пакете <span class="_vip">"VIP"</span> вам станет доступно участие в совместных проектах с компанией "MySkyLine"</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.one')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.two')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.free')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.four')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.five')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.six')</p>
+                    <p class="pageText">@lang('cabinet.marketing.decription_phar.seven')</p>
                 </div>
                 <div class="packageFlex displayFlex spaceBetween">
                     <div class="packageItem">
                         <div class="packageTop">
-                            <p class="packageTitle">Econom</p>
-                            <p class="packageInfo _noborder">Стоимость пакета <span>100€</span></p>
-                            <p class="packageCourse">Курс "Продвижение"</p>
-                            <p class="packageInfo">Вывод денег <span>40%</span></p>
-                            <p class="packageInfo">Накопительный счёт <span>60%</span></p>
-                            <p class="packageInfo _disabled">БОК <span>5€ в месяц</span></p>
-                            <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
-                            <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
+                            <p class="packageTitle">@lang('cabinet.marketing.packages.econom.packageTitle')</p>
+                            <p class="packageInfo _noborder">@lang('cabinet.marketing.packages.econom.packageInfo0')</p>
+                            <p class="packageCourse">@lang('cabinet.marketing.packages.econom.packageCourse')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo0')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.econom.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo3')</p>
                         </div>
-                        <p class="packageAccumulation">1000€ для перехода на 2 пакет</p>
+                        <p class="packageAccumulation">@lang('cabinet.marketing.packages.econom.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 1 )
-                            <a href="#" class="btnBuy" data-name="econom">Приобрести</a>
+                            <a href="#" class="btnBuy" data-name="econom">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                     <div class="packageItem _standard">
                         <div class="packageTop">
-                        <p class="packageTitle">Standard</p>
-                        <p class="packageInfo _noborder">Стоимость пакета <span>1000€</span></p>
-                        <p class="packageCourse">Курс "Позитивное мышление"</p>
-                        <p class="packageInfo">Вывод денег <span>40%</span></p>
-                        <p class="packageInfo">Накопительный счёт <span>60%</span></p>
-                        <p class="packageInfo _disabled">БОК <span>20€ в месяц</span></p>
-                        <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
-                        <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
+                            <p class="packageTitle">@lang('cabinet.marketing.packages.standard.packageTitle')</p>
+                            <p class="packageInfo _noborder">@lang('cabinet.marketing.packages.standard.packageInfo0')</p>
+                            <p class="packageCourse">@lang('cabinet.marketing.packages.standard.packageCourse')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo0')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.standard.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo3')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.standard.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.standard.packageInfo3')</p>
                         </div>
-                        <p class="packageAccumulation">10000€ для перехода на 3 пакет</p>
+                        <p class="packageAccumulation">@lang('cabinet.marketing.packages.standard.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 2 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 1 ? ' _disabled' : '' }}" data-name="standard">Апгрейд</a>
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 1 ? ' _disabled' : '' }}" data-name="standard">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                     <div class="packageItem _premium">
                         <div class="packageTop">
-                        <p class="packageTitle">Premium</p>
-                        <p class="packageInfo _noborder">Стоимость пакета <span>10000€</span></p>
-                        <p class="packageCourse">Курс "Инвестиции"</p>
-                        <p class="packageInfo">Вывод денег <span>40%</span></p>
-                        <p class="packageInfo">Накопительный счёт <span>60%</span></p>
-                        <p class="packageInfo _disabled">БОК <span>30€ в месяц</span></p>
-                        <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
-                        <p class="packageInfo _disabled">Автомобильная(НК 10%) <span>до 20.000€</span></p>
-                        <p class="packageInfo _disabled">Жилищная(НК 20%) <span>до 100.000€</span></p>
-                        <p class="packageInfo _disabled">Инвестиционная(НК 30%) <span>до 300.000€</span></p>
+                            <p class="packageTitle">@lang('cabinet.marketing.packages.premium.packageTitle')</p>
+                            <p class="packageInfo _noborder">@lang('cabinet.marketing.packages.premium.packageInfo0')</p>
+                            <p class="packageCourse">@lang('cabinet.marketing.packages.premium.packageCourse')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo0')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.premium.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo3')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.premium.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.premium.packageInfo3')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.premium.packageInfo4')</p>
                         </div>
-                        <p class="packageAccumulation">100000€ для перехода на 4 пакет</p>
+                        <p class="packageAccumulation">@lang('cabinet.marketing.packages.premium.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 3 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">Апгрейд</a>
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                     <div class="packageItem _vip">
                         <div class="packageTop">
-                        <p class="packageTitle">VIP</p>
-                        <p class="packageInfo _noborder">Стоимость пакета <span>100000€</span></p>
-                        <p class="packageCourse">Курс "Инвестиции +"</p>
-                        <p class="packageInfo">Вывод денег <span>40%</span></p>
-                        <p class="packageInfo _disabled">БОК <span>50€ в месяц</span></p>
-                        <p class="packageInfo _disabled">БОК <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageInfo _disabled">Online Shop <span>РП 10%-5%-3%-2%</span></p>
-                        <p class="packageGroover">Индивидуальные тренинги</p>
-                        <p class="packageGroover">Участие в мероприятиях</p>
-                        <p class="packageGroover">Закрытый инвестиционный клуб</p>
-                        <p class="packageGroover">Совместные проекты с MySkyLine</p>
+                            <p class="packageTitle">@lang('cabinet.marketing.packages.vip.packageTitle')</p>
+                            <p class="packageInfo _noborder">@lang('cabinet.marketing.packages.vip.packageInfo0')</p>
+                            <p class="packageCourse">@lang('cabinet.marketing.packages.vip.packageCourse')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo0')</p>
+                            <p class="packageInfo">@lang('cabinet.marketing.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packages.vip.packageInfo1')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo2')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo3')</p>
+                            <p class="packageInfo _disabled">@lang('cabinet.marketing.packageInfo4')</p>
+                        <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover0')</p>
+                        <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover1')</p>
+                        <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover2')</p>
+                        <p class="packageGroover">@lang('cabinet.marketing.packages.vip.packageGroover3')</p>
                         </div>
-                        <p class="packageAccumulation">Дальше дело за вами</p>
+                        <p class="packageAccumulation">@lang('cabinet.marketing.packages.vip.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="vip">Апгрейд</a>
+                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="vip">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                 </div>
                 <div class="myRamka">
-                    <p class="pageText _rammer">Каждый желающий может приобрести любой из четырех пакетов. В случае покупки большего пакета, меньший открывается автоматически бесплатно.</p>
-                    <p class="pageText _rammer">БОК (Библиотека Образовательных Курсов) для партнеров компании открыты все курсы, предусмотренные для каждого пакета</p>
-                    <p class="pageText _rammer">РП - Реферальная Программа для партнеров компании</p>
-                    <p class="pageText _rammer">НК – Накопительная Сумма для Авто программы и Жилищной программы</p>
-                    <p class="pageText _rammer">Пассивный доход выплачивается партнерам после выполнения квалификации. Полная информация на официальном ресурсе компании.</p>
+                    <p class="pageText _rammer">@lang('cabinet.marketing.packages_text.text0')</p>
+                    <p class="pageText _rammer">@lang('cabinet.marketing.packages_text.text1')</p>
+                    <p class="pageText _rammer">@lang('cabinet.marketing.packages_text.text2')</p>
+                    <p class="pageText _rammer">@lang('cabinet.marketing.packages_text.text3')</p>
+                    <p class="pageText _rammer">@lang('cabinet.marketing.packages_text.text4')</p>
                 </div>
                 <div class="myRamka">
-                    <p class="myBonusName"><span>Bonus "Travel"</span><span>пакет "Econom"</span></p>
-                    <p class="pageText">20 партнеров в первую линию за 6 месяцев + 200 €</p>
-                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете Econom.</p>
-                    <p class="myBonusName"><span>Bonus "Start"</span><span>пакет "Standard"</span></p>
-                    <p class="pageText">20 партнеров в первую линию за 6 месяцев + 2 000 € на путешествие.</p>
-                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете a.</p>
-                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Standard"</span></p>
-                    <p class="pageText">50 партнеров в первую линию 2% пассивный доход.</p>
-                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 2 партнера в первую линию в течении трех месяцев со дня первой выплаты в пакете a.</p>
-                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "Premium"</span></p>
-                    <p class="pageText">50 партнеров в первую линию 3% пассивный доход.</p>
-                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 1 партнера в первую линию в течении трех месяцев со дня первой выплаты в пакете Premium.</p>
-                    <p class="myBonusName"><span>Bonus "Passive Partners"</span><span>пакет "Premium"</span></p>
-                    <p class="pageText">60 партнеров, из них 30 партнеров в первую линию и 30 партнеров в остальные линии за 12 месяцев + 50 000 €</p>
-                    <p class="pageText">Отсчет начинается с первого зарегистрированного партнера в пакете Premium.</p>
-                    <p class="myBonusName"><span>Bonus "Passive Income"</span><span>пакет "VIP"</span></p>
-                    <p class="pageText">10 партнеров в первую линию 5% пассивный доход.</p>
-                    <p class="pageText">Выплаты один раз в квартал. Квалификация – 1 партнер в первую линию в течении 6 месяцев со дня первой выплаты в пакете VIP.</p>
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.one.markName')</span><span>@lang('cabinet.marketing.bonuses.one.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.one.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.one.markText1')</p>
+                    
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.two.markName')</span><span>@lang('cabinet.marketing.bonuses.two.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.two.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.two.markText1')</p>
+   
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.three.markName')</span><span>@lang('cabinet.marketing.bonuses.three.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.three.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.three.markText1')</p>
+      
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.four.markName')</span><span>@lang('cabinet.marketing.bonuses.four.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.four.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.four.markText1')</p>
+
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.five.markName')</span><span>@lang('cabinet.marketing.bonuses.five.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.five.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.five.markText1')</p>
+
+                    <p class="myBonusName"><span>@lang('cabinet.marketing.bonuses.six.markName')</span><span>@lang('cabinet.marketing.bonuses.six.markEblo')</span></p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.six.markText0')</p>
+                    <p class="pageText">@lang('cabinet.marketing.bonuses.six.markText1')</p>
                 </div>
             </div>
         </div>
@@ -130,7 +136,7 @@
 <link rel="stylesheet" href="/assets/css/index.css">
 <div class="popup" style="display: block;">
     <div class="popupBg"></div>
-    <div class="popupItem" style="display: block;">
+    <div class="popupItem" style="display: block;" id="confirmEmailNotic">
         <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_53_662)">
             <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
@@ -142,22 +148,22 @@
             </clipPath>
             </defs>
             </svg>
-            <p class="responseText">Ваш аккаунт был деактивирован</p>
-            <p class="responseDesc">Для восстановления аккаунта необходимо</p>
-            <p class="responseDesc">подтвердить вашу почту!</p>
+            <p class="responseText">@lang('popups.block.title')</p>
+            <p class="responseDesc">@lang('popups.block.text0')</p>
+            <p class="responseDesc">@lang('popups.block.text1')</p>
             <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn">Подтвердить</a>
+                <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
             </div>
     </div>
     <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
         <svg class="popupCross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <h3 class="popupName">Восстановление доступа</h3>
-        <p class="policeForm popDesc">На почту <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a><br> был отправлен код восстановления доступа.</p>
-        <p class="policeForm popDesc">У вас будет 24 часа на приобретение пакета.</p>
+        <h3 class="popupName">@lang('popups.activate.title')</h3>
+        <p class="policeForm popDesc">@lang('popups.activate.text0') <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a>@lang('popups.activate.text01')</p>
+        <p class="policeForm popDesc">@lang('popups.activate.text1')</p>
         <input type="text" name="name" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
-        <button class="formButton">Восстановить</button>
+        <button class="formButton">@lang('popups.block.btn')</button>
     </form>
 </div>
 <style>
