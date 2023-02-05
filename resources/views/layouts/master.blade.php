@@ -31,8 +31,8 @@
                     <a href="/contact.html"{{ Route::currentRouteName() == 'contact' ? ' class=_active' : '' }}>Contact</a>
                 </li>
             </ul>
-            <a href="#" class="btn logBtn popupBtn" data-name="login">Login</a>
-            <a href="#" class="btn regBtn popupBtn" data-name="register">Register</a>
+            <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
+            <a href="#" class="btn regBtn popupBtn" data-name="register">@lang('mainPages.header_btn.register')</a>
             <!-- <a href="#" class="btn userBtn">Cabinet</a> -->
         </div>
     </div>
@@ -83,40 +83,40 @@
             <div class="footerFlex">
                 <div class="footerItem">
                     <div class="footerAbout">
-                        <h3 class="footerTitle">About Us</h2>
-                        <p class="footerText">Lorem ipsum dolor sit amet, consectetur some dymmy adipiscing elit. Nam turpis quam, sodales in text she ante sagittis, varius efficitur mauris. Nam turpis quam, sodales in text should be able. to...</p>
+                        <h3 class="footerTitle">@lang('mainPages.footer.aboutUs')</h2>
+                        <p class="footerText">@lang('mainPages.footer.description')</p>
                     </div>
-                    <p class="copyright">©Copyright 2022 Digital Agency Theme. All Rights Reserved.</p>
+                    <p class="copyright">@lang('mainPages.footer.copy')</p>
                 </div>
                 <div class="footerItem">
-                    <h3 class="footerTitle">Contact Us</h2>
+                    <h3 class="footerTitle">@lang('mainPages.footer.contactUs')</h2>
                         <div class="footerLinks">
-                            <a href="#" class="footerLink">
+                            <a href="tel:@lang('mainPages.footer.phone')" class="footerLink">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.41333 7.19333C5.37333 9.08 6.92 10.62 8.80667 11.5867L10.2733 10.12C10.4533 9.94 10.72 9.88 10.9533 9.96C11.7 10.2067 12.5067 10.34 13.3333 10.34C13.7 10.34 14 10.64 14 11.0067V13.3333C14 13.7 13.7 14 13.3333 14C7.07333 14 2 8.92667 2 2.66667C2 2.3 2.3 2 2.66667 2H5C5.36667 2 5.66667 2.3 5.66667 2.66667C5.66667 3.5 5.8 4.3 6.04667 5.04667C6.12 5.28 6.06667 5.54 5.88 5.72667L4.41333 7.19333Z" fill="white"/>
                                     </svg>
-                                <span>0 (877) 123-4567</span>
+                                <span>@lang('mainPages.footer.phone')</span>
                             </a>
-                            <a href="#" class="footerLink">
+                            <a href="mailto:@lang('mainPages.footer.mail')" class="footerLink">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.66659 13.3334C2.29992 13.3334 1.98614 13.203 1.72525 12.9421C1.46392 12.6807 1.33325 12.3667 1.33325 12.0001V4.00008C1.33325 3.63341 1.46392 3.31964 1.72525 3.05875C1.98614 2.79741 2.29992 2.66675 2.66659 2.66675H13.3333C13.6999 2.66675 14.0139 2.79741 14.2753 3.05875C14.5361 3.31964 14.6666 3.63341 14.6666 4.00008V12.0001C14.6666 12.3667 14.5361 12.6807 14.2753 12.9421C14.0139 13.203 13.6999 13.3334 13.3333 13.3334H2.66659ZM7.99992 8.55008C8.05547 8.55008 8.1137 8.54164 8.17458 8.52475C8.23592 8.5083 8.29436 8.48342 8.34992 8.45008L13.0666 5.50008C13.1555 5.44453 13.2221 5.37519 13.2666 5.29208C13.311 5.20853 13.3333 5.11675 13.3333 5.01675C13.3333 4.79453 13.2388 4.62786 13.0499 4.51675C12.861 4.40564 12.6666 4.41119 12.4666 4.53341L7.99992 7.33341L3.53325 4.53341C3.33325 4.41119 3.13881 4.4083 2.94992 4.52475C2.76103 4.64164 2.66659 4.80564 2.66659 5.01675C2.66659 5.12786 2.68881 5.22497 2.73325 5.30808C2.7777 5.39164 2.84436 5.45564 2.93325 5.50008L7.64992 8.45008C7.70547 8.48342 7.76392 8.5083 7.82525 8.52475C7.88614 8.54164 7.94436 8.55008 7.99992 8.55008V8.55008Z" fill="white"/>
                                     </svg>
-                                <span>info@yoursite.com</span>
+                                <span>@lang('mainPages.footer.mail')</span>
                             </a>
                             <a href="#" class="footerLink">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.7049 4.6301C14.6252 4.33412 14.4692 4.06425 14.2525 3.84752C14.0357 3.63078 13.7659 3.47477 13.4699 3.3951C12.3799 3.1001 7.99989 3.1001 7.99989 3.1001C7.99989 3.1001 3.61989 3.1001 2.52989 3.3951C2.23391 3.47477 1.96404 3.63078 1.74731 3.84752C1.53057 4.06425 1.37456 4.33412 1.29489 4.6301C1.09136 5.74173 0.992594 6.87001 0.999888 8.0001C0.992594 9.13019 1.09136 10.2585 1.29489 11.3701C1.37456 11.6661 1.53057 11.9359 1.74731 12.1527C1.96404 12.3694 2.23391 12.5254 2.52989 12.6051C3.61989 12.9001 7.99989 12.9001 7.99989 12.9001C7.99989 12.9001 12.3799 12.9001 13.4699 12.6051C13.7659 12.5254 14.0357 12.3694 14.2525 12.1527C14.4692 11.9359 14.6252 11.6661 14.7049 11.3701C14.9084 10.2585 15.0072 9.13019 14.9999 8.0001C15.0072 6.87001 14.9084 5.74173 14.7049 4.6301V4.6301ZM6.59989 10.1001V5.9001L10.2349 8.0001L6.59989 10.1001Z" fill="white"/>
                                     </svg>
-                                <span>Youtube</span>
+                                <span>@lang('mainPages.footer.footerLink0')</span>
                             </a>
                             <a href="#" class="footerLink">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.7049 4.6301C14.6252 4.33412 14.4692 4.06425 14.2525 3.84752C14.0357 3.63078 13.7659 3.47477 13.4699 3.3951C12.3799 3.1001 7.99989 3.1001 7.99989 3.1001C7.99989 3.1001 3.61989 3.1001 2.52989 3.3951C2.23391 3.47477 1.96404 3.63078 1.74731 3.84752C1.53057 4.06425 1.37456 4.33412 1.29489 4.6301C1.09136 5.74173 0.992594 6.87001 0.999888 8.0001C0.992594 9.13019 1.09136 10.2585 1.29489 11.3701C1.37456 11.6661 1.53057 11.9359 1.74731 12.1527C1.96404 12.3694 2.23391 12.5254 2.52989 12.6051C3.61989 12.9001 7.99989 12.9001 7.99989 12.9001C7.99989 12.9001 12.3799 12.9001 13.4699 12.6051C13.7659 12.5254 14.0357 12.3694 14.2525 12.1527C14.4692 11.9359 14.6252 11.6661 14.7049 11.3701C14.9084 10.2585 15.0072 9.13019 14.9999 8.0001C15.0072 6.87001 14.9084 5.74173 14.7049 4.6301V4.6301ZM6.59989 10.1001V5.9001L10.2349 8.0001L6.59989 10.1001Z" fill="white"/>
                                     </svg>
-                                <span>Youtube</span>
+                                <span>@lang('mainPages.footer.footerLink1')</span>
                             </a>
-                            <a href="#" class="footerLink _police">Обработка персональных данных</a>
-                            <a href="#" class="footerLink _police">Политика конфиденциальности</a>
+                            <a href="#" class="footerLink _police" target="_blank">@lang('mainPages.footer.personal')</a>
+                            <a href="#" class="footerLink _police" target="_blank">@lang('mainPages.footer.policy')</a>
                         </div>
                 </div>
             </div>

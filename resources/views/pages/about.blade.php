@@ -4,30 +4,30 @@
     <div class="headerP"></div>
     <section class="section _hero" style="background: url(/image/about/hero.jpg);">
         <div class="page">
-            <h1 class="title">Маркетинговые решения, которые работают</h1>
-            <p class="subText">Оглянись — измени себя! Настоящая жизнь намного лучше</p>
-            <p class="aboutText _mt40">Компания «MySkyLine Limited» за мир, не имеет отношение к политическим, или военным организациям. Не поддерживает не законные или сомнительные проекты. Не является финансовой пирамидой, или хайпом. Не предлагает «легкие деньги», большие проценты, или сверх прибыли. В компании нет обязательных закупок, ежемесячной активности или постоянных квалификаций (за исключением пассивного дохода). Компания не предлагает крипты, койны или биткойны, придуманные деньги или супер ботов. Мы не работаем со скептиками, «нытиками», «блондинками» и «бабушками кошатницами». Если у вас кризис веры или стакан на половину пуст вам нет места в нашей компании. Мы сообщество сильных успешных и независимых людей. Для нас главное мирные жители планеты. Нужно жить сегодняшним днем и не забывать планировать свое будущее</p>
+            <h1 class="title">@lang('mainPages.about_first_screen.title')</h1>
+            <p class="subText">@lang('mainPages.about_first_screen.subtitle')</p>
+            <p class="aboutText _mt40">@lang('mainPages.about_first_screen.description')</p>
         </div>
     </section>
     <section class="section">
         <div class="page">
-            <h2 class="title">Почему стоит выбрать компанию "MySkyLine"</h2>
-            <p class="subText">Только то, что нравится лично тебе - приносит пользу, делает результат</p>
+            <h2 class="title">@lang('mainPages.about_second_screen.title')</h2>
+            <p class="subText">@lang('mainPages.about_second_screen.subtitle')</p>
             <div class="servicesFlex">
                 <div class="serviceItem">
                     <div class="serviceIcon">1</div>
-                    <h3 class="serviceTitle">25 лет в МЛМ бизнесе</h3>
-                    <p class="serviceText">Все настолько устали от пустых обещаний и обмана, что мы решились на серьезные перемены в области МЛМ бизнеса. На сегодняшний момент мы первые кто делает такой эксперимент в рамках нашей компании.</p>
+                    <h3 class="serviceTitle">@lang('mainPages.about_second_screen.cards.first_title')</h3>
+                    <p class="serviceText">@lang('mainPages.about_second_screen.cards.first_description')</p>
                 </div>
                 <div class="serviceItem">
                     <div class="serviceIcon">2</div>
-                    <h3 class="serviceTitle">35 Открытых компаний</h3>
-                    <p class="serviceText">Имеем ценный опыт открытия Компаний в различных сферах: строительство, производство, услуги. Многие из них работают до сих пор. Делают отчетность, платят налоги. </p>
+                    <h3 class="serviceTitle">@lang('mainPages.about_second_screen.cards.second_title')</h3>
+                    <p class="serviceText">@lang('mainPages.about_second_screen.cards.second_description')</p>
                 </div>
                 <div class="serviceItem">
                     <div class="serviceIcon">3</div>
-                    <h3 class="serviceTitle">42 страны вместе с нами</h3>
-                    <p class="serviceText">Ведем работу с партнерами в разных странах. Предлагаем услуги частным и юридическим лицам. Создаем совместные проекты, участвуем в благотворительности. Открыты к новым предложения.</p>
+                    <h3 class="serviceTitle">@lang('mainPages.about_second_screen.cards.third_title')</h3>
+                    <p class="serviceText">@lang('mainPages.about_second_screen.cards.third_description')</p>
                 </div>
             </div>
         </div>
