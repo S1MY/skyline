@@ -264,8 +264,8 @@ return [
             ],
         ]
     ],
-    'package' => [
-        'title' => 'Paket :package',
+    'pacage' => [
+        'title' => 'Paket :pacage',
         'earned' => 'Vom Paket verdient',
         'ref_count' => 'Paketempfehlungen',
         'last_buy' => 'Letzter Einkauf',
