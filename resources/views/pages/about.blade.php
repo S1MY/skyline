@@ -4,42 +4,30 @@
     <div class="headerP"></div>
     <section class="section _hero" style="background: url(/image/about/hero.jpg);">
         <div class="page">
-            <h1 class="title">Marketing Solutions That Work</h1>
-            <p class="subText">Marketing Solutions That Work</p>
-            <p class="aboutText _mt40">We’re also experts at finding the sweet spot between Google’s guidelines and what is
-                commercially right for you. We have progressive theories on search as a tool for retention of customers,
-                not just for acquisition.</p>
-            <p class="aboutText">There are many variations of passages of Lorem Ipsum available, but the majority have
-                suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
-                believable.</p>
-            <p class="aboutText">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                embarrassing hidden in the middle of text.</p>
-                <p class="aboutText">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                    embarrassing hidden in the middle of text. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                    embarrassing hidden in the middle of text.</p>
-                    <p class="aboutText">If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-                        embarrassing hidden in the middle of text.</p>
+            <h1 class="title">Маркетинговые решения, которые работают</h1>
+            <p class="subText">Оглянись — измени себя! Настоящая жизнь намного лучше</p>
+            <p class="aboutText _mt40">Компания «MySkyLine Limited» за мир, не имеет отношение к политическим, или военным организациям. Не поддерживает не законные или сомнительные проекты. Не является финансовой пирамидой, или хайпом. Не предлагает «легкие деньги», большие проценты, или сверх прибыли. В компании нет обязательных закупок, ежемесячной активности или постоянных квалификаций (за исключением пассивного дохода). Компания не предлагает крипты, койны или биткойны, придуманные деньги или супер ботов. Мы не работаем со скептиками, «нытиками», «блондинками» и «бабушками кошатницами». Если у вас кризис веры или стакан на половину пуст вам нет места в нашей компании. Мы сообщество сильных успешных и независимых людей. Для нас главное мирные жители планеты. Нужно жить сегодняшним днем и не забывать планировать свое будущее</p>
         </div>
     </section>
     <section class="section">
         <div class="page">
-            <h2 class="title">Why Choose Digital Agency</h2>
-            <p class="subText">We are Search Engine & Social Media Experts</p>
+            <h2 class="title">Почему стоит выбрать компанию "MySkyLine"</h2>
+            <p class="subText">Только то, что нравится лично тебе - приносит пользу, делает результат</p>
             <div class="servicesFlex">
                 <div class="serviceItem">
-                    <div class="serviceIcon"><img src="/image/about/1.png" alt="serviceIcon"></div>
-                    <h3 class="serviceTitle">Always on Support</h3>
-                    <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus vel ligula placerat pellentesque.</p>
+                    <div class="serviceIcon">1</div>
+                    <h3 class="serviceTitle">25 лет в МЛМ бизнесе</h3>
+                    <p class="serviceText">Все настолько устали от пустых обещаний и обмана, что мы решились на серьезные перемены в области МЛМ бизнеса. На сегодняшний момент мы первые кто делает такой эксперимент в рамках нашей компании.</p>
                 </div>
                 <div class="serviceItem">
-                    <div class="serviceIcon"><img src="/image/about/2.png" alt="serviceIcon"></div>
-                    <h3 class="serviceTitle">Custom SEO Solutions</h3>
-                    <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus vel ligula placerat pellentesque.</p>
+                    <div class="serviceIcon">2</div>
+                    <h3 class="serviceTitle">35 Открытых компаний</h3>
+                    <p class="serviceText">Имеем ценный опыт открытия Компаний в различных сферах: строительство, производство, услуги. Многие из них работают до сих пор. Делают отчетность, платят налоги. </p>
                 </div>
                 <div class="serviceItem">
-                    <div class="serviceIcon"><img src="/image/about/3.png" alt="serviceIcon"></div>
-                    <h3 class="serviceTitle">Money Back Policy</h3>
-                    <p class="serviceText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec metus vel ligula placerat pellentesque.</p>
+                    <div class="serviceIcon">3</div>
+                    <h3 class="serviceTitle">42 страны вместе с нами</h3>
+                    <p class="serviceText">Ведем работу с партнерами в разных странах. Предлагаем услуги частным и юридическим лицам. Создаем совместные проекты, участвуем в благотворительности. Открыты к новым предложения.</p>
                 </div>
             </div>
         </div>
