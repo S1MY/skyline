@@ -44,7 +44,10 @@ return [
         'auto_balance' => 'Automobil (10%)',
         'live_balance' => 'Wohnungen (20%)',
         'invest_balance' => 'Investition (30%)',
-        'savings' => 'Einsparungen beim Kauf eines Standardpakets',
+        'savings0' => 'Einsparungen beim Kauf eines "Standard" Paket',
+        'savings1' => 'Einsparungen beim Kauf eines "Premium" Paket',
+        'savings2' => 'Einsparungen beim Kauf eines "VIP" Paket',
+        'savings3' => 'Sie haben das coolste Paket',
         'history' => 'Operationsverlauf',
         'pdf' => 'PDF erstellen',
         'table' => [

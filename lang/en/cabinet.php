@@ -44,7 +44,10 @@ return [
         'auto_balance' => 'Automotive (10%)',
         'live_balance' => 'Housing (20%)',
         'invest_balance' => 'Investment (30%)',
-        'savings' => 'Savings to Buy a Standard Package',
+        'savings0' => 'Savings to Buy a "Standard" Package',
+        'savings1' => 'Savings to Buy a "Premium" Package',
+        'savings2' => 'Savings to Buy a "VIP" Package',
+        'savings3' => 'You have the coolest package',
         'history' => 'Operation History',
         'pdf' => 'Create PDF',
         'table' => [
