@@ -13,24 +13,26 @@ $(document).ready(function () {
     } else {
       storageLang = "en";
     }
-
-    let url = '/locale/'+storageLang;
+    langChecker(storageLang);
+    localStorage.setItem("lang", storageLang);
+    location.reload();
+  }else{
+    langChecker(storageLang);
+  }
+  function langChecker(lang){
+    let url = '/locale/'+lang;
 
     $.ajax({
         type: "GET",
         url: url,
-        data: {locale: storageLang},
+        data: {locale: lang},
         success: function (response) {
             console.log(response);
-            window.location.reload ();
         },
         error: function (response) {
             console.log(response);
         }
     });
-
-    localStorage.setItem("lang", storageLang);
-    location.reload();
   }
   $('.changerItem').click(function (e) {
     e.preventDefault();
