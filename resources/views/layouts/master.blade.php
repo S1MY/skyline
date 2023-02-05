@@ -69,6 +69,8 @@
                     @php
                         if(Auth::user()){
                             echo 1;
+                        }else{
+                            echo 0;
                         }
                     @endphp
                     <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
