@@ -12,23 +12,23 @@
 <body>
     <div class="mobileMenu">
         <div class="page">
-            <div class="langChanger">
-                <p class="changerItem">en</p>
-                <p class="changerItem">de</p>
-                <p class="changerItem">ru</p>
-            </div>
+            {{-- <div class="langChanger">
+                <p class="changerItem"><a href="{{ route('locale', 'en') }}">en</a></p>
+                <p class="changerItem"><a href="{{ route('locale', 'de') }}">de</a></p>
+                <p class="changerItem"><a href="{{ route('locale', 'ru') }}">ru</a></p>
+            </div> --}}
             <ul class="navigation">
                 <li>
-                    <a href="/"{{ Route::currentRouteName() == 'index' ? ' class=_active' : '' }}>Home</a>
+                    <a href="{{ route('index') }}"{{ Route::currentRouteName() == 'index' ? ' class=_active' : '' }}>@lang('mainPages.navigation.home')</a>
                 </li>
                 <li>
-                    <a href="/about.html"{{ Route::currentRouteName() == 'about' ? ' class=_active' : '' }}>About</a>
+                    <a href="{{ route('about') }}"{{ Route::currentRouteName() == 'about' ? ' class=_active' : '' }}>@lang('mainPages.navigation.about')</a>
                 </li>
                 <li>
-                    <a href="/marketing.html"{{ Route::currentRouteName() == 'marketing' ? ' class=_active' : '' }}>Marketing</a>
+                    <a href="{{ route('marketing') }}"{{ Route::currentRouteName() == 'marketing' ? ' class=_active' : '' }}>@lang('mainPages.navigation.marketing')</a>
                 </li>
                 <li>
-                    <a href="/contact.html"{{ Route::currentRouteName() == 'contact' ? ' class=_active' : '' }}>Contact</a>
+                    <a href="{{ route('contact') }}"{{ Route::currentRouteName() == 'contact' ? ' class=_active' : '' }}>@lang('mainPages.navigation.contact')</a>
                 </li>
             </ul>
             <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
@@ -66,6 +66,11 @@
                         <p class="changerItem"><a href="{{ route('locale', 'de') }}">de</a></p>
                         <p class="changerItem"><a href="{{ route('locale', 'ru') }}">ru</a></p>
                     </div> --}}
+                    @php
+                        if(Auth::user()){
+                            echo 1;
+                        }
+                    @endphp
                     <a href="#" class="btn logBtn popupBtn" data-name="login">@lang('mainPages.header_btn.login')</a>
                     <a href="#" class="btn regBtn popupBtn" data-name="register">@lang('mainPages.header_btn.register')</a>
                     <!-- <a href="#" class="btn userBtn">Cabinet</a> -->

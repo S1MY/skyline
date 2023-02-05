@@ -15,19 +15,19 @@
                 <img src="/image/home/1.png" alt="1">
                 <h3 class="absTitle">@lang('mainPages.main_first_screen_abs_element.first_title')</h3>
                 <p class="absText">@lang('mainPages.main_first_screen_abs_element.first_desc')</p>
-                <a href="#" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
+                <a href="{{ route('marketing') }}" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
             </div>
             <div class="absoluteItem">
                 <img src="/image/home/2.png" alt="2">
                 <h3 class="absTitle">@lang('mainPages.main_first_screen_abs_element.second_title')</h3>
                 <p class="absText">@lang('mainPages.main_first_screen_abs_element.second_desc')</p>
-                <a href="#" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
+                <a href="{{ route('marketing') }}" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
             </div>
             <div class="absoluteItem">
                 <img src="/image/home/3.png" alt="3">
                 <h3 class="absTitle">@lang('mainPages.main_first_screen_abs_element.third_title')</h3>
                 <p class="absText">@lang('mainPages.main_first_screen_abs_element.third_desc')</p>
-                <a href="#" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
+                <a href="{{ route('marketing') }}" class="absLink"><img src="/image/home/cross.png" alt="cross"></a>
             </div>
         </div>
     </section>
