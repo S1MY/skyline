@@ -288,8 +288,8 @@ return [
     ],
     'partners' => [
         'title' => 'Partnerprogramm',
-        'partn_link' => 'Partnerlink:',
-        'partn_link_two' => 'Alternativer Link:',
+        'partn_link' => 'Partnerlink',
+        'partn_link_two' => 'Alternativer Link',
         'copy' => 'kopiert',
         'desc' => 'Oben sind zwei Links, um Partner in Ihr Team einzuladen. Je mehr Partner Sie haben, desto mehr können Sie verdienen und das System verbessern.',
         'all_partners' => 'Partner insgesamt',
@@ -300,7 +300,7 @@ return [
         'your_partn' => 'Ihre Partner',
         'users' => 'p.',
     ],
-    'promotion' => [
+    'promo' => [
         'desc' => 'Hier finden Sie alle Werbematerialien, um Partner zu gewinnen',
         'banner_title' => 'Bannerlink :attribute',
         'banner_lenght' => 'Dateigröße',

@@ -288,8 +288,8 @@ return [
     ],
     'partners' => [
         'title' => 'Affiliate Program',
-        'partn_link' => 'Partner Link:',
-        'partn_link_two' => 'Alternate link:',
+        'partn_link' => 'Partner Link',
+        'partn_link_two' => 'Alternate link',
         'copy' => 'Copied',
         'desc' => 'Above are two links to invite partners to your team. The more partners you have, the more you can earn and upgrade the system.',
         'all_partners' => 'Total Partners',
@@ -300,7 +300,7 @@ return [
         'your_partn' => 'Your partners',
         'users' => 'p.',
     ],
-    'promotion' => [
+    'promo' => [
         'desc' => 'Here you can find any promotional materials to attract partners',
         'banner_title' => 'Banner link :attribute',
         'banner_lenght' => 'File size',
