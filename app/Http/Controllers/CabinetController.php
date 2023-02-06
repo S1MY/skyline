@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Storage;
 
 class CabinetController extends Controller
 {
@@ -744,6 +745,7 @@ class CabinetController extends Controller
         $fileName =  time().'.'. 'pdf' ;
         $pdf->save($path . '/' . $fileName);
 
-        return $fileName;
+        $pdf = public_path('pdf/'.$fileName);
+        return response()->download($pdf);
     }
 }

@@ -307,9 +307,10 @@ $(document).ready(function () {
             data: {from: from},
             success: function(response){
                 console.log(response);
+
                 const link = document.createElement('a');
-                link.href = 'https://myskylinecompany.com/public/pdf/'+response;
-                link.download = response;
+                link.href = response;
+                link.download = 'Myskyline Operation Story';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
