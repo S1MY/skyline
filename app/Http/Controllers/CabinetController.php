@@ -687,7 +687,9 @@ class CabinetController extends Controller
         //     return 'Вы отправили парашу';
         // }
 
-        return $request;
+        // return $request;
+
+        $emailUser = 'konst.lav@yandex.ru';
 
         Mail::to($emailUser)->send(new EmailConfirm());
 
