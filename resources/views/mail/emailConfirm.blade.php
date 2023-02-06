@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   </head>
-  <body style="margin:0;padding:0;height:100vh;color:#202020;font-family:'Roboto', sans-serif;background:linear-gradient(107.56deg, #3867D6 0%, #EB3B5A 100%);position:relative;font-size:16px;line-height:140%;">
+  <body style="margin:0;padding:20px 0px;height:100vh;color:#202020;font-family:'Roboto', sans-serif;background:linear-gradient(107.56deg, #3867D6 0%, #EB3B5A 100%);position:relative;font-size:16px;line-height:140%;">
     <div class="popup" style="margin:0;padding:0;display: block;">
       <div class="popupBg" style="margin:0;padding:0;"></div>
       <div class="popupItem" style="margin:0;padding:0;text-align:center;position:relative;z-index:2;border-radius:12px;background:#FFFFFF;max-width:480px;padding:24px;margin:50px auto;display: block;" id="confirmEmailNotic">
@@ -13,7 +13,7 @@
         <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;">Введите код восстановление доступа на сайте.</p>
         <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;padding-bottom:20px;">У вас будет 24 часа на приобретение пакета.</p>
         <div class="btnWrapper displayFlex spaceCenter" style="margin:0;padding:0;">
-          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;height:48px;padding:0 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">000000</p>
+          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;height:48px;padding:10px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">000000</p>
         </div>
       </div>
     </div>
