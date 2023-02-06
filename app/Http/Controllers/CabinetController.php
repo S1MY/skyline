@@ -745,7 +745,7 @@ class CabinetController extends Controller
         $fileName =  time().'.'. 'pdf' ;
         $pdf->save($path . '/' . $fileName);
 
-        $pdf = 'pdf/'.$fileName;
+        $pdf = '/pdf/'.$fileName;
         return $pdf;
     }
 }
