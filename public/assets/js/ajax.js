@@ -307,9 +307,8 @@ $(document).ready(function () {
             data: {from: from},
             success: function(response){
                 console.log(response);
-                var blob = new Blob([response]);
                 var link = document.createElement('a');
-                link.href = window.URL.createObjectURL(blob);
+                link.href = window.URL.createObjectURL(response);
                 link.download = "Operation story.pdf";
                 link.click();
             },
