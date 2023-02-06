@@ -313,7 +313,7 @@ $(document).ready(function () {
                 link.download = 'Myskyline Operation Story';
                 document.body.appendChild(link);
                 link.click();
-                document.body.removeChild(link);
+                // document.body.removeChild(link);
             },
             error: function (data) {
                 console.log(data);
