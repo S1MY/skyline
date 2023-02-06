@@ -260,18 +260,32 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
 
-                // $('.popupItem').hide();
+    $('#activator').submit(function(e){
+        e.preventDefault();
 
-                // if( result.error == 1 ){
-                //     $('.popup').fadeIn();
-                //     $('.popupItem[data-name="error"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="error"]').fadeIn();
-                // }else{
-                //     $('.popup').fadeIn();
-                //     $('.popupItem[data-name="success"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="success"]').fadeIn();
-                // }
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        let ajaxUrl = $(this).attr('action');
+        let data = $(this).serialize();
+        // let email = $(this).attr('data-email');
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: data,
+            success: function(result){
+                console.log(result);
             },
             error: function (data) {
                 console.log(data);

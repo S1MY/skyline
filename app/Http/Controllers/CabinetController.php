@@ -687,15 +687,23 @@ class CabinetController extends Controller
             return 'Вы отправили парашу';
         }
 
-        // return $request;
+        $code = rand(000000, 999999);
 
-        // $emailUser = 'afafaf228@mail.ru';
-
-        $code = 123456;
+        session(['hashed_code' => Hash::make($code)]);
 
         Mail::to($emailUser)->send(new EmailConfirm($code));
 
         return 1;
+
+    }
+
+    public function extendAccount(Request $request){
+
+        if( Hash::check($request->code, session('hashed_code')) ){
+            return 'Круто, получилось!';
+        }else{
+            return 'Что-то не так';
+        }
 
     }
 

@@ -213,14 +213,14 @@
                 <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
             </div>
     </div>
-    <form class="popupItem" data-name="activator" id="activator" action="{{ route('register') }}">
+    <form class="popupItem" data-name="activator" id="activator" action="{{ route('extendAccount') }}">
         <svg class="popupCross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         <h3 class="popupName">@lang('popups.activate.title')</h3>
         <p class="policeForm popDesc">@lang('popups.activate.text0') <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a>@lang('popups.activate.text01')</p>
         <p class="policeForm popDesc">@lang('popups.activate.text1')</p>
-        <input type="text" name="name" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
+        <input type="text" name="code" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
         <button class="formButton">@lang('popups.block.btn')</button>
     </form>
 </div>

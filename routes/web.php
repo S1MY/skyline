@@ -56,6 +56,7 @@ Route::post('/settings/update', [CabinetController::class, 'updateUserInfo'])->n
 Route::post('/settings/change-password', [CabinetController::class, 'passwordChanger'])->name('changePassword');
 Route::post('/settings/avatar', [CabinetController::class, 'setAvatar'])->name('setAvatar');
 Route::post('/confirmEmail', [CabinetController::class, 'papaConfirm'])->name('confirmEmail');
+Route::post('/extendAccount', [CabinetController::class, 'extendAccount'])->name('extendAccount');
 
 Route::get('/emailexample', [CabinetController::class, 'previewEmail'])->name('previewEmail');
 
