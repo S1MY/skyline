@@ -57,5 +57,7 @@ Route::post('/settings/change-password', [CabinetController::class, 'passwordCha
 Route::post('/settings/avatar', [CabinetController::class, 'setAvatar'])->name('setAvatar');
 Route::post('/confirmEmail', [CabinetController::class, 'papaConfirm'])->name('confirmEmail');
 
+Route::get('/emailexample', [CabinetController::class, 'previewEmail'])->name('previewEmail');
+
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
 Route::post('/marketing/buy', [CabinetController::class, 'buy'])->name('buy');

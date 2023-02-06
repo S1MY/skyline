@@ -697,6 +697,11 @@ class CabinetController extends Controller
 
     }
 
+    public function previewEmail()
+    {
+        return view('mail.emailConfirm');
+    }
+
     public function preview()
     {
         return view('preview');
