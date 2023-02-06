@@ -1,87 +1,21 @@
-<div class="popup" style="display: block;">
-    <div class="popupBg"></div>
-    <div class="popupItem" style="display: block;" id="confirmEmailNotic">
-        <img src="data:image/png;base64,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" alt="loga">
-        <p class="responseText">Восстановление доступа</p>
-        <p class="responseDesc">Введите код восстановление доступа на сайте.</p>
-        <p class="responseDesc">У вас будет 24 часа на приобретение пакета.</p>
-        <div class="btnWrapper displayFlex spaceCenter">
-            <p class="responseBtn confirmEmail">000000</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  </head>
+  <body style="margin:0;padding:0;height:100vh;color:#202020;font-family:'Roboto', sans-serif;background:linear-gradient(107.56deg, #3867D6 0%, #EB3B5A 100%);position:relative;font-size:16px;line-height:140%;">
+    <div class="popup" style="margin:0;padding:0;display: block;">
+      <div class="popupBg" style="margin:0;padding:0;"></div>
+      <div class="popupItem" style="margin:0;padding:0;text-align:center;position:relative;z-index:2;border-radius:12px;background:#FFFFFF;max-width:480px;padding:24px;margin:50px auto;display: block;" id="confirmEmailNotic">
+        <img src="data:image/png;base64,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" alt="loga" style="margin:0;padding:0;margin-bottom:25px;">
+        <p class="responseText" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:20px;font-size:20px;line-height:28px;text-align:center;text-transform:uppercase;">Восстановление доступа</p>
+        <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;">Введите код восстановление доступа на сайте.</p>
+        <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;padding-bottom:20px;">У вас будет 24 часа на приобретение пакета.</p>
+        <div class="btnWrapper displayFlex spaceCenter" style="margin:0;padding:0;">
+          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;height:48px;padding:0 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">000000</p>
         </div>
+      </div>
     </div>
-</div>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    img{
-        margin-bottom: 25px;
-    }
-    p{
-        color: #202020;
-        font-family: 'Roboto', sans-serif;
-    }
-    .responseBtn {
-        height: 48px;
-        padding: 0 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 20px;
-        text-transform: uppercase;
-        font-size: 16px;
-        color: #FFFFFF;
-        background: #EB3B5A;
-        border: 1px solid #EB3B5A;
-        border-radius: 8px;
-        transition: all 0.4s;
-        text-decoration: none;
-    }
-    .popupItem{
-        text-align: center;
-        position: relative;
-        z-index: 2;
-        border-radius: 12px;
-        background: #FFFFFF;
-        max-width: 480px;
-        padding: 24px;
-        margin: 50px auto;
-    }
-    .responseText{
-        padding-bottom: 20px;
-        font-size: 20px;
-        line-height: 28px;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .responseDesc {
-        padding-bottom: 5px;
-        font-size: 18px;
-        line-height: 20px;
-        text-align: center;
-    }
-
-    .popDesc{
-        margin-top: 0;
-    }
-    body{
-        height: 100vh;
-        color: #202020;
-        font-family: 'Roboto', sans-serif;
-        background: linear-gradient(107.56deg, #3867D6 0%, #EB3B5A 100%);
-        position: relative;
-        font-size: 16px;
-        line-height: 140%;
-    }
-    .responseDesc{
-        padding-bottom: 5px;
-        font-size: 18px;
-        line-height: 20px;
-        text-align: center;
-    }
-    .responseDesc:nth-last-child(2){
-        padding-bottom: 20px;
-    }
-</style>
+  </body>
+</html>
