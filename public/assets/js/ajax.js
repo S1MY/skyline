@@ -307,10 +307,9 @@ $(document).ready(function () {
             data: {from: from},
             success: function(response){
                 console.log(response);
-                var link = document.createElement('a');
-                link.href = window.URL.createObjectURL(response);
-                link.download = "Operation story.pdf";
-                link.click();
+                $('body').html('<a href="'+response+'" download class="downloadlink"></a>')
+                $('.downloadlink').click();
+                $('.downloadlink').remove();
             },
             error: function (data) {
                 console.log(data);
