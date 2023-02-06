@@ -408,11 +408,18 @@ class CabinetController extends Controller
                 // File path
                 $filepath = url('files/'.$filename);
 
+                $userInfo = UserInfo::where('user_id', '=', Auth::user()->id)->first();
+
+                $userInfo->avatar = $filepath;
+
+                $userInfo->save();
+
                 // Response
-                $data['success'] = 1;
-                $data['message'] = 'Uploaded Successfully!';
-                $data['filepath'] = $filepath;
-                $data['extension'] = $extension;
+                return response()->json([
+                    'avatar' => true,
+                    'error' => 0,
+                ]);
+
             }else{
                 // Response
                 $data['success'] = 2;

@@ -22,6 +22,7 @@ class UserInfo extends Model
         'user_show_id',
         'user_status',
         'login',
+        'avatar',
     ];
 
 }
