@@ -18,9 +18,12 @@ class EmailConfirm extends Mailable
      *
      * @return void
      */
-    public function __construct()
+
+    protected $code;
+
+    public function __construct($code)
     {
-        //
+        $this->code = $code;
     }
 
     /**
@@ -44,6 +47,9 @@ class EmailConfirm extends Mailable
     {
         return new Content(
             view: 'mail.emailConfirm',
+            with: [
+                'code' => $this->code
+            ],
         );
     }
 
