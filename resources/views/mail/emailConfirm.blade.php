@@ -11,6 +11,10 @@
     </div>
 </div>
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
     .responseBtn {
         height: 48px;
         padding: 0 20px;
