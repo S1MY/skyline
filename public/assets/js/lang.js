@@ -27,10 +27,8 @@ $(document).ready(function () {
         url: url,
         data: {locale: lang},
         success: function (response) {
-            console.log(response);
         },
         error: function (response) {
-            console.log(response);
         }
     });
   }
@@ -46,7 +44,6 @@ $(document).ready(function () {
         url: url,
         data: {locale: lang},
         success: function (response) {
-            console.log(response);
             window.location.reload ();
         }
     });
@@ -57,7 +54,6 @@ $(document).ready(function () {
     localStorage.removeItem("lang");
     let lang = $(this).attr('data-lang');
     let url = $(this).attr('href');
-    console.log(url);
     localStorage.setItem("lang", lang);
 
     $.ajax({
@@ -65,7 +61,6 @@ $(document).ready(function () {
         url: url,
         data: {locale: lang},
         success: function (response) {
-            console.log(response);
             window.location.reload ();
         }
     });
