@@ -191,6 +191,7 @@
 
 @section('cabBlocked')
 
+
 <link rel="stylesheet" href="/assets/css/index.css">
 <div class="popup" style="display: block;">
     <div class="popupBg confirmEmail"></div>
@@ -261,5 +262,6 @@
         padding-bottom: 20px;
     }
 </style>
+
 
 @endsection
