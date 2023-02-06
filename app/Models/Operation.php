@@ -30,40 +30,40 @@ class Operation extends Model
 
         switch ($month) {
             case 1:
-                $monthName = 'января';
+                $monthName = __('month.jun');
                 break;
             case 2:
-                $monthName = 'февраля';
+                $monthName = __('month.feb');
                 break;
             case 3:
-                $monthName = 'марта';
+                $monthName = __('month.mar');
                 break;
             case 4:
-                $monthName = 'апреля';
+                $monthName = __('month.apr');
                 break;
             case 5:
-                $monthName = 'мая';
+                $monthName = __('month.may');
                 break;
             case 6:
-                $monthName = 'июня';
+                $monthName = __('month.jun');
                 break;
             case 7:
-                $monthName = 'июля';
+                $monthName = __('month.jul');
                 break;
             case 8:
-                $monthName = 'августа';
+                $monthName = __('month.aug');
                 break;
             case 9:
-                $monthName = 'сенятбря';
+                $monthName = __('month.sep');
                 break;
             case 10:
-                $monthName = 'октября';
+                $monthName = __('month.oct');
                 break;
             case 11:
-                $monthName = 'ноября';
+                $monthName = __('month.nov');
                 break;
             case 12:
-                $monthName = 'декабря';
+                $monthName = __('month.dec');
                 break;
 
         }
