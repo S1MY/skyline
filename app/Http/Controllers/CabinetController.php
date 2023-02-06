@@ -738,7 +738,8 @@ class CabinetController extends Controller
                       ->orderBy('operations.id', 'desc')
                       ->get();
 
-        $pdf = PDF::loadView('preview',compact('operations'));
-        return $pdf->download('operation story.pdf');
+        $pdf = PDF::loadView('preview', compact('operations'));
+
+        return response()->download($pdf);
     }
 }
