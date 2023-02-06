@@ -2,11 +2,11 @@
             <div class="sidebarUser">
                 <div class="sidebarAv displayFlex alignItemsCenter">
                     @if (Auth::user()->UserInfo->avatar)
-                    <div class="sidebarAvatar displayFlex alignItemsCenter spaceCenter"
-                        style="background-image: url({{ Auth::user()->UserInfo->avatar }});"></div>
+                        <div class="sidebarAvatar displayFlex alignItemsCenter spaceCenter"
+                            style="background-image: url({{ Auth::user()->UserInfo->avatar }});"></div>
                     @else
-                    <div class="sidebarAvatar displayFlex alignItemsCenter spaceCenter"
-                    style="background-image: url(/image/users/user.png);"></div>
+                        <div class="sidebarAvatar displayFlex alignItemsCenter spaceCenter"
+                        style="background-image: url(/image/users/user.png);"></div>
                     @endif
 
                     <div class="sidebarNaming">

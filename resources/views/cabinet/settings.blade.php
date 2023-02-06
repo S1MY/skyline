@@ -75,7 +75,15 @@
                     </form>
                     <form class="settingForm" id="setAvatar" enctype="multipart/form-data" data-form="avatar" action="{{ route('setAvatar') }}">
                         <p class="settingName">@lang('cabinet.settings.set_avatar')</p>
-                        <div class="settingsAvatar displayFlex alignItemsCenter spaceCenter" style="background-image: url(/image/users/user.png);"></div>
+
+                        @if (Auth::user()->UserInfo->avatar)
+                            <div class="settingsAvatar displayFlex alignItemsCenter spaceCenter"
+                                style="background-image: url({{ Auth::user()->UserInfo->avatar }});"></div>
+                        @else
+                            <div class="settingsAvatar displayFlex alignItemsCenter spaceCenter"
+                            style="background-image: url(/image/users/user.png);"></div>
+                        @endif
+
                         <div class="avatarImageInput displayFlex alignItemsCenter spaceCenter">
                             <input type="file" name="img" class="avatarImage" id="avatarImage">
                             <span class="avatarImageInputText">
