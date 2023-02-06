@@ -307,9 +307,12 @@ $(document).ready(function () {
             data: {from: from},
             success: function(response){
                 console.log(response);
-                $('body').html('<a href="'+response+'" download class="downloadlink"></a>')
-                $('.downloadlink').click();
-                $('.downloadlink').remove();
+                const link = document.createElement('a');
+                link.href = 'https://myskylinecompany.com/public/pdf/'+response;
+                link.download = response;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             },
             error: function (data) {
                 console.log(data);
