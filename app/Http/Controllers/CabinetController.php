@@ -680,16 +680,16 @@ class CabinetController extends Controller
 
     public function papaConfirm(Request $request){
 
-        // $emailUser = Auth::user()->email;
-        // $emailSend = $request->email;
+        $emailUser = Auth::user()->email;
+        $emailSend = $request->email;
 
-        // if( $emailUser != $emailSend ){
-        //     return 'Вы отправили парашу';
-        // }
+        if( $emailUser != $emailSend ){
+            return 'Вы отправили парашу';
+        }
 
         // return $request;
 
-        $emailUser = 'afafaf228@mail.ru';
+        // $emailUser = 'afafaf228@mail.ru';
 
         Mail::to($emailUser)->send(new EmailConfirm());
 
