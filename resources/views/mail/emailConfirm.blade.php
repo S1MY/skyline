@@ -15,6 +15,9 @@
         margin: 0;
         padding: 0;
     }
+    img{
+        margin-bottom: 25px;
+    }
     .responseBtn {
         height: 48px;
         padding: 0 20px;
