@@ -240,4 +240,41 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#messageSend').submit(function(e){
+        e.preventDefault();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        let ajaxUrl = $(this).attr('action');
+        // let email = $(this).attr('data-email');
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: {email: email},
+            success: function(result){
+                console.log(result);
+
+                // $('.popupItem').hide();
+
+                // if( result.error == 1 ){
+                //     $('.popup').fadeIn();
+                //     $('.popupItem[data-name="error"] .responseText').text(result.message);
+                //     $('.popupItem[data-name="error"]').fadeIn();
+                // }else{
+                //     $('.popup').fadeIn();
+                //     $('.popupItem[data-name="success"] .responseText').text(result.message);
+                //     $('.popupItem[data-name="success"]').fadeIn();
+                // }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    })
 });
