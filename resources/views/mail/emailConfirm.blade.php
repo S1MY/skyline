@@ -31,7 +31,9 @@
         background: #FFFFFF;
         max-width: 480px;
         padding: 24px;
+        margin-top: 50px;
     }
+
     .popDesc{
         margin-top: 0;
     }
