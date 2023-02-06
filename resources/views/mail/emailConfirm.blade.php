@@ -18,6 +18,10 @@
     img{
         margin-bottom: 25px;
     }
+    body{
+        color: #202020;
+        font-family: 'Roboto', sans-serif;
+    }
     .responseBtn {
         height: 48px;
         padding: 0 20px;
