@@ -700,7 +700,9 @@ class CabinetController extends Controller
     public function extendAccount(Request $request){
 
         if( Hash::check($request->code, session('hashed_code')) ){
-            return 'Круто, получилось!';
+            $user = User::where('id', '=', Auth::user()->id)->first();
+            $user->created_at = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' -1 day'));
+            $user->save();
         }else{
             return 'Что-то не так';
         }

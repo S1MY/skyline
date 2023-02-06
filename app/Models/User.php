@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'sponsor_id',
+        'created_at',
     ];
 
     /**
