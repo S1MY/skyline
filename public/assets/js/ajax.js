@@ -306,6 +306,7 @@ $(document).ready(function () {
             method: 'post',
             data: {from: from},
             success: function(response){
+                console.log(response);
                 var blob = new Blob([response]);
                 var link = document.createElement('a');
                 link.href = window.URL.createObjectURL(blob);
