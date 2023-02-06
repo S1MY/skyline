@@ -176,7 +176,18 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
-                    // location.reload();
+
+                    $('.popupItem').hide();
+
+                    if( result.error == 1 ){
+                        $('.popup').fadeIn();
+                        $('.popupItem[data-name="error"] .responseText').text(result.message);
+                        $('.popupItem[data-name="error"]').fadeIn();
+                    }else{
+                        $('.popup').fadeIn();
+                        $('.popupItem[data-name="success"] .responseText').text(result.message);
+                        $('.popupItem[data-name="success"]').fadeIn();
+                    }
                 },
                 error: function (data) {
                     console.log(data);

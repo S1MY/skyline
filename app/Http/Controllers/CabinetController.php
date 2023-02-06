@@ -417,13 +417,16 @@ class CabinetController extends Controller
                 // Response
                 return response()->json([
                     'avatar' => true,
+                    'message' => 'Successfully!',
                     'error' => 0,
                 ]);
 
             }else{
-                // Response
-                $data['success'] = 2;
-                $data['message'] = 'File not uploaded.';
+                return response()->json([
+                    'avatar' => true,
+                    'message' => 'error',
+                    'error' => 1,
+                ]);
             }
         }
 
