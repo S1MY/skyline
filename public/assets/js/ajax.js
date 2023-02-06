@@ -306,7 +306,8 @@ $(document).ready(function () {
             method: 'post',
             data: {from: from},
             success: function(response){
-                var blob = new Blob([response]);
+                // var blob = new Blob([response]);
+                console.log(response);
                 const link = document.createElement('a');
                 link.href = response;
                 link.download = "Sample.pdf";
