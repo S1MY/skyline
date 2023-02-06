@@ -38,7 +38,7 @@ Route::middleware(['set_locale'])->group(function(){
         Route::get('/partners', [CabinetController::class, 'partners'])->name('partners');
         Route::get('/promo', [CabinetController::class, 'promo'])->name('promo');
         Route::get('/pdf/preview', [CabinetController::class, 'preview'])->name('pdf.preview');
-        Route::get('/pdf/generate', [CabinetController::class, 'generatePDF'])->name('pdf.generate');
+        Route::post('/pdf/generate', [CabinetController::class, 'generatePDF'])->name('pdf.generate');
     });
 });
 
