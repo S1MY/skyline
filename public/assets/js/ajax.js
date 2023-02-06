@@ -185,23 +185,6 @@ $(document).ready(function () {
         }else{
             console.log('Файл не загружен');
         }
-        // fd.append('img', $input.prop('files')[0]);
-
-        // $.ajax({
-        //     url: ajaxurl,
-        //     data: fd,
-        //     type: 'POST',
-        //     contentType: false,
-        //     processData: false,
-        //     dataType: 'json',
-        //     success: function (data) {
-        //         console.log(data);
-        //         // location.reload();
-        //     },
-        //     error: function (data) {
-        //         console.log(data);
-        //     }
-        // });
     });
 
     $('.confirmEmail').click(function(e){
