@@ -307,10 +307,11 @@ $(document).ready(function () {
             data: {from: from},
             success: function(response){
                 var blob = new Blob([response]);
-                var link = document.createElement('a');
-                link.href = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = response;
                 link.download = "Sample.pdf";
                 link.click();
+                document.body.removeChild(link);
             },
             error: function (data) {
                 console.log(data);
