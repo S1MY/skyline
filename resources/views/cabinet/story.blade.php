@@ -10,7 +10,7 @@
             <div class="contentWrapper">
                 <h1 class="pageTitle displayFlex spaceBetween alignItemsCenter">
                     @lang('cabinet.story.title')
-                    <a href="#" class="pdfCreate">@lang('cabinet.story.pdf')</a>
+                    <a href="#" class="pdfCreate" data-action="{{ route('pdf.generate') }}" data-where="story">@lang('cabinet.story.pdf')</a>
                 </h1>
                 <div class="customTable">
                     <div class="customTableLine customTableHead">

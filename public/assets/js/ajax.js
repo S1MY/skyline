@@ -222,18 +222,6 @@ $(document).ready(function () {
             data: {email: email},
             success: function(result){
                 console.log(result);
-
-                // $('.popupItem').hide();
-
-                // if( result.error == 1 ){
-                //     $('.popup').fadeIn();
-                //     $('.popupItem[data-name="error"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="error"]').fadeIn();
-                // }else{
-                //     $('.popup').fadeIn();
-                //     $('.popupItem[data-name="success"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="success"]').fadeIn();
-                // }
             },
             error: function (data) {
                 console.log(data);
@@ -300,4 +288,31 @@ $(document).ready(function () {
             }
         });
     })
+
+    $('.pdfCreate').click(function(e){
+        e.preventDefault();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        let ajaxUrl = $(this).attr('data-action');
+        let from = $(this).attr('data-where');
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: {from: from},
+            success: function(result){
+                console.log(result);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+
+    })
+
 });

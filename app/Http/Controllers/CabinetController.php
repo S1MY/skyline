@@ -723,8 +723,10 @@ class CabinetController extends Controller
         return view('preview');
     }
 
-    public function generatePDF()
+    public function generatePDF(Request $request)
     {
+        return $request;
+
         $pdf = PDF::loadView('preview');
         return $pdf->download('demo.pdf');
     }
