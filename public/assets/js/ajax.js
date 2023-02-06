@@ -305,8 +305,12 @@ $(document).ready(function () {
             url: ajaxUrl,
             method: 'post',
             data: {from: from},
-            success: function(result){
-                console.log(result);
+            success: function(response){
+                var blob = new Blob([response]);
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = "Operation story.pdf";
+                link.click();
             },
             error: function (data) {
                 console.log(data);
