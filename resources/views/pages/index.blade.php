@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Главная')
+@section('title', __('pagesTitle.navigation.home'))
 
 @section('content')
     <div class="headerP"></div>

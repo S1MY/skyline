@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'О нас')
+@section('title',  __('pagesTitle.navigation.about'))
 
 @section('content')
     <div class="headerP"></div>
