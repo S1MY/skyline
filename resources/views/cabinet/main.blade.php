@@ -193,7 +193,7 @@
 
 <link rel="stylesheet" href="/assets/css/index.css">
 <div class="popup" style="display: block;">
-    <div class="popupBg"></div>
+    <div class="popupBg confirmEmail"></div>
     <div class="popupItem" style="display: block;" id="confirmEmailNotic">
         <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_53_662)">
