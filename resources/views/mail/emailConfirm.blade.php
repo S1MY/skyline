@@ -13,7 +13,7 @@
         <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;">Введите код восстановление доступа на сайте.</p>
         <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;padding-bottom:20px;">У вас будет 24 часа на приобретение пакета.</p>
         <div class="btnWrapper displayFlex spaceCenter" style="margin:0;padding:0;">
-          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;height:48px;padding:10px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">000000</p>
+          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;height:48px; display:flex; padding:0px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">000000</p>
         </div>
       </div>
     </div>
