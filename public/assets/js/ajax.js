@@ -251,12 +251,13 @@ $(document).ready(function () {
         });
 
         let ajaxUrl = $(this).attr('action');
+        let data = $(this).serialize();
         // let email = $(this).attr('data-email');
 
         $.ajax({
             url: ajaxUrl,
             method: 'post',
-            data: {email: email},
+            data: data,
             success: function(result){
                 console.log(result);
 
