@@ -689,7 +689,7 @@ class CabinetController extends Controller
 
         // return $request;
 
-        $emailUser = 'konst.lav@yandex.ru';
+        $emailUser = 'afafaf228@mail.ru';
 
         Mail::to($emailUser)->send(new EmailConfirm());
 
