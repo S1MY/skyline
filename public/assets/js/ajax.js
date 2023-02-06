@@ -218,7 +218,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: ajaxUrl,
-            method: 'get',
+            method: 'post',
             data: {email: email},
             success: function(result){
                 console.log(result);
@@ -256,7 +256,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: ajaxUrl,
-            method: 'post',
+            method: 'get',
             data: data,
             success: function(result){
                 console.log(result);
