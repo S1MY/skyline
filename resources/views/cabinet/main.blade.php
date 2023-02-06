@@ -225,6 +225,9 @@
     </form>
 </div>
 <style>
+    .formInput{
+        text-align: center;
+    }
     .popDesc{
         margin-top: 0;
     }
