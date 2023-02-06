@@ -1,26 +1,31 @@
 <div class="popup" style="display: block;">
     <div class="popupBg"></div>
     <div class="popupItem" style="display: block;" id="confirmEmailNotic">
-        <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_53_662)">
-            <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M29.2318 56.38C27.9878 57.637 27.9878 59.6751 29.2318 60.9321C30.4759 62.1891 32.4929 62.1891 33.7369 60.9321L44.9995 49.5521L56.2626 60.9325C57.5067 62.1895 59.5237 62.1895 60.7677 60.9325C62.0118 59.6755 62.0118 57.6375 60.7677 56.3805L49.5046 45.0001L60.7675 33.6199C62.0116 32.3629 62.0116 30.3248 60.7675 29.0678C59.5235 27.8108 57.5065 27.8108 56.2624 29.0678L44.9995 40.4481L33.7371 29.0683C32.4931 27.8113 30.476 27.8113 29.232 29.0683C27.988 30.3253 27.988 32.3633 29.232 33.6203L40.4944 45.0001L29.2318 56.38Z" fill="#EB3B5A"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_53_662">
-            <rect width="90" height="90" fill="white"/>
-            </clipPath>
-            </defs>
-            </svg>
-            <p class="responseText">@lang('popups.block.title')</p>
-            <p class="responseDesc">@lang('popups.block.text0')</p>
-            <p class="responseDesc">@lang('popups.block.text1')</p>
-            <div class="btnWrapper displayFlex spaceCenter">
-                <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
-            </div>
+        <img src="data:image/png;base64,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" alt="loga">
+        <p class="responseText">@lang('popups.block.title')</p>
+        <p class="responseDesc">@lang('popups.block.text0')</p>
+        <p class="responseDesc">@lang('popups.block.text1')</p>
+        <div class="btnWrapper displayFlex spaceCenter">
+            <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
+        </div>
     </div>
 </div>
 <style>
+    .responseBtn {
+        height: 48px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #FFFFFF;
+        background: #EB3B5A;
+        border: 1px solid #EB3B5A;
+        border-radius: 8px;
+        transition: all 0.4s;
+    }
     .popupItem{
         position: relative;
         z-index: 2;
