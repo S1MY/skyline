@@ -308,7 +308,7 @@ $(document).ready(function () {
             success: function(response){
                 const link = document.createElement('a');
                 link.href = response;
-                link.download = "Sample.pdf";
+                link.download = "MySkyline Company - Operation Story.pdf";
                 link.click();
                 document.body.removeChild(link);
             },
