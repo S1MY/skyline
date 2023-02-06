@@ -97,7 +97,7 @@
                 @if ($operations->count() > 0)
                     <h2 class="pageTitle displayFlex spaceBetween alignItemsCenter">
                         @lang('cabinet.cabinet.history')
-                        <a href="#" class="pdfCreate">@lang('cabinet.cabinet.pdf')</a>
+                        <a href="#" class="pdfCreate" data-action="{{ route('pdf.generate') }}" data-where="story">@lang('cabinet.cabinet.pdf')</a>
                     </h2>
                     <div class="customTable">
                         <div class="customTableLine customTableHead">
