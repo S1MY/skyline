@@ -176,18 +176,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
-
-                    $('.popupItem').hide();
-
-                    if( data.error == 1 ){
-                        $('.popup').fadeIn();
-                        $('.popupItem[data-name="error"] .responseText').text(result.message);
-                        $('.popupItem[data-name="error"]').fadeIn();
-                    }else{
-                        $('.popup').fadeIn();
-                        $('.popupItem[data-name="success"] .responseText').text(result.message);
-                        $('.popupItem[data-name="success"]').fadeIn();
-                    }
+                    location.reload();
                 },
                 error: function (data) {
                     console.log(data);
