@@ -746,6 +746,6 @@ class CabinetController extends Controller
         $pdf->save($path . '/' . $fileName);
 
         $pdf = public_path('pdf/'.$fileName);
-        return response()->download($pdf);
+        return $pdf;
     }
 }
