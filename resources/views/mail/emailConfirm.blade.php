@@ -24,14 +24,25 @@
     .popupItem{
         position: relative;
         z-index: 2;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
         border-radius: 12px;
         background: #FFFFFF;
         max-width: 480px;
         padding: 24px;
         margin-top: 50px;
+    }
+    .responseText{
+        padding-bottom: 20px;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .responseDesc {
+        padding-bottom: 5px;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: center;
     }
 
     .popDesc{
