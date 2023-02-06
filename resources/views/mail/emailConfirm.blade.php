@@ -21,6 +21,17 @@
     </div>
 </div>
 <style>
+    .popupItem{
+        position: relative;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+        background: #FFFFFF;
+        max-width: 480px;
+        padding: 24px;
+    }
     .popDesc{
         margin-top: 0;
     }
