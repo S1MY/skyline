@@ -740,6 +740,12 @@ class CabinetController extends Controller
 
         $pdf = PDF::loadView('preview', compact('operations'));
 
+        $path = public_path('pdf/');
+        $fileName =  time().'.'. 'pdf' ;
+        $pdf->save($path . '/' . $fileName);
+
+        $pdf = public_path('pdf/'.$fileName);
+
         return response()->download($pdf);
     }
 }
