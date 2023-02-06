@@ -286,6 +286,7 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
+                location.reload();
             },
             error: function (data) {
                 console.log(data);
