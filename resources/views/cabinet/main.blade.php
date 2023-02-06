@@ -220,6 +220,7 @@
         <h3 class="popupName">@lang('popups.activate.title')</h3>
         <p class="policeForm popDesc">@lang('popups.activate.text0') <a href="#" style="color: #20BF6B;"> {{ Auth::user()->email }} </a>@lang('popups.activate.text01')</p>
         <p class="policeForm popDesc">@lang('popups.activate.text1')</p>
+        <p class="erorrMsg"></p>
         <input type="text" name="code" placeholder="Код формата: 000000" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
         <button class="formButton">@lang('popups.block.btn')</button>
     </form>
@@ -227,6 +228,13 @@
 <style>
     .formInput{
         text-align: center;
+    }
+    .erorrMsg{
+        color: red;
+    }
+    .formInput.error{
+        border: 1px solid red;
+        color: red;
     }
     .popDesc{
         margin-top: 0;

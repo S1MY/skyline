@@ -286,7 +286,14 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
-                location.reload();
+
+                if( result.error == 1 ){
+                    $('.erorrMsg').text(result.message)
+                    $('.formInput').addClass('error');
+                }else{
+                    location.reload();
+                }
+
             },
             error: function (data) {
                 console.log(data);

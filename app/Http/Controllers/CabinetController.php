@@ -704,7 +704,11 @@ class CabinetController extends Controller
             $user->created_at = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' -1 day'));
             $user->save();
         }else{
-            return 'Что-то не так';
+            return response()->json([
+                'extend' => true,
+                'message' => 'Пароль введён не верно! Повторите попытку.',
+                'error' => 1,
+            ]);
         }
 
     }
