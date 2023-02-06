@@ -256,7 +256,7 @@ $(document).ready(function () {
 
         $.ajax({
             url: ajaxUrl,
-            method: 'get',
+            method: 'post',
             data: data,
             success: function(result){
                 console.log(result);
