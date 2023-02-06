@@ -678,7 +678,7 @@ class CabinetController extends Controller
         ]);
     }
 
-    public function emailConfirm(Request $request){
+    public function papaConfirm(Request $request){
 
         // $emailUser = Auth::user()->email;
         // $emailSend = $request->email;
