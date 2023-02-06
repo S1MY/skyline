@@ -6,7 +6,7 @@
         <p class="responseDesc">@lang('popups.block.text0')</p>
         <p class="responseDesc">@lang('popups.block.text1')</p>
         <div class="btnWrapper displayFlex spaceCenter">
-            <a href="#" class="responseBtn confirmEmail" data-email="{{ Auth::user()->email }}" data-url="{{ route('confirmEmail') }}">@lang('popups.block.btn')</a>
+            <p class="responseBtn confirmEmail">00000</p>
         </div>
     </div>
 </div>
@@ -25,15 +25,17 @@
         border: 1px solid #EB3B5A;
         border-radius: 8px;
         transition: all 0.4s;
+        text-decoration: none;
     }
     .popupItem{
+        text-align: center;
         position: relative;
         z-index: 2;
         border-radius: 12px;
         background: #FFFFFF;
         max-width: 480px;
         padding: 24px;
-        margin-top: 50px;
+        margin: 50px auto;
     }
     .responseText{
         padding-bottom: 20px;
