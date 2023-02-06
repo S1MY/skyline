@@ -8,6 +8,7 @@
     <meta name="_token" content="{{ csrf_token() }}">
     <title>Кабинет пользователя - MySkyLine</title>
     <link rel="stylesheet" href="/assets/css/cabinet.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 
 <body>
