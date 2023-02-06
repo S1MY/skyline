@@ -92,7 +92,7 @@ class CabinetController extends Controller
                       ->where('operations.user_id', '=', Auth::user()->id)
                       ->where('operations.status', '=', 1)
                       ->orderBy('operations.id', 'desc')
-                      ->paginate(10);
+                      ->paginate(1);
 
         return view('cabinet.story', compact('operations'));
     }
