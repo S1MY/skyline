@@ -306,14 +306,11 @@ $(document).ready(function () {
             method: 'post',
             data: {from: from},
             success: function(response){
-                console.log(response);
-
-                const link = document.createElement('a');
-                link.href = response;
-                link.download = 'Myskyline Operation Story';
-                document.body.appendChild(link);
+                var blob = new Blob([response]);
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = "Sample.pdf";
                 link.click();
-                // document.body.removeChild(link);
             },
             error: function (data) {
                 console.log(data);
