@@ -15,7 +15,7 @@
     * {
         box-sizing: border-box;
   font-family: DejaVu Sans, sans-serif;
-    }  
+    }
     body{
         font-family: DejaVu Sans, sans-serif;
     }
@@ -93,52 +93,74 @@ tr th:last-child {
         <table>
             <thead>
                 <tr>
-                    <th>Дата и время</th>
-                    <th>Имя и ID</th>
-                    <th>Операция</th>
+                    <th>@lang('cabinet.story.table.date_time')</th>
+                    <th>@lang('cabinet.story.table.name_id')</th>
+                    <th>@lang('cabinet.story.table.operation')</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
-                <tr>
-                    <td>03 февраля в 13:58:19</td>
-                    <td>Ансвер Ансверов (00007)</td>
-                    <td><span>Оплата "VIP" <span class="_greened">100000€</span></span></td>
-                </tr>
+                @foreach ($operations as $operation)
+                    <tr>
+                        <td>{{ $operation::getCurrentDate($operation->created_at) }}</td>
+                        <td>
+                            {{ $operation->name }} {{ $operation->surname }}
+                            @if ($operation->user_show_id)
+                                ({{ $operation->user_show_id }})
+                            @endif
+                        </td>
+                        @php
+                            switch ($operation->type) {
+                                case '0':
+                                    $sign = '+';
+                                    $type = __('cabinet.story.operations_type.one');
+                                    break;
+                                case '1':
+                                    $sign = '-';
+                                    $type = __('cabinet.story.operations_type.two');
+                                    break;
+                                case '2':
+                                    $sign = '';
+                                    $type = __('cabinet.story.operations_type.free');
+                                    break;
+                                case '3':
+                                    $sign = '';
+                                    $type = __('cabinet.story.operations_type.four');
+                                    break;
+                                case '4':
+                                    $sign = '';
+                                    $type = __('cabinet.story.operations_type.five');
+                                    break;
+                                case '5':
+                                    $sign = '+';
+                                    $type = __('cabinet.story.operations_type.six');
+                                    break;
+                                case '6':
+                                    $sign = '+';
+                                    $type = __('cabinet.story.operations_type.seven');
+                                    break;
+                                case '7':
+                                    $sign = '+';
+                                    $type = __('cabinet.story.operations_type.eight');
+                                    break;
+                                case '8':
+                                    $sign = '+';
+                                    $type = __('cabinet.story.operations_type.nine');
+                                    break;
+                                case '11':
+                                    $sign = '';
+                                    $type = __('cabinet.story.operations_type.eleven');
+                                    break;
+
+                                default:
+                                    # code...
+                                    break;
+                            }
+                        @endphp
+                        <td><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
-        <div class="text-center pdf-btn">
-            <a href="{{ route('pdf.generate') }}" class="btn btn-primary">Generate PDF</a>
-        </div>
     </div>
 </body>
 </html>

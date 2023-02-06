@@ -19,65 +19,65 @@
                         <p class="customTableItem">@lang('cabinet.story.table.operation')</p>
                     </div>
                     @foreach ($operations as $operation)
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
-                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
-                            {{ $operation->name }} {{ $operation->surname }}
-                            @if ($operation->user_show_id)
-                                ({{ $operation->user_show_id }})
-                            @endif
-                        </p>
-                        @php
-                            switch ($operation->type) {
-                                case '0':
-                                    $sign = '+';
-                                    $type = __('cabinet.story.operations_type.one');
-                                    break;
-                                case '1':
-                                    $sign = '-';
-                                    $type = __('cabinet.story.operations_type.two');
-                                    break;
-                                case '2':
-                                    $sign = '';
-                                    $type = __('cabinet.story.operations_type.free');
-                                    break;
-                                case '3':
-                                    $sign = '';
-                                    $type = __('cabinet.story.operations_type.four');
-                                    break;
-                                case '4':
-                                    $sign = '';
-                                    $type = __('cabinet.story.operations_type.five');
-                                    break;
-                                case '5':
-                                    $sign = '+';
-                                    $type = __('cabinet.story.operations_type.six');
-                                    break;
-                                case '6':
-                                    $sign = '+';
-                                    $type = __('cabinet.story.operations_type.seven');
-                                    break;
-                                case '7':
-                                    $sign = '+';
-                                    $type = __('cabinet.story.operations_type.eight');
-                                    break;
-                                case '8':
-                                    $sign = '+';
-                                    $type = __('cabinet.story.operations_type.nine');
-                                    break;
-                                case '11':
-                                    $sign = '';
-                                    $type = __('cabinet.story.operations_type.eleven');
-                                    break;
+                        <div class="customTableLine">
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
+                                {{ $operation->name }} {{ $operation->surname }}
+                                @if ($operation->user_show_id)
+                                    ({{ $operation->user_show_id }})
+                                @endif
+                            </p>
+                            @php
+                                switch ($operation->type) {
+                                    case '0':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.one');
+                                        break;
+                                    case '1':
+                                        $sign = '-';
+                                        $type = __('cabinet.story.operations_type.two');
+                                        break;
+                                    case '2':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.free');
+                                        break;
+                                    case '3':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.four');
+                                        break;
+                                    case '4':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.five');
+                                        break;
+                                    case '5':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.six');
+                                        break;
+                                    case '6':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.seven');
+                                        break;
+                                    case '7':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.eight');
+                                        break;
+                                    case '8':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.nine');
+                                        break;
+                                    case '11':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.eleven');
+                                        break;
 
-                                default:
-                                    # code...
-                                    break;
-                            }
-                        @endphp
-                        <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
-                    </div>
-                @endforeach
+                                    default:
+                                        # code...
+                                        break;
+                                }
+                            @endphp
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
+                        </div>
+                    @endforeach
                     {{ $operations->links('cabinet.layouts.pagination') }}
                 </div>
             </div>

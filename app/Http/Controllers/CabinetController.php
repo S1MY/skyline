@@ -92,7 +92,7 @@ class CabinetController extends Controller
                       ->where('operations.user_id', '=', Auth::user()->id)
                       ->where('operations.status', '=', 1)
                       ->orderBy('operations.id', 'desc')
-                      ->paginate(1);
+                      ->paginate(10);
 
         return view('cabinet.story', compact('operations'));
     }
@@ -725,9 +725,14 @@ class CabinetController extends Controller
 
     public function generatePDF(Request $request)
     {
-        return $request;
+        $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
+                      ->select('operations.id', 'operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
+                      ->where('operations.user_id', '=', Auth::user()->id)
+                      ->where('operations.status', '=', 1)
+                      ->orderBy('operations.id', 'desc')
+                      ->get();
 
-        $pdf = PDF::loadView('preview');
-        return $pdf->download('demo.pdf');
+        $pdf = PDF::loadView('preview',compact('operations'));
+        return $pdf->download('operation story.pdf');
     }
 }
