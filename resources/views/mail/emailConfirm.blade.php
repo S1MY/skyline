@@ -18,7 +18,7 @@
     img{
         margin-bottom: 25px;
     }
-    body{
+    p{
         color: #202020;
         font-family: 'Roboto', sans-serif;
     }
