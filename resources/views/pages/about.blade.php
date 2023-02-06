@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'О нас')
+
 @section('content')
     <div class="headerP"></div>
     <section class="section _hero" style="background: url(/image/about/hero.jpg);">
