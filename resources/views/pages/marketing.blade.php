@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Маркетинг план')
+
 @section('content')
     <div class="headerP"></div>
     <section class="section _hero">
