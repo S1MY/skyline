@@ -179,7 +179,7 @@ $(document).ready(function () {
 
                     $('.popupItem').hide();
 
-                    if( result.error == 1 ){
+                    if( data.error == 1 ){
                         $('.popup').fadeIn();
                         $('.popupItem[data-name="error"] .responseText').text(result.message);
                         $('.popupItem[data-name="error"]').fadeIn();
