@@ -114,7 +114,7 @@
                     $counter = 0;
                     foreach ($messages as $msg) {
 
-                        print_r($msg);
+                        print_r($msg->checked);
                         // $checkedArray = unserialize($msg->checked);
 
                         // if( !in_array(Auth::user()->id, $checkedArray) ){
