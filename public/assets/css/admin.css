@@ -65,7 +65,7 @@
     color: #3867D6;
 }
 .pageStatItem._admin{
-    height: 410px;
+    max-height: 410px;
     flex-wrap: wrap;
 }
 .adminList{
