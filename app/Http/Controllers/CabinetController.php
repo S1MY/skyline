@@ -93,7 +93,7 @@ class CabinetController extends Controller
 
     public function messages(){
 
-        $msgs = Messages::paginate(7);
+        $msgs = Messages::where('to', '=', 0)->orWhere('to', '=', Auth::user()->id)->paginate(7);
 
         foreach ( $msgs as $msg ){
             $msgsToSave = Messages::where('id', '=', $msg->id)->first();

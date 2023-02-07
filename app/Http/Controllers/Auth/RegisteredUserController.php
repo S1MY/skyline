@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Models\Messages;
 use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\UserWallets;
@@ -80,6 +81,15 @@ class RegisteredUserController extends Controller
             'user_id' => $user->id,
             'login' => $login,
             'user_status' => 0,
+        ]);
+
+        Messages::create([
+            'message' => 'Поздравляем! Вы успешно прошли регистрацию на проекте <span class="_bold">Myskyline</span>! У вас есть 48 часов для ознакомления и покупки пакета!',
+            'en_message' => 'Congratulations! You have successfully registered on the project <span class="_bold">Myskyline</span>! You have 48 hours to review and purchase the package!',
+            'de_message' => 'Herzlichen Glückwunsch! Sie haben sich erfolgreich für das Projekt <span class="_bold">Myskyline</span> registriert! Sie haben 48 Stunden Zeit, um das Paket zu überprüfen und zu kaufen!',
+            'checked' => serialize(array()),
+            'from' => 0,
+            'to' => $user->id,
         ]);
 
         UserWallets::create([
