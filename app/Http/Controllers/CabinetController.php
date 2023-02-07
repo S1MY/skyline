@@ -11,10 +11,7 @@ use App\Models\UserWallets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Support\Facades\Storage;
 
 class CabinetController extends Controller
 {
@@ -689,25 +686,6 @@ class CabinetController extends Controller
         ]);
     }
 
-    public function papaConfirm(Request $request){
-
-        $emailUser = Auth::user()->email;
-        $emailSend = $request->email;
-
-        if( $emailUser != $emailSend ){
-            return 'Вы отправили парашу';
-        }
-
-        $code = rand(000000, 999999);
-
-        session(['hashed_code' => Hash::make($code)]);
-
-        Mail::to($emailUser)->send(new EmailConfirm($code));
-
-        return 1;
-
-    }
-
     public function extendAccount(Request $request){
 
         if( Hash::check($request->code, session('hashed_code')) ){
@@ -727,35 +705,5 @@ class CabinetController extends Controller
     public function previewEmail()
     {
         return view('mail.emailConfirm');
-    }
-
-    public function preview()
-    {
-        $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
-                      ->select('operations.id', 'operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
-                      ->where('operations.user_id', '=', Auth::user()->id)
-                      ->where('operations.status', '=', 1)
-                      ->orderBy('operations.id', 'desc')
-                      ->get();
-        return view('preview',compact('operations'));
-    }
-
-    public function generatePDF(Request $request)
-    {
-        $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
-                      ->select('operations.id', 'operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
-                      ->where('operations.user_id', '=', Auth::user()->id)
-                      ->where('operations.status', '=', 1)
-                      ->orderBy('operations.id', 'desc')
-                      ->get();
-
-        $pdf = PDF::loadView('preview', compact('operations'));
-
-        $path = public_path('pdf/');
-        $fileName =  time().'.'. 'pdf' ;
-        $pdf->save($path . '/' . $fileName);
-
-        $pdf = '/pdf/'.$fileName;
-        return $pdf;
     }
 }

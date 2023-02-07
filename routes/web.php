@@ -5,8 +5,10 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CabinetController;
 use App\Http\Controllers\CashController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['set_locale'])->group(function(){
@@ -20,7 +22,6 @@ Route::middleware(['set_locale'])->group(function(){
     Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function(){
         Route::get('/', [AdminController::class, 'main'])->name('admin');
     });
-
 
     Route::group(['prefix' => 'cabinet', 'middleware' => ['auth']], function(){
         Route::get('/', [CabinetController::class, 'cabinet'])->name('cabinet');
@@ -37,8 +38,8 @@ Route::middleware(['set_locale'])->group(function(){
         Route::get('/vip', [CabinetController::class, 'vip'])->name('vip');
         Route::get('/partners', [CabinetController::class, 'partners'])->name('partners');
         Route::get('/promo', [CabinetController::class, 'promo'])->name('promo');
-        Route::get('/pdf/preview', [CabinetController::class, 'preview'])->name('pdf.preview');
-        Route::post('/pdf/generate', [CabinetController::class, 'generatePDF'])->name('pdf.generate');
+        Route::get('/pdf/preview', [PDFController::class, 'preview'])->name('pdf.preview');
+        Route::post('/pdf/generate', [PDFController::class, 'generatePDF'])->name('pdf.generate');
     });
 });
 
@@ -55,10 +56,12 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('l
 Route::post('/settings/update', [CabinetController::class, 'updateUserInfo'])->name('updateSettings');
 Route::post('/settings/change-password', [CabinetController::class, 'passwordChanger'])->name('changePassword');
 Route::post('/settings/avatar', [CabinetController::class, 'setAvatar'])->name('setAvatar');
-Route::post('/confirmEmail', [CabinetController::class, 'papaConfirm'])->name('confirmEmail');
 Route::post('/extendAccount', [CabinetController::class, 'extendAccount'])->name('extendAccount');
-
-Route::get('/emailexample', [CabinetController::class, 'previewEmail'])->name('previewEmail');
-
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
 Route::post('/marketing/buy', [CabinetController::class, 'buy'])->name('buy');
+
+// Email
+Route::post('/confirmEmail', [EmailController::class, 'confirmEmail'])->name('confirmEmail');
+
+// Dev Routes
+Route::get('/emailexample', [CabinetController::class, 'previewEmail'])->name('previewEmail');
