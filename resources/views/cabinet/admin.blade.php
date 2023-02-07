@@ -106,7 +106,7 @@
                             <p class="statCount">{{ $invest_balance }}€</p>
                         </div>
                         <div class="adminList">
-                            @foreach ($invest_partner as $invest_partner)
+                            @foreach ($invest_partners as $invest_partner)
                                 <div class="userItem">
                                     <a href="ссылка авторизации" class="userLink">
                                         {{ $invest_partner->name }} {{ $invest_partner->surname }} ({{ $invest_partner->user_show_id }})
