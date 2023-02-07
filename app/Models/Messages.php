@@ -23,7 +23,7 @@ class Messages extends Model
         $explodDate = explode(' ', $date);
 
         $date = date('d.m.Y', strtotime($explodDate[0]));
-        $time = time('H:i', strtotime($explodDate[1]));
+        $time = date('H:i', strtotime($explodDate[1]));
 
         $currentDate = $date.' '.__('month.in').' '.$time;
 
