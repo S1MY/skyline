@@ -113,20 +113,22 @@
                     $messages = \App\Models\Messages::all();
                     $counter = 0;
                     foreach ($messages as $msg) {
-                        $checkedArray = unserialize($msg->checked);
 
-                        if( !in_array(Auth::user()->id, $checkedArray) ){
-                            array_push($checkedArray, Auth::user()->id);
-                            $msgsToSave->checked = serialize($checkedArray);
-                            $counter++;
-                        }
+                        print_r($msg);
+                        // $checkedArray = unserialize($msg->checked);
+
+                        // if( !in_array(Auth::user()->id, $checkedArray) ){
+                        //     array_push($checkedArray, Auth::user()->id);
+                        //     $msgsToSave->checked = serialize($checkedArray);
+                        //     $counter++;
+                        // }
                     }
 
-                    if( $counter == 0 ){
-                        $msgCount = '';
-                    }else{
-                        $msgCount = '('.$counter.')';
-                    }
+                    // if( $counter == 0 ){
+                    //     $msgCount = '';
+                    // }else{
+                    //     $msgCount = '('.$counter.')';
+                    // }
                 @endphp
                 <a href="{{ route('messages') }}" class="headerLink">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
