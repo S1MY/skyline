@@ -101,7 +101,7 @@ class CabinetController extends Controller
             }else{
 
                 $msgsToSave = Messages::where('id', '=', $msg->id)->first();
-                $msgsToSave->checked = array(Auth::user()->id);
+                $msgsToSave->checked = serialize(array(Auth::user()->id));
                 $msgsToSave->save();
 
             }
