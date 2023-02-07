@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CabinetController;
+use App\Http\Controllers\CabinetRequestController;
 use App\Http\Controllers\CashController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\MainController;
@@ -48,17 +49,17 @@ Route::get('/logout', [AuthenticatedSessionController::class, 'destroy'])->name(
 // Management Routes
 Route::get('/locale/{locale}', [MainController::class, 'changeLocale'])->name('locale');
 Route::get('/sponsor/{id}', [MainController::class, 'selectSponsor'])->name('sponsor');
-Route::get('/cabinet/{pacage}/{user}', [CabinetController::class, 'showPartnerInfo'])->name('showPartnerInfo');
+Route::get('/cabinet/{pacage}/{user}', [CabinetRequestController::class, 'showPartnerInfo'])->name('showPartnerInfo');
 
 // Post Routes
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
-Route::post('/settings/update', [CabinetController::class, 'updateUserInfo'])->name('updateSettings');
-Route::post('/settings/change-password', [CabinetController::class, 'passwordChanger'])->name('changePassword');
-Route::post('/settings/avatar', [CabinetController::class, 'setAvatar'])->name('setAvatar');
-Route::post('/extendAccount', [CabinetController::class, 'extendAccount'])->name('extendAccount');
+Route::post('/settings/update', [CabinetRequestController::class, 'updateUserInfo'])->name('updateSettings');
+Route::post('/settings/change-password', [CabinetRequestController::class, 'passwordChanger'])->name('changePassword');
+Route::post('/settings/avatar', [CabinetRequestController::class, 'setAvatar'])->name('setAvatar');
+Route::post('/extendAccount', [CabinetRequestController::class, 'extendAccount'])->name('extendAccount');
+Route::post('/marketing/buy', [CabinetRequestController::class, 'buy'])->name('buy');
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
-Route::post('/marketing/buy', [CabinetController::class, 'buy'])->name('buy');
 
 // Email
 Route::post('/confirmEmail', [EmailController::class, 'confirmEmail'])->name('confirmEmail');
