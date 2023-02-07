@@ -178,7 +178,7 @@
                                         break;
                                 }
                             @endphp
-                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span><span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $operation->value }}€</span></span></p>
                         </div>
                     @endforeach
                     {{ $operations->links('cabinet.layouts.pagination') }}
