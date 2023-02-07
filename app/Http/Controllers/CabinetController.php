@@ -98,7 +98,7 @@ class CabinetController extends Controller
         foreach ( $msgs as $msg ){
             $msgsToSave = Messages::where('id', '=', $msg->id)->first();
 
-            if ( is_array($msg->checked) ){
+            if ( is_array(unserialize($msg->checked)) ){
 
                 $checkedArray = unserialize($msg->checked);
 
