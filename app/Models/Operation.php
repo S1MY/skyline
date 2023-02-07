@@ -68,7 +68,7 @@ class Operation extends Model
 
         }
 
-        $currentDate = $day.' '. $monthName.' в '.$time;
+        $currentDate = $day.' '. $monthName.' '.__('month.in').' '.$time;
 
         return $currentDate;
 

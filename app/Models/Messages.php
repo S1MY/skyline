@@ -17,4 +17,17 @@ class Messages extends Model
         'from',
         'to',
     ];
+
+    public static function getCurrentDate($date){
+
+        $explodDate = explode(' ', $date);
+
+        $date = $explodDate[0];
+        $time = $explodDate[1];
+
+        $currentDate = $date.' '.__('month.in').' '.$time;
+
+        return $currentDate;
+
+    }
 }

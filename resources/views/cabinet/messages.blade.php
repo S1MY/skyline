@@ -44,7 +44,7 @@
 
                         <div class="messageItem{{ $supportClass }}">
                             <p class="messageText">{!! $message !!}</p>
-                            <p class="messageDate">29.01.2022 в 20:00</p>
+                            <p class="messageDate">{{ $msg::getCurrentDate($msg->created_at) }}</p>
                         </div>
 
                     @endforeach

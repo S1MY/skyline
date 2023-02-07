@@ -13,4 +13,5 @@ return [
     'oct' => 'Oktober',
     'nov' => 'November',
     'dec' => 'Dezember',
+    'in' => 'in',
 ];
