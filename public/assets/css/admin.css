@@ -66,6 +66,7 @@
 }
 .pageStatItem._admin{
     max-height: 410px;
+    height: unset;
     flex-wrap: wrap;
 }
 .adminList{
