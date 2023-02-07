@@ -32,7 +32,7 @@
                                 $supportClass = '';
                             }
 
-                            echo sesion('locale');
+                            echo session('locale');
                         @endphp
 
                         <div class="messageItem{{ $supportClass }}">
