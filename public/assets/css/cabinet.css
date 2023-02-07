@@ -1987,6 +1987,9 @@ input:checked + p{
     .popupItem{
         width: 95%;
     }
+    .customTableItem{
+        font-size: 14px;
+    }
 }
 @media (max-width: 380px) {
     .langChanger{

@@ -1,16 +1,19 @@
-.adminText{
+.adminText {
     font-size: 16px;
     line-height: 28px;
 }
-.adminText:nth-child(1){
+
+.adminText:nth-child(1) {
     margin-top: 16px;
 }
-.adminForm{
+
+.adminForm {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.adminForm textarea{
+
+.adminForm textarea {
     outline: none;
     border: none;
     padding: 15px;
@@ -25,18 +28,22 @@
     line-height: 28px;
     color: #202020;
 }
-.adminForm textarea::placeholder{
+
+.adminForm textarea::placeholder {
     color: rgba(32, 32, 32, 0.7);
 }
-.adminForm .btnWrapper{
+
+.adminForm .btnWrapper {
     width: 100%;
 }
-.adminForm .btn{
+
+.adminForm .btn {
     width: calc((100% - 30px) / 3);
     justify-content: center;
     cursor: pointer;
 }
-.adminForm input{
+
+.adminForm input {
     outline: none;
     border: none;
     padding: 0 15px;
@@ -51,46 +58,55 @@
     line-height: 28px;
     color: #202020;
 }
-.adminForm input::placeholder{
+
+.adminForm input::placeholder {
     color: rgba(32, 32, 32, 0.7);
 }
-.excelCreate{
+
+.excelCreate {
     font-weight: 400;
     font-size: 18px;
     color: #20BF6B;
     transition: all 0.4s;
     margin-right: 15px;
 }
-.excelCreate:hover{
+
+.excelCreate:hover {
     color: #3867D6;
 }
-.pageStatItem._admin{
+
+.pageStatItem._admin {
     max-height: 410px;
     height: unset;
     flex-wrap: wrap;
     align-items: unset;
 }
-.aglone{
+
+.aglone {
     display: flex;
-     align-items: center;
-     height: 60px;
-     justify-content: space-between;
-     width: 100%;
+    align-items: center;
+    height: 60px;
+    justify-content: space-between;
+    width: 100%;
 }
-.adminList{
+
+.adminList {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-.userLink{
+
+.userLink {
     color: #EB3B5A;
     font-weight: 500;
     transition: all 0.4s;
 }
-.userLink:hover{
+
+.userLink:hover {
     opacity: 0.8;
 }
-.userItem{
+
+.userItem {
     height: 48px;
     display: flex;
     justify-content: space-between;
@@ -101,21 +117,26 @@
     width: 100%;
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
 }
-.userItem .userLink{
+
+.userItem .userLink {
     font-weight: 400;
 }
-.userCount{
+
+.userCount {
     font-weight: 500;
     font-size: 16px;
 }
-.adminUser{
+
+.adminUser {
     display: flex;
     justify-content: space-between;
 }
-.adminUser .contentInput{
+
+.adminUser .contentInput {
     width: calc((100% - 40px) / 3);
 }
-#adminAuth{
+
+#adminAuth {
     width: calc((100% - 40px) / 3);
     justify-content: center;
     height: 48px;
@@ -127,11 +148,13 @@
     border: none;
     outline: none;
 }
-#adminAuth:hover{
+
+#adminAuth:hover {
     color: #ffffff;
     opacity: 0.8;
 }
-#adminEdit{
+
+#adminEdit {
     width: calc((100% - 40px) / 3);
     justify-content: center;
     height: 48px;
@@ -143,28 +166,33 @@
     border: none;
     outline: none;
 }
-#adminEdit:hover{
+
+#adminEdit:hover {
     color: #ffffff;
     opacity: 0.8;
 }
-.btn._blueed{
+
+.btn._blueed {
     background: #3867D6;
     border: 1px solid #3867D6;
     margin-bottom: 12px;
     width: 100%;
     justify-content: center;
 }
-.btn._blueed:hover{
+
+.btn._blueed:hover {
     color: #3867D6;
     background: transparent;
 }
-.userPopup{
+
+.userPopup {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(33, 33, 33, 0.1);
     text-align: center;
 }
-.popupAvatar{
+
+.popupAvatar {
     width: 80px;
     height: 80px;
     border-radius: 8px;
@@ -175,51 +203,78 @@
     margin: 0 auto;
     margin-bottom: 12px;
 }
-.userPopupName{
+
+.userPopupName {
     font-weight: 500;
     font-size: 18px;
 }
-.userPopupText{
+
+.userPopupText {
     margin-top: 6px;
     font-size: 16px;
 }
-.responseBtn._w100{
+
+.responseBtn._w100 {
     width: 100%;
     justify-content: center;
 }
+
 @media (max-width: 1120px) {
-    .pageStatItem{
+    .pageStatItem {
         width: 100%;
     }
-    .pageStatItem._admin{
+
+    .pageStatItem._admin {
         height: unset;
     }
 }
+
 @media (max-width: 1024px) {
-    .adminForm textarea{
+    .adminForm textarea {
         width: 100%;
     }
-    .adminForm .btn{
+
+    .adminForm .btn {
         width: 100%;
     }
-    .adminForm input{
+
+    .adminForm input {
         width: 100%;
     }
 }
+
 @media (max-width: 900px) {
-    .adminUser{
+    .adminUser {
         flex-wrap: wrap;
     }
-    .adminUser .contentInput{
+
+    .adminUser .contentInput {
         width: 100%;
     }
-    #adminAuth{
+
+    #adminAuth {
         width: 100%;
     }
-    #adminEdit{
+
+    #adminEdit {
         width: 100%;
     }
-    .pageTitle.displayFlex{
+
+    .pageTitle.displayFlex {
         flex-wrap: wrap;
+    }
+}
+@media (max-width: 440px) {
+    .userItem{
+        flex-direction: column;
+        padding: 12px;
+        height: unset;
+    }
+}
+
+@media (max-width: 380px) {
+    .aglone {
+        flex-direction: column;
+        height: unset;
     }
 }
