@@ -22,6 +22,7 @@ Route::middleware(['set_locale'])->group(function(){
     // Cabinet
     Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function(){
         Route::get('/', [AdminController::class, 'main'])->name('admin');
+        Route::post('/send-message', [CabinetRequestController::class, 'sendMessage'])->name('sendMessage');
     });
 
     Route::group(['prefix' => 'cabinet', 'middleware' => ['auth']], function(){
@@ -54,11 +55,15 @@ Route::get('/cabinet/{pacage}/{user}', [CabinetRequestController::class, 'showPa
 // Post Routes
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+
 Route::post('/settings/update', [CabinetRequestController::class, 'updateUserInfo'])->name('updateSettings');
 Route::post('/settings/change-password', [CabinetRequestController::class, 'passwordChanger'])->name('changePassword');
 Route::post('/settings/avatar', [CabinetRequestController::class, 'setAvatar'])->name('setAvatar');
+
 Route::post('/extendAccount', [CabinetRequestController::class, 'extendAccount'])->name('extendAccount');
+
 Route::post('/marketing/buy', [CabinetRequestController::class, 'buy'])->name('buy');
+
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
 
 // Email

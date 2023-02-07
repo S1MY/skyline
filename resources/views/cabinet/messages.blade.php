@@ -13,7 +13,7 @@
                 <link rel="stylesheet" href="/assets/css/admin.css">
                 <div class="adminItem">
                     <p class="adminText">@lang('cabinet.messages.adminText')</p>
-                    <form class="adminForm">
+                    <form class="adminForm" id="sendMessageFromAdmin" action="{{ route('sendMessage') }}">
                         <textarea name="msg_ru" placeholder="@lang('cabinet.messages.msg_ru')"></textarea>
                         <textarea name="msg_en" placeholder="@lang('cabinet.messages.msg_en')"></textarea>
                         <textarea name="msg_ge" placeholder="@lang('cabinet.messages.msg_de')"></textarea>

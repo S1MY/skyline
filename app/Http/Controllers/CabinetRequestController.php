@@ -454,4 +454,8 @@ class CabinetRequestController extends Controller
         ]);
     }
 
+    public function sendMessage(Request $request){
+        return $request;
+    }
+
 }
