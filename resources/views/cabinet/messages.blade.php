@@ -32,11 +32,18 @@
                                 $supportClass = '';
                             }
 
-                            echo session('locale');
+                            if( sesion('locale') == 'ru' ){
+                                $message = $msg->message;
+                            }elseif ( sesion('locale') == 'en' ) {
+                                $message = $msg->en_message;
+                            }elseif ( sesion('locale') == 'de' ) {
+                                $message = $msg->de_message;
+                            }
+
                         @endphp
 
                         <div class="messageItem{{ $supportClass }}">
-                            <p class="messageText">Поздравляем! Вы успешно перешли на пакет <span class="_bold">"STANDARD"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!</p>
+                            <p class="messageText">{{ $message }}</p>
                             <p class="messageDate">29.01.2022 в 20:00</p>
                         </div>
 
