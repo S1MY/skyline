@@ -49,7 +49,7 @@
                         </div>
                         <p class="packageAccumulation">@lang('cabinet.marketing.packages.standard.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 2 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 1 ? ' _disabled' : '' }}" data-name="standard">@lang('cabinet.marketing.btnBuy')</a>
+                            <a href="#" class="btnBuy" data-name="standard">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                     <div class="packageItem _premium">
@@ -68,7 +68,7 @@
                         </div>
                         <p class="packageAccumulation">@lang('cabinet.marketing.packages.premium.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 3 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _disabled' : '' }}" data-name="premium">@lang('cabinet.marketing.btnBuy')</a>
+                            <a href="#" class="btnBuy" data-name="premium">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                     <div class="packageItem _vip">
@@ -88,7 +88,7 @@
                         </div>
                         <p class="packageAccumulation">@lang('cabinet.marketing.packages.vip.packageAccumulation')</p>
                         @if ( Auth::user()->UserInfo->user_pacage < 4 )
-                            <a href="#" class="btnBuy{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _disabled' : '' }}" data-name="vip">@lang('cabinet.marketing.btnBuy')</a>
+                            <a href="#" class="btnBuy" data-name="vip">@lang('cabinet.marketing.btnBuy')</a>
                         @endif
                     </div>
                 </div>
