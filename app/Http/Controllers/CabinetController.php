@@ -97,7 +97,15 @@ class CabinetController extends Controller
 
         foreach ( $msgs as $msg ){
             if ( is_array(unserialize($msg->checked)) ){
-                return 'Массив';
+
+                $checkedArray = unserialize($msg->checked);
+
+                if( in_array(Auth::user()->id, $checkedArray) ){
+                    return 'Уже есть в массиве';
+                }else{
+                    return 'Ещё нет в массиве';
+                }
+
             }else{
 
                 $msgsToSave = Messages::where('id', '=', $msg->id)->first();
