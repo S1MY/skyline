@@ -43,7 +43,7 @@
                         @endphp
 
                         <div class="messageItem{{ $supportClass }}">
-                            <p class="messageText">{{ $message }}</p>
+                            <p class="messageText">{!! $message !!}</p>
                             <p class="messageDate">29.01.2022 в 20:00</p>
                         </div>
 
