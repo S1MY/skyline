@@ -461,6 +461,7 @@ class CabinetRequestController extends Controller
             'message' => $request->msg_ru,
             'en_message' => $request->msg_en,
             'de_message' => $request->msg_ge,
+            'checked' => serialize(array()),
             'from' => 1,
             'to' => 0,
         ]);
