@@ -37,7 +37,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">20% от общего баланса</p>
-                            <p class="statCount">200€</p>
+                            <p class="statCount">{{ $total_balance*0.2 }}€</p>
                         </div>
                     </div>
                     <div class="pageStatItem">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">80% от общего баланса</p>
-                            <p class="statCount">800€</p>
+                            <p class="statCount">{{ $total_balance*0.8 }}€</p>
                         </div>
                     </div>
                     <div class="pageStatItem _admin">
@@ -60,10 +60,12 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">Автомобильная всего</p>
-                            <p class="statCount">0€</p>
+                            <p class="statCount">{{ $auto_balance }}€</p>
                         </div>
                         <div class="adminList">
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
+                            @foreach ($auto_partners as $auto_partner)
+                                <div class="userItem"><a href="ссылка авторизации" class="userLink">{{ $auto_partner->name }} {{ $auto_partner->surname }} ({{ $auto_partner->user_show_id }})</a><p class="userCount">{{ $auto_partner->autobalance }}€</p></div>
+                            @endforeach
                             <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
                             <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
                             <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
@@ -85,7 +87,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">Жилищная всего</p>
-                            <p class="statCount">0€</p>
+                            <p class="statCount">{{ $house_balance }}€</p>
                         </div>
                         <div class="adminList">
                             <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
@@ -103,7 +105,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">Инвестиционная всего</p>
-                            <p class="statCount">0€</p>
+                            <p class="statCount">{{ $invest_balance }}€</p>
                         </div>
                         <div class="adminList">
                             <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
