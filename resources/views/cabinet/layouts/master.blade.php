@@ -121,7 +121,7 @@
                     }
 
                     if( $counter == 0 ){
-                        $msgCount = '';
+                        $msgCount = '('.$counter.')';
                     }else{
                         $msgCount = '('.$counter.')';
                     }
