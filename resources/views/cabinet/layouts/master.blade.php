@@ -110,7 +110,7 @@
                 </p>
                 @php
 
-                    $messages = \App\Models\Messages::all();
+                    $messages = \App\Models\Messages::where('to', '=', 0)->orWhere('to', '=', Auth::user()->id)->get();
                     $counter = 0;
                     foreach ($messages as $msg) {
                         $checkedArray = unserialize($msg->checked);
