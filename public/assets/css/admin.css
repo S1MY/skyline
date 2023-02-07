@@ -269,6 +269,8 @@
         flex-direction: column;
         padding: 12px;
         height: unset;
+        text-align: center;
+        font-size: 14px;
     }
 }
 
