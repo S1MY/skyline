@@ -96,7 +96,7 @@ class CabinetController extends Controller
         $msgs = Messages::get();
 
         foreach ( $msgs as $msg ){
-            if ( IsArray($msg->checked) ){
+            if ( is_array($msg->checked) ){
                 return 'Массив';
             }else{
                 return 'Не массив';
