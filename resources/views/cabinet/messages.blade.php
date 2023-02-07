@@ -32,11 +32,11 @@
                                 $supportClass = '';
                             }
 
-                            if( sesion('locale') == 'ru' ){
+                            if( session('locale') == 'ru' ){
                                 $message = $msg->message;
-                            }elseif ( sesion('locale') == 'en' ) {
+                            }elseif ( session('locale') == 'en' ) {
                                 $message = $msg->en_message;
-                            }elseif ( sesion('locale') == 'de' ) {
+                            }elseif ( session('locale') == 'de' ) {
                                 $message = $msg->de_message;
                             }
 
