@@ -230,7 +230,7 @@ class CabinetController extends Controller
         $economPartners = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
         ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
         ->where('users.sponsor_id', '=', Auth::user()->id)
-        ->where('user_infos.user_pacage', '>=', 1)
+        ->where('ui.user_pacage', '>=', 1)
         ->get();
 
         $economPartners->map(function ($item, $key) {
@@ -238,28 +238,28 @@ class CabinetController extends Controller
             $itemPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
             ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
             ->where('users.sponsor_id', '=', $item->id)
-            ->where('user_infos.user_pacage', '>=', 1)
+            ->where('ui.user_pacage', '>=', 1)
             ->get();
 
             $itemPartner->map(function ($ite){
                 $itePartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
                 ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
                 ->where('users.sponsor_id', '=', $ite->id)
-                ->where('user_infos.user_pacage', '>=', 1)
+                ->where('ui.user_pacage', '>=', 1)
                 ->get();
 
                 $itePartner->map(function ($it){
                     $itPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
                     ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
                     ->where('users.sponsor_id', '=', $it->id)
-                    ->where('user_infos.user_pacage', '>=', 1)
+                    ->where('ui.user_pacage', '>=', 1)
                     ->get();
 
                     $itPartner->map(function ($i){
                         $iPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
                         ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
                         ->where('users.sponsor_id', '=', $i->id)
-                        ->where('user_infos.user_pacage', '>=', 1)
+                        ->where('ui.user_pacage', '>=', 1)
                         ->get();
 
                         return $i->folp = $iPartner;
