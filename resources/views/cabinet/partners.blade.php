@@ -258,7 +258,7 @@
                     </div>
                     <div class="packageItem _premium{{ Auth::user()->UserInfo->user_pacage < 3 ? ' _closed' : '' }}">
                         <p class="packageName">Premium</p>
-                        @if ($premiumPartners > 0)
+                        @if ($premiumPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($premiumPartners as $premiumPartner)
                                     <div class="flowItem">
@@ -337,7 +337,7 @@
                     </div>
                     <div class="packageItem _vip{{ Auth::user()->UserInfo->user_pacage < 4 ? ' _closed' : '' }}">
                         <p class="packageName">VIP</p>
-                        @if ($vipPartners > 0)
+                        @if ($vipPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($vipPartners as $vipPartner)
                                     <div class="flowItem">

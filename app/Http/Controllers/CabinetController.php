@@ -323,8 +323,102 @@ class CabinetController extends Controller
 
         });
 
-        $premiumPartners = 0;
-        $vipPartners = 0;
+        $premiumPartners = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+        ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+        ->where('users.sponsor_id', '=', Auth::user()->id)
+        ->where('ui.user_pacage', '>=', 3)
+        ->get();
+
+        $premiumPartners->map(function ($item, $key) {
+
+            $itemPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+            ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+            ->where('users.sponsor_id', '=', $item->id)
+            ->where('ui.user_pacage', '>=', 3)
+            ->get();
+
+            $itemPartner->map(function ($ite){
+                $itePartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                ->where('users.sponsor_id', '=', $ite->id)
+                ->where('ui.user_pacage', '>=', 3)
+                ->get();
+
+                $itePartner->map(function ($it){
+                    $itPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                    ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                    ->where('users.sponsor_id', '=', $it->id)
+                    ->where('ui.user_pacage', '>=', 3)
+                    ->get();
+
+                    $itPartner->map(function ($i){
+                        $iPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                        ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                        ->where('users.sponsor_id', '=', $i->id)
+                        ->where('ui.user_pacage', '>=', 3)
+                        ->get();
+
+                        return $i->folp = $iPartner;
+                    });
+
+                    return $it->freelp = $itPartner;
+                });
+
+                return $ite->slp = $itePartner;
+            });
+
+            return $item->flp = $itemPartner;
+
+        });
+
+        $vipPartners = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+        ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+        ->where('users.sponsor_id', '=', Auth::user()->id)
+        ->where('ui.user_pacage', '=', 4)
+        ->get();
+
+        $vipPartners->map(function ($item, $key) {
+
+            $itemPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+            ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+            ->where('users.sponsor_id', '=', $item->id)
+            ->where('ui.user_pacage', '=', 4)
+            ->get();
+
+            $itemPartner->map(function ($ite){
+                $itePartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                ->where('users.sponsor_id', '=', $ite->id)
+                ->where('ui.user_pacage', '=', 4)
+                ->get();
+
+                $itePartner->map(function ($it){
+                    $itPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                    ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                    ->where('users.sponsor_id', '=', $it->id)
+                    ->where('ui.user_pacage', '=', 4)
+                    ->get();
+
+                    $itPartner->map(function ($i){
+                        $iPartner = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                        ->select('users.id', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status')
+                        ->where('users.sponsor_id', '=', $i->id)
+                        ->where('ui.user_pacage', '=', 4)
+                        ->get();
+
+                        return $i->folp = $iPartner;
+                    });
+
+                    return $it->freelp = $itPartner;
+                });
+
+                return $ite->slp = $itePartner;
+            });
+
+            return $item->flp = $itemPartner;
+
+        });
+
 
         return view('cabinet.partners', compact('partners', 'registers', 'economPartners', 'standartPartners', 'premiumPartners', 'vipPartners'));
     }
