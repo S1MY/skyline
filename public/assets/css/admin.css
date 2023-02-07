@@ -69,6 +69,10 @@
     height: unset;
     flex-wrap: wrap;
 }
+.aglone{
+    display: flex;
+     align-items: center;
+}
 .adminList{
     width: 100%;
     display: flex;
