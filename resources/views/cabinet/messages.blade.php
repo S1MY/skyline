@@ -40,6 +40,14 @@
                                 $message = $msg->de_message;
                             }
 
+
+                            if ( is_array(unserialize($msg->checked)) ){
+                                $checkedArray = unserialize($msg->checked);
+                                if( in_array(Auth::user()->id, $checkedArray) ){
+                                    $supportClass = ' _greened';
+                                }
+                            }
+
                         @endphp
 
                         <div class="messageItem{{ $supportClass }}">
