@@ -22,10 +22,15 @@
                         <div class="customTableLine">
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
-                                {{ $operation->name }} {{ $operation->surname }}
-                                @if ($operation->user_show_id)
-                                    ({{ $operation->user_show_id }})
+                                @if ($operation->name && $operation->surname)
+                                    {{ $operation->name }} {{ $operation->surname }}
+                                    @if ($operation->user_show_id)
+                                        ({{ $operation->user_show_id }})
+                                    @endif
+                                @else
+                                    {{ $operation->uname }}
                                 @endif
+
                             </p>
                             @php
                                 switch ($operation->type) {
