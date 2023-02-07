@@ -100,7 +100,7 @@ class CabinetController extends Controller
                 return 'Массив';
             }else{
 
-                $msgsToSave = Messages::where('id', '=', $msg->id)->get();
+                $msgsToSave = Messages::where('id', '=', $msg->id)->first();
                 $msgsToSave->checked = array(Auth::user()->id);
                 $msgsToSave->save();
 
