@@ -84,10 +84,18 @@
                 </h2>
                 <p class="pageText">@lang('cabinet.pacage.desc')</p>
                 <div class="packageGroov">
-                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.one', ['attribute' => $partnersInLine->user_first_line, 'class' => '_econom'])</p>
-                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.two', ['attribute' => $partnersInLine->user_second_line, 'class' => '_econom'])</p>
-                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.free', ['attribute' => $partnersInLine->user_third_line, 'class' => '_econom'])</p>
-                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.four', ['attribute' => $partnersInLine->user_fourth_line, 'class' => '_econom'])</p>
+                    @if ($partnersInLine)
+                        <p class="groovItem">@lang('cabinet.pacage.partners_in_line.one', ['attribute' => $partnersInLine->user_first_line, 'class' => '_econom'])</p>
+                        <p class="groovItem">@lang('cabinet.pacage.partners_in_line.two', ['attribute' => $partnersInLine->user_second_line, 'class' => '_econom'])</p>
+                        <p class="groovItem">@lang('cabinet.pacage.partners_in_line.free', ['attribute' => $partnersInLine->user_third_line, 'class' => '_econom'])</p>
+                        <p class="groovItem">@lang('cabinet.pacage.partners_in_line.four', ['attribute' => $partnersInLine->user_fourth_line, 'class' => '_econom'])</p>
+                    @else
+                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.one', ['attribute' => 0, 'class' => '_econom'])</p>
+                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.two', ['attribute' => 0, 'class' => '_econom'])</p>
+                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.free', ['attribute' => 0, 'class' => '_econom'])</p>
+                    <p class="groovItem">@lang('cabinet.pacage.partners_in_line.four', ['attribute' => 0, 'class' => '_econom'])</p>
+                    @endif
+
                 </div>
                 <div class="packageUsers">
                     @if ($partners->count() != 0)
