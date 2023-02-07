@@ -182,6 +182,22 @@ class CabinetRequestController extends Controller
         return response()->json($data);
     }
 
+    public function extendAccount(Request $request){
+
+        if( Hash::check($request->code, session('hashed_code')) ){
+            $user = User::where('id', '=', Auth::user()->id)->first();
+            $user->created_at = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' -1 day'));
+            $user->save();
+        }else{
+            return response()->json([
+                'extend' => true,
+                'message' => 'Пароль введён не верно! Повторите попытку.',
+                'error' => 1,
+            ]);
+        }
+
+    }
+
     public function buy(Request $request){
 
         /*
@@ -438,19 +454,4 @@ class CabinetRequestController extends Controller
         ]);
     }
 
-    public function extendAccount(Request $request){
-
-        if( Hash::check($request->code, session('hashed_code')) ){
-            $user = User::where('id', '=', Auth::user()->id)->first();
-            $user->created_at = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' -1 day'));
-            $user->save();
-        }else{
-            return response()->json([
-                'extend' => true,
-                'message' => 'Пароль введён не верно! Повторите попытку.',
-                'error' => 1,
-            ]);
-        }
-
-    }
 }
