@@ -2,16 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\EmailConfirm;
+use App\Models\Messages;
 use App\Models\Operation;
 use App\Models\User;
-use App\Models\UserInfo;
 use App\Models\UserPartner;
-use App\Models\UserWallets;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 
 class CabinetController extends Controller
 {
@@ -96,7 +91,10 @@ class CabinetController extends Controller
     }
 
     public function messages(){
-        return view('cabinet.messages');
+
+        $msgs = Messages::get();
+
+        return view('cabinet.messages', compact('msgs'));
     }
 
     public function bonus(){

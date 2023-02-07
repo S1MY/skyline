@@ -24,6 +24,23 @@
                 </div>
                 @endif
                 <div class="messageWrapper">
+                    @foreach ($msgs as $msg)
+                        @php
+                            if( $msg->from == 0){
+                                $supportClass = ' _reded';
+                            }elseif ( $msg->from == 1 ) {
+                                $supportClass = '';
+                            }
+
+                            echo sesion('locale');
+                        @endphp
+
+                        <div class="messageItem{{ $supportClass }}">
+                            <p class="messageText">Поздравляем! Вы успешно перешли на пакет <span class="_bold">"STANDARD"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!</p>
+                            <p class="messageDate">29.01.2022 в 20:00</p>
+                        </div>
+
+                    @endforeach
                     <div class="messageItem _greened">
                         <p class="messageText">Поздравляем! Вы успешно перешли на пакет <span class="_bold">"STANDARD"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!</p>
                         <p class="messageDate">29.01.2022 в 20:00</p>
