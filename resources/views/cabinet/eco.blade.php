@@ -21,13 +21,17 @@
                             <p class="statCount">
                                 @php
                                     $pacagePrice = 100;
+                                    if( $partnersInLine ){
+                                        $fromFirstLine = $partnersInLine->user_first_line * ($pacagePrice * 0.4);
+                                        $fromSecondLine = $partnersInLine->user_second_line * ($pacagePrice * 0.2);
+                                        $fromThirdLine = $partnersInLine->user_third_line * ($pacagePrice * 0.05);
+                                        $fromFourthLine = $partnersInLine->user_fourth_line * ($pacagePrice * 0.15);
 
-                                    $fromFirstLine = $partnersInLine->user_first_line * ($pacagePrice * 0.4);
-                                    $fromSecondLine = $partnersInLine->user_second_line * ($pacagePrice * 0.2);
-                                    $fromThirdLine = $partnersInLine->user_third_line * ($pacagePrice * 0.05);
-                                    $fromFourthLine = $partnersInLine->user_fourth_line * ($pacagePrice * 0.15);
+                                        echo $fromFirstLine + $fromSecondLine + $fromThirdLine + $fromFourthLine;
+                                    }else{
+                                        echo 0;
+                                    }
 
-                                    echo $fromFirstLine + $fromSecondLine + $fromThirdLine + $fromFourthLine;
                                 @endphp
                                 €
                             </p>
@@ -41,7 +45,15 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.pacage.ref_count')</p>
-                            <p class="statCount">{{ $partnersInLine->user_first_line + $partnersInLine->user_second_line + $partnersInLine->user_third_line + $partnersInLine->user_fourth_line }} ч.</p>
+                            <p class="statCount">
+                                @php
+                                    if( $partnersInLine ){
+                                        echo $partnersInLine->user_first_line + $partnersInLine->user_second_line + $partnersInLine->user_third_line + $partnersInLine->user_fourth_line;
+                                    }else{
+                                        echo 0;
+                                    }
+                                @endphp
+                                ч.</p>
                         </div>
                     </div>
                     <div class="pageStatItem">
@@ -52,7 +64,15 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.pacage.last_buy')</p>
-                            <p class="statCount _small">{{ date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at))  }}</p>
+                            <p class="statCount _small">
+                                @php
+                                    if( $partnersInLine ){
+                                        echo date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at));
+                                    }else{
+                                        echo 0;
+                                    }
+                                @endphp
+                            </p>
                         </div>
                     </div>
                 </div>
