@@ -16,7 +16,7 @@
                     <a href="#" class="btn" id="adminAuth">Авторизация</a>
                     <a href="#" class="btn" id="adminEdit">Изменить</a>
                 </div>
-                <h2 class="pageTitle">У них нет приглсителя</h2>
+                <h2 class="pageTitle">У них нет пригласителя</h2>
                         <div class="customTable">
                             <div class="customTableLine customTableHead">
                                 <p class="customTableItem">ID</p>
