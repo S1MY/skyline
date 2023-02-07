@@ -179,7 +179,7 @@
                     </div>
                     <div class="packageItem _standard{{ Auth::user()->UserInfo->user_pacage < 2 ? ' _closed' : '' }}">
                         <p class="packageName">Standard</p>
-                        @if ($standartPartners > 0)
+                        @if ($standartPartners->count() > 0)
                             <div class="packageFlow">
                                 @foreach ($standartPartners as $standartPartner)
                                     <div class="flowItem">
