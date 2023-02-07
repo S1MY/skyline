@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Operation;
 use App\Models\UserWallets;
 use Illuminate\Http\Request;
 
@@ -34,6 +35,11 @@ class AdminController extends Controller
             ->orderBy('investbalance', 'desc')
             ->paginate(5);
 
-        return view('cabinet.admin', compact('total_balance', 'auto_balance', 'house_balance', 'invest_balance', 'auto_partners', 'house_partners', 'invest_partners'));
+        // История операций
+            $operations = Operation::leftJoin('user_infos as ui', 'ui.user_id', '=', 'operations.id')
+            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_id', 'type', 'value', 'operations.created_at')
+            ->paginate(5);
+
+        return view('cabinet.admin', compact('total_balance', 'auto_balance', 'house_balance', 'invest_balance', 'auto_partners', 'house_partners', 'invest_partners', 'operations'));
     }
 }

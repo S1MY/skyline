@@ -129,7 +129,68 @@
                         <p class="customTableItem">Имя и ID</p>
                         <p class="customTableItem">Операция</p>
                     </div>
-                    <div class="customTableLine">
+                    @foreach ($operations as $operation)
+                        <div class="customTableLine">
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
+                                {{ $operation->name }} {{ $operation->surname }}
+                                @if ($operation->user_show_id)
+                                    ({{ $operation->user_show_id }})
+                                @endif
+                            </p>
+                            @php
+                                switch ($operation->type) {
+                                    case '0':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.one');
+                                        break;
+                                    case '1':
+                                        $sign = '-';
+                                        $type = __('cabinet.story.operations_type.two');
+                                        break;
+                                    case '2':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.free');
+                                        break;
+                                    case '3':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.four');
+                                        break;
+                                    case '4':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.five');
+                                        break;
+                                    case '5':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.six');
+                                        break;
+                                    case '6':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.seven');
+                                        break;
+                                    case '7':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.eight');
+                                        break;
+                                    case '8':
+                                        $sign = '+';
+                                        $type = __('cabinet.story.operations_type.nine');
+                                        break;
+                                    case '11':
+                                        $sign = '';
+                                        $type = __('cabinet.story.operations_type.eleven');
+                                        break;
+
+                                    default:
+                                        # code...
+                                        break;
+                                }
+                            @endphp
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
+                        </div>
+                    @endforeach
+                    {{ $operations->links('cabinet.layouts.pagination') }}
+                    {{-- <div class="customTableLine">
                         <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
                         <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
                         <p class="customTableItem" aria-label="Операция"><span>Вывод средств <span class="_greened">-100€</span></span></p>
@@ -192,7 +253,7 @@
                                 <path d="M7.98903 4.503L15.297 12L7.98903 19.497C7.85819 19.631 7.78495 19.8108 7.78495 19.998C7.78495 20.1852 7.85819 20.3651 7.98903 20.499C8.05257 20.5639 8.12842 20.6154 8.21213 20.6506C8.29584 20.6857 8.38573 20.7039 8.47653 20.7039C8.56733 20.7039 8.65721 20.6857 8.74092 20.6506C8.82463 20.6154 8.90048 20.5639 8.96403 20.499L16.74 12.5235C16.8765 12.3834 16.953 12.1956 16.953 12C16.953 11.8044 16.8765 11.6166 16.74 11.4765L8.96553 3.50101C8.90193 3.43569 8.8259 3.38378 8.74191 3.34833C8.65792 3.31288 8.56769 3.29462 8.47653 3.29462C8.38536 3.29462 8.29513 3.31288 8.21114 3.34833C8.12715 3.38378 8.05112 3.43569 7.98753 3.50101C7.85669 3.63495 7.78345 3.81476 7.78345 4.002C7.78345 4.18925 7.85669 4.36906 7.98753 4.503L7.98903 4.503Z" fill="#202020"/>
                                 </svg>
                         </button>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
