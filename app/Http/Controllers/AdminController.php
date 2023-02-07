@@ -39,6 +39,7 @@ class AdminController extends Controller
             $operations = Operation::leftJoin('user_infos as ui', 'ui.user_id', '=', 'operations.user_id')
             ->leftJoin('users as u', 'u.id', '=', 'operations.user_id')
             ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_id', 'type', 'value', 'operations.created_at', 'u.name as uname')
+            ->orderBy('operations.created_at', 'desc')
             ->paginate(10);
 
         return view('cabinet.admin', compact('total_balance', 'auto_balance', 'house_balance', 'invest_balance', 'auto_partners', 'house_partners', 'invest_partners', 'operations'));
