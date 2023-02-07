@@ -26,7 +26,7 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">Общий баланс</p>
-                            <p class="statCount">1000€</p>
+                            <p class="statCount">{{ $total_balance }}€</p>
                         </div>
                     </div>
                     <div class="pageStatItem">
