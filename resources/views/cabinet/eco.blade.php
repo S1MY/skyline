@@ -67,7 +67,11 @@
                             <p class="statCount _small">
                                 @php
                                     if( $partnersInLine ){
-                                        echo date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at));
+                                        if( strtotime($partnersInLine->updated_at) == strtotime($partnersInLine->created_at) ){
+                                            echo 0;
+                                        }else{
+                                            echo date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at));
+                                        }
                                     }else{
                                         echo 0;
                                     }

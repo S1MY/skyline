@@ -51,7 +51,19 @@
                         </div>
                         <div class="statRight">
                             <p class="statName">@lang('cabinet.pacage.last_buy')</p>
-                            <p class="statCount _small">{{ date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at))  }}</p>
+                            <p class="statCount _small">
+                                @php
+                                    if( $partnersInLine ){
+                                        if( strtotime($partnersInLine->updated_at) == strtotime($partnersInLine->created_at) ){
+                                            echo 0;
+                                        }else{
+                                            echo date('Y.m.d', strtotime($partnersInLine->updated_at)).' в '.date('H:i', strtotime($partnersInLine->updated_at));
+                                        }
+                                    }else{
+                                        echo 0;
+                                    }
+                                @endphp
+                            </p>
                         </div>
                     </div>
                 </div>

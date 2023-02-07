@@ -470,7 +470,6 @@ class CabinetRequestController extends Controller
 
         }
 
-
         return response()->json([
             'buy' => true,
             'message' => 'Пакет '.$request->pacage.' активирован!',
