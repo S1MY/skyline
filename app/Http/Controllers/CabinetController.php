@@ -142,6 +142,8 @@ class CabinetController extends Controller
         ->where('pacage', '=', $currentPacage)
         ->first();
 
+        dd($partnersInLine);
+
         return view('cabinet.eco', compact('partners', 'partnersInLine'));
     }
 
