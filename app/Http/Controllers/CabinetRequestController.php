@@ -186,9 +186,20 @@ class CabinetRequestController extends Controller
     public function extendAccount(Request $request){
 
         if( Hash::check($request->code, session('hashed_code')) ){
+
             $user = User::where('id', '=', Auth::user()->id)->first();
             $user->created_at = date('Y-m-d H:i:s', strtotime(date('Y-m-d H:i:s') . ' -1 day'));
             $user->save();
+
+            Messages::create([
+                'message' => 'Доступ к аккаунту восстановлен! У вас будет <span class="_bold">24 часа</span>, чтобы приобрести пакет.',
+                'en_message' => 'Account access has been restored! You will have <span class="_bold">24 hours</span> to purchase the package.',
+                'de_message' => 'Der Zugriff auf das Konto wurde wiederhergestellt! Sie haben <span class="_bold">24 Stunden</span>, um das Paket zu kaufen.',
+                'checked' => serialize(array()),
+                'from' => 0,
+                'to' => Auth::user()->id,
+            ]);
+
         }else{
             return response()->json([
                 'extend' => true,
@@ -319,6 +330,17 @@ class CabinetRequestController extends Controller
             'pacage' => $pacage,
         ]);
 
+        // Создание сообщения
+
+        Messages::create([
+            'message' => 'Поздравляем! Вы успешно перешли на пакет <span class="_bold">"'.$request->pacage.'"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!',
+            'en_message' => 'Congratulations! You have successfully switched to the package <span class="_bold">"'.$request->package.'"</span>. Soon you will discover new features that will multiply your earnings!',
+            'de_message' => 'Herzlichen Glückwunsch! Sie haben erfolgreich zum Paket <span class="_bold">"'.$request->package.'"</span>. Bald werden Sie neue Funktionen entdecken, die Ihr Einkommen um ein Vielfaches erhöhen werden!',
+            'checked' => serialize(array()),
+            'from' => 0,
+            'to' => Auth::user()->id,
+        ]);
+
         // Сохранение данных пользователя
         $wallet->save();
         $userInfo->save();
@@ -447,6 +469,7 @@ class CabinetRequestController extends Controller
             $type++;
 
         }
+
 
         return response()->json([
             'buy' => true,
