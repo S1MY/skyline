@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Messages;
 use Illuminate\Http\Request;
 use App\Models\Operation;
 use App\Models\User;
@@ -455,6 +456,15 @@ class CabinetRequestController extends Controller
     }
 
     public function sendMessage(Request $request){
+
+        Messages::create([
+            'message' => $request->msg_ru,
+            'en_message' => $request->msg_en,
+            'de_message' => $request->msg_ge,
+            'from' => 1,
+            'to' => 0,
+        ]);
+
         return $request;
     }
 
