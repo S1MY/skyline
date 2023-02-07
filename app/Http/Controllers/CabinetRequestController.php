@@ -448,7 +448,7 @@ class CabinetRequestController extends Controller
                 $table_line = 'user_fourth_line';
             }
 
-            UserPartner::where('user_id', '=', $sponsor)->increment($table_line);
+            UserPartner::where('user_id', '=', $sponsor)->where('pacage', '=', $pacage)->increment($table_line);
 
             // Сохраняем балансы, создаём операцию и берём следующего спонсора
 
