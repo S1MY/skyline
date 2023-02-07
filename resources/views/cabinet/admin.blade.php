@@ -133,10 +133,12 @@
                         <div class="customTableLine">
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
-                                {{ $operation->name }} {{ $operation->surname }}
-                                @if ($operation->user_show_id)
-                                    ({{ $operation->user_show_id }})
-                                @endif
+                                <a href="ссылка авторизации" class="userLink">
+                                    {{ $operation->name }} {{ $operation->surname }}
+                                    @if ($operation->user_show_id)
+                                        ({{ $operation->user_show_id }})
+                                    @endif
+                                </a>
                             </p>
                             @php
                                 switch ($operation->type) {
@@ -190,70 +192,6 @@
                         </div>
                     @endforeach
                     {{ $operations->links('cabinet.layouts.pagination') }}
-                    {{-- <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Вывод средств <span class="_greened">-100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Вывод средств <span class="_greened">-100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Процент 1 линии <span class="_blueed">+40€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Процент 2 линии <span class="_blueed">+20€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="customTableLine">
-                        <p class="customTableItem" aria-label="Дата и время">14 октября в 19:35</p>
-                        <p class="customTableItem" aria-label="Имя и ID"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a></p>
-                        <p class="customTableItem" aria-label="Операция"><span>Оплата "Эконом” <span class="_reded">100€</span></span></p>
-                    </div>
-                    <div class="paginationWrapper displayFlex alignItemsCenter spaceCenter">
-                        <button class="prev displayFlex alignItemsCenter spaceCenter disabledPag">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.011 19.497L8.70297 12L16.011 4.50299C16.1418 4.36905 16.2151 4.18923 16.2151 4.00199C16.2151 3.81475 16.1418 3.63494 16.011 3.50099C15.9474 3.43614 15.8716 3.38461 15.7879 3.34944C15.7042 3.31426 15.6143 3.29614 15.5235 3.29614C15.4327 3.29614 15.3428 3.31426 15.2591 3.34944C15.1754 3.38461 15.0995 3.43614 15.036 3.50099L7.25997 11.4765C7.12345 11.6166 7.04705 11.8044 7.04705 12C7.04705 12.1956 7.12345 12.3834 7.25997 12.5235L15.0345 20.499C15.0981 20.5643 15.1741 20.6162 15.2581 20.6517C15.3421 20.6871 15.4323 20.7054 15.5235 20.7054C15.6146 20.7054 15.7049 20.6871 15.7889 20.6517C15.8728 20.6162 15.9489 20.5643 16.0125 20.499C16.1433 20.365 16.2166 20.1852 16.2166 19.998C16.2166 19.8108 16.1433 19.6309 16.0125 19.497L16.011 19.497Z" fill="#202020"/>
-                                </svg>
-                        </button>
-                        <button id="1" class="active">1</button>
-                        <button class="link">2</button>
-                        <button class="next displayFlex alignItemsCenter spaceCenter link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.98903 4.503L15.297 12L7.98903 19.497C7.85819 19.631 7.78495 19.8108 7.78495 19.998C7.78495 20.1852 7.85819 20.3651 7.98903 20.499C8.05257 20.5639 8.12842 20.6154 8.21213 20.6506C8.29584 20.6857 8.38573 20.7039 8.47653 20.7039C8.56733 20.7039 8.65721 20.6857 8.74092 20.6506C8.82463 20.6154 8.90048 20.5639 8.96403 20.499L16.74 12.5235C16.8765 12.3834 16.953 12.1956 16.953 12C16.953 11.8044 16.8765 11.6166 16.74 11.4765L8.96553 3.50101C8.90193 3.43569 8.8259 3.38378 8.74191 3.34833C8.65792 3.31288 8.56769 3.29462 8.47653 3.29462C8.38536 3.29462 8.29513 3.31288 8.21114 3.34833C8.12715 3.38378 8.05112 3.43569 7.98753 3.50101C7.85669 3.63495 7.78345 3.81476 7.78345 4.002C7.78345 4.18925 7.85669 4.36906 7.98753 4.503L7.98903 4.503Z" fill="#202020"/>
-                                </svg>
-                        </button>
-                    </div> --}}
                 </div>
             </div>
         </div>
