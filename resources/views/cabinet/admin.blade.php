@@ -16,6 +16,39 @@
                     <a href="#" class="btn" id="adminAuth">Авторизация</a>
                     <a href="#" class="btn" id="adminEdit">Изменить</a>
                 </div>
+                <h2 class="pageTitle">У них нет приглсителя</h2>
+                        <div class="customTable">
+                            <div class="customTableLine customTableHead">
+                                <p class="customTableItem">ID</p>
+                                <p class="customTableItem">Имя</p>
+                                <p class="customTableItem">Дата регистрации</p>
+                            </div>
+                            <div class="customTableLine">
+                                <p class="customTableItem" aria-label="ID">00034</p>
+                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
+                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
+                            </div>
+                            <div class="customTableLine">
+                                <p class="customTableItem" aria-label="ID">00034</p>
+                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
+                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
+                            </div>
+                            <div class="customTableLine">
+                                <p class="customTableItem" aria-label="ID">00034</p>
+                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
+                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
+                            </div>
+                            <div class="customTableLine">
+                                <p class="customTableItem" aria-label="ID">00034</p>
+                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
+                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
+                            </div>
+                            <div class="customTableLine">
+                                <p class="customTableItem" aria-label="ID">00034</p>
+                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
+                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
+                            </div>
+                </div>
                 <h2 class="pageTitle">Админ панель</h2>
                 <div class="pageStat displayFlex spaceBetween flexWrap">
                     <div class="pageStatItem">
