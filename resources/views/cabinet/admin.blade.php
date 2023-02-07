@@ -66,10 +66,6 @@
                             @foreach ($auto_partners as $auto_partner)
                                 <div class="userItem"><a href="ссылка авторизации" class="userLink">{{ $auto_partner->name }} {{ $auto_partner->surname }} ({{ $auto_partner->user_show_id }})</a><p class="userCount">{{ $auto_partner->autobalance }}€</p></div>
                             @endforeach
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
                         </div>
                     </div>
                     <div class="pageStatItem _admin">
@@ -90,11 +86,13 @@
                             <p class="statCount">{{ $house_balance }}€</p>
                         </div>
                         <div class="adminList">
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
+                            @foreach ($house_partners as $house_partner)
+                                <div class="userItem">
+                                    <a href="ссылка авторизации" class="userLink">
+                                        {{ $house_partner->name }} {{ $house_partner->surname }} ({{ $house_partner->user_show_id }})
+                                    </a>
+                                    <p class="userCount">{{ $house_partner->autobalance }}€</p></div>
+                            @endforeach
                         </div>
                     </div>
                     <div class="pageStatItem _admin">
@@ -108,11 +106,13 @@
                             <p class="statCount">{{ $invest_balance }}€</p>
                         </div>
                         <div class="adminList">
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
-                            <div class="userItem"><a href="ссылка авторизации" class="userLink">Иван Иванов (00034)</a><p class="userCount">100€</p></div>
+                            @foreach ($invest_partner as $invest_partner)
+                                <div class="userItem">
+                                    <a href="ссылка авторизации" class="userLink">
+                                        {{ $invest_partner->name }} {{ $invest_partner->surname }} ({{ $invest_partner->user_show_id }})
+                                    </a>
+                                    <p class="userCount">{{ $invest_partner->autobalance }}€</p></div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
