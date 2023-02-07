@@ -113,28 +113,24 @@
                     $messages = \App\Models\Messages::all();
                     $counter = 0;
                     foreach ($messages as $msg) {
+                        $checkedArray = unserialize($msg->checked);
 
-                        print_r($msg->checked);
-                        // $checkedArray = unserialize($msg->checked);
-
-                        // if( !in_array(Auth::user()->id, $checkedArray) ){
-                        //     array_push($checkedArray, Auth::user()->id);
-                        //     $msgsToSave->checked = serialize($checkedArray);
-                        //     $counter++;
-                        // }
+                        if( !in_array(Auth::user()->id, $checkedArray) ){
+                            $counter++;
+                        }
                     }
 
-                    // if( $counter == 0 ){
-                    //     $msgCount = '';
-                    // }else{
-                    //     $msgCount = '('.$counter.')';
-                    // }
+                    if( $counter == 0 ){
+                        $msgCount = '';
+                    }else{
+                        $msgCount = '('.$counter.')';
+                    }
                 @endphp
                 <a href="{{ route('messages') }}" class="headerLink">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.8571 2H2.14286C1.57454 2 1.02949 2.22987 0.627628 2.63904C0.225765 3.04821 0 3.60316 0 4.18182V4.47273L9.74286 9.80364C9.83099 9.84164 9.92572 9.86123 10.0214 9.86123C10.1171 9.86123 10.2119 9.84164 10.3 9.80364L20 4.47273V4.18182C20 3.60316 19.7742 3.04821 19.3724 2.63904C18.9705 2.22987 18.4255 2 17.8571 2ZM19.7714 16.7782C19.9187 16.4802 19.9969 16.1518 20 15.8182V6.12364L13.5 9.68L19.7714 16.7782ZM0 6.12364V15.8182C0.00310737 16.1518 0.0813017 16.4802 0.228571 16.7782L6.5 9.68L0 6.12364ZM10.9357 11.0836C10.6384 11.2259 10.3142 11.3003 9.98571 11.3018C9.6801 11.3014 9.37811 11.2345 9.1 11.1055L7.79286 10.3782L1.25714 17.7964C1.5347 17.9279 1.83672 17.9973 2.14286 18H17.8571C18.1657 17.9984 18.4703 17.9289 18.75 17.7964L12.2 10.3927L10.9357 11.0836Z" fill="#202020"/>
                         </svg>
-                    {{-- <span>@lang('cabinet.header_btn.messages') <span class="messageCount">{{ $msgCount }}</span></span> --}}
+                    <span>@lang('cabinet.header_btn.messages') <span class="messageCount">{{ $msgCount }}</span></span>
                 </a>
                 @php
                 $notactive = '';
