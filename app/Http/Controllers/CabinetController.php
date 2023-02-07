@@ -99,7 +99,11 @@ class CabinetController extends Controller
             if ( is_array($msg->checked) ){
                 return 'Массив';
             }else{
-                return 'Не массив';
+
+                $msgsToSave = Messages::where('id', '=', $msg->id)->get();
+                $msgsToSave->checked = array(Auth::user()->id);
+                $msgsToSave->save();
+
             }
         }
 
