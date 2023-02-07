@@ -143,43 +143,33 @@
                             @php
                                 switch ($operation->type) {
                                     case '0':
-                                        $sign = '+';
                                         $type = __('cabinet.story.operations_type.one');
                                         break;
                                     case '1':
-                                        $sign = '-';
                                         $type = __('cabinet.story.operations_type.two');
                                         break;
                                     case '2':
-                                        $sign = '';
                                         $type = __('cabinet.story.operations_type.free');
                                         break;
                                     case '3':
-                                        $sign = '';
                                         $type = __('cabinet.story.operations_type.four');
                                         break;
                                     case '4':
-                                        $sign = '';
                                         $type = __('cabinet.story.operations_type.five');
                                         break;
                                     case '5':
-                                        $sign = '+';
                                         $type = __('cabinet.story.operations_type.six');
                                         break;
                                     case '6':
-                                        $sign = '+';
                                         $type = __('cabinet.story.operations_type.seven');
                                         break;
                                     case '7':
-                                        $sign = '+';
                                         $type = __('cabinet.story.operations_type.eight');
                                         break;
                                     case '8':
-                                        $sign = '+';
                                         $type = __('cabinet.story.operations_type.nine');
                                         break;
                                     case '11':
-                                        $sign = '';
                                         $type = __('cabinet.story.operations_type.eleven');
                                         break;
 
@@ -188,7 +178,7 @@
                                         break;
                                 }
                             @endphp
-                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span>{{ $type }} <span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
+                            <p class="customTableItem" aria-label="@lang('cabinet.story.table.operation')"><span><span class="_greened">{{ $sign }}{{ $operation->value }}€</span></span></p>
                         </div>
                     @endforeach
                     {{ $operations->links('cabinet.layouts.pagination') }}
