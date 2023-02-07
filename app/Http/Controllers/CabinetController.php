@@ -134,7 +134,7 @@ class CabinetController extends Controller
         $partners = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
         ->leftJoin('user_partners as up', 'up.user_id', '=', 'users.id')
         ->select('users.id', 'ui.login', 'users.email', 'ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_status', 'up.user_first_line', 'up.user_second_line', 'up.user_third_line', 'up.user_fourth_line')
-        ->where('up.pacage', '=', $currentPacage)
+        ->where('up.pacage', '>', $currentPacage)
         ->where('users.sponsor_id', '=', Auth::user()->id)
         ->paginate(9);
 
