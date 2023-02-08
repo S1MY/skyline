@@ -155,7 +155,16 @@
                         <div class="customTableLine">
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.date_time')">{{ $operation::getCurrentDate($operation->created_at) }}</p>{{-- 14 октября в 19:35 --}}
                             <p class="customTableItem" aria-label="@lang('cabinet.story.table.name_id')">
-                                <a href="{{ route('showUser', ['user' => $operation->user_show_id]) }}" class="userLink">
+
+                                @php
+                                    if( $operation->user_show_id ){
+                                        $userShow = $operation->user_show_id;
+                                    }else{
+                                        $userShow = $operation->user_id;
+                                    }
+                                @endphp
+
+                                <a href="{{ route('showUser', ['user' => $userShow]) }}" class="userLink">
                                     {{ $operation->name }} {{ $operation->surname }}
                                     @if ($operation->user_show_id)
                                         ({{ $operation->user_show_id }})

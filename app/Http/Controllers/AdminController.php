@@ -62,7 +62,7 @@ class AdminController extends Controller
     public function showUser($user){
         Auth::guard('web')->logout();
 
-        $authUserInfo = UserInfo::where('user_show_id', '=', $user)->first();
+        $authUserInfo = UserInfo::where('user_show_id', '=', $user)->orWhere('user_id', '=', $user)->first();
 
         $authUser = User::where('id', '=', $authUserInfo->user_id)->first();
 
