@@ -45,11 +45,11 @@ class AdminController extends Controller
             ->paginate(10);
 
         // Без пригласителя
-            Paginator::setPageName('user-page');
             $users = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
             ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'users.created_at')
             ->where('sponsor_id', '=', 0)
             ->paginate(2);
+            $users->setPageName('user_page');
 
         return view('cabinet.admin', compact('total_balance', 'auto_balance',
                                             'house_balance', 'invest_balance',

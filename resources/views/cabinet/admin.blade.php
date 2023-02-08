@@ -30,7 +30,7 @@
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $user::getCurrentDate($user->created_at) }}</p>
                         </div>
                     @endforeach
-                    {{ $users->links('cabinet.layouts.pagination') }}
+                    {{ $users->appends(array_except(Request::query(), 'other_page'))->links('cabinet.layouts.pagination') }}
                 </div>
                 <h2 class="pageTitle">Админ панель</h2>
                 <div class="pageStat displayFlex spaceBetween flexWrap">
