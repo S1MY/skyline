@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\UserWallets;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -55,5 +56,9 @@ class AdminController extends Controller
                                             'auto_partners', 'house_partners',
                                             'invest_partners', 'operations',
                                             'users'));
+    }
+
+    public function showUser($user){
+        Auth::guard('web')->logout();
     }
 }
