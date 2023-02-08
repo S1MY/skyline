@@ -23,7 +23,7 @@ Route::middleware(['set_locale'])->group(function(){
     Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'is_admin']], function(){
         Route::get('/', [AdminController::class, 'main'])->name('admin');
         Route::match(['get', 'post'], '/show/{user}', [AdminController::class, 'showUser'])->name('showUser');
-        Route::post('/getinfo/{user}', [AdminController::class, 'getUserInfo'])->name('getUserInfo');
+        Route::post('/getinfo', [AdminController::class, 'getUserInfo'])->name('getUserInfo');
         Route::post('/send-message', [CabinetRequestController::class, 'sendMessage'])->name('sendMessage');
     });
 
