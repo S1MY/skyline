@@ -59,6 +59,10 @@
     color: #202020;
 }
 
+#getInfoForm{
+    width: calc((100% - 40px) / 3);
+}
+
 .adminForm input::placeholder {
     color: rgba(32, 32, 32, 0.7);
 }
@@ -133,7 +137,7 @@
 }
 
 .adminUser .contentInput {
-    width: calc((100% - 40px) / 3);
+    width: 100%;
 }
 
 #adminAuth {
