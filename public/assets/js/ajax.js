@@ -359,7 +359,8 @@ $(document).ready(function () {
                 console.log(result);
 
                 if( result['avatar'] != null ){
-                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url('+ result['avatar'] +');'});
+                    console.log('Замена аватара');
+                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url('+ result['avatar'] +')'});
                 }else{
                     $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url(/image/users/user.png)'});
                 }
