@@ -71,4 +71,15 @@ class AdminController extends Controller
         return redirect()->route('cabinet');
 
     }
+
+    public function getUserInfo($user){
+        $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
+        ->select('user_infos.name', 'user_infos.surname', 'user_infos.user_show_id', 'u.email', 'user_infos.avatar')
+        ->where('user_show_id', '=', $user)
+        ->orWhere('user_id', '=', $user)
+        ->first();
+
+        return $userInfo;
+    }
+
 }

@@ -12,7 +12,9 @@
             <div class="contentWrapper">
                 <h1 class="pageTitle">Авторизация</h1>
                 <div class="adminUser">
-                    <input type="text" class="contentInput" name="id" placeholder="ID пользователя" required>
+                    <form action="{{ route('getUserInfo') }}" id="getInfoForm">
+                        <input type="text" class="contentInput" name="id" placeholder="ID пользователя" required>
+                    </form>
                     <a href="#" class="btn" id="adminAuth">Авторизация</a>
                     <a href="#" class="btn" id="adminEdit">Изменить</a>
                 </div>
