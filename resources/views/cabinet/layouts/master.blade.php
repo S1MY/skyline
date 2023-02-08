@@ -359,8 +359,8 @@
             <div class="userPopup">
                 <div class="popupAvatar" style="background: url(/image/users/user.png);"></div>
                 <p class="userPopupName">Иван Иванов</p>
-                <p class="userPopupText">ID: 00021</p>
-                <p class="userPopupText">examle@example.ru</p>
+                <p class="userPopupText userPopupId">ID: 00021</p>
+                <p class="userPopupText userPopupEmail">examle@example.ru</p>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
                 <button class="btn _blueed">@lang('popups.autorization')</button>

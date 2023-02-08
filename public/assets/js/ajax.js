@@ -356,7 +356,12 @@ $(document).ready(function () {
             method: 'post',
             data: data,
             success: function(result){
-                console.log(result['name']);
+                console.log(result);
+
+                $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
+                $('.popupItem[data-name="adminAuth"] .userPopupId').text('ID: '+result['user_show_id']);
+                $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('ID: '+result['email']);
+
             },
             error: function (result) {
                 console.log(result);
