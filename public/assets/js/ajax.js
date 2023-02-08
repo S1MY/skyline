@@ -358,6 +358,12 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
+                if( result['avatar'] ){
+                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css('background: url('+ result['avatar'] +');');
+                }else{
+                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css('background: url(/image/users/user.png);');
+                }
+
                 $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
                 $('.popupItem[data-name="adminAuth"] .userPopupId').text('ID: '+result['user_show_id']);
                 $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('ID: '+result['email']);
