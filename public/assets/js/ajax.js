@@ -356,7 +356,7 @@ $(document).ready(function () {
             method: 'post',
             data: data,
             success: function(result){
-                console.log(result);
+                console.log(result['name']);
             },
             error: function (result) {
                 console.log(result);
