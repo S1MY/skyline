@@ -358,10 +358,10 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
-                if( result['avatar'] ){
-                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css('background: url('+ result['avatar'] +');');
+                if( result['avatar'] != null ){
+                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url('+ result['avatar'] +');'});
                 }else{
-                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css('background: url(/image/users/user.png);');
+                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url(/image/users/user.png)'});
                 }
 
                 $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
