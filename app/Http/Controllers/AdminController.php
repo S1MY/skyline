@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Operation;
+use App\Models\User;
 use App\Models\UserWallets;
 use Illuminate\Http\Request;
 
@@ -42,6 +43,16 @@ class AdminController extends Controller
             ->orderBy('operations.created_at', 'desc')
             ->paginate(10);
 
-        return view('cabinet.admin', compact('total_balance', 'auto_balance', 'house_balance', 'invest_balance', 'auto_partners', 'house_partners', 'invest_partners', 'operations'));
+        // Без пригласителя
+            $users = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'users.created_at')
+            ->where('sponsor_id', '=', 0)
+            ->paginate(5);
+
+        return view('cabinet.admin', compact('total_balance', 'auto_balance',
+                                            'house_balance', 'invest_balance',
+                                            'auto_partners', 'house_partners',
+                                            'invest_partners', 'operations',
+                                            'users'));
     }
 }

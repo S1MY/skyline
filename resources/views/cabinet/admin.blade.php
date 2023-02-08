@@ -17,37 +17,19 @@
                     <a href="#" class="btn" id="adminEdit">Изменить</a>
                 </div>
                 <h2 class="pageTitle">У них нет пригласителя</h2>
-                        <div class="customTable">
-                            <div class="customTableLine customTableHead">
-                                <p class="customTableItem">ID</p>
-                                <p class="customTableItem">Имя</p>
-                                <p class="customTableItem">Дата регистрации</p>
-                            </div>
-                            <div class="customTableLine">
-                                <p class="customTableItem" aria-label="ID">00034</p>
-                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
-                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
-                            </div>
-                            <div class="customTableLine">
-                                <p class="customTableItem" aria-label="ID">00034</p>
-                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
-                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
-                            </div>
-                            <div class="customTableLine">
-                                <p class="customTableItem" aria-label="ID">00034</p>
-                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
-                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
-                            </div>
-                            <div class="customTableLine">
-                                <p class="customTableItem" aria-label="ID">00034</p>
-                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
-                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
-                            </div>
-                            <div class="customTableLine">
-                                <p class="customTableItem" aria-label="ID">00034</p>
-                                <p class="customTableItem" aria-label="Имя">Иван Иванов</p>
-                                <p class="customTableItem" aria-label="Дата регистрации">14 октября в 19:35</p>
-                            </div>
+                <div class="customTable">
+                    <div class="customTableLine customTableHead">
+                        <p class="customTableItem">ID</p>
+                        <p class="customTableItem">Имя</p>
+                        <p class="customTableItem">Дата регистрации</p>
+                    </div>
+                    @foreach ($users as $user)
+                        <div class="customTableLine">
+                            <p class="customTableItem" aria-label="ID">{{ $user->user_show_id }}</p>
+                            <p class="customTableItem" aria-label="Имя">{{ $user->name }} {{ $user->surname }}</p>
+                            <p class="customTableItem" aria-label="Дата регистрации">{{ $user::getCurrentDate($user->created_at) }}</p>
+                        </div>
+                    @endforeach
                 </div>
                 <h2 class="pageTitle">Админ панель</h2>
                 <div class="pageStat displayFlex spaceBetween flexWrap">
@@ -128,7 +110,7 @@
                                     <a href="ссылка авторизации" class="userLink">
                                         {{ $house_partner->name }} {{ $house_partner->surname }} ({{ $house_partner->user_show_id }})
                                     </a>
-                                    <p class="userCount">{{ $house_partner->autobalance }}€</p></div>
+                                    <p class="userCount">{{ $house_partner->housebalance }}€</p></div>
                             @endforeach
                         </div>
                     </div>
@@ -150,7 +132,7 @@
                                     <a href="ссылка авторизации" class="userLink">
                                         {{ $invest_partner->name }} {{ $invest_partner->surname }} ({{ $invest_partner->user_show_id }})
                                     </a>
-                                    <p class="userCount">{{ $invest_partner->autobalance }}€</p></div>
+                                    <p class="userCount">{{ $invest_partner->investbalance }}€</p></div>
                             @endforeach
                         </div>
                     </div>
