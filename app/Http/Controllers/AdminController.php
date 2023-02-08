@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Operation;
 use App\Models\User;
+use App\Models\UserInfo;
 use App\Models\UserWallets;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
@@ -60,5 +61,14 @@ class AdminController extends Controller
 
     public function showUser($user){
         Auth::guard('web')->logout();
+
+        $authUserInfo = UserInfo::where('user_show_id', '=', $user)->first();
+
+        $authUser = User::where('id', '=', $authUserInfo->user_id)->first();
+
+        Auth::login($authUser);
+
+        return redirect()->route('cabinet');
+
     }
 }
