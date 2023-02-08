@@ -74,7 +74,7 @@ class AdminController extends Controller
 
     public function getUserInfo(Request $request){
 
-        return $request;
+        $user = $request->id;
 
         $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
         ->select('user_infos.name', 'user_infos.surname', 'user_infos.user_show_id', 'u.email', 'user_infos.avatar')
