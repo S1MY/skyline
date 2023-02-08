@@ -363,7 +363,7 @@
                 <p class="userPopupText userPopupEmail">examle@example.ru</p>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
-                <button class="btn _blueed">@lang('popups.autorization')</button>
+                <a class="btn _blueed" id="authBtn">@lang('popups.autorization')</a>
             </div>
             <div class="btnWrapper displayFlex spaceCenter">
                 <a href="#" class="responseBtn _w100">@lang('popups.close')</a>
