@@ -375,7 +375,7 @@
                 <p class="userPopupName">Иван Иванов</p>
                 <p class="userPopupText userPopupSponsor">Реферер: 00032</p>
             </div>
-            <input type="hidden" name="id" id="userShowId">
+            <input type="hidden" name="id" id="userId">
             <input type="text" class="contentInput" name="refid" placeholder="@lang('popups.newref')" required>
             <div class="btnWrapper displayFlex spaceCenter">
                 <button class="btn _blueed">@lang('popups.change')</button>
