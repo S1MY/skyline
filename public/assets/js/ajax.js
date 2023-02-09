@@ -335,7 +335,7 @@ $(document).ready(function () {
         });
     })
 
-    $('#adminAuth').click(function(e){
+    $('#adminAuth, #adminEdit').click(function(e){
         e.preventDefault();
         $('#getInfoForm').submit();
     })
