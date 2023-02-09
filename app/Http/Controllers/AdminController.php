@@ -91,7 +91,7 @@ class AdminController extends Controller
             $sponsorShowId = $sponsorShowId->user_show_id;
 
             $userInfo->put('sponsor', $sponsorShowId);
-
+            $userInfo->all();
 
         }
 
