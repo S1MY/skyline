@@ -90,8 +90,7 @@ class AdminController extends Controller
             $sponsorShowId = UserInfo::where('user_id', '=', $sponsorShowId->sponsor_id)->first();
             $sponsorShowId = $sponsorShowId->user_show_id;
 
-            $userInfo->put('sponsor', $sponsorShowId);
-            $userInfo->all();
+            $userInfo->sponsor = $sponsorShowId;
 
         }
 
