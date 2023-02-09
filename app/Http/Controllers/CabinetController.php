@@ -6,7 +6,6 @@ use App\Models\Messages;
 use App\Models\Operation;
 use App\Models\User;
 use App\Models\UserPartner;
-use Hamcrest\Arrays\IsArray;
 use Illuminate\Support\Facades\Auth;
 
 class CabinetController extends Controller

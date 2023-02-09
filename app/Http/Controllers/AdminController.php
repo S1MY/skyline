@@ -83,6 +83,7 @@ class AdminController extends Controller
             ->first();
         }else{
             $userInfo = UserInfo::where('user_show_id', '=', $user)
+            ->select('name', 'surname', 'user_infos.user_show_id', 'user_infos.avatar')
             ->orWhere('user_id', '=', $user)
             ->first();
 

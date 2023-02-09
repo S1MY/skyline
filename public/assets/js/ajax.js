@@ -363,18 +363,30 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
+                if( result['email'] ){
+                    if( result['avatar'] != null ){
+                        $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url('+ result['avatar'] +')'});
+                    }else{
+                        $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url(/image/users/user.png)'});
+                    }
 
-                if( result['avatar'] != null ){
-                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url('+ result['avatar'] +')'});
+                    $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
+                    $('.popupItem[data-name="adminAuth"] .userPopupId').text('ID: '+result['user_show_id']);
+                    $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('Email: '+result['email']);
+
+                    $('.popupItem[data-name="adminAuth"] #authBtn').attr('href', 'https://myskylinecompany.com/admin/show/'+result['user_show_id'])
                 }else{
-                    $('.popupItem[data-name="adminAuth"] .popupAvatar').css({'background': 'url(/image/users/user.png)'});
+                    if( result['avatar'] != null ){
+                        $('.popupItem[data-name="adminEdit"] .popupAvatar').css({'background': 'url('+ result['avatar'] +')'});
+                    }else{
+                        $('.popupItem[data-name="adminEdit"] .popupAvatar').css({'background': 'url(/image/users/user.png)'});
+                    }
+
+                    $('.popupItem[data-name="adminEdit"] .userPopupName').text(result['name']+' '+result['surname']);
+                    $('.popupItem[data-name="adminEdit"] #userShowId').val(result['user_show_id']);
+                    $('.popupItem[data-name="adminEdit"] .userPopupSponsor').text('Реферер: '+result['sponsor']);
                 }
 
-                $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
-                $('.popupItem[data-name="adminAuth"] .userPopupId').text('ID: '+result['user_show_id']);
-                $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('Email: '+result['email']);
-
-                $('.popupItem[data-name="adminAuth"] #authBtn').attr('href', 'https://myskylinecompany.com/admin/show/'+result['user_show_id'])
 
             },
             error: function (result) {
