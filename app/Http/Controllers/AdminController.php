@@ -75,7 +75,7 @@ class AdminController extends Controller
 
         $user = $request->id;
 
-        return $request;
+        // return $request;
 
         if( $request->type != 'edit' ){
             $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
