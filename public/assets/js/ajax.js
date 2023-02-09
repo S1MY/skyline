@@ -372,7 +372,7 @@ $(document).ready(function () {
 
                 $('.popupItem[data-name="adminAuth"] .userPopupName').text(result['name']+' '+result['surname']);
                 $('.popupItem[data-name="adminAuth"] .userPopupId').text('ID: '+result['user_show_id']);
-                $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('ID: '+result['email']);
+                $('.popupItem[data-name="adminAuth"] .userPopupEmail').text('Email: '+result['email']);
 
                 $('.popupItem[data-name="adminAuth"] #authBtn').attr('href', 'https://myskylinecompany.com/admin/show/'+result['user_show_id'])
 

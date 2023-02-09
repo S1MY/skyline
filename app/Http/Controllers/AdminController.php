@@ -74,15 +74,30 @@ class AdminController extends Controller
 
     public function getUserInfo(Request $request){
 
-        return $request;
-
         $user = $request->id;
 
-        $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
-        ->select('user_infos.name', 'user_infos.surname', 'user_infos.user_show_id', 'u.email', 'user_infos.avatar')
-        ->where('user_show_id', '=', $user)
-        ->orWhere('user_id', '=', $user)
-        ->first();
+        if( $request->type != 'edit' ){
+            $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
+            ->select('user_infos.name', 'user_infos.surname', 'user_infos.user_show_id', 'u.email', 'user_infos.avatar')
+            ->where('user_show_id', '=', $user)
+            ->orWhere('user_id', '=', $user)
+            ->first();
+        }else{
+            $userInfo = UserInfo::where('user_show_id', '=', $user)
+            ->orWhere('user_id', '=', $user)
+            ->first();
+
+            $userInfo->map(function ($item, $key) {
+
+                $sponsorShowId = User::where('id', '=', $item->user_id)->first();
+                $sponsorShowId = UserInfo::where('user_id', '=', $sponsorShowId->sponsor_id)->first;
+                $sponsorShowId = $sponsorShowId->user_show_id;
+
+                return $item->sponsor = $sponsorShowId;
+
+            });
+
+        }
 
         return $userInfo;
     }
