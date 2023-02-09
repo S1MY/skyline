@@ -13,6 +13,7 @@
                 <h1 class="pageTitle">Авторизация</h1>
                 <div class="adminUser">
                     <form action="{{ route('getUserInfo') }}" id="getInfoForm">
+                        <input type="hidden" name="type" id="typeInfoGet" value="auth">
                         <input type="text" class="contentInput" name="id" placeholder="ID пользователя" required>
                     </form>
                     <a href="#" class="btn" id="adminAuth">Авторизация</a>
