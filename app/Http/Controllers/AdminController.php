@@ -84,17 +84,14 @@ class AdminController extends Controller
         }else{
             $userInfo = UserInfo::where('user_show_id', '=', $user)
             ->orWhere('user_id', '=', $user)
-            ->get();
+            ->first();
 
-            $userInfo->map(function ($item, $key) {
+            $sponsorShowId = User::where('id', '=', $userInfo->user_id)->first();
+            $sponsorShowId = UserInfo::where('user_id', '=', $sponsorShowId->sponsor_id)->first;
+            $sponsorShowId = $sponsorShowId->user_show_id;
 
-                $sponsorShowId = User::where('id', '=', $item->user_id)->first();
-                $sponsorShowId = UserInfo::where('user_id', '=', $sponsorShowId->sponsor_id)->first;
-                $sponsorShowId = $sponsorShowId->user_show_id;
+            $userInfo->put('sponsor', $sponsorShowId);
 
-                return $item->sponsor = $sponsorShowId;
-
-            });
 
         }
 
