@@ -7,7 +7,6 @@ use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\UserWallets;
 use Illuminate\Http\Request;
-use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -85,7 +84,7 @@ class AdminController extends Controller
         }else{
             $userInfo = UserInfo::where('user_show_id', '=', $user)
             ->orWhere('user_id', '=', $user)
-            ->first();
+            ->get();
 
             $userInfo->map(function ($item, $key) {
 
