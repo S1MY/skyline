@@ -75,6 +75,8 @@ class AdminController extends Controller
 
         $user = $request->id;
 
+        return $request;
+
         if( $request->type != 'edit' ){
             $userInfo = UserInfo::leftJoin('users as u', 'u.id', '=', 'user_infos.user_id')
             ->select('user_infos.name', 'user_infos.surname', 'user_infos.user_show_id', 'u.email', 'user_infos.avatar')
@@ -88,8 +90,6 @@ class AdminController extends Controller
             ->first();
 
             $sponsorShowId = User::where('id', '=', $userInfo->user_id)->first();
-
-            return $sponsorShowId;
 
             $sponsorShowId = UserInfo::where('user_id', '=', $sponsorShowId->sponsor_id)->first();
             $sponsorShowId = $sponsorShowId->user_show_id;
