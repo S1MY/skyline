@@ -91,6 +91,8 @@ class AdminController extends Controller
 
             $sponsorShowId = User::where('id', '=', $userInfo->user_id)->first();
 
+            return $sponsorShowId;
+
             if( $sponsorShowId->sponsor_id == 0 ){
                 $sponsorShowId = '00000';
             }else{
