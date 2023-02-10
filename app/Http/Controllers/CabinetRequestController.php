@@ -521,7 +521,11 @@ class CabinetRequestController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('cabinet');
+        return response()->json([
+            'updated' => true,
+            'redirect' => route('cabinet'),
+            'error' => 0,
+        ]);
 
     }
 

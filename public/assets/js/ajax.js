@@ -493,9 +493,7 @@ $(document).ready(function () {
                     $('.popupItem[data-name="error"] .responseText').text(result.message);
                     $('.popupItem[data-name="error"]').fadeIn();
                 }else{
-                    $('.popup .popupItem[data-name="success"]').fadeIn();
-                    $('.popupItem[data-name="success"] .responseText').text(result.message);
-                    $('.popupItem[data-name="success"]').fadeIn();
+                    window.location.href = result.redirect;
                 }
 
             },
