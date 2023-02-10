@@ -450,17 +450,17 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
-                // $('.popup .popupItem[data-name="adminEdit"]').hide();
+                $('.popup .popupItem[data-name="repair"]').hide();
 
-                // if( result.error == 1 ){
-                //     $('.popup .popupItem[data-name="error"]').fadeIn();
-                //     $('.popupItem[data-name="error"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="error"]').fadeIn();
-                // }else{
-                //     $('.popup .popupItem[data-name="success"]').fadeIn();
-                //     $('.popupItem[data-name="success"] .responseText').text(result.message);
-                //     $('.popupItem[data-name="success"]').fadeIn();
-                // }
+                if( result.error == 1 ){
+                    $('.popup .popupItem[data-name="error"]').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup .popupItem[data-name="success"]').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
 
             },
             error: function (result) {

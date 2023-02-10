@@ -163,7 +163,7 @@
             </svg>
             <h3 class="popupName">Восстановление</h3>
             <input type="email" name="mail" placeholder="Ваш E-Mail *" class="formInput">
-            <button class="formButton">Отправить пароль</button>
+            <button class="formButton">Отправить ссылку</button>
             <p class="policeForm">Вспомнили пароль?<br><a href="#" class="popupBtn" data-name="login">Авторизоваться</a></p>
         </form>
     </div>

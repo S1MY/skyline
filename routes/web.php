@@ -58,6 +58,8 @@ Route::get('/cabinet/{pacage}/{user}', [CabinetRequestController::class, 'showPa
 // Post Routes
 Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
+
+Route::get('/restore/{code}', [MainController::class, 'restore'])->name('restore');
 Route::post('/restore/lost-password', [EmailController::class, 'lostPassword'])->name('lostPassword');
 
 Route::post('/settings/update', [CabinetRequestController::class, 'updateUserInfo'])->name('updateSettings');
