@@ -47,7 +47,7 @@ class LostPassword extends Mailable
         return new Content(
             view: 'mail.lostPassword',
             with: [
-                'code' => $this->link
+                'link' => $this->link
             ],
         );
     }
