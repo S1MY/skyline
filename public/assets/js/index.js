@@ -22,4 +22,12 @@ $(document).ready(function () {
         $(this).children('.answerIcon').toggleClass('active');
         $(this).next().slideToggle();
     });
+    $(document).on('click', '.popupBg, .responseBtn', function(e){
+        e.preventDefault();
+        if( !$(this).hasClass('confirmEmail') ){
+            $('.popup').fadeOut();
+            $('.popupItem').fadeOut();
+            location.reload();
+        }
+    });
 });
