@@ -106,7 +106,31 @@ class AdminController extends Controller
     }
 
     public function changeSponsor(Request $request){
-        return $request;
+
+        $newSponsorId = $request->refid;
+        $userUpdateId = $request->id;
+
+        $newSponsorId = UserInfo::where('user_show_id', '=', $newSponsorId)->first();
+
+        if( !$newSponsorId->user_id ){
+            return response()->json([
+                'updated' => true,
+                'message' => 'Не удалось найти спонсора с ID: '.$request->refid,
+                'error' => 1,
+            ]);
+        }
+
+        $newSponsorId = $newSponsorId->user_id;
+
+        $user = User::where('id', '=', $userUpdateId)->first();
+        $user->sponsor_id = $newSponsorId;
+        $user->save();
+
+        return response()->json([
+            'updated' => true,
+            'message' => 'Спонсор обновлён успешно!',
+            'error' => 0,
+        ]);
     }
 
 }
