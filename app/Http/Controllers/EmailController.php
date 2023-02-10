@@ -61,6 +61,8 @@ class EmailController extends Controller
 
     public function contactMail(Request $request){
 
+        return $request;
+
         if( session('sendMail') ){
             return response()->json([
                 'updated' => true,
@@ -71,7 +73,6 @@ class EmailController extends Controller
 
         session(['sendMail' => 1]);
 
-        return $request;
 
         $name = $request->fullname;
         $email = $request->email;
