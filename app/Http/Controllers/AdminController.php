@@ -112,7 +112,7 @@ class AdminController extends Controller
 
         $newSponsorId = UserInfo::where('user_show_id', '=', $newSponsorId)->first();
 
-        if( !$newSponsorId->user_id ){
+        if( !$newSponsorId ){
             return response()->json([
                 'updated' => true,
                 'message' => 'Не удалось найти спонсора с ID: '.$request->refid,
