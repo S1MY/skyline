@@ -14,10 +14,18 @@ class CashController extends Controller
 
         $depositeVariants = ['PAYEER'];
 
+        if( !$request->platname ){
+            return response()->json([
+                'pay' => true,
+                'message' => 'Платёжная система не выбрана.',
+                'error' => 1,
+            ]);
+        }
+
         if( !in_array($request->platname, $depositeVariants) ){
             return response()->json([
                 'pay' => true,
-                'message' => 'Нет данного варианта пополнения!',
+                'message' => 'Данная платёжная система не поддерживается.',
                 'error' => 1,
             ]);
         }
