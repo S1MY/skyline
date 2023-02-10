@@ -12,7 +12,7 @@
         <p class="responseText" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:20px;font-size:20px;line-height:28px;text-align:center;text-transform:uppercase;">Password Recovery</p>
         <p class="responseDesc" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif;padding-bottom:5px;font-size:18px;line-height:20px;text-align:center;">To change your password, follow the link below.</p>
         <div class="btnWrapper displayFlex spaceCenter" style="margin:0;padding:0;">
-          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif; padding:10px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">{{ $link }}</p>
+          <p class="responseBtn confirmEmail" style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif; padding:10px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;"><a href="{{ $link }}"  style="margin:0;padding:0;color:#202020;font-family:'Roboto', sans-serif; padding:10px 20px;display:flex;align-items:center;justify-content:center;line-height:20px;text-transform:uppercase;font-size:16px;color:#FFFFFF;background:#EB3B5A;border:1px solid #EB3B5A;border-radius:8px;transition:all 0.4s;text-decoration:none;">{{ $link }}</a></p>
         </div>
       </div>
     </div>
