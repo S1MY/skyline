@@ -411,7 +411,7 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
-                $('.popup .popupItem[data-name="adminEdit"]').fadeOut();
+                $('.popup .popupItem[data-name="adminEdit"]').hide();
 
                 if( result.error == 1 ){
                     $('.popup .popupItem[data-name="error"]').fadeIn();
