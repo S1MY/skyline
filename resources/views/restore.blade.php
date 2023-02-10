@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', __('pagesTitle.navigation.home'))
+@section('title', 'Смена пароля')
 
 @section('content')
     <div class="headerP"></div>

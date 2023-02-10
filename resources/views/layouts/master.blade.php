@@ -133,6 +133,7 @@
         @if (session()->has('warning'))
             style="display: block;"
         @endif>
+        <div class="popupBg"></div>
         @if (session()->has('warning'))
             <div class="popupItem" data-name="access" style="display: block;">
                 <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +153,6 @@
                     </div>
             </div>
         @endif
-        <div class="popupBg"></div>
         <div class="popupItem" data-name="success">
             <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_53_728)">
