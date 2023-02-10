@@ -25,7 +25,7 @@ Route::middleware(['set_locale'])->group(function(){
         Route::match(['get', 'post'], '/show/{user}', [AdminController::class, 'showUser'])->name('showUser');
         Route::post('/getinfo', [AdminController::class, 'getUserInfo'])->name('getUserInfo');
         Route::post('/send-message', [CabinetRequestController::class, 'sendMessage'])->name('sendMessage');
-        Route::post('/change-sponsor', [CabinetRequestController::class, 'changeSponsor'])->name('changeSponsor');
+        Route::post('/change-sponsor', [AdminController::class, 'changeSponsor'])->name('changeSponsor');
     });
 
     Route::group(['prefix' => 'cabinet', 'middleware' => ['auth']], function(){
