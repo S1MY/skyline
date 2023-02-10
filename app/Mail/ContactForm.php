@@ -48,7 +48,7 @@ class ContactForm extends Mailable
         return new Content(
             view: 'mail.contact',
             with: [
-                'code' => $this->content
+                'content' => $this->content
             ],
         );
     }
