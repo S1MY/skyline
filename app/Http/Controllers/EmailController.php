@@ -71,6 +71,8 @@ class EmailController extends Controller
 
         session(['sendMail' => 1]);
 
+        return $request;
+
         $name = $request->fullname;
         $email = $request->email;
         $area = $request->area;
