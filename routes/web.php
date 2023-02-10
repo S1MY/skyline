@@ -61,6 +61,7 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('l
 
 Route::get('/restore/{code}', [MainController::class, 'restore'])->name('restore');
 Route::post('/restore/lost-password', [EmailController::class, 'lostPassword'])->name('lostPassword');
+Route::post('/restore/new-password', [CabinetRequestController::class, 'createNewPassword'])->name('createNewPassword');
 
 Route::post('/settings/update', [CabinetRequestController::class, 'updateUserInfo'])->name('updateSettings');
 Route::post('/settings/change-password', [CabinetRequestController::class, 'passwordChanger'])->name('changePassword');

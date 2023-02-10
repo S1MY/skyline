@@ -39,7 +39,7 @@ class MainController extends Controller
     }
 
     public function restore($code){
-        return view('auth.reset-password');
+        return view('restore');
     }
 
 }
