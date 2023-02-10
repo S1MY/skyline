@@ -28,4 +28,8 @@ class EmailController extends Controller
         return 1;
 
     }
+
+    public function lostPassword(Request $request){
+        return $request;
+    }
 }
