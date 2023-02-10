@@ -49,6 +49,7 @@ class AdminController extends Controller
             $users = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
             ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'users.created_at')
             ->where('sponsor_id', '=', 0)
+            ->where('user_show_id', '!=', 'null')
             ->paginate(5, ['*'], 'user_page');
 
         return view('cabinet.admin', compact('total_balance', 'auto_balance',
