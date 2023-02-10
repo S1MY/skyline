@@ -223,7 +223,6 @@ $(document).ready(function () {
 
         let ajaxUrl = $(this).attr('action');
         let data = $(this).serialize();
-        // let email = $(this).attr('data-email');
 
         $.ajax({
             url: ajaxUrl,
@@ -231,6 +230,18 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
+
+                if( result.error == 1 ){
+                    $('.popup').fadeIn();
+                    $('.popup .popupItem[data-name="error"]').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup').fadeIn();
+                    $('.popup .popupItem[data-name="success"]').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
             },
             error: function (data) {
                 console.log(data);

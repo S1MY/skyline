@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactForm;
 use App\Mail\EmailConfirm;
 use App\Mail\LostPassword;
 use App\Models\User;
@@ -56,5 +57,35 @@ class EmailController extends Controller
             'message' => 'Вам на почту отправлена ссылка для смены пароля!',
             'error' => 0,
         ]);
+    }
+
+    public function contactMail(Request $request){
+
+        if( session('sendMail') ){
+            return response()->json([
+                'updated' => true,
+                'message' => 'Вы уже отправляли письмо, перед следующей отправкой нужно подождать.',
+                'error' => 1,
+            ]);
+        }
+
+        session(['sendMail' => 1]);
+
+        $name = $request->fullname;
+        $email = $request->email;
+        $area = $request->area;
+
+        $to = 'S1MY.PJ@yandex.ru';
+
+        $content = ['name'=> $name, 'email' => $email, 'text' => $area];
+
+        Mail::to($to)->send(new ContactForm($content));
+
+        return response()->json([
+            'updated' => true,
+            'message' => 'Форма успешно отправлена!',
+            'error' => 0,
+        ]);
+
     }
 }

@@ -60,7 +60,6 @@ Route::post('/register', [RegisteredUserController::class, 'store'])->name('regi
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
 Route::get('/restore/{code}', [MainController::class, 'restore'])->name('restore');
-Route::post('/restore/lost-password', [EmailController::class, 'lostPassword'])->name('lostPassword');
 Route::post('/restore/new-password', [CabinetRequestController::class, 'createNewPassword'])->name('createNewPassword');
 
 Route::post('/settings/update', [CabinetRequestController::class, 'updateUserInfo'])->name('updateSettings');
@@ -75,6 +74,10 @@ Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
 
 // Email
 Route::post('/confirmEmail', [EmailController::class, 'confirmEmail'])->name('confirmEmail');
+Route::post('/restore/lost-password', [EmailController::class, 'lostPassword'])->name('lostPassword');
+Route::post('/contact-mail', [EmailController::class, 'contactMail'])->name('contactMail');
+
+
 
 // Dev Routes
 Route::get('/emailexample', [CabinetController::class, 'previewEmail'])->name('previewEmail');
