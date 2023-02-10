@@ -383,8 +383,8 @@ $(document).ready(function () {
                     }
 
                     $('.popupItem[data-name="adminEdit"] .userPopupName').text(result['name']+' '+result['surname']);
-                    $('.popupItem[data-name="adminEdit"] #userShowId').val(result['user_id']);
-                    $('.popupItem[data-name="adminEdit"] .userPopupSponsor').text('Реферер: '+result['sponsor']);
+                    $('.popupItem[data-name="adminEdit"] #userId').val(result['user_id']);
+                    $('.popupItem[data-name="adminEdit"] .userPopupSponsor').text('Реферер: 00000');
                 }
 
             },
