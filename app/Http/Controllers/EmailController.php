@@ -61,15 +61,13 @@ class EmailController extends Controller
 
     public function contactMail(Request $request){
 
-        // return $request;
-
-        // if( session('sendMail') ){
-        //     return response()->json([
-        //         'updated' => true,
-        //         'message' => 'Вы уже отправляли письмо, перед следующей отправкой нужно подождать.',
-        //         'error' => 1,
-        //     ]);
-        // }
+        if( session('sendMail') ){
+            return response()->json([
+                'updated' => true,
+                'message' => 'Вы уже отправляли письмо, перед следующей отправкой нужно подождать.',
+                'error' => 1,
+            ]);
+        }
 
         session(['sendMail' => 1]);
 
