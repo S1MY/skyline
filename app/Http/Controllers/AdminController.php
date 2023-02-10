@@ -104,4 +104,8 @@ class AdminController extends Controller
         return $userInfo;
     }
 
+    public function changeSponsor(Request $request){
+        return $request;
+    }
+
 }

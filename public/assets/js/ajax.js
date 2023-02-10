@@ -387,7 +387,6 @@ $(document).ready(function () {
                     $('.popupItem[data-name="adminEdit"] .userPopupSponsor').text('Реферер: '+result['sponsor']);
                 }
 
-
             },
             error: function (result) {
                 console.log(result);
