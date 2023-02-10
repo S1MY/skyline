@@ -411,6 +411,8 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
+                $('.popup').fadeOut();
+
                 if( result.error == 1 ){
                     $('.popup').fadeIn();
                     $('.popupItem[data-name="error"] .responseText').text(result.message);
@@ -420,6 +422,7 @@ $(document).ready(function () {
                     $('.popupItem[data-name="success"] .responseText').text(result.message);
                     $('.popupItem[data-name="success"]').fadeIn();
                 }
+
             },
             error: function (result) {
                 console.log(result);
