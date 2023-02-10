@@ -12,6 +12,16 @@ class CashController extends Controller
 
     public function pay(Request $request){
 
+        $depositeVariants = ['PAYEER'];
+
+        if( !in_array($request->platname, $depositeVariants) ){
+            return response()->json([
+                'pay' => true,
+                'message' => 'Нет данного варианта пополнения!',
+                'error' => 1,
+            ]);
+        }
+
         Operation::create([
             'type' => 0,
             'status' => 1, // После изменить на 0
