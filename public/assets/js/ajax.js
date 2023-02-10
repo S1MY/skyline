@@ -410,6 +410,16 @@ $(document).ready(function () {
             data: data,
             success: function(result){
                 console.log(result);
+
+                if( result.error == 1 ){
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
             },
             error: function (result) {
                 console.log(result);
