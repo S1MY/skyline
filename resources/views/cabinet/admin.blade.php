@@ -85,7 +85,11 @@
                         </div>
                         <div class="adminList">
                             @foreach ($auto_partners as $auto_partner)
-                                <div class="userItem"><a href="ссылка авторизации" class="userLink">{{ $auto_partner->name }} {{ $auto_partner->surname }} ({{ $auto_partner->user_show_id }})</a><p class="userCount">{{ $auto_partner->autobalance }}€</p></div>
+                                <div class="userItem">
+                                    <a href="{{ route('showUser', ['user' => $auto_partner->user_show_id]) }}" class="userLink">
+                                        {{ $auto_partner->name }} {{ $auto_partner->surname }} ({{ $auto_partner->user_show_id }})
+                                    </a>
+                                    <p class="userCount">{{ $auto_partner->autobalance }}€</p></div>
                             @endforeach
                         </div>
                     </div>
@@ -111,7 +115,7 @@
                         <div class="adminList">
                             @foreach ($house_partners as $house_partner)
                                 <div class="userItem">
-                                    <a href="ссылка авторизации" class="userLink">
+                                    <a href="{{ route('showUser', ['user' => $house_partner->user_show_id]) }}" class="userLink">
                                         {{ $house_partner->name }} {{ $house_partner->surname }} ({{ $house_partner->user_show_id }})
                                     </a>
                                     <p class="userCount">{{ $house_partner->housebalance }}€</p></div>
@@ -133,7 +137,7 @@
                         <div class="adminList">
                             @foreach ($invest_partners as $invest_partner)
                                 <div class="userItem">
-                                    <a href="ссылка авторизации" class="userLink">
+                                    <a href="{{ route('showUser', ['user' => $invest_partner->user_show_id]) }}" class="userLink">
                                         {{ $invest_partner->name }} {{ $invest_partner->surname }} ({{ $invest_partner->user_show_id }})
                                     </a>
                                     <p class="userCount">{{ $invest_partner->investbalance }}€</p></div>

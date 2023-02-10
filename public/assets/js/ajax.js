@@ -340,6 +340,7 @@ $(document).ready(function () {
         $('#typeInfoGet').val('auth');
         $('#getInfoForm').submit();
     })
+
     $('#adminEdit').click(function(e){
         e.preventDefault();
         $('#typeInfoGet').val('edit');
@@ -393,6 +394,7 @@ $(document).ready(function () {
             }
         });
     })
+
     $('#changeSponsorForm').submit(function(e){
         e.preventDefault();
         $.ajaxSetup({
