@@ -37,4 +37,9 @@ class MainController extends Controller
         session(['sponsor' => $id]);
         return redirect()->route('index');
     }
+
+    public function restore($code){
+        return $code;
+    }
+
 }

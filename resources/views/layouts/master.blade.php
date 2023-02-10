@@ -129,8 +129,6 @@
         </div>
     </footer>
 
-    {{ dd(session('lostPwd')) }}
-
     <div class="popup">
         <div class="popupBg"></div>
         <div class="popupItem" data-name="success">
