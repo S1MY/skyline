@@ -54,7 +54,7 @@
                         <input type="text" class="contentInput selectHeader" name="platname" placeholder="@lang('cabinet.deposit.payment')" required readonly>
                         <div class="selectFlow">
                             @foreach ($depositeVariants as $depositeVariant)
-                                <p class="selectItem" data-plat="{{ $depositeVariant }}">$depositeVariant</p>
+                                <p class="selectItem" data-plat="{{ $depositeVariant }}">{{$depositeVariant}}</p>
                             @endforeach
                         </div>
                     </div>
