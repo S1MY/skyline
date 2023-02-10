@@ -129,7 +129,7 @@
         </div>
     </footer>
 
-    {{ session('lostPwd') }}
+    {{ dd(session('lostPwd')) }}
 
     <div class="popup">
         <div class="popupBg"></div>
