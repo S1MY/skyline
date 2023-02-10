@@ -298,7 +298,7 @@
                 <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <h3 class="popupName">Смена пароля</h3>
-            <input type="hidden" name="id" class="formInput">
+            <input type="hidden" name="id" class="formInput" value="{{ session('lostPwd')['user'] }}">
             <input type="password" name="password" placeholder="Придумайте пароль *" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
             <input type="password" name="password_confirmation" placeholder="Повторите пароль *" class="formInput" readonly onfocus="this.removeAttribute('readonly')">
             <button class="formButton">Сменить пароль</button>

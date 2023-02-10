@@ -491,4 +491,38 @@ class CabinetRequestController extends Controller
         return $request;
     }
 
+    public function createNewPassword(Request $request){
+
+        $id = $request->id;
+
+        $user = User::where('id', '=', $id)->first();
+
+        if( !$user ){
+            return response()->json([
+                'updated' => true,
+                'message' => 'Не удалось найти данного пользователя.',
+                'error' => 1,
+            ]);
+        }
+
+        $password = $request->password;
+        $password_confirmation = $request->password_confirmation;
+
+        if( $password != $password_confirmation ){
+            return response()->json([
+                'updated' => true,
+                'message' => 'Введённые вами пароли не совпадают.',
+                'error' => 1,
+            ]);
+        }
+
+        $user->password = Hash::make($password);
+        $user->save();
+
+        Auth::login($user);
+
+        return redirect()->route('cabinet');
+
+    }
+
 }

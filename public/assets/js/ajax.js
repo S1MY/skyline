@@ -468,4 +468,40 @@ $(document).ready(function () {
             }
         });
     })
+    $('#restore').submit(function(e){
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        let ajaxUrl = $(this).attr('action');
+        let data = $(this).serialize();
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: data,
+            success: function(result){
+                console.log(result);
+
+                $('.popup .popupItem[data-name="repair"]').hide();
+
+                if( result.error == 1 ){
+                    $('.popup .popupItem[data-name="error"]').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup .popupItem[data-name="success"]').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
+
+            },
+            error: function (result) {
+                console.log(result);
+            }
+        });
+    })
 });
