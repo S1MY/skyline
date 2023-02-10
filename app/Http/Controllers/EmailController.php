@@ -61,7 +61,7 @@ class EmailController extends Controller
 
     public function contactMail(Request $request){
 
-        return $request;
+        // return $request;
 
         if( session('sendMail') ){
             return response()->json([
