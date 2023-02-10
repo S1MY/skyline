@@ -411,14 +411,14 @@ $(document).ready(function () {
             success: function(result){
                 console.log(result);
 
-                $('.popup').fadeOut();
+                $('.popup .popupItem[data-name="adminEdit"]').fadeOut();
 
                 if( result.error == 1 ){
-                    $('.popup').fadeIn();
+                    $('.popup .popupItem[data-name="error"]').fadeIn();
                     $('.popupItem[data-name="error"] .responseText').text(result.message);
                     $('.popupItem[data-name="error"]').fadeIn();
                 }else{
-                    $('.popup').fadeIn();
+                    $('.popup .popupItem[data-name="success"]').fadeIn();
                     $('.popupItem[data-name="success"] .responseText').text(result.message);
                     $('.popupItem[data-name="success"]').fadeIn();
                 }
