@@ -58,7 +58,9 @@ class CabinetController extends Controller
         ->where('type', '=', 0)
         ->count();
 
-        return view('cabinet.deposite', compact('operations', 'depositSum', 'depositsCount'));
+        $depositeVariants = ['payeer'];
+
+        return view('cabinet.deposite', compact('operations', 'depositSum', 'depositsCount', 'depositeVariants'));
     }
 
     public function withdraw(){

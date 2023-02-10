@@ -53,8 +53,9 @@
                             </svg>
                         <input type="text" class="contentInput selectHeader" name="platname" placeholder="@lang('cabinet.deposit.payment')" required readonly>
                         <div class="selectFlow">
-                            <p class="selectItem" data-plat="Name1">Название системы 1</p>
-                            <p class="selectItem" data-plat="Name2">Название системы 2</p>
+                            @foreach ($depositeVariants as $depositeVariant)
+                                <p class="selectItem" data-plat="{{ $depositeVariant }}">$depositeVariant</p>
+                            @endforeach
                         </div>
                     </div>
                     <button class="btn">@lang('cabinet.deposit.btn')</button>
