@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\UserInfo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Hash;
 
 class MainController extends Controller
 {
@@ -39,6 +40,12 @@ class MainController extends Controller
     }
 
     public function restore($code){
+
+        if( !Hash::check($code, session('lostPwd')['code']) ){
+            session()->flash('warning', 'Секретный код не соотвествует!');
+            return redirect()->route('index');
+        }
+
         return view('restore');
     }
 

@@ -297,7 +297,6 @@
             <svg class="popupCross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14 14L2 2M14 2L2 14" stroke="#353535" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-            {{ session('lostPwd')['code'] }}
             <h3 class="popupName">Смена пароля</h3>
             <input type="hidden" name="id" class="formInput">
             <input type="password" name="password" placeholder="Придумайте пароль *" class="formInput" readonly onfocus="this.removeAttribute('readonly')">

@@ -129,7 +129,29 @@
         </div>
     </footer>
 
-    <div class="popup">
+    <div class="popup"
+        @if (session()->has('warning'))
+            style="display: block;"
+        @endif>
+        @if (session()->has('warning'))
+            <div class="popupItem" data-name="access" style="display: block;">
+                <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53_662)">
+                    <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.2318 56.38C27.9878 57.637 27.9878 59.6751 29.2318 60.9321C30.4759 62.1891 32.4929 62.1891 33.7369 60.9321L44.9995 49.5521L56.2626 60.9325C57.5067 62.1895 59.5237 62.1895 60.7677 60.9325C62.0118 59.6755 62.0118 57.6375 60.7677 56.3805L49.5046 45.0001L60.7675 33.6199C62.0116 32.3629 62.0116 30.3248 60.7675 29.0678C59.5235 27.8108 57.5065 27.8108 56.2624 29.0678L44.9995 40.4481L33.7371 29.0683C32.4931 27.8113 30.476 27.8113 29.232 29.0683C27.988 30.3253 27.988 32.3633 29.232 33.6203L40.4944 45.0001L29.2318 56.38Z" fill="#EB3B5A"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_53_662">
+                    <rect width="90" height="90" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <p class="responseText">{{ session()->get('warning') }}</p>
+                    <div class="btnWrapper displayFlex spaceCenter">
+                        <a href="#" class="responseBtn">@lang('popups.close')</a>
+                    </div>
+            </div>
+        @endif
         <div class="popupBg"></div>
         <div class="popupItem" data-name="success">
             <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
