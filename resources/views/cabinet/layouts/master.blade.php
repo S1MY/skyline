@@ -369,7 +369,7 @@
                 <a href="#" class="responseBtn _w100">@lang('popups.close')</a>
             </div>
         </form>
-        <form class="popupItem" data-name="adminEdit">
+        <form class="popupItem" data-name="adminEdit" id="changeSponsorForm" action="{{ route('changeSponsor') }}">
             <div class="userPopup">
                 <div class="popupAvatar" style="background: url(/image/users/user.png);"></div>
                 <p class="userPopupName">Иван Иванов</p>

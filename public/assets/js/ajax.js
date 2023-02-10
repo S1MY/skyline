@@ -393,5 +393,27 @@ $(document).ready(function () {
             }
         });
     })
+    $('#changeSponsorForm').submit(function(e){
+        e.preventDefault();
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
 
+        let ajaxUrl = $(this).attr('action');
+        let data = $(this).serialize();
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: data,
+            success: function(result){
+                console.log(result);
+            },
+            error: function (result) {
+                console.log(result);
+            }
+        });
+    })
 });
