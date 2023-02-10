@@ -919,6 +919,9 @@ body {
 .formButton:hover{
     background: #EB3B5A;
 }
+.formButton.blocked{
+    background: #EB3B5A;
+}
 .popupCross{
     cursor: pointer;
     position: absolute;

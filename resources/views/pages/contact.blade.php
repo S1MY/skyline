@@ -14,7 +14,11 @@
                 <input type="text" class="formInput" required name="fullname" placeholder="@lang('mainPages.contacts_page.form_input_name')">
                 <input type="email" class="formInput" required name="email" placeholder="@lang('mainPages.contacts_page.form_input_email')">
                 <textarea name="area" class="formArea" placeholder="@lang('mainPages.contacts_page.form_input_message')" required></textarea>
-                <button class="formButton">@lang('mainPages.contacts_page.form_submit')</button>
+                <button class="formButton @php
+                    if( session('sendMail') ){
+                        echo 'blocked';
+                    }
+                @endphp">@lang('mainPages.contacts_page.form_submit')</button>
             </form>
         </div>
     </section>
