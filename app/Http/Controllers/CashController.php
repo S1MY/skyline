@@ -38,17 +38,16 @@ class CashController extends Controller
             'user_id' => Auth::user()->id,
         ]);
 
-        $m_shop = '1799877113';
+        $m_shop = '1830538379';
         $m_orderid = Auth::user()->id;
-        $m_amount = number_format($request->oa, 2, '.', '');
+        $m_amount = number_format($request->amount, 2, '.', '');
 
         if( Auth::user()->id == 1 ){
             $m_amount = number_format(10, 2, '.', '');
         }
 
-        // $m_amount = number_format(10, 2, '.', '');
-        $m_curr = 'RUB';
-        $m_desc = base64_encode('Оплата одного из уровня маркетинга на проекте Fortune Time!');
+        $m_curr = 'EUR';
+        $m_desc = base64_encode('Пополнение баланса MySkyLine Company');
         $m_key = 'OyWD8qfN4eFPqaQd';
 
         $arHash = array(
