@@ -32,21 +32,57 @@ class CashController extends Controller
 
         Operation::create([
             'type' => 0,
-            'status' => 1, // После изменить на 0
+            'status' => 0, // После изменить на 0
             'value' => $request->amount,
             'system' => $request->platname,
             'user_id' => Auth::user()->id,
         ]);
 
-        $wallet = UserWallets::where('user_id', '=', Auth::user()->id)->first();
-        $wallet->balance = $wallet->balance + $request->amount;
-        $wallet->save();
+        $m_shop = '1799877113';
+        $m_orderid = Auth::user()->id;
+        $m_amount = number_format($request->oa, 2, '.', '');
 
-        return response()->json([
-            'pay' => true,
-            'message' => 'Пополнение успешно!',
-            'error' => 0,
-        ]);
+        if( Auth::user()->id == 1 ){
+            $m_amount = number_format(10, 2, '.', '');
+        }
+
+        // $m_amount = number_format(10, 2, '.', '');
+        $m_curr = 'RUB';
+        $m_desc = base64_encode('Оплата одного из уровня маркетинга на проекте Fortune Time!');
+        $m_key = 'OyWD8qfN4eFPqaQd';
+
+        $arHash = array(
+            $m_shop,
+            $m_orderid,
+            $m_amount,
+            $m_curr,
+            $m_desc
+        );
+
+        $arHash[] = $m_key;
+
+        $sign = strtoupper(hash('sha256', implode(':', $arHash)));
+        $form = '<form method="post" action="https://payeer.com/merchant/">
+                    <input type="hidden" name="m_shop" value="'.$m_shop.'">
+                    <input type="hidden" name="m_orderid" value="'.$m_orderid.'">
+                    <input type="hidden" name="m_amount" value="'.$m_amount.'">
+                    <input type="hidden" name="m_curr" value="'.$m_curr.'">
+                    <input type="hidden" name="m_desc" value="'.$m_desc.'">
+                    <input type="hidden" name="m_sign" value="'.$sign.'">
+                    <input type="submit" name="m_process" value="send" />
+                </form>';
+
+        return $form;
+
+        // $wallet = UserWallets::where('user_id', '=', Auth::user()->id)->first();
+        // $wallet->balance = $wallet->balance + $request->amount;
+        // $wallet->save();
+
+        // return response()->json([
+        //     'pay' => true,
+        //     'message' => 'Пополнение успешно!',
+        //     'error' => 0,
+        // ]);
 
     }
 }
