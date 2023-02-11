@@ -30,16 +30,16 @@ class CashController extends Controller
             ]);
         }
 
-        Operation::create([
+        $operation = Operation::create([
             'type' => 0,
-            'status' => 0, // После изменить на 0
+            'status' => 0,
             'value' => $request->amount,
             'system' => $request->platname,
             'user_id' => Auth::user()->id,
         ]);
 
         $m_shop = '1830538379';
-        $m_orderid = Auth::user()->id;
+        $m_orderid = $operation->id;
         $m_amount = number_format($request->amount, 2, '.', '');
 
         if( Auth::user()->id == 1 ){
