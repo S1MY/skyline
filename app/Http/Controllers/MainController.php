@@ -52,7 +52,7 @@ class MainController extends Controller
     }
 
     public function success(){
-        session()->flash('success', 'Оплата прошла успешно!');
+        session()->flash('paysuccess', 'Оплата прошла успешно!');
 
         $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
         ->select('operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
@@ -71,7 +71,7 @@ class MainController extends Controller
     }
 
     public function fail(){
-        session()->flash('warning', 'При оплате произошла ошибка. Повторите попытку позже!');
+        session()->flash('payfail', 'При оплате произошла ошибка. Повторите попытку позже!');
 
         $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
         ->select('operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
