@@ -130,7 +130,7 @@
     </footer>
 
     <div class="popup"
-        @if (session()->has('warning'))
+        @if (session()->has('warning') || session()->has('paysuccess') || session()->has('payfail'))
             style="display: block;"
         @endif>
         <div class="popupBg"></div>
@@ -151,6 +151,44 @@
                     <div class="btnWrapper displayFlex spaceCenter">
                         <a href="#" class="responseBtn">@lang('popups.close')</a>
                     </div>
+            </div>
+        @endif
+        @if (session()->has('payfail'))
+            <div class="popupItem" data-name="access" style="display: block;">
+                <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53_662)">
+                    <path opacity="0.12" d="M45 90.0001C69.5966 90.0001 89.5361 69.8529 89.5361 45.0001C89.5361 20.1473 69.5966 9.15527e-05 45 9.15527e-05C20.4034 9.15527e-05 0.463917 20.1473 0.463917 45.0001C0.463917 69.8529 20.4034 90.0001 45 90.0001Z" fill="#EB3B5A"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.2318 56.38C27.9878 57.637 27.9878 59.6751 29.2318 60.9321C30.4759 62.1891 32.4929 62.1891 33.7369 60.9321L44.9995 49.5521L56.2626 60.9325C57.5067 62.1895 59.5237 62.1895 60.7677 60.9325C62.0118 59.6755 62.0118 57.6375 60.7677 56.3805L49.5046 45.0001L60.7675 33.6199C62.0116 32.3629 62.0116 30.3248 60.7675 29.0678C59.5235 27.8108 57.5065 27.8108 56.2624 29.0678L44.9995 40.4481L33.7371 29.0683C32.4931 27.8113 30.476 27.8113 29.232 29.0683C27.988 30.3253 27.988 32.3633 29.232 33.6203L40.4944 45.0001L29.2318 56.38Z" fill="#EB3B5A"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_53_662">
+                    <rect width="90" height="90" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <p class="responseText">{{ session()->get('payfail') }}</p>
+                    <div class="btnWrapper displayFlex spaceCenter">
+                        <a href="{{ route('cabinet') }}" class="responseBtn noreload">@lang('popups.close')</a>
+                    </div>
+            </div>
+        @endif
+        @if (session()->has('paysuccess'))
+            <div class="popupItem" data-name="access" style="display: block;">
+                <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53_728)">
+                        <path opacity="0.12" d="M45 90C69.5965 90 89.536 69.8528 89.536 45C89.536 20.1472 69.5965 0 45 0C20.4034 0 0.463867 20.1472 0.463867 45C0.463867 69.8528 20.4034 90 45 90Z" fill="#20BF6B"/>
+                        <path d="M34.3155 46.0004C33.7432 45.5221 32.9975 45.2626 32.2278 45.2739C31.4583 45.2853 30.7219 45.5666 30.1661 46.0614C29.6104 46.5563 29.2767 47.2282 29.2318 47.9422C29.1869 48.6562 29.4341 49.3597 29.924 49.9114L36.6942 56.5147C36.9776 56.791 37.3182 57.0113 37.6955 57.1623C38.0728 57.3132 38.479 57.3918 38.8899 57.3933C39.2985 57.3954 39.7034 57.3214 40.0806 57.1753C40.4577 57.0292 40.7995 56.8142 41.0856 56.5431L61.7619 36.7047C62.0423 36.4368 62.2631 36.1201 62.4117 35.7728C62.5604 35.4256 62.634 35.0545 62.6283 34.6808C62.6227 34.3072 62.5379 33.9382 62.3788 33.5949C62.2196 33.2516 61.9893 32.9409 61.701 32.6804C61.4126 32.4199 61.0719 32.2147 60.6982 32.0766C60.3245 31.9384 59.9252 31.87 59.5231 31.8753C59.1209 31.8805 58.7239 31.9594 58.3546 32.1072C57.9853 32.2551 57.6509 32.4691 57.3705 32.7371L38.9203 50.4782L34.3155 46.0004Z" fill="#20BF6B"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_53_728">
+                            <rect width="90" height="90" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="responseText">{{ session()->get('paysuccess') }}</p>
+                <div class="btnWrapper displayFlex spaceCenter">
+                    <a href="{{ route('cabinet') }}" class="responseBtn noreload">@lang('popups.close')</a>
+                </div>
             </div>
         @endif
         <div class="popupItem" data-name="success">
