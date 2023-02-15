@@ -176,7 +176,7 @@
     @endif
 
     <div class="popup"
-        @if (session()->has('warning'))
+        @if (session()->has('warning') || session()->has('success'))
             style="display: block;"
         @endif
     >
@@ -283,6 +283,25 @@
                     <div class="btnWrapper displayFlex spaceCenter">
                         <a href="#" class="responseBtn">@lang('popups.close')</a>
                     </div>
+            </div>
+        @endif
+        @if (session()->has('success'))
+            <div class="popupItem" data-name="access" style="display: block;">
+                <svg class="responseIcon" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53_728)">
+                        <path opacity="0.12" d="M45 90C69.5965 90 89.536 69.8528 89.536 45C89.536 20.1472 69.5965 0 45 0C20.4034 0 0.463867 20.1472 0.463867 45C0.463867 69.8528 20.4034 90 45 90Z" fill="#20BF6B"/>
+                        <path d="M34.3155 46.0004C33.7432 45.5221 32.9975 45.2626 32.2278 45.2739C31.4583 45.2853 30.7219 45.5666 30.1661 46.0614C29.6104 46.5563 29.2767 47.2282 29.2318 47.9422C29.1869 48.6562 29.4341 49.3597 29.924 49.9114L36.6942 56.5147C36.9776 56.791 37.3182 57.0113 37.6955 57.1623C38.0728 57.3132 38.479 57.3918 38.8899 57.3933C39.2985 57.3954 39.7034 57.3214 40.0806 57.1753C40.4577 57.0292 40.7995 56.8142 41.0856 56.5431L61.7619 36.7047C62.0423 36.4368 62.2631 36.1201 62.4117 35.7728C62.5604 35.4256 62.634 35.0545 62.6283 34.6808C62.6227 34.3072 62.5379 33.9382 62.3788 33.5949C62.2196 33.2516 61.9893 32.9409 61.701 32.6804C61.4126 32.4199 61.0719 32.2147 60.6982 32.0766C60.3245 31.9384 59.9252 31.87 59.5231 31.8753C59.1209 31.8805 58.7239 31.9594 58.3546 32.1072C57.9853 32.2551 57.6509 32.4691 57.3705 32.7371L38.9203 50.4782L34.3155 46.0004Z" fill="#20BF6B"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_53_728">
+                            <rect width="90" height="90" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <p class="responseText">{{ session()->get('success') }}</p>
+                <div class="btnWrapper displayFlex spaceCenter">
+                    <a href="#" class="responseBtn">@lang('popups.close')</a>
+                </div>
             </div>
         @endif
         <div class="popupItem" data-name="access">
