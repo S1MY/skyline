@@ -84,4 +84,8 @@ class CashController extends Controller
         // ]);
 
     }
+
+    public function status(Request $request){
+        return 1;
+    }
 }
