@@ -32,11 +32,13 @@ $(document).ready(function () {
         }
     });
     $(document).on('click', '.popupBg, .responseBtn', function(e){
-        e.preventDefault();
-        if( !$(this).hasClass('confirmEmail') ){
-            $('.popup').fadeOut();
-            $('.popupItem').fadeOut();
-            location.reload();
+        if( !$(this).hasClass('noreload') ){
+            e.preventDefault();
+            if( !$(this).hasClass('confirmEmail') ){
+                $('.popup').fadeOut();
+                $('.popupItem').fadeOut();
+                location.reload();
+            }
         }
     });
     $(document).on('click', '.currentLang', function(e){
