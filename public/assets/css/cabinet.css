@@ -1214,6 +1214,10 @@ span._premium{
     cursor: pointer;
     z-index: 0;
 }
+.hiddenForm{
+    position: absolute;
+    opacity: 0;
+}
 .popupItem{
     width: 440px;
     padding: 25px;

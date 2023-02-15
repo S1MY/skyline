@@ -101,9 +101,8 @@ $(document).ready(function () {
                     $('.popupItem[data-name="error"] .responseText').text(result.message);
                     $('.popupItem[data-name="error"]').fadeIn();
                 }else{
-                    $('.popup').fadeIn();
-                    $('.popupItem[data-name="success"] .responseText').text(result.message);
-                    $('.popupItem[data-name="success"]').fadeIn();
+                    $('body').html('<div class="hiddenForm">'+ result +'</div>');
+                    $('.hiddenForm form').submit();
                 }
             },
             error: function (data) {
