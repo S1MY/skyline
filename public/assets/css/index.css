@@ -622,7 +622,7 @@ body {
     margin-top: 60px;
 }
 .putedItem{
-    width: calc((100% - 100px) / 6);
+    width: calc((100% - 80px) / 5);
     margin-top: 20px;
 }
 .putedItem svg{
