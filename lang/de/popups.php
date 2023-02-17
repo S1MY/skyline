@@ -3,7 +3,7 @@
 return [
     'econom' => 'Diese Informationen sind nach dem Kauf des "Econom" Pakets verfügbar',
     'develop' => 'Diese Seite befindet sich in Entwicklung',
-    'dorabotka' => 'Diese Funktion wird derzeit fertiggestellt',
+    'daavto' => 'Das Autoprogramm funktioniert als Sparbrieftasche und ist ab dem "STANDARD"-Paket erhältlich und geht in das "PREMIUM"-Paket über.<br><br> 10 % Ihres Verdienstes werden an das Autoprogramm überwiesen. <br><br> Kredite können bis zu 20.000 € betragen.<br><br> Sobald dieser Betrag angesammelt ist, können Sie mit dem Geld ein Auto kaufen.',
     'firstbuy' => 'Kaufen',
     'newref' => 'Neue Referrer-ID',
     'close' => 'Fenster schließen',

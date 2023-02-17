@@ -3,7 +3,7 @@
 return [
     'econom' => 'This information will be available after purchasing the "Econom" package',
     'develop' => 'This page is under development',
-    'dorabotka' => 'This feature is currently being finalized',
+    'daavto' => 'The car program works as a savings wallet and is available from the STANDARD package and goes to the PREMIUM package.<br><br> 10% of your earnings are transferred to the car program.<br><br> Credits go up to 20,000 €.<br><br> Once this amount is accumulated, you can use the money to buy a car',
     'firstbuy' => 'Buy',
     'newref' => 'New referrer ID',
     'close' => 'Close window',
