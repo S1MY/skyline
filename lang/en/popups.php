@@ -3,7 +3,9 @@
 return [
     'econom' => 'This information will be available after purchasing the "Econom" package',
     'develop' => 'This page is under development',
-    'dorabotka' => 'This feature is currently being finalized',
+    'daavto' => 'The car program works as a savings wallet and is available from the "STANDARD" package and goes to the "PREMIUM" package.<br> 10% of your earnings are transferred to the car program.<br> Credits go up to 20,000 €.<br> Once this amount is accumulated, you can use the money to buy a car.',
+    'dalive' => 'The housing program works as a savings wallet and is available from the "STANDARD" package and goes to the "PREMIUM" package.<br> 20% of your earnings are transferred to the Housing program.<br> Credits go up to the amount of 100,000 €.<br> Once this amount is accumulated, you can use the money to buy property.',
+    'dainvest' => 'The investment program works as a savings wallet for €1,000 in the "ECONOM" package, €10,000 in the "STANDARD" package and €100,000 in the "PREMIUM" package.<br> 30% of your earnings are transferred to the Investment Program.<br> As soon as this amount is accumulated, you will automatically switch to the next package.',
     'firstbuy' => 'Buy',
     'newref' => 'New referrer ID',
     'close' => 'Close window',

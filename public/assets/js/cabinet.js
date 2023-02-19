@@ -11,10 +11,20 @@ $(document).ready(function () {
         $('.popup').fadeIn();
         $('.popupItem[data-name="development"]').fadeIn();
     });
-    $(document).on('click', '._deactivate', function(e){
+    $(document).on('click', '._daavto', function(e){
         e.preventDefault();
         $('.popup').fadeIn();
-        $('.popupItem[data-name="deactivate"]').fadeIn();
+        $('.popupItem[data-name="daavto"]').fadeIn();
+    });
+    $(document).on('click', '._dalive', function(e){
+        e.preventDefault();
+        $('.popup').fadeIn();
+        $('.popupItem[data-name="dalive"]').fadeIn();
+    });
+    $(document).on('click', '._dainvest', function(e){
+        e.preventDefault();
+        $('.popup').fadeIn();
+        $('.popupItem[data-name="dainvest"]').fadeIn();
     });
     $(document).on('click', '._access', function(e){
         e.preventDefault();

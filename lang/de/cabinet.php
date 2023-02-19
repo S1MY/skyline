@@ -238,7 +238,7 @@ return [
             'two' => [
                 'markName' => 'Bonus "Travel"',
                 'markEblo' => 'Standard-Paket',
-                'markText0' => '<span>20</span> Partner in der ersten Reihe für 6 Monate + <span>200 €</span> für die Reise.',
+                'markText0' => '<span>20</span> Partner in der ersten Reihe für 6 Monate + <span>2000 €</span> für die Reise.',
                 'markText1' => 'Der Countdown beginnt beim ersten registrierten Partner im "Standard" Paket.',
             ],
             'three' => [

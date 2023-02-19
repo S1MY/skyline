@@ -1243,6 +1243,11 @@ span._premium{
     text-align: center;
     text-transform: uppercase;
 }
+.responseText._minimal{
+    font-size: 16px;
+    padding-bottom: 16px;
+    text-transform: unset;
+}
 .responseBtn{
     height: 48px;
     padding: 0 20px;
