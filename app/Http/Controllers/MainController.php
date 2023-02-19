@@ -55,19 +55,7 @@ class MainController extends Controller
         session()->flash('paysuccess', 'Оплата прошла успешно!');
 
         if( Auth::check() ){
-            $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
-            ->select('operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
-            ->where('operations.user_id', '=', Auth::user()->id)
-            ->where('operations.status', '=', 1)
-            ->orderBy('operations.id', 'desc')
-            ->limit(10)
-            ->get();
-
-            $output = Operation::where('user_id', '=', Auth::user()->id)
-            ->where('status', '=', 1)
-            ->where('type', '=', 1)
-            ->sum('value');
-            return view('cabinet.main', compact('operations', 'output'));
+            return redirect()->route('cabinet');
         }else{
             return redirect()->route('index');
         }
@@ -77,19 +65,7 @@ class MainController extends Controller
         session()->flash('payfail', 'При оплате произошла ошибка. Повторите попытку позже!');
 
         if( Auth::check() ){
-            $operations = Operation::leftJoin('user_infos', 'user_infos.user_id', '=', 'operations.user_id')
-            ->select('operations.created_at', 'operations.value', 'operations.type', 'user_infos.name', 'user_infos.surname', 'user_infos.user_show_id')
-            ->where('operations.user_id', '=', Auth::user()->id)
-            ->where('operations.status', '=', 1)
-            ->orderBy('operations.id', 'desc')
-            ->limit(10)
-            ->get();
-
-            $output = Operation::where('user_id', '=', Auth::user()->id)
-            ->where('status', '=', 1)
-            ->where('type', '=', 1)
-            ->sum('value');
-            return view('cabinet.main', compact('operations', 'output'));
+            return redirect()->route('cabinet');
         }else{
             return redirect()->route('index');
         }
