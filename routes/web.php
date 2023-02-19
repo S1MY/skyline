@@ -71,9 +71,9 @@ Route::post('/extendAccount', [CabinetRequestController::class, 'extendAccount']
 Route::post('/marketing/buy', [CabinetRequestController::class, 'buy'])->name('buy');
 
 Route::post('/deposit/pay', [CashController::class, 'pay'])->name('pay');
-Route::get('/payeer/fail', [MainController::class, 'fail'])->name('fail');
-Route::get('/payeer/success', [MainController::class, 'success'])->name('success');
-Route::post('/payeer/status', [CashController::class, 'status'])->name('payeer.status');
+Route::get('/epaycore/fail', [MainController::class, 'fail'])->name('fail');
+Route::get('/epaycore/success', [MainController::class, 'success'])->name('success');
+Route::post('/epaycore/status', [CashController::class, 'status'])->name('payeer.status');
 
 // Email
 Route::post('/confirmEmail', [EmailController::class, 'confirmEmail'])->name('confirmEmail');

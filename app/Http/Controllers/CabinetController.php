@@ -58,7 +58,7 @@ class CabinetController extends Controller
         ->where('type', '=', 0)
         ->count();
 
-        $depositeVariants = ['PAYEER'];
+        $depositeVariants = ['ePayCore'];
 
         return view('cabinet.deposite', compact('operations', 'depositSum', 'depositsCount', 'depositeVariants'));
     }

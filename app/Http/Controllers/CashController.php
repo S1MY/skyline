@@ -12,7 +12,7 @@ class CashController extends Controller
 
     public function pay(Request $request){
 
-        $depositeVariants = ['PAYEER'];
+        $depositeVariants = ['ePayCore'];
 
         if( !$request->platname ){
             return response()->json([
@@ -39,49 +39,52 @@ class CashController extends Controller
         ]);
 
         $m_shop = '1830538379';
-        $m_orderid = $operation->id;
-        $m_amount = number_format($request->amount, 2, '.', '');
+        $merchant_id = $operation->id;
+        $amount = number_format($request->amount, 2, '.', '');
 
         if( Auth::user()->id == 1 ){
-            $m_amount = number_format(10, 2, '.', '');
+            $amount = number_format(10, 2, '.', '');
         }
 
-        $m_curr = 'EUR';
-        $m_desc = base64_encode('Пополнение баланса MySkyLine Company');
-        $m_key = 'OyWD8qfN4eFPqaQd';
+        $params = [
+            'epc_merchant_id' => 102335,
+            'epc_commission' => 2,
+            'epc_amount' => $amount,
+            'epc_currency_code' => 'EUR',
+            'epc_order_id' => $operation->id,
+            'epc_success_url' => 'https://myskylinecompany.com/epaycore/success',
+            'epc_cancel_url' => 'https://myskylinecompany.com/epaycore/fail',
+            'epc_status_url' => 'https://myskylinecompany.com/epaycore/status',
+            'epc_descr' => 'Оплата MySkyLine'
+        ];
+        # form
+        $form = '<form action="https://api.epaycore.com/checkout/form" method="POST">';
 
-        $arHash = array(
-            $m_shop,
-            $m_orderid,
-            $m_amount,
-            $m_curr,
-            $m_desc
-        );
+        # append query params to form
+        foreach($params AS $key => $val)
+        {
+        $form .= '<input type="hidden" name="'.$key.'" value="'.$val.'">';
+        }
 
-        $arHash[] = $m_key;
+        # epc_sign params
+        $sign = [
+            $params['epc_merchant_id'],
+            $params['epc_amount'],
+            $params['epc_currency_code'],
+            $params['epc_order_id'],
+            '5K4oANstnfYDShTZ'
+        ];
 
-        $sign = strtoupper(hash('sha256', implode(':', $arHash)));
-        $form = '<form method="post" action="https://payeer.com/merchant/">
-                    <input type="hidden" name="m_shop" value="'.$m_shop.'">
-                    <input type="hidden" name="m_orderid" value="'.$m_orderid.'">
-                    <input type="hidden" name="m_amount" value="'.$m_amount.'">
-                    <input type="hidden" name="m_curr" value="'.$m_curr.'">
-                    <input type="hidden" name="m_desc" value="'.$m_desc.'">
-                    <input type="hidden" name="m_sign" value="'.$sign.'">
-                    <input type="submit" name="m_process" value="send" />
-                </form>';
+        # get epc_sign hash
+        $sign = hash('sha256', implode(':', $sign));
 
+        # append epc_sign, submit button and finally close form
+        $form .= '<input type="hidden" name="epc_sign" value="'.$sign.'">';
+        $form .= '<button type="submit">CHECKOUT</button>';
+        $form .= '</form>';
+
+        # display form
         return $form;
-
-        // $wallet = UserWallets::where('user_id', '=', Auth::user()->id)->first();
-        // $wallet->balance = $wallet->balance + $request->amount;
-        // $wallet->save();
-
-        // return response()->json([
-        //     'pay' => true,
-        //     'message' => 'Пополнение успешно!',
-        //     'error' => 0,
-        // ]);
 
     }
 
