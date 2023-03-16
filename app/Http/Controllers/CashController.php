@@ -89,6 +89,53 @@ class CashController extends Controller
     }
 
     public function status(Request $request){
+
+        if(isset($request->epc_batch) && isset($request->epc_sign))
+        {
+           # your merchant password
+           $password = '0QaWLgv6NcOe8OQT';
+
+           # sign params
+           $sign = [
+                $request->epc_merchant_id,
+                $request->epc_order_id,
+                $request->epc_created_at,
+                $request->epc_amount,
+                $request->epc_currency_code,
+                $request->epc_dst_account,
+                $request->epc_src_account,
+                $request->epc_batch,
+                $password
+           ];
+
+           # get sha256 signature
+           $sign = hash('sha256', implode(':', $sign));
+
+           # if signature not valid
+           if($request->epc_sign !== $sign)
+           {
+              # set header 400
+              header('HTTP/1.1 400 Bad request');
+
+              # exit
+              die('Invalid signature');
+           }
+
+           # if signature valid
+           echo $request->epc_batch;
+
+           $operation = Operation::where('id', '=', $request->epc_order_id)->first();
+           $operation->status = 1;
+           $operation->save();
+
+           $user_id = $operation->user_id;
+
+           $balance = UserWallets::where('user_id', '=', $user_id)->first();
+           $balance->balance = $balance->balance + $operation->value;
+           $balance->save();
+
+        }
+
         return 1;
     }
 }
