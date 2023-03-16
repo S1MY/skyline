@@ -72,7 +72,7 @@ class CashController extends Controller
             $params['epc_amount'],
             $params['epc_currency_code'],
             $params['epc_order_id'],
-            '5K4oANstnfYDShTZ'
+            '0QaWLgv6NcOe8OQT'
         ];
 
         # get epc_sign hash
