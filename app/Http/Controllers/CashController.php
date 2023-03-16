@@ -125,10 +125,9 @@ class CashController extends Controller
            echo $request->epc_batch;
 
            $operation = Operation::where('id', '=', $request->epc_order_id)->first();
+           $user_id = $operation->user_id;
            $operation->status = 1;
            $operation->save();
-
-           $user_id = $operation->user_id;
 
            $balance = UserWallets::where('user_id', '=', $user_id)->first();
            $balance->balance = $balance->balance + $operation->value;
