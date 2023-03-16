@@ -363,10 +363,7 @@ class CabinetRequestController extends Controller
             // Накопительный процент
             $capitalPersent = 0;
 
-            // Если Premium пакет, накопительный процент равен 0
-            if( $pacage != 3 ){
-                $capitalPersent = 0.6;
-            }
+            $capitalPersent = 0.6;
 
             // Проценты на вывод
             if( $i == 0 ){
@@ -469,6 +466,8 @@ class CabinetRequestController extends Controller
             $type++;
 
         }
+
+
 
         return response()->json([
             'buy' => true,
