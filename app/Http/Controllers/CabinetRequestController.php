@@ -319,7 +319,7 @@ class CabinetRequestController extends Controller
                     // Обновляем баланс
 
                     $sponsorWallet = UserWallets::where('user_id', '=', $sponsor)->get();
-                    $sponsorWallet->balance = $sponsorWallet->balance + 200;
+                    $sponsorWallet->output = $sponsorWallet->output + 200;
                     $sponsorWallet->save();
 
                 }
