@@ -283,12 +283,10 @@ class CabinetRequestController extends Controller
         $sponsor = $user->sponsor_id;
 
         if( $type == 2 ){
-            echo 'Тайп правильный';
             // Смотрим получил ли спонсор этот бонус
             $bonusChecker = BonusProgram::where('program_name', '=', 'Bonus "Start"')->where('user_id', '=', $sponsor)->count();
 
             if( $bonusChecker == 0 ){
-                echo 'Бонус не получал';
                 // Ещё не получал, считаем приглашённых за 6 месяцев
                 $refererCountChecker = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
                                     ->where('sponsor_id', '=', $sponsor)
@@ -299,7 +297,6 @@ class CabinetRequestController extends Controller
                                     ->count();
 
                 if( $refererCountChecker >= 1 ){
-                    echo 'Рефералов нормально';
                     // Присваиваем бонус
                     BonusProgram::create([
                         'program_name' => 'Bonus "Start"',
@@ -519,8 +516,6 @@ class CabinetRequestController extends Controller
             $type++;
 
         }
-
-
 
         return response()->json([
             'buy' => true,
