@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class BonusProgram extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'program_name',
+        'user_id',
+    ];
 }
