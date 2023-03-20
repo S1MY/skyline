@@ -326,6 +326,7 @@ class CabinetRequestController extends Controller
             }
         }
 
+        return 1;
 
         // Вычитаем деньги с баланса и обнуляем накопления
 
