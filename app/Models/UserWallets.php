@@ -11,6 +11,7 @@ class UserWallets extends Model
 
     protected $fillable = [
         'balance',
+        'output',
         'autobalance',
         'housebalance',
         'investbalance',
