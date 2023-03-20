@@ -296,7 +296,7 @@ class CabinetRequestController extends Controller
                                     )
                                     ->count();
 
-                if( $refererCountChecker >= 2 ){
+                if( $refererCountChecker >= 1 ){
 
                     // Присваиваем бонус
                     BonusProgram::create([
