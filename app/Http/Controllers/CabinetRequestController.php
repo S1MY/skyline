@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BonusProgram;
 use App\Models\Messages;
 use Illuminate\Http\Request;
 use App\Models\Operation;
@@ -9,6 +10,7 @@ use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\UserPartner;
 use App\Models\UserWallets;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -274,6 +276,54 @@ class CabinetRequestController extends Controller
                 'error' => 1,
             ]);
         }
+
+
+        // Бонусные программы
+        $user = User::where('id', '=', Auth::user()->id)->first();
+        $sponsor = $user->sponsor_id;
+
+        if( $type == 2 ){
+            // Смотрим получил ли спонсор этот бонус
+            $bonusChecker = BonusProgram::where('program_name', '=', 'Bonus "Start"')->where('user_id', '=', $sponsor)->count();
+
+            if( $bonusChecker == 0 ){
+                // Ещё не получал, считаем приглашённых за 6 месяцев
+                $refererCountChecker = User::leftJoin('user_infos as ui', 'ui.user_id', '=', 'users.id')
+                                    ->where('sponsor_id', '=', $sponsor)
+                                    ->where('user_status', '>', 0)
+                                    ->whereBetween('users.created_at',
+                                        [Carbon::now()->subMonth(6), Carbon::now()]
+                                    )
+                                    ->count();
+
+                if( $refererCountChecker >= 2 ){
+
+                    // Присваиваем бонус
+                    BonusProgram::create([
+                        'program_name' => 'Bonus "Start"',
+                        'user_id' => $sponsor,
+                    ]);
+
+                    // Отправляем сообщение
+                    Messages::create([
+                        'message' => 'Поздравляем! Вам начислен <span class="_bold">Bonus "Start"</span>.',
+                        'en_message' => 'Congratulations! You have been awarded the <span class="_bold">Bonus "Start"</span>.',
+                        'de_message' => 'Herzlichen Glückwunsch! Ihnen wird ein <span class="_bold">Bonus "Start"</span> gutgeschrieben.',
+                        'checked' => serialize(array()),
+                        'from' => 0,
+                        'to' => $sponsor,
+                    ]);
+
+                    // Обновляем баланс
+
+                    $sponsorWallet = UserWallets::where('user_id', '=', $sponsor)->get();
+                    $sponsorWallet->balance = $sponsorWallet->balance + 200;
+                    $sponsorWallet->save();
+
+                }
+            }
+        }
+
 
         // Вычитаем деньги с баланса и обнуляем накопления
 
