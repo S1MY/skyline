@@ -22,7 +22,7 @@
                 </div>
                 <div class="mediaItem">
                     <div class="noteWrapper">
-                        <iframe class="noteVideo" width="560" height="315" src="@lang('mainPages.marketing_second_screen.videolink')" title="@lang('mainPages.marketing_second_screen.title')" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="noteVideo" width="560" height="315" src="@lang('mainPages.marketing_second_screen.videolink')" title="@lang('mainPages.marketing_second_screen.videoName')" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
