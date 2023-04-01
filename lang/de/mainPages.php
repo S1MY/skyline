@@ -266,13 +266,15 @@ return [
     'footer' => [
         'aboutUs' => 'О нас',
         'description' => 'Lorem ipsum dolor sit amet, consectetur some dymmy adipiscing elit. Nam turpis quam, sodales in text she ante sagittis, varius efficitur mauris. Nam turpis quam, sodales in text should be able. to...',
-        'copy' => '©Copyright 2022 Digital Agency Theme. All Rights Reserved.',
+        'copy' => '©Copyright 2023 MySkyLine. Все права защищены.',
         'contactUs' => 'Контакты',
         'personal' => 'Обработка персональных данных',
+        'personal-link' => '/personal-data-ru.pdf',
         'policy' => 'Политика конфиденциальности',
+        'policy-link' => '/privacy-policy-ru.pdf',
         'phone' => '0 (877) 123-4567',
         'mail' => 'info@yoursite.com',
         'footerLink0' => 'Youtube',
-        'footerLink1' => 'Youtube',
+        'footerLink1' => 'https://www.youtube.com/@myskylinecompany',
     ],
 ];

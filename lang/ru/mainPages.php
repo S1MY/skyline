@@ -34,8 +34,7 @@ return [
             'third' => 'Медиа',
             'fourth' => 'Инновации',
         ],
-        'videolink' => 'https://www.youtube.com/embed/6peWKROhAlk',
-        'videoName' => 'Презентация компании MySkyLine',
+        'videolink' => 'https://www.youtube.com/embed/z7SkNWQINds',
     ],
     'main_third_screen' => [
         'title' => 'Развитие компании в трёх востребованных направлениях',
@@ -112,8 +111,7 @@ return [
         'subtitle' => 'Ваше будущее здесь',
         'head' => 'Лучший инвестиционный проект с партнерской программой!',
         'description' => 'В настоящее время любой бизнес реально построить в интернете. И именно здесь вы можете начать зарабатывать на машину мечты, тёплую и уютную квартиру или инвестировать в доходный бизнес.',
-        'videolink' => 'https://www.youtube.com/embed/NORibYZ0OFk',
-        'videoName' => 'Маркетинг-план компании MySkyLine',
+        'videolink' => 'https://www.youtube.com/embed/z7SkNWQINds',
     ],
     'marketing_third_screen' => [
         'title' => 'Четыре ступени развития',
@@ -268,13 +266,15 @@ return [
     'footer' => [
         'aboutUs' => 'О нас',
         'description' => 'Lorem ipsum dolor sit amet, consectetur some dymmy adipiscing elit. Nam turpis quam, sodales in text she ante sagittis, varius efficitur mauris. Nam turpis quam, sodales in text should be able. to...',
-        'copy' => '©Copyright 2022 Digital Agency Theme. All Rights Reserved.',
+        'copy' => '©Copyright 2023 MySkyLine. Все права защищены.',
         'contactUs' => 'Контакты',
         'personal' => 'Обработка персональных данных',
+        'personal-link' => '/personal-data-ru.pdf',
         'policy' => 'Политика конфиденциальности',
+        'policy-link' => '/privacy-policy-ru.pdf',
         'phone' => '0 (877) 123-4567',
         'mail' => 'info@yoursite.com',
         'footerLink0' => 'Youtube',
-        'footerLink1' => 'Youtube',
+        'footerLink1' => 'https://www.youtube.com/@myskylinecompany',
     ],
 ];
