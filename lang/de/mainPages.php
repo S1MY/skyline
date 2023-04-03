@@ -34,7 +34,7 @@ return [
             'third' => 'Медиа',
             'fourth' => 'Инновации',
         ],
-        'videolink' => 'https://www.youtube.com/embed/z7SkNWQINds',
+        'videolink' => 'https://www.youtube.com/embed/6peWKROhAlk',
     ],
     'main_third_screen' => [
         'title' => 'Развитие компании в трёх востребованных направлениях',
@@ -111,7 +111,7 @@ return [
         'subtitle' => 'Ваше будущее здесь',
         'head' => 'Лучший инвестиционный проект с партнерской программой!',
         'description' => 'В настоящее время любой бизнес реально построить в интернете. И именно здесь вы можете начать зарабатывать на машину мечты, тёплую и уютную квартиру или инвестировать в доходный бизнес.',
-        'videolink' => 'https://www.youtube.com/embed/z7SkNWQINds',
+        'videolink' => 'https://www.youtube.com/embed/NORibYZ0OFk',
     ],
     'marketing_third_screen' => [
         'title' => 'Четыре ступени развития',
