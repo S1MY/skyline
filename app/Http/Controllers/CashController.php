@@ -165,6 +165,10 @@ class CashController extends Controller
             'sustem' => $request->platname
         ]);
 
+        $balance = UserWallets::where('user_id', '=', Auth::user()->id)->first();
+        $balance->output = $balance->output - $request->amount;
+        $balance->save();
+
         return response()->json([
             'withdraw' => true,
             'message' => 'Заявка на вывод успешно создана!',
