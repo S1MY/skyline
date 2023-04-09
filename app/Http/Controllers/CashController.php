@@ -140,6 +140,7 @@ class CashController extends Controller
     }
 
     public function withdraw(Request $request){
+
         $depositeVariants = ['ePayCore'];
 
         if( !$request->platname ){

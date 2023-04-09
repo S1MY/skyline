@@ -6,6 +6,7 @@ use App\Models\Operation;
 use App\Models\User;
 use App\Models\UserInfo;
 use App\Models\UserWallets;
+use App\Models\Withdraw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,11 +53,17 @@ class AdminController extends Controller
             ->where('user_show_id', '!=', 'null')
             ->paginate(5, ['*'], 'user_page');
 
-        return view('cabinet.admin', compact('total_balance', 'auto_balance',
+        // Заявки на вывод
+
+            $withdraws = Withdraw::leftJoin('user_infos as ui', 'ui.user_id', '=', 'withdraws.user_id')
+            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'withdraws.amount', 'withdraws.wallet', 'withdraws.sustem')
+            ->paginate(5, ['*'], 'withdraws_page');
+
+            return view('cabinet.admin', compact('total_balance', 'auto_balance',
                                             'house_balance', 'invest_balance',
                                             'auto_partners', 'house_partners',
                                             'invest_partners', 'operations',
-                                            'users'));
+                                            'users', 'withdraws'));
     }
 
     public function showUser($user){

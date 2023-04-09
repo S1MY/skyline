@@ -35,6 +35,26 @@
                     @endforeach
                     {{ $users->links('cabinet.layouts.pagination') }}
                 </div>
+                <h2 class="pageTitle">Заявки на вывод</h2>
+                <div class="customTable">
+                    <div class="customTableLine customTableHead">
+                        <p class="customTableItem">ID</p>
+                        <p class="customTableItem">Имя</p>
+                        <p class="customTableItem">Сумма</p>
+                        <p class="customTableItem">Кошелёк</p>
+                        <p class="customTableItem">Система</p>
+                    </div>
+                    @foreach ($withdraws as $withdraw)
+                        <div class="customTableLine">
+                            <p class="customTableItem" aria-label="ID">{{ $withdraw->user_show_id }}</p>
+                            <p class="customTableItem" aria-label="Имя">{{ $withdraw->name }} {{ $withdraw->surname }}</p>
+                            <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->amount }}</p>
+                            <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->wallet }}</p>
+                            <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->sustem }}</p>
+                        </div>
+                    @endforeach
+                    {{ $withdraws->links('cabinet.layouts.pagination') }}
+                </div>
                 <h2 class="pageTitle">Админ панель</h2>
                 <div class="pageStat displayFlex spaceBetween flexWrap">
                     <div class="pageStatItem">
