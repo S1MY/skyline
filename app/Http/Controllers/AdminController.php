@@ -56,7 +56,8 @@ class AdminController extends Controller
         // Заявки на вывод
 
             $withdraws = Withdraw::leftJoin('user_infos as ui', 'ui.user_id', '=', 'withdraws.user_id')
-            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'withdraws.amount', 'withdraws.wallet', 'withdraws.sustem')
+            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'withdraws.amount', 'withdraws.wallet', 'withdraws.sustem', 'withdraws.status')
+            ->where('withdraws.status', '=', '0')
             ->paginate(5, ['*'], 'withdraws_page');
 
             return view('cabinet.admin', compact('total_balance', 'auto_balance',

@@ -43,6 +43,7 @@
                         <p class="customTableItem">Сумма</p>
                         <p class="customTableItem">Кошелёк</p>
                         <p class="customTableItem">Система</p>
+                        <p class="customTableItem">Вывод сделан</p>
                     </div>
                     @foreach ($withdraws as $withdraw)
                         <div class="customTableLine">
@@ -51,6 +52,7 @@
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->amount }}</p>
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->wallet }}</p>
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->sustem }}</p>
+                            <p class="customTableItem" aria-label="Дата регистрации"><a href="#" class="withtrue">Да</a></p>
                         </div>
                     @endforeach
                     {{ $withdraws->links('cabinet.layouts.pagination') }}
