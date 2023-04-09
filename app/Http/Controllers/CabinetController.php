@@ -78,7 +78,9 @@ class CabinetController extends Controller
         ->where('type', '=', 1)
         ->sum('value');
 
-        return view('cabinet.withdraw', compact('withdrawSum', 'operations'));
+        $withdrawVariants = ['ePayCore'];
+
+        return view('cabinet.withdraw', compact('withdrawSum', 'operations', 'withdrawVariants'));
     }
 
     public function story(){

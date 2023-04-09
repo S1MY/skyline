@@ -54,8 +54,9 @@
                             </svg>
                         <input type="text" class="contentInput selectHeader" name="platname" placeholder="@lang('cabinet.withdraw.payment')" required readonly>
                         <div class="selectFlow">
-                            <p class="selectItem" data-plat="Name1">Название системы 1</p>
-                            <p class="selectItem" data-plat="Name2">Название системы 2</p>
+                            @foreach ($withdrawVariants as $withdrawVariant)
+                                <p class="selectItem" data-plat="{{ $withdrawVariant }}">{{$withdrawVariant}}</p>
+                            @endforeach
                         </div>
                     </div>
                     <button class="btn">@lang('cabinet.withdraw.btn')</button>
