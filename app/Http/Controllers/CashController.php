@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Operation;
 use App\Models\UserWallets;
+use App\Models\Withdraw;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -136,5 +137,39 @@ class CashController extends Controller
         }
 
         return 1;
+    }
+
+    public function withdraw(Request $request){
+        $depositeVariants = ['ePayCore'];
+
+        if( !$request->platname ){
+            return response()->json([
+                'withdraw' => true,
+                'message' => 'Платёжная система не выбрана.',
+                'error' => 1,
+            ]);
+        }
+
+        if( Auth::user()->userWallets->output < $request->amount ){
+            return response()->json([
+                'withdraw' => true,
+                'message' => 'Вам доступно только '.Auth::user()->userWallets->output.' для вывода.',
+                'error' => 1,
+            ]);
+        }
+
+        Withdraw::create([
+            'user_id' => Auth::user()->id,
+            'amount' => $request->amount,
+            'wallet' => $request->wallet,
+            'sustem' => $request->platname
+        ]);
+
+        return response()->json([
+            'withdraw' => true,
+            'message' => 'Заявка на вывод успешно создана!',
+            'error' => 0,
+        ]);
+
     }
 }

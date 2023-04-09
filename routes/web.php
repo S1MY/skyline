@@ -75,6 +75,8 @@ Route::get('/epaycore/fail', [MainController::class, 'fail'])->name('fail');
 Route::get('/epaycore/success', [MainController::class, 'success'])->name('success');
 Route::post('/epaycore/status', [CashController::class, 'status'])->name('payeer.status');
 
+Route::post('/withdraw/do', [CashController::class, 'withdraw'])->name('withdraw.do');
+
 // Email
 Route::post('/confirmEmail', [EmailController::class, 'confirmEmail'])->name('confirmEmail');
 Route::post('/restore/lost-password', [EmailController::class, 'lostPassword'])->name('lostPassword');
