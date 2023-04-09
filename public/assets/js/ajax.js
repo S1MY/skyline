@@ -182,6 +182,43 @@ $(document).ready(function () {
 
     });
 
+    $('.withtrue').click(function(e){
+        e.preventDefault();
+        let ajaxUrl = $(this).attr('data-action');
+        let id = $(this).attr('data-with-id');
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: {id: id},
+            success: function(result){
+                console.log(result);
+
+                $('.popupItem').hide();
+
+                if( result.error == 1 ){
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+
+    });
+
     $('#setAvatar').submit(function(e){
         e.preventDefault();
         let ajaxurl = $(this).attr('action');

@@ -52,7 +52,7 @@
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->amount }}</p>
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->wallet }}</p>
                             <p class="customTableItem" aria-label="Дата регистрации">{{ $withdraw->sustem }}</p>
-                            <p class="customTableItem" aria-label="Дата регистрации"><a href="#" class="withtrue">Да</a></p>
+                            <p class="customTableItem" aria-label="Дата регистрации"><a href="#" class="withtrue" data-action="{{ route('withdrawTrue') }}" data-with-id="{{ $withdraw->id }}">Да</a></p>
                         </div>
                     @endforeach
                     {{ $withdraws->links('cabinet.layouts.pagination') }}

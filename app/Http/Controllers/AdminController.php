@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Messages;
 use App\Models\Operation;
 use App\Models\User;
 use App\Models\UserInfo;
@@ -56,7 +57,7 @@ class AdminController extends Controller
         // Заявки на вывод
 
             $withdraws = Withdraw::leftJoin('user_infos as ui', 'ui.user_id', '=', 'withdraws.user_id')
-            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'withdraws.amount', 'withdraws.wallet', 'withdraws.sustem', 'withdraws.status')
+            ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'withdraws.amount', 'withdraws.wallet', 'withdraws.sustem', 'withdraws.status', 'withdraws.id')
             ->where('withdraws.status', '=', '0')
             ->paginate(5, ['*'], 'withdraws_page');
 
@@ -111,6 +112,36 @@ class AdminController extends Controller
         }
 
         return $userInfo;
+    }
+
+    public function withdrawTrue(Request $request){
+        $with = Withdraw::where('id', '=', $request->id)->first();
+        $with->status = 1;
+        $with->save();
+
+        Operation::create([
+            'type' => 1,
+            'status' => 1,
+            'value' => $with->amount,
+            'system' => $with->platname,
+            'user_id' => $with->user_id,
+        ]);
+
+        Messages::create([
+            'message' => 'Поздравляем! Ваши '.$with->amount.'€ успешно выведены!',
+            'en_message' => 'Congratulations! Your '.$with->amount.'€ has been successfully withdrawn!',
+            'de_message' => 'Herzlichen Glückwunsch! Euer '.$with->amount.'€ erfolgreich abgeleitet!',
+            'checked' => serialize(array()),
+            'from' => 0,
+            'to' => $with->user_id,
+        ]);
+
+        return response()->json([
+            'updated' => true,
+            'message' => 'Деньги выведены успешно! Пользователь получил сообщение!',
+            'error' => 0,
+        ]);
+
     }
 
     public function changeSponsor(Request $request){
