@@ -153,7 +153,7 @@ class CashController extends Controller
         if( Auth::user()->userWallets->output < $request->amount ){
             return response()->json([
                 'withdraw' => true,
-                'message' => 'Вам доступно только '.Auth::user()->userWallets->output.' для вывода.',
+                'message' => 'Вам доступно только '.Auth::user()->userWallets->output.'€ для вывода.',
                 'error' => 1,
             ]);
         }
