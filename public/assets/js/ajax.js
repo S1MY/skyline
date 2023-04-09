@@ -111,6 +111,40 @@ $(document).ready(function () {
         });
     });
 
+    $('#withdraw').submit(function(e){
+        e.preventDefault();
+        let ajaxUrl = $(this).attr('action');
+        let formData = $(this).serialize();
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: ajaxUrl,
+            method: 'post',
+            data: formData,
+            success: function(result){
+                console.log(result);
+
+                if( result.error == 1 ){
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="error"] .responseText').text(result.message);
+                    $('.popupItem[data-name="error"]').fadeIn();
+                }else{
+                    $('.popup').fadeIn();
+                    $('.popupItem[data-name="success"] .responseText').text(result.message);
+                    $('.popupItem[data-name="success"]').fadeIn();
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
     $('.btnPopup.buy').click(function(e){
         e.preventDefault();
         let ajaxUrl = $(this).attr('data-action');

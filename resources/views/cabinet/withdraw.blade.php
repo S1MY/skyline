@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <p class="pageText">@lang('cabinet.withdraw.sub_title')</p>
-                <form class="contentForm _withdraw">
+                <form class="contentForm _withdraw" id="withdraw" action="{{ route('withdraw.do') }}">
                     <input type="text" class="contentInput" name="amount" placeholder="@lang('cabinet.withdraw.sum')" min="100" max="10000" required>
                     <input type="text" class="contentInput" name="wallet" placeholder="@lang('cabinet.withdraw.wallet')" min="100" max="10000" required>
                     <div class="contentSelect">
