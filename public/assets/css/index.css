@@ -1317,6 +1317,10 @@ section._case .markName::after{
 .myRamka .pageText:nth-child(1){
     margin-top: 0;
 }
+.footerItem img{
+    width: 100%;
+    max-width: 300px;
+}
 /* adaptive */
 @media (max-width: 1240px) {
     .heroAbsolute{
