@@ -691,7 +691,6 @@ body {
     opacity: 0.6;
     font-weight: 300;
     padding-top: 35px;
-    padding-bottom: 60px;
 }
 .footerLink{
     margin-top: 20px;
@@ -1319,7 +1318,7 @@ section._case .markName::after{
 }
 .footerItem img{
     width: 100%;
-    max-width: 300px;
+    max-width: 240px;
 }
 /* adaptive */
 @media (max-width: 1240px) {
@@ -1615,9 +1614,6 @@ section._case .markName::after{
     }
     .footerText{
         padding-bottom: 30px;
-    }
-    .copyright{
-        padding-bottom: 40px;
     }
     .putedItem{
         width: calc(50% - 10px);
