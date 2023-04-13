@@ -1319,6 +1319,7 @@ section._case .markName::after{
 .footerItem img{
     width: 100%;
     max-width: 240px;
+    margin-top: 20px;
 }
 /* adaptive */
 @media (max-width: 1240px) {
