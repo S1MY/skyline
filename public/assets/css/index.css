@@ -1576,6 +1576,9 @@ section._case .markName::after{
     }
 }
 @media (max-width: 660px) {
+    .footerItem img{
+        margin-bottom: 40px;
+    }
     .section{
         padding: 90px 0 !important;
     }
