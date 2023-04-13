@@ -1732,6 +1732,10 @@ input:checked + p{
 .packageFlex{
     flex-wrap: wrap;
 }
+.footerItem img{
+    width: 100%;
+    max-width: 300px;
+}
 /* adaptive */
 @media (max-width: 1520px) {
     .headerInfo{
