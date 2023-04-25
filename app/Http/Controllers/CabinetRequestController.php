@@ -445,16 +445,16 @@ class CabinetRequestController extends Controller
                 for ($io=1; $io <= $pacage ; $io++) {
 
                     if( $io == 1 ){
-                        $price = 100;
+                        $priceO = 100;
                     }elseif ($io == 2) {
-                        $price = 1000;
+                        $priceO = 1000;
                     }elseif ($io == 3) {
-                        $price = 10000;
+                        $priceO = 10000;
                     }elseif ($io == 4) {
-                        $price = 100000;
+                        $priceO = 100000;
                     }
 
-                    $outMoney = $outMoney + ($price * $outPersent);
+                    $outMoney = $outMoney + ($priceO * $outPersent);
 
                 }
 
@@ -477,16 +477,16 @@ class CabinetRequestController extends Controller
                     for ($io=1; $io <= $pacage ; $io++) {
 
                         if( $io == 1 ){
-                            $price = 100;
+                            $priceO = 100;
                         }elseif ($io == 2) {
-                            $price = 1000;
+                            $priceO = 1000;
                         }elseif ($io == 3) {
-                            $price = 10000;
+                            $priceO = 10000;
                         }elseif ($io == 4) {
-                            $price = 100000;
+                            $priceO = 100000;
                         }
 
-                        $capiMoney = $capiMoney + ($price * $capitalPersent);
+                        $capiMoney = $capiMoney + ($priceO * $capitalPersent);
 
                     }
 
