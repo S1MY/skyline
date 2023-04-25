@@ -424,15 +424,7 @@ class CabinetRequestController extends Controller
             $capitalPersent = 0.6;
 
             // Проценты на вывод
-            if( $i == 0 ){
-                $outPersent = 0.4;
-            }elseif ($i == 1) {
-                $outPersent = 0.2;
-            }elseif ($i == 2) {
-                $outPersent = 0.05;
-            }elseif ($i == 3) {
-                $outPersent = 0.15;
-            }
+            $outPersent = 0.4;
 
             $outMoney = $price * $outPersent;
 
@@ -450,21 +442,20 @@ class CabinetRequestController extends Controller
             if( $pacage > 1 ){
                 $outMoney = 0;
 
-                for ($i=1; $i <= $pacage ; $i++) {
-                    if( $i == 1 ){
-                        $outPersent = 0.4;
+                for ($io=1; $io <= $pacage ; $io++) {
+
+                    if( $io == 1 ){
                         $price = 100;
-                    }elseif ($i == 2) {
-                        $outPersent = 0.2;
+                    }elseif ($io == 2) {
                         $price = 1000;
-                    }elseif ($i == 3) {
-                        $outPersent = 0.05;
+                    }elseif ($io == 3) {
                         $price = 10000;
-                    }elseif ($i == 4) {
-                        $outPersent = 0.15;
+                    }elseif ($io == 4) {
                         $price = 100000;
                     }
+
                     $outMoney = $outMoney + ($price * $outPersent);
+
                 }
 
                 $wallet->output = $wallet->output + $outMoney;
@@ -483,17 +474,18 @@ class CabinetRequestController extends Controller
                 if( $pacage > 1 ){
                     $capiMoney = 0;
 
-                    for ($i=1; $i <= $pacage ; $i++) {
+                    for ($io=1; $io <= $pacage ; $io++) {
 
-                        if( $i == 1 ){
+                        if( $io == 1 ){
                             $price = 100;
-                        }elseif ($i == 2) {
+                        }elseif ($io == 2) {
                             $price = 1000;
-                        }elseif ($i == 3) {
+                        }elseif ($io == 3) {
                             $price = 10000;
-                        }elseif ($i == 4) {
+                        }elseif ($io == 4) {
                             $price = 100000;
                         }
+
                         $capiMoney = $capiMoney + ($price * $capitalPersent);
 
                     }
