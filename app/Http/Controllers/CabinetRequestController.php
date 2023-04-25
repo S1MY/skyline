@@ -375,10 +375,20 @@ class CabinetRequestController extends Controller
         ]);
 
         // Создаём таблицу партнёров
-        UserPartner::create([
-            'user_id' => Auth::user()->id,
-            'pacage' => $pacage,
-        ]);
+        if( $pacage > 1 ){
+            for ($i=1; $i <= $pacage; $i++) {
+                UserPartner::create([
+                    'user_id' => Auth::user()->id,
+                    'pacage' => $i,
+                ]);
+            }
+        }else{
+            UserPartner::create([
+                'user_id' => Auth::user()->id,
+                'pacage' => $pacage,
+            ]);
+        }
+
 
         // Создание сообщения
 
