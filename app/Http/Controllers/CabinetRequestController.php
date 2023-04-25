@@ -421,8 +421,6 @@ class CabinetRequestController extends Controller
             $sponsor = $user->sponsor_id;
 
             // Накопительный процент
-            $capitalPersent = 0;
-
             $capitalPersent = 0.6;
 
             // Проценты на вывод
@@ -449,8 +447,31 @@ class CabinetRequestController extends Controller
             // Делаем начисление
 
             $wallet = UserWallets::where('user_id', '=', $sponsor)->first();
+            if( $pacage > 1 ){
+                $outMoney = 0;
 
-            $wallet->output = $wallet->output + $outMoney;
+                for ($i=1; $i <= $pacage ; $i++) {
+                    if( $i == 1 ){
+                        $outPersent = 0.4;
+                        $price = 100;
+                    }elseif ($i == 2) {
+                        $outPersent = 0.2;
+                        $price = 1000;
+                    }elseif ($i == 3) {
+                        $outPersent = 0.05;
+                        $price = 10000;
+                    }elseif ($i == 4) {
+                        $outPersent = 0.15;
+                        $price = 100000;
+                    }
+                    $outMoney = $outMoney + ($price * $outPersent);
+                }
+
+                $wallet->output = $wallet->output + $outMoney;
+            }else{
+                $wallet->output = $wallet->output + $outMoney;
+            }
+
 
             // Для спонсора первой линии
             if( $i == 0 ){
@@ -458,6 +479,29 @@ class CabinetRequestController extends Controller
                 // Если нужено зачислить на накопительный счёт
 
                 $wallet->capital = $wallet->capital + $price * $capitalPersent;
+
+                if( $pacage > 1 ){
+                    $capiMoney = 0;
+
+                    for ($i=1; $i <= $pacage ; $i++) {
+
+                        if( $i == 1 ){
+                            $price = 100;
+                        }elseif ($i == 2) {
+                            $price = 1000;
+                        }elseif ($i == 3) {
+                            $price = 10000;
+                        }elseif ($i == 4) {
+                            $price = 100000;
+                        }
+                        $capiMoney = $capiMoney + ($price * $capitalPersent);
+
+                    }
+
+                    $wallet->capital = $wallet->capital + $capiMoney;
+                }else{
+                    $wallet->capital = $wallet->capital + $price * $capitalPersent;
+                }
 
                 // Переходы на следующий пакет
                 if( $sponsorInfo->user_pacage == 1 && $wallet->capital >= 1000 ){
