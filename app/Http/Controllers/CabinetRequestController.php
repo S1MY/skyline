@@ -505,7 +505,14 @@ class CabinetRequestController extends Controller
                 $table_line = 'user_fourth_line';
             }
 
-            UserPartner::where('user_id', '=', $sponsor)->where('pacage', '=', $pacage)->increment($table_line);
+            if( $pacage > 1 ){
+                for ($i=$pacage; $i > 0; $i--) {
+                    UserPartner::where('user_id', '=', $sponsor)->where('pacage', '=', $i)->increment($table_line);
+                }
+            }else{
+                UserPartner::where('user_id', '=', $sponsor)->where('pacage', '=', $pacage)->increment($table_line);
+            }
+
 
             // Сохраняем балансы, создаём операцию и берём следующего спонсора
 
