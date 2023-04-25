@@ -469,8 +469,6 @@ class CabinetRequestController extends Controller
 
                 // Если нужено зачислить на накопительный счёт
 
-                $wallet->capital = $wallet->capital + $price * $capitalPersent;
-
                 if( $pacage > 1 ){
                     $capiMoney = 0;
 
