@@ -93,6 +93,7 @@
                         <p class="footerText">@lang('mainPages.footer.description')</p>
                     </div>
                     <p class="copyright">@lang('mainPages.footer.copy')</p>
+                    <img src="/image/wewer.png" alt="platezhki">
                 </div>
                 <div class="footerItem">
                     <h3 class="footerTitle">@lang('mainPages.footer.contactUs')</h2>

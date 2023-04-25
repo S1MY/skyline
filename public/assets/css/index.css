@@ -691,7 +691,6 @@ body {
     opacity: 0.6;
     font-weight: 300;
     padding-top: 35px;
-    padding-bottom: 60px;
 }
 .footerLink{
     margin-top: 20px;
@@ -1317,6 +1316,11 @@ section._case .markName::after{
 .myRamka .pageText:nth-child(1){
     margin-top: 0;
 }
+.footerItem img{
+    width: 100%;
+    max-width: 240px;
+    margin-top: 20px;
+}
 /* adaptive */
 @media (max-width: 1240px) {
     .heroAbsolute{
@@ -1572,6 +1576,9 @@ section._case .markName::after{
     }
 }
 @media (max-width: 660px) {
+    .footerItem img{
+        margin-bottom: 40px;
+    }
     .section{
         padding: 90px 0 !important;
     }
@@ -1611,9 +1618,6 @@ section._case .markName::after{
     }
     .footerText{
         padding-bottom: 30px;
-    }
-    .copyright{
-        padding-bottom: 40px;
     }
     .putedItem{
         width: calc(50% - 10px);
