@@ -45,6 +45,7 @@ class AdminController extends Controller
             ->leftJoin('users as u', 'u.id', '=', 'operations.user_id')
             ->select('ui.name', 'ui.surname', 'ui.user_show_id', 'ui.user_id', 'type', 'value', 'operations.created_at', 'u.name as uname')
             ->orderBy('operations.created_at', 'desc')
+            ->where('status', '=', 1)
             ->paginate(10);
 
         // Без пригласителя
