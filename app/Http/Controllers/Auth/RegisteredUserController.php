@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
 
         $sponsor = $request->sponsor;
         if( !$sponsor ){
-            $sponsor = 0;
+            $sponsor = 1;
         }else{
             $userID = UserInfo::where('user_show_id', '=', $sponsor)->first();
             $sponsor = $userID->user_id;

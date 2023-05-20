@@ -282,7 +282,9 @@ class CabinetRequestController extends Controller
         $user = User::where('id', '=', Auth::user()->id)->first();
         $sponsor = $user->sponsor_id;
 
-        if( $type == 2 ){
+        // Если спонсор = админ, не делаем ничего в бонусных
+
+        if( $type == 2 && $sponsor != 1 ){
             // Смотрим получил ли спонсор этот бонус
             $bonusChecker = BonusProgram::where('program_name', '=', 'Bonus "Start"')->where('user_id', '=', $sponsor)->count();
 
@@ -391,15 +393,38 @@ class CabinetRequestController extends Controller
 
 
         // Создание сообщения
+        if( $pacage > 1 ){
+            // Если получили пакет в подарок + сообщения
+            for ($i=1; $i < $pacage; $i++){
 
-        Messages::create([
-            'message' => 'Поздравляем! Вы успешно перешли на пакет <span class="_bold">"'.$request->pacage.'"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!',
-            'en_message' => 'Congratulations! You have successfully switched to the package <span class="_bold">"'.$request->package.'"</span>. Soon you will discover new features that will multiply your earnings!',
-            'de_message' => 'Herzlichen Glückwunsch! Sie haben erfolgreich zum Paket <span class="_bold">"'.$request->package.'"</span>. Bald werden Sie neue Funktionen entdecken, die Ihr Einkommen um ein Vielfaches erhöhen werden!',
-            'checked' => serialize(array()),
-            'from' => 0,
-            'to' => Auth::user()->id,
-        ]);
+                if( $i == 1 ){
+                    $pacage_gift = 'ECONOM';
+                }elseif ($i == 2) {
+                    $pacage_gift = 'STANDARD';
+                }elseif ($i == 3) {
+                    $pacage_gift = 'PREMIUM';
+                }
+
+                Messages::create([
+                    'message' => 'Поздравляем! Вы получили пакет <span class="_bold">"'.$pacage_gift.'"</span> в подарок. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!',
+                    'en_message' => 'Congratulations! You have received the package <span class="_bold">"'.$pacage_gift.'"</span> as a gift. Soon you will discover new features that will multiply your earnings!',
+                    'de_message' => 'Herzlichen Glückwunsch! Sie haben das Paket <span class="_bold">"'.$pacage_gift.'"</span> als Geschenk. Bald werden Sie neue Funktionen entdecken, die Ihr Einkommen um ein Vielfaches erhöhen werden!',
+                    'checked' => serialize(array()),
+                    'from' => 0,
+                    'to' => Auth::user()->id,
+                ]);
+            }
+        }else{
+            Messages::create([
+                'message' => 'Поздравляем! Вы успешно перешли на пакет <span class="_bold">"'.$request->pacage.'"</span>. В скором времени вам откроются новые функции, которые многократно увеличат ваш заработок!',
+                'en_message' => 'Congratulations! You have successfully switched to the package <span class="_bold">"'.$request->package.'"</span>. Soon you will discover new features that will multiply your earnings!',
+                'de_message' => 'Herzlichen Glückwunsch! Sie haben erfolgreich zum Paket <span class="_bold">"'.$request->package.'"</span>. Bald werden Sie neue Funktionen entdecken, die Ihr Einkommen um ein Vielfaches erhöhen werden!',
+                'checked' => serialize(array()),
+                'from' => 0,
+                'to' => Auth::user()->id,
+            ]);
+        }
+
 
         // Сохранение данных пользователя
         $wallet->save();
@@ -414,7 +439,24 @@ class CabinetRequestController extends Controller
         for ($i=0; $i < 4; $i++) {
 
             // Проверяем на наличие спонсора
-            if( !$user->sponsor_id ){
+            if( $user->sponsor_id == 1 ){
+
+                $wallet = UserWallets::where('user_id', '=', 1)->first();
+                $wallet->balance = $wallet->balance + $price;
+
+                $wallet->save();
+
+                // Сообщение на админский аккаунт
+
+                Messages::create([
+                    'message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
+                    'en_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
+                    'de_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
+                    'checked' => serialize(array()),
+                    'from' => 0,
+                    'to' => 1,
+                ]);
+
                 break;
             }
 
@@ -426,7 +468,8 @@ class CabinetRequestController extends Controller
             // Проценты на вывод
             $outPersent = 0.4;
 
-            $outMoney = $price * $outPersent;
+            $persentMoney = $price * $outPersent;
+            $outMoney = $persentMoney * $outPersent;
 
             // Проверяем куплен ли у спонсора этот пакет
 
@@ -439,29 +482,30 @@ class CabinetRequestController extends Controller
             // Делаем начисление
 
             $wallet = UserWallets::where('user_id', '=', $sponsor)->first();
-            if( $pacage > 1 ){
-                $outMoney = 0;
+            $wallet->balance = $persentMoney;
+            // if( $pacage > 1 ){
+            //     $outMoney = 0;
 
-                for ($io=1; $io <= $pacage ; $io++) {
+            //     for ($io=1; $io <= $pacage ; $io++) {
 
-                    if( $io == 1 ){
-                        $priceO = 100;
-                    }elseif ($io == 2) {
-                        $priceO = 1000;
-                    }elseif ($io == 3) {
-                        $priceO = 10000;
-                    }elseif ($io == 4) {
-                        $priceO = 100000;
-                    }
+            //         if( $io == 1 ){
+            //             $priceO = 100;
+            //         }elseif ($io == 2) {
+            //             $priceO = 1000;
+            //         }elseif ($io == 3) {
+            //             $priceO = 10000;
+            //         }elseif ($io == 4) {
+            //             $priceO = 100000;
+            //         }
 
-                    $outMoney = $outMoney + ($priceO * $outPersent);
+            //         $outMoney = $outMoney + ($priceO * $outPersent);
 
-                }
+            //     }
 
+            //     $wallet->output = $wallet->output + $outMoney;
+            // }else{
                 $wallet->output = $wallet->output + $outMoney;
-            }else{
-                $wallet->output = $wallet->output + $outMoney;
-            }
+            // }
 
 
             // Для спонсора первой линии
@@ -469,29 +513,29 @@ class CabinetRequestController extends Controller
 
                 // Если нужено зачислить на накопительный счёт
 
-                if( $pacage > 1 ){
-                    $capiMoney = 0;
+                // if( $pacage > 1 ){
+                //     $capiMoney = 0;
 
-                    for ($io=1; $io <= $pacage ; $io++) {
+                //     for ($io=1; $io <= $pacage ; $io++) {
 
-                        if( $io == 1 ){
-                            $priceO = 100;
-                        }elseif ($io == 2) {
-                            $priceO = 1000;
-                        }elseif ($io == 3) {
-                            $priceO = 10000;
-                        }elseif ($io == 4) {
-                            $priceO = 100000;
-                        }
+                //         if( $io == 1 ){
+                //             $priceO = 100;
+                //         }elseif ($io == 2) {
+                //             $priceO = 1000;
+                //         }elseif ($io == 3) {
+                //             $priceO = 10000;
+                //         }elseif ($io == 4) {
+                //             $priceO = 100000;
+                //         }
 
-                        $capiMoney = $capiMoney + ($priceO * $capitalPersent);
+                //         $capiMoney = $capiMoney + ($priceO * $capitalPersent);
 
-                    }
+                //     }
 
-                    $wallet->capital = $wallet->capital + $capiMoney;
-                }else{
-                    $wallet->capital = $wallet->capital + $price * $capitalPersent;
-                }
+                //     $wallet->capital = $wallet->capital + $capiMoney;
+                // }else{
+                    $wallet->capital = $wallet->capital + $persentMoney * $capitalPersent;
+                // }
 
                 // Переходы на следующий пакет
                 if( $sponsorInfo->user_pacage == 1 && $wallet->capital >= 1000 ){
@@ -512,10 +556,10 @@ class CabinetRequestController extends Controller
 
                     // Начисляем в автомобильную и желищьную
                     if( $wallet->autobalance < 20000 ){
-                        $wallet->autobalance = $wallet->autobalance + $price * 0.1;
+                        $wallet->autobalance = $wallet->autobalance + $persentMoney * 0.1;
                     }
                     if( $wallet->housebalance < 100000 ){
-                        $wallet->housebalance = $wallet->housebalance + $price * 0.2;
+                        $wallet->housebalance = $wallet->housebalance + $persentMoney * 0.2;
                     }
 
                 }
@@ -523,7 +567,7 @@ class CabinetRequestController extends Controller
                 if( $pacage == 3 ){
                     // Начисляем в инвистиционную
                     if( $wallet->investbalance < 300000 ){
-                        $wallet->investbalance = $wallet->investbalance + $price * 0.3;
+                        $wallet->investbalance = $wallet->investbalance + $persentMoney * 0.3;
                     }
                 }
 
