@@ -447,6 +447,7 @@ class CabinetRequestController extends Controller
         $userID = Auth::user()->id;
         $user = User::where('id', '=', $userID)->first();
         $type = 5;
+        $persentMoneyAdmin = 0;
 
         for ($i=0; $i < 4; $i++) {
 
@@ -454,16 +455,16 @@ class CabinetRequestController extends Controller
             if( $user->sponsor_id == 1 ){
 
                 $wallet = UserWallets::where('user_id', '=', 1)->first();
-                $wallet->balance = $wallet->balance + $price;
+                $wallet->balance = $wallet->balance + $persentMoneyAdmin;
 
                 $wallet->save();
 
                 // Сообщение на админский аккаунт
 
                 Messages::create([
-                    'message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
-                    'en_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
-                    'de_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$price.'€',
+                    'message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$persentMoneyAdmin.'€',
+                    'en_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$persentMoneyAdmin.'€',
+                    'de_message' => 'Пользователь '.$user->name.' успешно активировал пакет "'.$request->package.'" на баланс начислено '.$persentMoneyAdmin.'€',
                     'checked' => serialize(array()),
                     'from' => 0,
                     'to' => 1,
@@ -492,6 +493,7 @@ class CabinetRequestController extends Controller
             }
 
             $persentMoney = $price * $outPersent;
+            $persentMoneyAdmin += $persentMoney;
             $outMoney = $persentMoney * $outPersent;
 
             // Проверяем куплен ли у спонсора этот пакет
@@ -505,7 +507,7 @@ class CabinetRequestController extends Controller
             // Делаем начисление
 
             $wallet = UserWallets::where('user_id', '=', $sponsor)->first();
-            $wallet->balance = $persentMoney;
+            $wallet->balance = $wallet->balance + $persentMoney;
             // if( $pacage > 1 ){
             //     $outMoney = 0;
 
