@@ -260,11 +260,11 @@ class CabinetRequestController extends Controller
         $endPrice = $price - $wallet->capital;
 
         // return $endPrice;
-        return response()->json([
-            'buy' => true,
-            'message' => $endPrice,
-            'error' => 1,
-        ]);
+        // return response()->json([
+        //     'buy' => true,
+        //     'message' => $endPrice,
+        //     'error' => 1,
+        // ]);
 
         if( $wallet->balance < $endPrice ){
             // Проверяем хватает ли денег на балансе
