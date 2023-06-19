@@ -258,11 +258,11 @@ class CabinetRequestController extends Controller
         // Вычисляем конечную стоимость пакета, вычитая накопленные средства
 
         $endPrice = $price - $wallet->capital;
-        return response()->json([
-            'buy' => true,
-            'message' => $endPrice,
-            'error' => 1,
-        ]);
+        // return response()->json([
+        //     'buy' => true,
+        //     'message' => $endPrice,
+        //     'error' => 1,
+        // ]);
 
         if( $wallet->balance < $endPrice ){
             // Проверяем хватает ли денег на балансе
