@@ -63,7 +63,7 @@ class AdminController extends Controller
             ->where('withdraws.status', '=', '0')
             ->paginate(5, ['*'], 'withdraws_page');
 
-            return view('cabinet.admin', compact('total_balance', 'auto_balance',
+            return view('cabinet.admin', compact('admin_balance', 'total_balance', 'auto_balance',
                                             'house_balance', 'invest_balance',
                                             'auto_partners', 'house_partners',
                                             'invest_partners', 'operations',
