@@ -258,13 +258,11 @@ class CabinetRequestController extends Controller
         // Вычисляем конечную стоимость пакета, вычитая накопленные средства
 
         $endPrice = $price - $wallet->capital;
-
-        // return $endPrice;
-        // return response()->json([
-        //     'buy' => true,
-        //     'message' => $endPrice,
-        //     'error' => 1,
-        // ]);
+        return response()->json([
+            'buy' => true,
+            'message' => $endPrice,
+            'error' => 1,
+        ]);
 
         if( $wallet->balance < $endPrice ){
             // Проверяем хватает ли денег на балансе
@@ -283,7 +281,6 @@ class CabinetRequestController extends Controller
                 'error' => 1,
             ]);
         }
-
 
         // Бонусные программы
         $user = User::where('id', '=', Auth::user()->id)->first();
@@ -549,6 +546,7 @@ class CabinetRequestController extends Controller
 
                 //     $wallet->capital = $wallet->capital + $capiMoney;
                 // }else{
+
                     if( $sponsorInfo->user_pacage == 1 ){
                         $wallet->capital = $wallet->capital + $persentMoney * $capitalPersent;
                     }else{
