@@ -16,7 +16,7 @@ class AdminController extends Controller
     public function main(){
 
         // Балансы
-            $total_balance = UserWallets::sum('balance');
+            $total_balance = UserWallets::where('user_id', '!=', 1)->sum('balance');
             $auto_balance = UserWallets::sum('autobalance');
             $house_balance = UserWallets::sum('housebalance');
             $invest_balance = UserWallets::sum('investbalance');
