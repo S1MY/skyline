@@ -478,7 +478,18 @@ class CabinetRequestController extends Controller
             $capitalPersent = 0.6;
 
             // Проценты на вывод
-            $outPersent = 0.4;
+            if( $i == 0 ){
+                $outPersent = 0.4;
+            }
+            if( $i == 1 ){
+                $outPersent = 0.2;
+            }
+            if( $i == 2 ){
+                $outPersent = 0.05;
+            }
+            if( $i == 3 ){
+                $outPersent = 0.15;
+            }
 
             $persentMoney = $price * $outPersent;
             $outMoney = $persentMoney * $outPersent;
@@ -547,7 +558,7 @@ class CabinetRequestController extends Controller
                 //     $wallet->capital = $wallet->capital + $capiMoney;
                 // }else{
 
-                    if( $sponsorInfo->user_pacage == 1 ){
+                    if( $sponsorInfo->user_pacage == 1 || $sponsorInfo->user_pacage == 4 ){
                         $wallet->capital = $wallet->capital + $persentMoney * $capitalPersent;
                     }else{
                         $wallet->capital = $wallet->capital + $persentMoney * 0.3;
