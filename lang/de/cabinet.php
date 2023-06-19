@@ -43,7 +43,7 @@ return [
         'canwindraft' => 'Kann zurückgezogen werden',
         'auto_balance' => 'Automobil (10%)',
         'live_balance' => 'Wohnungen (20%)',
-        'invest_balance' => 'Investition (30%)',
+        'invest_balance' => 'Lotterie (10€ per mon.)',
         'savings0' => 'Einsparungen beim Kauf eines "Standard" Paket',
         'savings1' => 'Einsparungen beim Kauf eines "Premium" Paket',
         'savings2' => 'Einsparungen beim Kauf eines "VIP" Paket',

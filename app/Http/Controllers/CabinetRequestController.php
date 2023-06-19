@@ -542,7 +542,12 @@ class CabinetRequestController extends Controller
 
                 //     $wallet->capital = $wallet->capital + $capiMoney;
                 // }else{
-                    $wallet->capital = $wallet->capital + $persentMoney * $capitalPersent;
+                    if( $sponsorInfo->user_pacage == 1 ){
+                        $wallet->capital = $wallet->capital + $persentMoney * $capitalPersent;
+                    }else{
+                        $wallet->capital = $wallet->capital + $persentMoney * 0.3;
+                    }
+
                 // }
 
                 // Переходы на следующий пакет
@@ -553,8 +558,14 @@ class CabinetRequestController extends Controller
                 }
 
                 if( $sponsorInfo->user_pacage == 2 && $wallet->capital >= 10000 ){
-                    $wallet->capital = 0;
+                    $wallet->capital = $wallet->capital - 10000;
                     $sponsorInfo->user_pacage = 3;
+                    $sponsorInfo->save();
+                }
+
+                if( $sponsorInfo->user_pacage == 3 && $wallet->capital >= 100000 ){
+                    $wallet->capital = 0;
+                    $sponsorInfo->user_pacage = 4;
                     $sponsorInfo->save();
                 }
 
@@ -572,12 +583,12 @@ class CabinetRequestController extends Controller
 
                 }
 
-                if( $pacage == 3 ){
-                    // Начисляем в инвистиционную
-                    if( $wallet->investbalance < 300000 ){
-                        $wallet->investbalance = $wallet->investbalance + $persentMoney * 0.3;
-                    }
-                }
+                // if( $pacage == 3 ){
+                //     // Начисляем в инвистиционную
+                //     if( $wallet->investbalance < 300000 ){
+                //         $wallet->investbalance = $wallet->investbalance + $persentMoney * 0.3;
+                //     }
+                // }
 
             }
 

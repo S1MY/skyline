@@ -43,7 +43,7 @@ return [
         'canwindraft' => 'Can be withdrawn',
         'auto_balance' => 'Automotive (10%)',
         'live_balance' => 'Housing (20%)',
-        'invest_balance' => 'Investment (30%)',
+        'invest_balance' => 'Lottery (10€ pre mon.)',
         'savings0' => 'Savings to Buy a "Standard" Package',
         'savings1' => 'Savings to Buy a "Premium" Package',
         'savings2' => 'Savings to Buy a "VIP" Package',
