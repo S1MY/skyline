@@ -17,7 +17,6 @@ class AdminController extends Controller
 
         // Балансы
             $total_balance = UserWallets::where('user_id', '!=', 1)->sum('balance');
-            $admin_balance = UserWallets::where('user_id', '=', 1)->sum('balance');
             $auto_balance = UserWallets::sum('autobalance');
             $house_balance = UserWallets::sum('housebalance');
             $invest_balance = UserWallets::sum('investbalance');
@@ -63,7 +62,7 @@ class AdminController extends Controller
             ->where('withdraws.status', '=', '0')
             ->paginate(5, ['*'], 'withdraws_page');
 
-            return view('cabinet.admin', compact('admin_balance', 'total_balance', 'auto_balance',
+            return view('cabinet.admin', compact('total_balance', 'auto_balance',
                                             'house_balance', 'invest_balance',
                                             'auto_partners', 'house_partners',
                                             'invest_partners', 'operations',
